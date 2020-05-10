@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+
+      {'gtm.start': new Date().getTime(),event:'gtm.js'}
+      );var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-N8MP7P');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"9dbf7bf394",applicationID:"184097864"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:site_name" content="Voice of America" />
+<link rel="canonical" href="https://www.voanews.com/covid-19-pandemic/asian-celebs-work-combat-racist-attacks-amid-pandemic" />
+<meta http-equiv="content-language" content="en" />
+<meta property="fb:pages" content="36235438073" />
+<meta name="twitter:site" content="@VOANews" />
+<meta name="twitter:description" content="Actress Olivia Cheng was recently volunteering in Vancouver when she says she witnessed a man drive up to an elderly Chinese woman, roll down his window and yell, &quot;This is your fault!&quot; before throwing trash at her.
+
+The incident enraged Cheng, and also served as another reason why she feels it&#039;s so important for celebrities of Asian descent to use their voices and speak up against anti-Asian attacks, which authorities say are increasing during the coronavirus pandemic.
+
+&quot;I don&#039;t think we can pretend that this isn&#039;t happening,&quot; Cheng, who stars in &quot;The Stand&quot; on CBS All Access, said in a recent" />
+<meta name="twitter:title" content="Asian Celebs Work to Combat Racist Attacks Amid Pandemic " />
+<meta property="og:type" content="Article" />
+<meta property="fb:app_id" content="394734098058258" />
+<meta name="description" content="Actress Olivia Cheng was recently volunteering in Vancouver when she says she witnessed a man drive up to an elderly Chinese woman, roll down his window and yell, &quot;This is your fault!&quot; before throwing trash at her.
+
+The incident enraged Cheng, and also served as another reason why she feels it&#039;s so important for celebrities of Asian descent to use their voices and speak up against anti-Asian attacks, which authorities say are increasing during the coronavirus pandemic.
+
+&quot;I don&#039;t think we can pretend that this isn&#039;t happening,&quot; Cheng, who stars in &quot;The Stand&quot; on CBS All Access, said in a recent" />
+<meta property="og:url" content="https://www.voanews.com/covid-19-pandemic/asian-celebs-work-combat-racist-attacks-amid-pandemic" />
+<meta name="msvalidate.01" content="3286EE554B6F672A6F2E608C02343C0E" />
+<meta property="og:title" content="Asian Celebs Work to Combat Racist Attacks Amid Pandemic " />
+<meta name="twitter:url" content="https://www.voanews.com/covid-19-pandemic/asian-celebs-work-combat-racist-attacks-amid-pandemic" />
+<meta property="og:description" content="Actress Olivia Cheng was recently volunteering in Vancouver when she says she witnessed a man drive up to an elderly Chinese woman, roll down his window and yell, &quot;This is your fault!&quot; before throwing trash at her.
+
+The incident enraged Cheng, and also served as another reason why she feels it&#039;s so important for celebrities of Asian descent to use their voices and speak up against anti-Asian attacks, which authorities say are increasing during the coronavirus pandemic.
+
+&quot;I don&#039;t think we can pretend that this isn&#039;t happening,&quot; Cheng, who stars in &quot;The Stand&quot; on CBS All Access, said in a recent" />
+<meta name="twitter:image" content="https://media.voltron.voanews.com/Drupal/01live-166/styles/710x340/s3/2020-04/AP_18284242573364.jpg?itok=RYb1grug" />
+<meta property="og:image" content="https://media.voltron.voanews.com/Drupal/01live-166/2020-04/AP_18284242573364.jpg" />
+<meta property="article:section" content="COVID-19 Pandemic, Arts &amp; Culture" />
+<meta name="apple-itunes-app" content="app-id=1414561730, app-argument=//4948560.ltr" />
+<meta property="og:image:width" content="3176" />
+<meta property="og:image:height" content="2200" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="//tags.tiqcdn.com/utag/bbg/voa-pangea/prod/utag.sync.js"></script>
+<link rel="sitemap" type="application/rss+xml" href="/sitemap.xml" />
+<link rel="manifest" href="/modules/custom/voa_pwa/js/manifest.json?voltron=universalDefender" />
+<meta name="theme-color" content="#3a79b7" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://www.voanews.com/covid-19-pandemic/asian-celebs-work-combat-racist-attacks-amid-pandemic" />
+<link rel="amphtml" href="https://www.voanews.com/covid-19-pandemic/asian-celebs-work-combat-racist-attacks-amid-pandemic?amp" />
+
+    <title>Asian Celebs Work to Combat Racist Attacks Amid Pandemic  | Voice of America - English</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/cauiqe166/files/css/css_8x4boKVoY1BZxYkNw7V2aTZjh4SHDJFXhH0b88KTq2c.css" />
+<link rel="stylesheet" media="all" href="/modules/custom/voa_breaking_news/css/voa-breaking-news.theme.css?q9mlmj" />
+<link rel="stylesheet" media="all" href="/sites/g/files/cauiqe166/files/css/css_wf4RC88h5WEHBXv3-6khrmwyVP9tYo7jyT2YbAa08Cc.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/g/files/cauiqe166/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/sites/g/files/cauiqe166/files/js/js_QHqjxhGPGgZFwOfW92tmrVpssmC1sbO0zDG4TgLmaEI.js"></script>
+
+
+    <!-- noscript css -->
+      <noscript>
+        <style>
+         
+.b-lazy, .b-responsive {
+  display: none !important;
+}
+        </style>
+      </noscript>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8MP7P"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    <script type="text/javascript">var utag_data = {"slug":"asian-celebs-work-combat-racist-attacks-amid-pandemic","page_type":"article","content_type":"article","article_uid":"4271266","video_event":[],"pub_day":"27","pub_hour":"21","pub_minute":"40","pub_min":"40","pub_month":"04","pub_weekday":"Mon","pub_year":"2020","pub_date":"Monday, April 27, 2020 - 21:40","dateline":" NEW YORK","short_headline":null,"byline":"Associated Press","categories":"COVID-19 Pandemic, Arts \u0026 Culture","subcontent_type":"Article","section":"COVID-19 Pandemic, Arts \u0026 Culture","tags":"COVID-19 Pandemic, Arts \u0026 Culture","english_section":"COVID-19 Pandemic, Arts \u0026 Culture","page_name":"Asian Celebs Work to Combat Racist Attacks Amid Pandemic\u00a0","page_title":"Asian Celebs Work to Combat Racist Attacks Amid Pandemic\u00a0","long_headline":"Asian Celebs Work to Combat Racist Attacks Amid Pandemic\u00a0","headline":"Asian Celebs Work to Combat Racist Attacks Amid Pandemic\u00a0","runs_js":"yes","language":"English","language_service":"voa english","entity":"voa","platform":"Responsive","short_language_service":"en","platform_short":"r","property_id":"461","enviro_type":"prod","domain":"www.voanews.com","url":"www.voanews.com\/covid-19-pandemic\/asian-celebs-work-combat-racist-attacks-amid-pandemic"}</script>
+<script type="text/javascript">
+  (function(a,b,c,d){
+  a='//tags.tiqcdn.com/utag/bbg/voa-pangea/prod/utag.js';
+  b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+  a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+  })();
+</script>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="l-page">
+  <div id="breaking-news-ajax"></div>
+
+      <div class="site-header ">
+
+  <div class="site-header__bar">
+
+    <div class="site-header__primary">
+
+      <div class="site-header__menu">
+        <button class="button site-header__menu-item" aria-label="Open main navigation"><span class="hidden">Open main navigation</span></button>
+        <nav class="site-header__mega-menu site-header__subnav">
+          <div class="site-header__mega-menu--inner">
+            <!-- This is hidden by default -->
+            <div class="grid">
+              <div class="col-1 col--hidden-large">
+                                <div>
+  
+    
+      <div class="schedule-menu voa-media-schedule-menu-block">
+      <div class="channel-schedule-wrapper" id="channel-296-wrapper-mobile" data-menu-block-channel="296" >
+              <div class="channel-schedule__section-title">
+          <span class="channel-schedule__icon fa fa-play"></span>
+                      Live TV                  </div>
+      
+      <div class="channel-playing">
+        <img src="/core/themes/stable/images/core/throbber-active.gif"
+             alt="Please wait, loading..."/>
+      </div>
+    </div>
+
+          <div class="channel-schedule-wrapper" id="channel-266-wrapper-mobile" data-menu-block-channel="266" >
+      
+      <div class="channel-playing">
+        <img src="/core/themes/stable/images/core/throbber-active.gif"
+             alt="Please wait, loading..."/>
+      </div>
+    </div>
+
+          <div class="schedule-menu__links">
+        <div class="schedule-menu__link"><a
+            href="/watch/schedule">Full Schedule</a>
+        </div>
+        <div class="schedule-menu__link"><a
+            href="/watch/programs">All Programs</a>
+        </div>
+      </div>
+      </div>
+
+  </div>
+
+                                                <div>
+  
+    
+      <div class="schedule-menu voa-media-schedule-menu-block">
+      <div class="channel-schedule-wrapper" id="channel-246-wrapper-mobile" data-menu-block-channel="246" >
+              <div class="channel-schedule__section-title">
+          <span class="channel-schedule__icon fa fa-volume-up"></span>
+                      Live Radio                  </div>
+      
+      <div class="channel-playing">
+        <img src="/core/themes/stable/images/core/throbber-active.gif"
+             alt="Please wait, loading..."/>
+      </div>
+    </div>
+
+          <div class="channel-schedule-wrapper" id="channel-251-wrapper-mobile" data-menu-block-channel="251" >
+      
+      <div class="channel-playing">
+        <img src="/core/themes/stable/images/core/throbber-active.gif"
+             alt="Please wait, loading..."/>
+      </div>
+    </div>
+
+          <div class="channel-schedule-wrapper" id="channel-256-wrapper-mobile" data-menu-block-channel="256" >
+      
+      <div class="channel-playing">
+        <img src="/core/themes/stable/images/core/throbber-active.gif"
+             alt="Please wait, loading..."/>
+      </div>
+    </div>
+
+          <div class="schedule-menu__links">
+        <div class="schedule-menu__link"><a
+            href="/listen/schedule">Full Schedule</a>
+        </div>
+        <div class="schedule-menu__link"><a
+            href="/listen/programs">All Programs</a>
+        </div>
+      </div>
+      </div>
+
+  </div>
+
+                              </div>
+            </div>
+
+            
+    
+    
+      
+              <ul class="grid site-header__mega-menu-list">
+                              <li class="site-header__mega-menu-item col-2 col-2--full-mobile site-header__mega-menu-item--header">
+          <a href="/usa" class="site-header__mega-menu-item-link site-header__mega-menu-item-link--header" data-drupal-link-system-path="taxonomy/term/32681">United States</a>
+                                    <ul class="site-header__mega-menu-sub-list">
+                                      <div class="grid">
+        <div class="col-2 site-header__mega-menu-sub-column">
+                      <li class="site-header__mega-menu-item">
+              <a href="/usa/us-politics" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/32936">US Politics</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/usa/immigration" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/33021">Immigration</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/usa/all-about-america" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/562771">All About America</a>
+                          </li>
+                  </div>
+        <div class="col-2 site-header__mega-menu-sub-column">
+                      <li class="site-header__mega-menu-item">
+              <a href="/science-health" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/562831">Science &amp; Health</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/silicon-valley-technology" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/61">Silicon Valley &amp; Technology</a>
+                          </li>
+                  </div>
+      </div>
+        </ul>
+  
+                  </li>
+                      <li class="site-header__mega-menu-item col-2 col-2--full-mobile site-header__mega-menu-item--header">
+          <span class="site-header__mega-menu-item-link site-header__mega-menu-item-link--header">World</span>
+                                    <ul class="site-header__mega-menu-sub-list">
+                                      <div class="grid">
+        <div class="col-2 site-header__mega-menu-sub-column">
+                      <li class="site-header__mega-menu-item">
+              <a href="/africa" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/562841">Africa</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/americas" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/562846">The Americas</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/east-asia-pacific" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/562821">East Asia Pacific</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/europe" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/32686">Europe</a>
+                          </li>
+                  </div>
+        <div class="col-2 site-header__mega-menu-sub-column">
+                      <li class="site-header__mega-menu-item">
+              <a href="/extremism-watch" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/51">Extremism Watch</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/middle-east" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/562811">Middle East</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/south-central-asia" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/562866">South &amp; Central Asia</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/middle-east/voa-news-iran" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/33026">VOA News on Iran</a>
+                          </li>
+                  </div>
+      </div>
+        </ul>
+  
+                  </li>
+                      <li class="site-header__mega-menu-item col-2 col-2--full-mobile site-header__mega-menu-item--header">
+          <span class="site-header__mega-menu-item-link site-header__mega-menu-item-link--header">Sections</span>
+                                    <ul class="site-header__mega-menu-sub-list">
+                                      <div class="grid">
+        <div class="col-2 site-header__mega-menu-sub-column">
+                      <li class="site-header__mega-menu-item">
+              <a href="/arts-culture" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/562826">Arts &amp; Culture</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/day-photos" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/32661">Day in Photos</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/economy-business" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/66">Economy &amp; Business</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/press-freedom" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/562871">Press Freedom</a>
+                          </li>
+                  </div>
+        <div class="col-2 site-header__mega-menu-sub-column">
+                      <li class="site-header__mega-menu-item">
+              <a href="/plugged-greta-van-susteren" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/156">Plugged in with Greta Van Susteren</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/student-union" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/32976">VOA StudentU</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/voa-connect" class="site-header__mega-menu-item-link" data-drupal-link-system-path="taxonomy/term/191">VOA Connect</a>
+                          </li>
+                      <li class="site-header__mega-menu-item">
+              <a href="/refugees" class="site-header__mega-menu-item-link" data-drupal-link-system-path="node/4078021">Refugees</a>
+                          </li>
+                  </div>
+      </div>
+        </ul>
+  
+                  </li>
+              </ul>
+  
+
+
+  
+
+          </div>
+        </nav>
+      </div>
+
+        <div>
+    
+<div id="block-featuredmenu">
+  
+  
+              <ul class="site-header__featured-menu">
+              <li><a class="site-header__featured-menu-item" href="/usa">US News</a></li>
+              <li><a class="site-header__featured-menu-item" href="/press-freedom">Press Freedom</a></li>
+              <li><a class="site-header__featured-menu-item" href="/science-health/coronavirus-outbreak">Coronavirus Outbreak</a></li>
+              <li><a class="site-header__featured-menu-item" href="/middle-east/voa-news-iran">VOA News on Iran</a></li>
+          </ul>
+  
+  </div>
+
+  </div>
+
+    </div>
+
+    <a href="/" class="site-header__branding"><img alt="Voice of America Logo" src="/themes/custom/voa/logo.svg"/></a>
+
+    <div class="site-header__secondary">
+      <div class="site-header__date">
+            </div>
+
+      <div class="site-header__secondary--grouping">
+        <button id="js-search-drop" class="button site-header__item">
+          <span class="site-header__icon fa fa-search"></span><span
+            class="site-header__icon-text site-header__icon-text--medium-only">Search</span>
+        </button>
+        <div class="site-header__search-drop site-header__subnav">
+          <div class="grid">
+            <div class="col-1">
+              <form class="site-header__search-form" action="/search" method="GET">
+                <label class="site-header__search-label" for="header-search">Search VOA News</label>
+                <input placeholder="Search VOA News" class="site-header__search" id="header-search" type="text"
+                       name="search_api_fulltext">
+                <input type="hidden" name="type" value="1">
+                <input type="hidden" name="sort_by" value="publication_time">
+                <button class="button site-header__search-button fa fa-search" type="submit"><span
+                    class="site-header__search-label">Search</span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="site-header__dropdown">
+          <button id="js-language-drop" class="button site-header__item">
+            <span class="site-header__icon fa fa-globe"></span>
+              <span class="site-header__icon-text site-header__icon-text">Lang</span>
+          </button>
+        </div>
+                <a href="/watch" id="js-watch-drop" data-target=".site-header__watch-drop" class="site-header__item site-header__item--secondary site-header__item--wide-only">
+          <span class="site-header__icon fa fa-play"></span><span class="site-header__icon-text">Live TV</span>
+        </a>
+        <div class="site-header__watch-drop site-header__subnav">
+          <div class="grid">
+            <div class="col-1">
+              <div id="watch-drop-menu">
+                <div>
+  
+    
+      <div class="schedule-menu voa-media-schedule-menu-block">
+      <div class="channel-schedule-wrapper" id="channel-296-wrapper-desktop" data-menu-block-channel="296" >
+              <div class="channel-schedule__section-title">
+          <span class="channel-schedule__icon fa fa-play"></span>
+                      Live TV                  </div>
+      
+      <div class="channel-playing">
+        <img src="/core/themes/stable/images/core/throbber-active.gif"
+             alt="Please wait, loading..."/>
+      </div>
+    </div>
+
+          <div class="channel-schedule-wrapper" id="channel-266-wrapper-desktop" data-menu-block-channel="266" >
+      
+      <div class="channel-playing">
+        <img src="/core/themes/stable/images/core/throbber-active.gif"
+             alt="Please wait, loading..."/>
+      </div>
+    </div>
+
+          <div class="schedule-menu__links">
+        <div class="schedule-menu__link"><a
+            href="/watch/schedule">Full Schedule</a>
+        </div>
+        <div class="schedule-menu__link"><a
+            href="/watch/programs">All Programs</a>
+        </div>
+      </div>
+      </div>
+
+  </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+                        <a href="/listen" id="js-listen-drop" data-target=".site-header__listen-drop" class="site-header__item site-header__item--secondary site-header__item--wide-only site-header__subnav"><span
+            class="site-header__icon fa fa-volume-up"></span><span class="site-header__icon-text">Live Radio</span></a>
+        <div class="site-header__listen-drop site-header__subnav">
+          <div class="grid">
+            <div class="col-1">
+              <div id="listen-drop-menu">
+                <div>
+  
+    
+      <div class="schedule-menu voa-media-schedule-menu-block">
+      <div class="channel-schedule-wrapper" id="channel-246-wrapper-desktop" data-menu-block-channel="246" >
+              <div class="channel-schedule__section-title">
+          <span class="channel-schedule__icon fa fa-volume-up"></span>
+                      Live Radio                  </div>
+      
+      <div class="channel-playing">
+        <img src="/core/themes/stable/images/core/throbber-active.gif"
+             alt="Please wait, loading..."/>
+      </div>
+    </div>
+
+          <div class="channel-schedule-wrapper" id="channel-251-wrapper-desktop" data-menu-block-channel="251" >
+      
+      <div class="channel-playing">
+        <img src="/core/themes/stable/images/core/throbber-active.gif"
+             alt="Please wait, loading..."/>
+      </div>
+    </div>
+
+          <div class="channel-schedule-wrapper" id="channel-256-wrapper-desktop" data-menu-block-channel="256" >
+      
+      <div class="channel-playing">
+        <img src="/core/themes/stable/images/core/throbber-active.gif"
+             alt="Please wait, loading..."/>
+      </div>
+    </div>
+
+          <div class="schedule-menu__links">
+        <div class="schedule-menu__link"><a
+            href="/listen/schedule">Full Schedule</a>
+        </div>
+        <div class="schedule-menu__link"><a
+            href="/listen/programs">All Programs</a>
+        </div>
+      </div>
+      </div>
+
+  </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+              </div>
+    </div>
+
+  </div>
+
+  <div class="site-header__language-drop site-header__subnav">
+    <div class="site-header__language-wrap">
+              <div class="site-header__language-region">
+          <div class="section-title site-header__language-region-title">English</div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voanews-com" href="https://voanews.com">English</a>
+              <a class="site-header__language-url" href="https://voanews.com">voanews.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title learningenglish-voanews-com" href="https://learningenglish.voanews.com">Learning English</a>
+              <a class="site-header__language-url" href="https://learningenglish.voanews.com">learningenglish.voanews.com</a>
+            </div>
+                  </div>
+              <div class="site-header__language-region">
+          <div class="section-title site-header__language-region-title">Eastern &amp; Central Europe</div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title zeriamerikes-com" href="https://zeriamerikes.com">Shqip</a>
+              <a class="site-header__language-url" href="https://zeriamerikes.com">zeriamerikes.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title ba-voanews-com" href="https://ba.voanews.com">Bosanski</a>
+              <a class="site-header__language-url" href="https://ba.voanews.com">ba.voanews.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title gr-voanews-com" href="https://gr.voanews.com">Ελληνικά</a>
+              <a class="site-header__language-url" href="https://gr.voanews.com">gr.voanews.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title mk-voanews-com" href="https://mk.voanews.com">Македонски</a>
+              <a class="site-header__language-url" href="https://mk.voanews.com">mk.voanews.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title glasamerike-net" href="https://glasamerike.net">Srpski</a>
+              <a class="site-header__language-url" href="https://glasamerike.net">glasamerike.net</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title ukrainian-voanews-com" href="https://ukrainian.voanews.com">Українська</a>
+              <a class="site-header__language-url" href="https://ukrainian.voanews.com">ukrainian.voanews.com</a>
+            </div>
+                  </div>
+              <div class="site-header__language-region">
+          <div class="section-title site-header__language-region-title">Eurasia</div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title amerikayidzayn-com" href="https://amerikayidzayn.com">Հայերեն</a>
+              <a class="site-header__language-url" href="https://amerikayidzayn.com">amerikayidzayn.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title amerikaninsesi-org" href="https://amerikaninsesi.org">Azerbaijani</a>
+              <a class="site-header__language-url" href="https://amerikaninsesi.org">amerikaninsesi.org</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title amerikiskhma-com" href="https://amerikiskhma.com">ქართული</a>
+              <a class="site-header__language-url" href="https://amerikiskhma.com">amerikiskhma.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title golos-ameriki-ru" href="https://golos-ameriki.ru">Русский</a>
+              <a class="site-header__language-url" href="https://golos-ameriki.ru">golos-ameriki.ru</a>
+            </div>
+                  </div>
+              <div class="site-header__language-region">
+          <div class="section-title site-header__language-region-title">Central Asia</div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title amerikaovozi-com" href="https://amerikaovozi.com">O‘zbek‎</a>
+              <a class="site-header__language-url" href="https://amerikaovozi.com">amerikaovozi.com</a>
+            </div>
+                  </div>
+              <div class="site-header__language-region">
+          <div class="section-title site-header__language-region-title">South Asia</div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voabangla-com" href="https://voabangla.com">বাংলা</a>
+              <a class="site-header__language-url" href="https://voabangla.com">voabangla.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title darivoa-com" href="https://darivoa.com">دری</a>
+              <a class="site-header__language-url" href="https://darivoa.com">darivoa.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title pashtovoa-com" href="https://pashtovoa.com">پښتو</a>
+              <a class="site-header__language-url" href="https://pashtovoa.com">pashtovoa.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voadeewanews-com" href="https://voadeewanews.com">وی او اې ډيوه ريډیو</a>
+              <a class="site-header__language-url" href="https://voadeewanews.com">voadeewanews.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title urduvoa-com" href="https://urduvoa.com">ارد</a>
+              <a class="site-header__language-url" href="https://urduvoa.com">urduvoa.com</a>
+            </div>
+                  </div>
+              <div class="site-header__language-region">
+          <div class="section-title site-header__language-region-title">East &amp; Southeast Asia</div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title burmese-voanews-com" href="https://burmese.voanews.com">ျမန္မာ</a>
+              <a class="site-header__language-url" href="https://burmese.voanews.com">burmese.voanews.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voacantonese-com" href="https://voacantonese.com">粤语</a>
+              <a class="site-header__language-url" href="https://voacantonese.com">voacantonese.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voachinese-com" href="https://voachinese.com">中文</a>
+              <a class="site-header__language-url" href="https://voachinese.com">voachinese.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voaindonesia-com" href="https://voaindonesia.com">Bahasa Indonesia</a>
+              <a class="site-header__language-url" href="https://voaindonesia.com">voaindonesia.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title khmer-voanews-com" href="https://khmer.voanews.com">ខ្មែរ</a>
+              <a class="site-header__language-url" href="https://khmer.voanews.com">khmer.voanews.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voacambodia-com" href="https://voacambodia.com">Khmer</a>
+              <a class="site-header__language-url" href="https://voacambodia.com">voacambodia.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voakorea-com" href="https://voakorea.com">한국어</a>
+              <a class="site-header__language-url" href="https://voakorea.com">voakorea.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title lao-voanews-com" href="https://lao.voanews.com">ລາວ</a>
+              <a class="site-header__language-url" href="https://lao.voanews.com">lao.voanews.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voathai-com" href="https://voathai.com">ไทย</a>
+              <a class="site-header__language-url" href="https://voathai.com">voathai.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voatibetan-com" href="https://voatibetan.com">བོད་ཡིག</a>
+              <a class="site-header__language-url" href="https://voatibetan.com">voatibetan.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voatiengviet-com" href="https://voatiengviet.com">Tiếng Việt</a>
+              <a class="site-header__language-url" href="https://voatiengviet.com">voatiengviet.com</a>
+            </div>
+                  </div>
+              <div class="site-header__language-region">
+          <div class="section-title site-header__language-region-title">Africa</div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voaafaanoromoo-com" href="https://voaafaanoromoo.com">Afaan Oromoo</a>
+              <a class="site-header__language-url" href="https://voaafaanoromoo.com">voaafaanoromoo.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title amharic-voanews-com" href="https://amharic.voanews.com">አማርኛ</a>
+              <a class="site-header__language-url" href="https://amharic.voanews.com">amharic.voanews.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voabambara-com" href="https://voabambara.com">Bambara</a>
+              <a class="site-header__language-url" href="https://voabambara.com">voabambara.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voaafrique-com" href="https://voaafrique.com">Français</a>
+              <a class="site-header__language-url" href="https://voaafrique.com">voaafrique.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voahausa-com" href="https://voahausa.com">Hausa</a>
+              <a class="site-header__language-url" href="https://voahausa.com">voahausa.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title radiyoyacuvoa-com" href="https://radiyoyacuvoa.com">Kinyarwanda / Kirundi</a>
+              <a class="site-header__language-url" href="https://radiyoyacuvoa.com">radiyoyacuvoa.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voandebele-com" href="https://voandebele.com">Ndebele</a>
+              <a class="site-header__language-url" href="https://voandebele.com">voandebele.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voaportugues-com" href="https://voaportugues.com">Português</a>
+              <a class="site-header__language-url" href="https://voaportugues.com">voaportugues.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voashona-com" href="https://voashona.com">Shona</a>
+              <a class="site-header__language-url" href="https://voashona.com">voashona.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voasomali-com" href="https://voasomali.com">Soomaaliga</a>
+              <a class="site-header__language-url" href="https://voasomali.com">voasomali.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voaswahili-com" href="https://voaswahili.com">Kiswahili</a>
+              <a class="site-header__language-url" href="https://voaswahili.com">voaswahili.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title tigrigna-voanews-com" href="https://tigrigna.voanews.com">ትግርኛ</a>
+              <a class="site-header__language-url" href="https://tigrigna.voanews.com">tigrigna.voanews.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voazimbabwe-com" href="https://voazimbabwe.com">Zimbabwe</a>
+              <a class="site-header__language-url" href="https://voazimbabwe.com">voazimbabwe.com</a>
+            </div>
+                  </div>
+              <div class="site-header__language-region">
+          <div class="section-title site-header__language-region-title">Middle East/North Africa</div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title ir-voanews-com" href="https://ir.voanews.com">فارسی</a>
+              <a class="site-header__language-url" href="https://ir.voanews.com">ir.voanews.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title dengiamerika-com" href="https://dengiamerika.com">كوردی</a>
+              <a class="site-header__language-url" href="https://dengiamerika.com">dengiamerika.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title dengeamerika-com" href="https://dengeamerika.com">Kurdi</a>
+              <a class="site-header__language-url" href="https://dengeamerika.com">dengeamerika.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title amerikaninsesi-com" href="https://amerikaninsesi.com">Türkçe</a>
+              <a class="site-header__language-url" href="https://amerikaninsesi.com">amerikaninsesi.com</a>
+            </div>
+                  </div>
+              <div class="site-header__language-region">
+          <div class="section-title site-header__language-region-title">Latin America</div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voanouvel-com" href="https://voanouvel.com">Creole</a>
+              <a class="site-header__language-url" href="https://voanouvel.com">voanouvel.com</a>
+            </div>
+                      <div class="site-header__language-group">
+              <a class="site-header__language-title voanoticias-com" href="https://voanoticias.com">Español</a>
+              <a class="site-header__language-url" href="https://voanoticias.com">voanoticias.com</a>
+            </div>
+                  </div>
+          </div>
+  </div>
+</div>
+  
+  <main role="main" id="main-content" tabindex="-1">
+        <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-voa-content">
+  
+    
+      
+
+  
+
+
+  
+  
+              
+
+  
+                                  
+
+
+  <div class="l-content-container"><div class="article">
+  <div class="article__social">
+    <div class="article__social-container">
+      
+
+<div class="social-widget">
+      <div tabindex="0" id="share-facebook" class="fab social-widget__icon social-widget__icon--facebook" data-url="https%3A%2F%2Fwww.voanews.com%2Fcovid-19-pandemic%2Fasian-celebs-work-combat-racist-attacks-amid-pandemic">
+      <span class="fa-facebook-f"><span class="sr-only">Share on Facebook</span></span>
+    </div>
+        <div tabindex="0" id="share-twitter" class="fab social-widget__icon social-widget__icon--twitter" data-url="https%3A%2F%2Fwww.voanews.com%2Fcovid-19-pandemic%2Fasian-celebs-work-combat-racist-attacks-amid-pandemic" data-title="Asian%20Celebs%20Work%20to%20Combat%20Racist%20Attacks%20Amid%20Pandemic%C2%A0" >
+      <span class="fa-twitter"><span class="sr-only">Share on Twitter</span></span>
+    </div>
+                <div tabindex="0" id="share-email" class="fa social-widget__icon social-widget__icon--mail" data-url="https%3A%2F%2Fwww.voanews.com%2Fcovid-19-pandemic%2Fasian-celebs-work-combat-racist-attacks-amid-pandemic" data-title="Asian%20Celebs%20Work%20to%20Combat%20Racist%20Attacks%20Amid%20Pandemic%C2%A0">
+      <span class="fa-envelope"><span class="sr-only">Share via Email</span></span>
+    </div>
+        <div tabindex="0" id="share-print" class="fa social-widget__icon social-widget__icon--print">
+      <span class="fa-print"><span class="sr-only">Print this page</span></span>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="article__main"><div class="page-header">
+  <span class="page-header__eyebrow eyebrow"><a href="/covid-19-pandemic" hreflang="en">COVID-19 Pandemic</a></span>
+  <h1 class="page-header__title"><span>Asian Celebs Work to Combat Racist Attacks Amid Pandemic </span>
+</h1>
+
+  
+  <div class="caption page-header__meta ">
+          <div class="page-header__meta-item">
+        <span>By</span>
+                  <span>Associated Press</span>              </div>
+    
+    <div class="page-header__meta-item">
+              April 27, 2020 09:55 PM
+          </div>
+          <div class="page-header__meta-item">
+        
+      </div>
+      </div>
+</div>
+<div class="article__social article__social--mobile-only">
+      
+
+<div class="social-widget">
+      <div tabindex="0" id="share-facebook-mobile" class="fab social-widget__icon social-widget__icon--facebook" data-url="https%3A%2F%2Fwww.voanews.com%2Fcovid-19-pandemic%2Fasian-celebs-work-combat-racist-attacks-amid-pandemic">
+      <span class="fa-facebook-f"><span class="sr-only">Share on Facebook</span></span>
+    </div>
+        <div tabindex="0" id="share-twitter-mobile" class="fab social-widget__icon social-widget__icon--twitter" data-url="https%3A%2F%2Fwww.voanews.com%2Fcovid-19-pandemic%2Fasian-celebs-work-combat-racist-attacks-amid-pandemic" data-title="Asian%20Celebs%20Work%20to%20Combat%20Racist%20Attacks%20Amid%20Pandemic%C2%A0" >
+      <span class="fa-twitter"><span class="sr-only">Share on Twitter</span></span>
+    </div>
+                <div tabindex="0" id="share-email-mobile" class="fa social-widget__icon social-widget__icon--mail" data-url="https%3A%2F%2Fwww.voanews.com%2Fcovid-19-pandemic%2Fasian-celebs-work-combat-racist-attacks-amid-pandemic" data-title="Asian%20Celebs%20Work%20to%20Combat%20Racist%20Attacks%20Amid%20Pandemic%C2%A0">
+      <span class="fa-envelope"><span class="sr-only">Share via Email</span></span>
+    </div>
+        <div tabindex="0" id="share-print-mobile" class="fa social-widget__icon social-widget__icon--print">
+      <span class="fa-print"><span class="sr-only">Print this page</span></span>
+    </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col-2of3">
+        <div class="article__lightbox-available">
+                      <div class="article__featured-media"><figure class="media media--type-image media--view-mode-" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
+      <a href="https://media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2020-04/AP_18284242573364.jpg?itok=IQkj2lN7" data-size="3176x2200">
+      
+            <div>    <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/817x459/s3/2020-04/AP_18284242573364.jpg?itok=aNWsODfS 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/817x459_retina/s3/2020-04/AP_18284242573364.jpg?itok=d_3IHu7r 2x" media="(min-width: 2000px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/817x459/s3/2020-04/AP_18284242573364.jpg?itok=aNWsODfS 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/817x459_retina/s3/2020-04/AP_18284242573364.jpg?itok=d_3IHu7r 2x" media="(min-width: 1280px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/710x340/s3/2020-04/AP_18284242573364.jpg?itok=RYb1grug 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/710x340_retina/s3/2020-04/AP_18284242573364.jpg?itok=PPhQR0Vj 2x" media="(min-width: 1024px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/545x307/s3/2020-04/AP_18284242573364.jpg?itok=3QUpfaq_ 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/576x564_retina/s3/2020-04/AP_18284242573364.jpg?itok=Pvcsr5TF 2x" media="(min-width: 992px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/892x501/s3/2020-04/AP_18284242573364.jpg?itok=YPLD-R0I 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/892x501_retina/s3/2020-04/AP_18284242573364.jpg?itok=e322oYS8 2x" media="(min-width: 769px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/671x377/s3/2020-04/AP_18284242573364.jpg?itok=Xz7qtv4N 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/671x377_retina/s3/2020-04/AP_18284242573364.jpg?itok=MLVqBgWg 2x" media="(min-width: 580px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/516x290/s3/2020-04/AP_18284242573364.jpg?itok=TcPYderQ 1x" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img src="https://media.voltron.voanews.com/Drupal/01live-166/styles/892x501/s3/2020-04/AP_18284242573364.jpg?itok=YPLD-R0I" alt="Olivia Cheng arrives at the Los Angeles premiere of &quot;Camping&quot; on Wednesday, Oct. 10, 2018, at Paramount Studios. (Photo by…" />
+
+  </picture>
+
+</div>
+      
+      <figcaption>
+                          
+  <div>
+          <figcaption>Olivia Cheng arrives at the Los Angeles premiere of &quot;Camping&quot; on Oct. 10, 2018, at Paramount Studios. </figcaption>
+      </div>
+
+              </figcaption>
+    </a>
+  </figure>
+</div>
+          
+          <div class="article__content">
+            <div class="article__body">
+              
+            <div><p> NEW YORK - Actress Olivia Cheng was recently volunteering in Vancouver when she says she witnessed a man drive up to an elderly Chinese woman, roll down his window and yell, "This is your fault!" before throwing trash at her.</p>
+
+<p>The incident enraged Cheng, and also served as another reason why she feels it's so important for celebrities of Asian descent to use their voices and speak up against anti-Asian attacks, which authorities say are increasing during the coronavirus pandemic.</p>
+
+<p>"I don't think we can pretend that this isn't happening," Cheng, who stars in "The Stand" on CBS All Access, said in a recent interview with The Associated Press. "For now, it would not be unwise to be a little more careful, to maybe have buddy systems when possible to go get your groceries if you're not feeling safe." </p>
+
+<p>The FBI reports there has been an uptick in hate crimes and harassment against Asian Americans since the outbreak of COVID-19, which first appeared in Wuhan, China, late last year.</p>
+
+<p>Some people have blamed China and Asians in general for the spread of coronavirus; President Donald Trump at times has called it the "Chinese virus."</p>
+
+<p>In New York, state Attorney General Letitia James has set up a hotline to report harassment or other targeted crime. Some of those incidents have been filmed and posted online.</p>
+
+  <figure role="group" class="embedded-entity align-left div"><div data-embed-button="wysiwug_image" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="d6f2f700-3b7e-4a74-bef0-70c4f755ff92" data-langcode="en">
+<figure class="media media--type-image media--view-mode-" itemscope="itemscope" itemtype="http://schema.org/ImageObject"><a data-size="3696x2456" href="https://media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2020-04/AP_20070197738184.jpg?itok=_jeP0FRd">
+      
+            <div>  <img alt="Tzi Ma arrives at the Los Angeles premiere of &quot;Mulan&quot; at the Dolby Theatre on Monday, Mar. 09, 2020. (Photo by Jordan Strauss…" height="272" layout="responsive" src="https://media.voltron.voanews.com/Drupal/01live-166/styles/sourced_410px_wide/s3/2020-04/AP_20070197738184.jpg?itok=QmPkhMiK" width="410" /></div>
+      
+
+          </a>
+  </figure></div>
+    <figcaption>Tzi Ma arrives at the Los Angeles premiere of "Mulan" at the Dolby Theatre on Mar. 09, 2020.</figcaption></figure><p>"Tigertail" star Tzi Ma says he's been a victim of such harassment. He was entering a grocery store in Pasadena, California, recently when he was confronted by a man in a car.</p>
+
+<p>"He looked at me straight in the eye and said, 'You should be quarantined' and took off," said the veteran actor, who was born in Hong Kong but moved to the United States as a child. </p>
+
+<p>"I got very angry obviously, flush with this kind of cold in your body. And I started screaming at him, but he was way too far away for him to hear me." </p>
+
+<p>Actor Alain Uy, a star of the upcoming Hulu series "Marvel's Helstrom," worried early on that such incidents would occur after the virus' spread. </p>
+
+<p>"Once this outbreak happened in Wuhan, we all kind of went, 'OK, we know what this is gonna mean,'" said the actor, who was born in the Philippines.</p>
+
+<p>"Crazy Rich Asians" director Jon M. Chu said he's been feeling more cautious than usual.</p>
+
+<p>"It's very sad when I feel a little bit weird when I'm going to go for a walk around the block," he said. </p>
+
+  <figure role="group" class="embedded-entity align-left div"><div data-embed-button="wysiwug_image" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="5b5875f4-17e1-4816-802d-9d23a0eadd93" data-langcode="en">
+<figure class="media media--type-image media--view-mode-" itemscope="itemscope" itemtype="http://schema.org/ImageObject"><a data-size="2426x3000" href="https://media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2020-04/AP_20005803311482.jpg?itok=McFNrJQf">
+      
+            <div>  <img alt="Jeannie Mai arrives at the 77th annual Golden Globe Awards at the Beverly Hilton Hotel on Sunday, Jan. 5, 2020, in Beverly…" height="507" layout="responsive" src="https://media.voltron.voanews.com/Drupal/01live-166/styles/sourced_410px_wide/s3/2020-04/AP_20005803311482.jpg?itok=z6og7so8" width="410" /></div>
+      
+
+          </a>
+  </figure></div>
+    <figcaption>Jeannie Mai arrives at the 77th annual Golden Globe Awards at the Beverly Hilton Hotel on Jan. 5, 2020, in Beverly Hills, Calif.</figcaption></figure><p>"The Real" co-host, Jeannie Mai, who is half-Vietnamese and half-Chinese, revealed recently that for the first time, she needed someone to monitor her social media posts to delete racist comments.</p>
+
+<p>"The Good Doctor" actor Will Yun Lee is even nervous about taking his baby son to the grocery store: "My wife is Caucasian, but my son is half Korean and half white. But he looks very Asian."</p>
+
+<p>But Ma and other stars are speaking up and working to combat the ignorance and harassment. Ma joined actress Celia Au and other celebrities and influencers in the recent campaign called " Wash the Hate, " created by IW Group, an Asian American-focused marketing agency. The PSA features Ma, Au and others washing their hands and reminding people that hygiene, not xenophobia, is the way to help combat the virus. </p>
+
+<p>"If I can start the conversation, why not?' said Au, who was also born in Hong Kong. "If we don't talk about it, then it's not going to be talked about at all."</p>
+
+<p>For Cheng, the recent wave of anti-Asian sentiment brought back painful memories of her childhood growing up in Edmonton, Canada, where she was the victim of a bias attack as a teen.</p>
+
+<p>She went down an internet rabbit hole of attacks posted online. "I had to stop watching," she said. "It brought up all those feelings again from being a kid and not being able to do anything."</p>
+
+<p>Mai says that it's not only important for Asian stars to speak out against these attacks, but people of other races as well. </p>
+
+<p>"These are the conversations you need to be having with your kids in your house. You need to, even if you're not Chinese. You should be explaining that this is terrible, that racism is coming out of this pandemic," she said. "So, have that talk with your kid. Have that talk with your friends. If one of your friends says, 'Yo, this 'Chinese Virus' is crazy.' Say, 'No. Actually, man it's called COVID-19. It's not the 'Chinese Virus.'' Just check them."</p>
+
+<p>Earlier this month, Bill Maher, host of HBO's "Real Time with Bill Maher," defended calling coronavirus the "Chinese Virus," comparing it to the Spanish flu. </p>
+
+<p>"While people say it's innocuous and that it came from China, it's the undertones," Lee said. "Certain people will grab those undertones and attach to it." </p>
+
+<p>There's also a worry that anti-Asian American sentiment could translate to a regression in Hollywood after recent success of telling Asian stories. </p>
+
+  <figure role="group" class="embedded-entity align-left div"><div data-embed-button="wysiwug_image" data-entity-embed-display="view_mode:media.embedded" data-entity-type="media" data-entity-uuid="a75f3d80-52f2-449a-abe1-e8f91a0af0ed" data-langcode="en">
+<figure class="media media--type-image media--view-mode-" itemscope="itemscope" itemtype="http://schema.org/ImageObject"><a data-size="4557x3038" href="https://media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2020-02/2020-02-10T063028Z_1950780291_RC2IXE9V8NNG_RTRMADP_3_OSCARS-AWARDS.JPG?itok=bYUnepur">
+      
+            <div>  <img alt="Bong Joon Ho and the cast of &quot;Parasite&quot; pose at the 92nd Academy Awards in Hollywood, Los Angeles, California." height="273" layout="responsive" src="https://media.voltron.voanews.com/Drupal/01live-166/styles/sourced_410px_wide/s3/2020-02/2020-02-10T063028Z_1950780291_RC2IXE9V8NNG_RTRMADP_3_OSCARS-AWARDS.JPG?itok=G7BcwBQz" width="410" /></div>
+      
+
+          </a>
+  </figure></div>
+    <figcaption>Bong Joon Ho and the cast of "Parasite" pose at the 92nd Academy Awards in Hollywood, Los Angeles, California, Feb. 9, 2020.</figcaption></figure><p>This year, the South Korean film "Parasite" won the best picture Oscar, and Chinese-American director Lulu Wang took home the Independent Spirit Award for her film, "The Farewell." "Crazy Rich Asians" was a hit at the box office in 2018 and last year, Sandra Oh became the first Asian woman in 39 years to win the best leading TV actress Golden Globe for "Killing Eve." </p>
+
+<p>"I worry, is this going to impact our chances so soon after it feels like we finally made inroads?" Cheng said. "Is this going to regress us and put us however many steps back?" </p>
+
+<p>Ma says the only way to proceed is to keep putting out diverse stories.</p>
+
+<p>"There's no relenting. We'll keep moving forward. And hopefully one day, people are going to say, 'You know what? I not only accept the differences, but I also accept the fact that we're very much alike.'" </p>
+</div>
+      
+            </div>
+          </div>
+        </div>
+
+                  <div class="article__footer">
+                          <h2 class="section-title">Related Stories</h2>
+
+              
+<div class="grid vertical-list vertical-list--list">
+      <div class="col-1 vertical-list__item vertical-list__item--list">
+      
+
+     
+
+  
+
+
+
+
+<div class="teaser">
+      <div class="teaser__img">
+      <div class="teaser__img-wrap">
+                  
+            <div><div>
+  
+  
+            <div data-blazy="" class="blazy blazy--field blazy--field-media-image">
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      <noscript>  <img class="media__image media__element" loading="lazy" srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/269x177/s3/2020-04/ap_china_journ.jpg?itok=rRwTTPel 1x" src="https://media.voltron.voanews.com/Drupal/01live-166/styles/269x177/s3/2020-04/ap_china_journ.jpg?itok=rRwTTPel" alt="FILE - A policeman moves journalists back from an event held for the last group of medical workers who came from outside Wuhan to help the city during the coronavirus outbreak, in Wuhan, China, April 15, 2020. " />
+
+</noscript>
+      
+        <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="https://media.voltron.voanews.com/Drupal/01live-166/2020-04/ap_china_journ.jpg" srcset="" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/269x177/s3/2020-04/ap_china_journ.jpg?itok=rRwTTPel 1x" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 6720 4480&#039;%2F%3E" alt="FILE - A policeman moves journalists back from an event held for the last group of medical workers who came from outside Wuhan to help the city during the coronavirus outbreak, in Wuhan, China, April 15, 2020. " />
+
+
+        
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+</div>
+</div>
+      
+                      </div>
+    </div>
+    <div class="teaser__content">
+          <div class="eyebrow">
+        <a href="/east-asia-pacific" hreflang="en">East Asia Pacific</a>
+      </div>
+        <div class="teaser__title">
+      <a class="teaser__title-link" href="/east-asia-pacific/asian-media-battles-officials-report-coronavirus" title="Asian Media Battles Officials to Report on Coronavirus"><span>Asian Media Battles Officials to Report on Coronavirus</span>
+</a>
+    </div>
+    <div class="teaser__text">
+      Reporters covering the virus outbreak face crackdowns, trolls and information blockades
+    </div>
+          <div class="teaser__author">
+        <div class="teaser__author-image">
+          <div>
+  
+  
+            <div>  <img src="https://media.voltron.voanews.com/Drupal/01live-166/styles/medium/s3/2020-04/Ralph%20Jennings.jpg?h=735f7c84&amp;itok=w6KiNZVY" width="220" height="220" alt="Ralph Jennings" />
+
+
+</div>
+      
+</div>
+
+        </div>
+        <div class="teaser__author-content">
+          <div class="teaser__author-name">
+            By <a class="teaser__author-link" href="/author/ralph-jennings" title="Ralph Jennings">Ralph Jennings</a>          </div>
+          <div class="teaser__publish-date">
+            Fri, 04/17/2020 - 09:31
+          </div>
+        </div>
+      </div>
+      </div>
+</div>
+
+    </div>
+      <div class="col-1 vertical-list__item vertical-list__item--list">
+      
+
+     
+
+  
+
+
+
+
+<div class="teaser">
+      <div class="teaser__img">
+      <div class="teaser__img-wrap">
+                  
+            <div><div>
+  
+  
+            <div data-blazy="" class="blazy blazy--field blazy--field-media-image">
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      <noscript>  <img class="media__image media__element" loading="lazy" srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/269x177/s3/2020-04/Jennings_taiwan_rapper_hot_dog.jpeg?itok=qwtgKEg- 1x" src="https://media.voltron.voanews.com/Drupal/01live-166/styles/269x177/s3/2020-04/Jennings_taiwan_rapper_hot_dog.jpeg?itok=qwtgKEg-" alt="MC Hot Dog" />
+
+</noscript>
+      
+        <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="https://media.voltron.voanews.com/Drupal/01live-166/2020-04/Jennings_taiwan_rapper_hot_dog.jpeg" srcset="" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/269x177/s3/2020-04/Jennings_taiwan_rapper_hot_dog.jpeg?itok=qwtgKEg- 1x" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 4032 3024&#039;%2F%3E" alt="MC Hot Dog" />
+
+
+        
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+</div>
+</div>
+      
+                      </div>
+    </div>
+    <div class="teaser__content">
+          <div class="eyebrow">
+        <a href="/arts-culture" hreflang="en">Arts &amp; Culture</a>
+      </div>
+        <div class="teaser__title">
+      <a class="teaser__title-link" href="/arts-culture/covid-canceled-his-tour-asian-rapper-mc-hot-dog-still-keeps-collecting-fans" title="COVID Canceled His Tour, But Asian Rapper &#039;MC Hot Dog&#039; Still Keeps Collecting Fans "><span>COVID Canceled His Tour, But Asian Rapper &#039;MC Hot Dog&#039; Still Keeps Collecting Fans </span>
+</a>
+    </div>
+    <div class="teaser__text">
+      Relatable rapper has built an audience for 20 years by singing in Mandarin for younger Taiwanese who identify with his ideas 
+    </div>
+          <div class="teaser__author">
+        <div class="teaser__author-image">
+          <div>
+  
+  
+            <div>  <img src="https://media.voltron.voanews.com/Drupal/01live-166/styles/medium/s3/2020-04/Ralph%20Jennings.jpg?h=735f7c84&amp;itok=w6KiNZVY" width="220" height="220" alt="Ralph Jennings" />
+
+
+</div>
+      
+</div>
+
+        </div>
+        <div class="teaser__author-content">
+          <div class="teaser__author-name">
+            By <a class="teaser__author-link" href="/author/ralph-jennings" title="Ralph Jennings">Ralph Jennings</a>          </div>
+          <div class="teaser__publish-date">
+            Wed, 04/08/2020 - 13:43
+          </div>
+        </div>
+      </div>
+      </div>
+</div>
+
+    </div>
+  </div>
+            
+                          
+
+
+<div class="author-card">
+  <div class="author-card__photo">
+    <div>
+  
+  
+            <div>  <img src="https://media.voltron.voanews.com/Drupal/01live-166/styles/medium/s3/2019-10/ap_logo_8z9FImcv_400x400.png?h=a7e6d17b&amp;itok=0pmmQ0Oh" width="220" height="220" alt="AP logo" />
+
+
+</div>
+      
+</div>
+
+  </div>
+  <div class="author-card__content">
+    <span class="author-card__eyebrow eyebrow">By</span>
+    <div class="author-card__name">
+      <a href="/author/associated-press" hreflang="en">Associated Press</a>
+    </div>
+    
+      </div>
+</div>
+
+                      </div>
+        
+              </div>
+
+      <div class="col-3">
+                  
+
+
+
+
+  <div class="section-title__container section-title__container--centered">
+    <h2 class="section-title--callout">
+              Special Section
+          </h2>
+  </div>
+
+
+
+
+
+
+  
+  <div class="section-content-widgets">
+    
+<div class="content-card__container content-card__container--padding">
+  
+  
+<div class="horizontal-list ">
+  <div class="grid">
+          <div class="col-1">
+        
+      </div>
+      </div>
+  </div>
+</div>
+  </div>
+
+
+
+
+
+
+    
+    
+    
+                                                                                  
+
+        
+  
+  <div class="section-content-widgets">
+    
+<div class="content-list">
+      
+<div class="grid vertical-list vertical-list--list">
+      <div class="col-1 vertical-list__item vertical-list__item--list">
+      
+  
+
+
+<div class="teaser teaser--small">
+  <div class="teaser__content teaser__content--small">
+          <div class="eyebrow">
+        <a href="/covid-19-pandemic" hreflang="en">COVID-19 Pandemic</a>
+      </div>
+        <a href="/covid-19-pandemic/inmates-brazil-prison-protest-suspension-visits" title="Inmates in Brazil Prison Protest Suspension of Visits">
+      <h2 class="teaser__title teaser__title--small"><span>Inmates in Brazil Prison Protest Suspension of Visits</span>
+</h2>
+    </a>
+  </div>
+  <div class="teaser__img teaser__img--small">
+    <a href="/covid-19-pandemic/inmates-brazil-prison-protest-suspension-visits" title="Inmates in Brazil Prison Protest Suspension of Visits">
+              
+            <div><div>
+  
+  
+            <div data-blazy="" class="blazy blazy--field blazy--field-media-image">
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      <noscript>  <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/s3/files/styles/192x108_retina/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=wD8J_VSe 1x" media="(min-width: 2000px)" type="image/jpeg"/>
+              <source srcset="/s3/files/styles/192x108/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QEQk066c 1x, /s3/files/styles/192x108_retina/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=wD8J_VSe 2x" media="(min-width: 1280px)" type="image/jpeg"/>
+              <source srcset="/s3/files/styles/192x108/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QEQk066c 1x, /s3/files/styles/192x108_retina/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=wD8J_VSe 2x" media="(min-width: 1024px)" type="image/jpeg"/>
+              <source srcset="/s3/files/styles/192x108/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QEQk066c 1x, /s3/files/styles/192x108_retina/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=wD8J_VSe 2x" media="(min-width: 992px)" type="image/jpeg"/>
+              <source srcset="/s3/files/styles/192x108/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QEQk066c 1x, /s3/files/styles/192x108_retina/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=wD8J_VSe 2x" media="(min-width: 769px)" type="image/jpeg"/>
+              <source srcset="/s3/files/styles/252x141/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=rJ0PiAJ6 1x, /s3/files/styles/252x1410/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QMSf1f5W 2x" media="(min-width: 580px)" type="image/jpeg"/>
+              <source srcset="/s3/files/styles/192x108/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QEQk066c 1x" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element" loading="lazy" src="/s3/files/styles/192x108/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QEQk066c" alt="Inmates at the Puraquequara prison stand on a water tower as they protest against bad conditions and restrictions on family…" />
+
+  </picture>
+</noscript>
+      
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="(min-width: 2000px)" type="image/jpeg" data-srcset="/s3/files/styles/192x108_retina/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=wD8J_VSe 1x"/>
+              <source media="(min-width: 1280px)" type="image/jpeg" data-srcset="/s3/files/styles/192x108/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QEQk066c 1x, /s3/files/styles/192x108_retina/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=wD8J_VSe 2x"/>
+              <source media="(min-width: 1024px)" type="image/jpeg" data-srcset="/s3/files/styles/192x108/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QEQk066c 1x, /s3/files/styles/192x108_retina/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=wD8J_VSe 2x"/>
+              <source media="(min-width: 992px)" type="image/jpeg" data-srcset="/s3/files/styles/192x108/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QEQk066c 1x, /s3/files/styles/192x108_retina/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=wD8J_VSe 2x"/>
+              <source media="(min-width: 769px)" type="image/jpeg" data-srcset="/s3/files/styles/192x108/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QEQk066c 1x, /s3/files/styles/192x108_retina/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=wD8J_VSe 2x"/>
+              <source media="(min-width: 580px)" type="image/jpeg" data-srcset="/s3/files/styles/252x141/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=rJ0PiAJ6 1x, /s3/files/styles/252x1410/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QMSf1f5W 2x"/>
+              <source type="image/jpeg" data-srcset="/s3/files/styles/192x108/s3/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg?itok=QEQk066c 1x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="https://media.voltron.voanews.com/Drupal/01live-166/ap-images/2020/05/3d6eb80dd05b5e605c2dab6c9c64f9cd.jpg" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 2845 2006&#039;%2F%3E" alt="Inmates at the Puraquequara prison stand on a water tower as they protest against bad conditions and restrictions on family…" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+</div>
+</div>
+      
+          </a>
+  </div>
+</div>
+
+    </div>
+      <div class="col-1 vertical-list__item vertical-list__item--list">
+      
+  
+
+
+<div class="teaser teaser--small">
+  <div class="teaser__content teaser__content--small">
+          <div class="eyebrow">
+        <a href="/covid-19-pandemic" hreflang="en">COVID-19 Pandemic</a>
+      </div>
+        <a href="/covid-19-pandemic/coronavirus-sweeping-through-massive-us-prison-population" title="Coronavirus Sweeping Through Massive US Prison Population">
+      <h2 class="teaser__title teaser__title--small"><span>Coronavirus Sweeping Through Massive US Prison Population</span>
+</h2>
+    </a>
+  </div>
+  <div class="teaser__img teaser__img--small">
+    <a href="/covid-19-pandemic/coronavirus-sweeping-through-massive-us-prison-population" title="Coronavirus Sweeping Through Massive US Prison Population">
+              
+            <div><div>
+  
+  
+            <div data-blazy="" class="blazy blazy--field blazy--field-media-image">
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      <noscript>  <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=QG-YQOWd 1x" media="(min-width: 2000px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=NiSqsXh- 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=QG-YQOWd 2x" media="(min-width: 1280px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=NiSqsXh- 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=QG-YQOWd 2x" media="(min-width: 1024px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=NiSqsXh- 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=QG-YQOWd 2x" media="(min-width: 992px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=NiSqsXh- 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=QG-YQOWd 2x" media="(min-width: 769px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/252x141/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=uQogh1xP 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/252x1410/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=JQoKZO3o 2x" media="(min-width: 580px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=NiSqsXh- 1x" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element" loading="lazy" src="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=NiSqsXh-" alt="People gather outside the Temple of Justice and in front of the Legislative Building, Thursday, April 23, 2020, at the Capitol…" />
+
+  </picture>
+</noscript>
+      
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="(min-width: 2000px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=QG-YQOWd 1x"/>
+              <source media="(min-width: 1280px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=NiSqsXh- 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=QG-YQOWd 2x"/>
+              <source media="(min-width: 1024px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=NiSqsXh- 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=QG-YQOWd 2x"/>
+              <source media="(min-width: 992px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=NiSqsXh- 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=QG-YQOWd 2x"/>
+              <source media="(min-width: 769px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=NiSqsXh- 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=QG-YQOWd 2x"/>
+              <source media="(min-width: 580px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/252x141/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=uQogh1xP 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/252x1410/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=JQoKZO3o 2x"/>
+              <source type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg?itok=NiSqsXh- 1x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="https://media.voltron.voanews.com/Drupal/01live-166/ap-images/2020/05/5d20bace99286a19a1efd830a0e3ede2.jpg" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 5472 3648&#039;%2F%3E" alt="People gather outside the Temple of Justice and in front of the Legislative Building, Thursday, April 23, 2020, at the Capitol…" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+</div>
+</div>
+      
+          </a>
+  </div>
+</div>
+
+    </div>
+      <div class="col-1 vertical-list__item vertical-list__item--list">
+      
+  
+
+
+<div class="teaser teaser--small">
+  <div class="teaser__content teaser__content--small">
+          <div class="eyebrow">
+        <a href="/covid-19-pandemic" hreflang="en">COVID-19 Pandemic</a>
+      </div>
+        <a href="/covid-19-pandemic/military-jets-fly-over-us-cities-salute-frontline-workers-0" title="Military Jets Fly Over US Cities to Salute Frontline Workers">
+      <h2 class="teaser__title teaser__title--small"><span>Military Jets Fly Over US Cities to Salute Frontline Workers</span>
+</h2>
+    </a>
+  </div>
+  <div class="teaser__img teaser__img--small">
+    <a href="/covid-19-pandemic/military-jets-fly-over-us-cities-salute-frontline-workers-0" title="Military Jets Fly Over US Cities to Salute Frontline Workers">
+              
+            <div><div>
+  
+  
+            <div data-blazy="" class="blazy blazy--field blazy--field-media-image">
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      <noscript>  <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=1J-P67Wp 1x" media="(min-width: 2000px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=k_nyuPwQ 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=1J-P67Wp 2x" media="(min-width: 1280px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=k_nyuPwQ 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=1J-P67Wp 2x" media="(min-width: 1024px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=k_nyuPwQ 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=1J-P67Wp 2x" media="(min-width: 992px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=k_nyuPwQ 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=1J-P67Wp 2x" media="(min-width: 769px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/252x141/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=38H1flZ4 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/252x1410/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=lUNCBhZ_ 2x" media="(min-width: 580px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=k_nyuPwQ 1x" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element" loading="lazy" src="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=k_nyuPwQ" alt="The Ferry family, from Chantilly, Va., who were in the middle of taking a family photograph, are surprised by a second fly over…" />
+
+  </picture>
+</noscript>
+      
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="(min-width: 2000px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=1J-P67Wp 1x"/>
+              <source media="(min-width: 1280px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=k_nyuPwQ 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=1J-P67Wp 2x"/>
+              <source media="(min-width: 1024px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=k_nyuPwQ 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=1J-P67Wp 2x"/>
+              <source media="(min-width: 992px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=k_nyuPwQ 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=1J-P67Wp 2x"/>
+              <source media="(min-width: 769px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=k_nyuPwQ 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=1J-P67Wp 2x"/>
+              <source media="(min-width: 580px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/252x141/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=38H1flZ4 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/252x1410/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=lUNCBhZ_ 2x"/>
+              <source type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg?itok=k_nyuPwQ 1x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="https://media.voltron.voanews.com/Drupal/01live-166/ap-images/2020/05/e81c24b7c530d9021e7d1f9fed86590e.jpg" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 4429 2956&#039;%2F%3E" alt="The Ferry family, from Chantilly, Va., who were in the middle of taking a family photograph, are surprised by a second fly over…" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+</div>
+</div>
+      
+          </a>
+  </div>
+</div>
+
+    </div>
+      <div class="col-1 vertical-list__item vertical-list__item--list">
+      
+  
+
+
+<div class="teaser teaser--small">
+  <div class="teaser__content teaser__content--small">
+          <div class="eyebrow">
+        <a href="/covid-19-pandemic" hreflang="en">COVID-19 Pandemic</a>
+      </div>
+        <a href="/covid-19-pandemic/millions-spain-rush-outdoors-after-easing-coronavirus-restrictions" title="Millions in Spain Rush Outdoors After Easing of Coronavirus Restrictions">
+      <h2 class="teaser__title teaser__title--small"><span>Millions in Spain Rush Outdoors After Easing of Coronavirus Restrictions</span>
+</h2>
+    </a>
+  </div>
+  <div class="teaser__img teaser__img--small">
+    <a href="/covid-19-pandemic/millions-spain-rush-outdoors-after-easing-coronavirus-restrictions" title="Millions in Spain Rush Outdoors After Easing of Coronavirus Restrictions">
+              
+            <div><div>
+  
+  
+            <div data-blazy="" class="blazy blazy--field blazy--field-media-image">
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      <noscript>  <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="/sites/g/files/cauiqe166/files/styles/192x108_retina/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=ei-f1BLG 1x" media="(min-width: 2000px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/cauiqe166/files/styles/192x108/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=0EP3WcxS 1x, /sites/g/files/cauiqe166/files/styles/192x108_retina/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=ei-f1BLG 2x" media="(min-width: 1280px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/cauiqe166/files/styles/192x108/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=0EP3WcxS 1x, /sites/g/files/cauiqe166/files/styles/192x108_retina/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=ei-f1BLG 2x" media="(min-width: 1024px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/cauiqe166/files/styles/192x108/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=0EP3WcxS 1x, /sites/g/files/cauiqe166/files/styles/192x108_retina/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=ei-f1BLG 2x" media="(min-width: 992px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/cauiqe166/files/styles/192x108/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=0EP3WcxS 1x, /sites/g/files/cauiqe166/files/styles/192x108_retina/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=ei-f1BLG 2x" media="(min-width: 769px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/cauiqe166/files/styles/252x141/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=vdOpn4pY 1x, /sites/g/files/cauiqe166/files/styles/252x1410/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=nYpYVxGK 2x" media="(min-width: 580px)" type="image/jpeg"/>
+              <source srcset="/sites/g/files/cauiqe166/files/styles/192x108/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=0EP3WcxS 1x" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element" loading="lazy" src="/sites/g/files/cauiqe166/files/styles/192x108/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=0EP3WcxS" alt="Spain emerges from lockdown during the global outbreak of the coronavirus disease (COVID-19) in San Sebastian" />
+
+  </picture>
+</noscript>
+      
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="(min-width: 2000px)" type="image/jpeg" data-srcset="/sites/g/files/cauiqe166/files/styles/192x108_retina/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=ei-f1BLG 1x"/>
+              <source media="(min-width: 1280px)" type="image/jpeg" data-srcset="/sites/g/files/cauiqe166/files/styles/192x108/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=0EP3WcxS 1x, /sites/g/files/cauiqe166/files/styles/192x108_retina/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=ei-f1BLG 2x"/>
+              <source media="(min-width: 1024px)" type="image/jpeg" data-srcset="/sites/g/files/cauiqe166/files/styles/192x108/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=0EP3WcxS 1x, /sites/g/files/cauiqe166/files/styles/192x108_retina/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=ei-f1BLG 2x"/>
+              <source media="(min-width: 992px)" type="image/jpeg" data-srcset="/sites/g/files/cauiqe166/files/styles/192x108/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=0EP3WcxS 1x, /sites/g/files/cauiqe166/files/styles/192x108_retina/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=ei-f1BLG 2x"/>
+              <source media="(min-width: 769px)" type="image/jpeg" data-srcset="/sites/g/files/cauiqe166/files/styles/192x108/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=0EP3WcxS 1x, /sites/g/files/cauiqe166/files/styles/192x108_retina/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=ei-f1BLG 2x"/>
+              <source media="(min-width: 580px)" type="image/jpeg" data-srcset="/sites/g/files/cauiqe166/files/styles/252x141/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=vdOpn4pY 1x, /sites/g/files/cauiqe166/files/styles/252x1410/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=nYpYVxGK 2x"/>
+              <source type="image/jpeg" data-srcset="/sites/g/files/cauiqe166/files/styles/192x108/public/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg?itok=0EP3WcxS 1x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="/sites/g/files/cauiqe166/files/reuters-images/2020/05/reuters_com_2020_newsml_RC2BGG90JU8D.jpg" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 6000 4000&#039;%2F%3E" alt="Spain emerges from lockdown during the global outbreak of the coronavirus disease (COVID-19) in San Sebastian" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+</div>
+</div>
+      
+          </a>
+  </div>
+</div>
+
+    </div>
+      <div class="col-1 vertical-list__item vertical-list__item--list">
+      
+  
+
+
+<div class="teaser teaser--small">
+  <div class="teaser__content teaser__content--small">
+          <div class="eyebrow">
+        <a href="/covid-19-pandemic" hreflang="en">COVID-19 Pandemic</a>
+      </div>
+        <a href="/covid-19-pandemic/hundreds-rush-popular-clerics-herbal-covid-cure-cameroon" title="Hundreds Rush for Popular Cleric’s Herbal COVID &#039;Cure&#039; in Cameroon">
+      <h2 class="teaser__title teaser__title--small"><span>Hundreds Rush for Popular Cleric’s Herbal COVID &#039;Cure&#039; in Cameroon</span>
+</h2>
+    </a>
+  </div>
+  <div class="teaser__img teaser__img--small">
+    <a href="/covid-19-pandemic/hundreds-rush-popular-clerics-herbal-covid-cure-cameroon" title="Hundreds Rush for Popular Cleric’s Herbal COVID &#039;Cure&#039; in Cameroon">
+              
+            <div><div>
+  
+  
+            <div data-blazy="" class="blazy blazy--field blazy--field-media-image">
+
+
+
+                    <div class="media media--bundle--image media--blazy media--loading media--responsive media--image">
+      <noscript>  <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/2020-05/000_1PN7PI.jpg?itok=lkBK2DiR 1x" media="(min-width: 2000px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/2020-05/000_1PN7PI.jpg?itok=No_2ygce 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/2020-05/000_1PN7PI.jpg?itok=lkBK2DiR 2x" media="(min-width: 1280px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/2020-05/000_1PN7PI.jpg?itok=No_2ygce 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/2020-05/000_1PN7PI.jpg?itok=lkBK2DiR 2x" media="(min-width: 1024px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/2020-05/000_1PN7PI.jpg?itok=No_2ygce 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/2020-05/000_1PN7PI.jpg?itok=lkBK2DiR 2x" media="(min-width: 992px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/2020-05/000_1PN7PI.jpg?itok=No_2ygce 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/2020-05/000_1PN7PI.jpg?itok=lkBK2DiR 2x" media="(min-width: 769px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/252x141/s3/2020-05/000_1PN7PI.jpg?itok=QW-tlebK 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/252x1410/s3/2020-05/000_1PN7PI.jpg?itok=3AwECTcu 2x" media="(min-width: 580px)" type="image/jpeg"/>
+              <source srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/2020-05/000_1PN7PI.jpg?itok=No_2ygce 1x" type="image/jpeg"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element" loading="lazy" src="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/2020-05/000_1PN7PI.jpg?itok=No_2ygce" alt="Some people wear masks as they walk by the entrance to the Yaounde General Hospital in Yaounde on March 6, 2020 as Cameroon has…" />
+
+  </picture>
+</noscript>
+      
+        <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source media="(min-width: 2000px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/2020-05/000_1PN7PI.jpg?itok=lkBK2DiR 1x"/>
+              <source media="(min-width: 1280px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/2020-05/000_1PN7PI.jpg?itok=No_2ygce 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/2020-05/000_1PN7PI.jpg?itok=lkBK2DiR 2x"/>
+              <source media="(min-width: 1024px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/2020-05/000_1PN7PI.jpg?itok=No_2ygce 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/2020-05/000_1PN7PI.jpg?itok=lkBK2DiR 2x"/>
+              <source media="(min-width: 992px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/2020-05/000_1PN7PI.jpg?itok=No_2ygce 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/2020-05/000_1PN7PI.jpg?itok=lkBK2DiR 2x"/>
+              <source media="(min-width: 769px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/2020-05/000_1PN7PI.jpg?itok=No_2ygce 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108_retina/s3/2020-05/000_1PN7PI.jpg?itok=lkBK2DiR 2x"/>
+              <source media="(min-width: 580px)" type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/252x141/s3/2020-05/000_1PN7PI.jpg?itok=QW-tlebK 1x, https://media.voltron.voanews.com/Drupal/01live-166/styles/252x1410/s3/2020-05/000_1PN7PI.jpg?itok=3AwECTcu 2x"/>
+              <source type="image/jpeg" data-srcset="https://media.voltron.voanews.com/Drupal/01live-166/styles/192x108/s3/2020-05/000_1PN7PI.jpg?itok=No_2ygce 1x"/>
+            <!--[if IE 9]></video><![endif]-->
+            <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="https://media.voltron.voanews.com/Drupal/01live-166/2020-05/000_1PN7PI.jpg" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 2505 1670&#039;%2F%3E" alt="Some people wear masks as they walk by the entrance to the Yaounde General Hospital in Yaounde on March 6, 2020 as Cameroon has…" />
+
+  </picture>
+
+        
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+</div>
+</div>
+      
+          </a>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+  </div>
+
+
+
+
+
+
+  
+  <div class="section-content-widgets">
+    
+<div class="content-card__container content-card__container--padding">
+  
+  
+<div class="horizontal-list ">
+  <div class="grid">
+          <div class="col-1">
+        
+            <div><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script><script type="text/javascript">
+
+<!--//--><![CDATA[// ><!--
+
+console.log("trying to embed map4");
+$(".article__body").prepend('<iframe height="150" src="https://www.voanews.com/widget/1181/embed?t=syndication" style="border: none; padding: 0; width: 100%;"></iframe>');
+
+$(document).ready(function(){
+      $('#links a').attr('target', '_blank');
+    });
+
+//--><!]]>
+</script></div>
+      
+      </div>
+      </div>
+  </div>
+</div>
+  </div>
+
+
+
+
+
+
+  
+  <div class="section-content-widgets">
+    
+<div class="content-card__container content-card__container--padding">
+  
+  
+<div class="horizontal-list ">
+  <div class="grid">
+          <div class="col-1">
+        
+            <div><p><iframe height="600" src="https://projects.voanews.com/coronavirus/" style="border: none; padding: 0; width: 100%;"></iframe></p>
+</div>
+      
+      </div>
+      </div>
+  </div>
+</div>
+  </div>
+
+
+              </div>
+    </div>
+  </div>
+
+</div>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+  <!-- Background of PhotoSwipe.
+       It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg"></div>
+
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+
+    <!-- Container that holds slides.
+        PhotoSwipe keeps only 3 of them in the DOM to save memory.
+        Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+
+      <div class="pswp__top-bar">
+
+        <!--  Controls are self-explanatory. Order can be changed. -->
+
+        <div class="pswp__counter"></div>
+
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+      </div>
+
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+
+      <div class="pswp__caption">
+        <div class="pswp__caption__center"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+  </main>
+
+      <div class="site-footer">
+  <div class="site-footer__container">
+    <div class="grid site-footer__upper">
+      <div class="col-2 site-footer__social">
+                  <a class="site-footer__social-link" href="https://twitter.com/voanews"><span class="fab fa-twitter"></span><span class="sr-only">Twitter</span></a>
+                          <a class="site-footer__social-link" href="https://www.instagram.com/voanews/"><span class="fab fa-instagram"></span><span class="sr-only">Instagram</span></a>
+                          <a class="site-footer__social-link" href="https://www.facebook.com/voiceofamerica"><span class="fab fa-facebook-f"></span><span class="sr-only">Facebook</span></a>
+                          <a class="site-footer__social-link" href="https://www.youtube.com/user/VOAvideo"><span class="fab fa-youtube"></span><span class="sr-only">YouTube</span></a>
+                                                <a class="site-footer__social-link" href="/rssfeeds"><span class="fa fa-rss"></span><span class="sr-only">RSS</span></a>
+      </div>
+      <form class="col-2 site-footer__search-form" action="/search" method="GET">
+        <label class="site-footer__search-label" for="footer-search">Search VOA News</label>
+        <input placeholder="Search VOA News" class="site-footer__search" id="footer-search" type="text" name="search_api_fulltext" />
+        <input type="hidden" name="type" value="1">
+        <input type="hidden" name="sort_by" value="publication_time">
+        <button class="button site-footer__search-button fa fa-search" type="submit"><span class="site-footer__search-label">Search</span></button>
+      </form>
+    </div>
+    <div class="site-footer__lower">
+      
+    
+    
+      
+              <ul class="grid site-footer__menu">
+    
+    
+                      <li class="site-footer__menu-item col-3 site-footer__menu-item--header">
+          <a href="/usa" class="site-footer__menu-item-link site-footer__menu-item-link--header" data-drupal-link-system-path="taxonomy/term/32681">United States</a>
+                                    <ul class="site-footer__sub-menu">
+    
+                                  <div class="grid">
+        <div class="col-2 site-footer__sub-menu-column">
+                      <li class="site-footer__menu-item">
+              <a href="/usa/us-politics" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/32936">US Politics</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/usa/immigration" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/33021">Immigration</a>
+                          </li>
+                  </div>
+        <div class="col-2 site-footer__sub-menu-column">
+                      <li class="site-footer__menu-item">
+              <a href="/usa/all-about-america" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/562771">All About America</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/silicon-valley-technology" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/61">Silicon Valley and Technology</a>
+                          </li>
+                  </div>
+      </div>
+
+    
+    </ul>
+  
+                  </li>
+                      <li class="site-footer__menu-item col-3 site-footer__menu-item--header">
+          <span class="site-footer__menu-item-link site-footer__menu-item-link--header">World News</span>
+                                    <ul class="site-footer__sub-menu">
+    
+                                  <div class="grid">
+        <div class="col-2 site-footer__sub-menu-column">
+                      <li class="site-footer__menu-item">
+              <a href="/africa" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/562841">Africa</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/americas" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/562846">The Americas</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/east-asia-pacific" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/562821">East Asia Pacific</a>
+                          </li>
+                  </div>
+        <div class="col-2 site-footer__sub-menu-column">
+                      <li class="site-footer__menu-item">
+              <a href="/europe" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/32686">Europe</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/middle-east" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/562811">Middle East</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/south-central-asia" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/562866">South &amp; Central Asia</a>
+                          </li>
+                  </div>
+      </div>
+
+    
+    </ul>
+  
+                  </li>
+                      <li class="site-footer__menu-item col-3 site-footer__menu-item--header">
+          <span class="site-footer__menu-item-link site-footer__menu-item-link--header">Sections</span>
+                                    <ul class="site-footer__sub-menu">
+    
+                                  <div class="grid">
+        <div class="col-2 site-footer__sub-menu-column">
+                      <li class="site-footer__menu-item">
+              <a href="/arts-culture" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/562826">Arts &amp; Culture</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/day-photos" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/32661">Day in Photos</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/economy-business" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/66">Economy &amp; Business</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/extremism-watch" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/51">Extremism Watch</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/press-freedom" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/562871">Press Freedom</a>
+                          </li>
+                  </div>
+        <div class="col-2 site-footer__sub-menu-column">
+                      <li class="site-footer__menu-item">
+              <a href="/science-health" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/562831">Science &amp; Health</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/student-union" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/32976">VOA StudentU</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/voa-connect" class="site-footer__menu-item-link" data-drupal-link-system-path="taxonomy/term/191">VOA Connect</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/refugees" class="site-footer__menu-item-link" data-drupal-link-system-path="node/4078021">Refugees</a>
+                          </li>
+                  </div>
+      </div>
+
+    
+    </ul>
+  
+                  </li>
+                      <li class="site-footer__menu-item col-3 site-footer__menu-item--header">
+          <span class="site-footer__menu-item-link site-footer__menu-item-link--header">Voice of America</span>
+                                    <ul class="site-footer__sub-menu">
+    
+                                  <div class="grid">
+        <div class="col-2 site-footer__sub-menu-column">
+                      <li class="site-footer__menu-item">
+              <a href="https://www.insidevoa.com/p/5831.html" class="site-footer__menu-item-link">About VOA</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="https://www.insidevoa.com/p/5621.html" class="site-footer__menu-item-link">Contact VOA</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="https://www.voanews.com/terms-use-and-privacy-notice" class="site-footer__menu-item-link">Terms of Use and Privacy Notice</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/section-508" title="The United States Agency for Global Media is committed to providing access to our web pages for individuals with disabilities" class="site-footer__menu-item-link" data-drupal-link-system-path="node/4219441">Accessibility</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/voas-free-app-mobile-and-tablet-devices" class="site-footer__menu-item-link" data-drupal-link-system-path="node/3877491">Get Our Mobile App</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="http://www.insidevoa.com/p/5719.html" class="site-footer__menu-item-link">Usage Requests</a>
+                          </li>
+                  </div>
+        <div class="col-2 site-footer__sub-menu-column">
+                      <li class="site-footer__menu-item">
+              <a href="https://www.voanews.com/voa-around-world" class="site-footer__menu-item-link">VOA Around the World</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="http://pronounce.voanews.com/" class="site-footer__menu-item-link">VOA Pronunciation Guide</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="http://www.insidevoa.com/" class="site-footer__menu-item-link">Media Relations</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/voa-broadcast-frequency-schedules" class="site-footer__menu-item-link" data-drupal-link-system-path="node/3877541">Listen on the radio</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="http://direct.voa24.news/english/portal/broadcast-schedule" class="site-footer__menu-item-link">Satellite Schedule</a>
+                          </li>
+                      <li class="site-footer__menu-item">
+              <a href="/subscribe" class="site-footer__menu-item-link" data-drupal-link-system-path="subscribe">Subscribe to Our Newsletters</a>
+                          </li>
+                  </div>
+      </div>
+
+    
+    </ul>
+  
+                  </li>
+      
+    
+    </ul>
+  
+
+
+  
+
+    </div>
+  </div>
+</div>
+  </div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/4271266","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"voa_tracking_code":{"isHomePage":false,"isSearchPage":false},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":null,"container":""},"blazyIo":{"enabled":false,"disconnect":false,"rootMargin":"0px","threshold":[0]},"0":{"voaMediaSchedule":{"liveText":"LIVE"}},"baseFilePath":"\/sites\/g\/files\/cauiqe166\/files\/voa_breaking_news.html","user":{"uid":0,"permissionsHash":"6597ccbf8872701f673e5d77705e96bf9d74fe982eb111e29aac53bf6a5fbcff"}}</script>
+<script src="/sites/g/files/cauiqe166/files/js/js_gCnQzGtmCDgRRWvy1r2jEu-dKGtzd9s936h7nkOMDyk.js"></script>
+<script src="/modules/custom/voa_breaking_news/js/voa-breaking-news.js?v=1.1"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9dbf7bf394","applicationID":"184097864,177414840","transactionName":"Yl1aZxNQDBBVV0VbDFsXeVAVWA0NG3BDRxNUVGRFDlA9EkFdS24gWlZMQQ5dDgZGaGJHAVhRS0AIXgwgW1pFQAxZVF1BTA8DAFdRQkE=","queueTime":0,"applicationTime":2913,"atts":"ThpZEVtKHx4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

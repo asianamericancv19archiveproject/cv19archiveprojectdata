@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"
+
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:schema="http://schema.org/">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    
+    var overrides = ["www.asu.edu"];
+    var hostname = window.location.hostname;
+    var ASUHeader = ASUHeader || {};
+    
+    
+    if (overrides.indexOf(hostname) == -1) {  
+        ASUHeader.user_signedin = false;
+        ASUHeader.signout_url = "/caslogout";
+    }
+       
+    //--><!]]>
+  </script><!-- START /asuthemes/4.9/heads/default.shtml TODO: CHANGE URLS BACK AFTER TESTING-->
+<link type="text/css" rel="stylesheet" media="all" href="https://www.asu.edu/asuthemes/4.9/css/asu_header.min.css"/>
+<link type="text/css" rel="stylesheet" media="all" href="https://www.asu.edu/asuthemes/4.9/css/asu_header_media.min.css"/>
+<!--[if IE 9]>
+  <style type="text/css">
+    #asu_universal_nav ul ul {
+      filter: none;
+      box-shadow: 0 6px 6px 0 #999;
+    }
+    #asu_universal_nav > ul > li.parent:hover > a {
+      filter: none;
+      box-shadow: 6px 0 6px -6px #999, -6px 0 6px -6px #999;
+    }
+  </style>
+<![endif]-->
+<script>
+  var ASUHeader = ASUHeader || {};
+  ASUHeader.browser = false;
+  ASUHeader.compliance = "options";
+</script>
+<!--[if IE 5
+  ]><script>
+    ASUHeader.browser = true;
+  </script><!
+[endif]-->
+<!--[if IE 6
+  ]><script>
+    ASUHeader.browser = true;
+  </script><!
+[endif]-->
+<!--[if IE 7
+  ]><script>
+    ASUHeader.browser = true;
+  </script><!
+[endif]-->
+<!--[if IE 8
+  ]><script>
+    ASUHeader.browser = true;
+  </script><!
+[endif]-->
+<script type="text/javascript" src="https://www.asu.edu/asuthemes/4.9/js/asu_header.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://www.asu.edu/asuthemes/4.9/vendor/cookieconsent/cookieconsent.min.css"/>
+<script src="https://www.asu.edu/asuthemes/4.9/vendor/cookieconsent/cookieconsent.min.js"></script>
+<!-- END /asuthemes/4.9/heads/default.shtml -->
+<meta name="TileImage" content="/profiles/openasu/themes/innovation/images/mstile.png" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"32195de049",applicationID:"18645603"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta content="Webspark:1.70.7 (Zipperlandville)" http-equiv="X-Name-of-Distro" name="cmsversion" />
+<link rel="apple-touch-icon-precomposed" href="/profiles/openasu/themes/innovation/images/apple-touch-icon-precomposed.png" />
+<link rel="apple-touch-icon" href="/profiles/openasu/themes/innovation/images/apple-touch-icon.png" />
+<link rel="shortcut icon" href="https://asunow.asu.edu/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="theme-color" content="#8c1d40" />
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime();</script>
+<meta name="description" content="While plenty of stories of sacrifice and goodwill surrounding COVID-19 have surfaced since the global pandemic began, two ASU professors are shedding light on the darker side of this troubling time. Aggie J. Yellow Horse and Karen J. Leong, two professors in ASU’s School of Social Transformation, have written a paper about the anti-immigration and anti-Asian backlash that" />
+<meta name="abstract" content="While plenty of stories of sacrifice and goodwill surrounding COVID-19 have surfaced since the global pandemic began, two ASU professors are shedding light on the darker side of this troubling time. Aggie J. Yellow Horse and Karen J. Leong, two professors in ASU’s School of Social Transformation, have written a paper about the anti-immigration and anti-Asian backlash that COVID-19 has caused throughout the country." />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://asunow.asu.edu/20200402-discoveries-parallel-contagions" />
+<link rel="shortlink" href="https://asunow.asu.edu/node/85398" />
+<meta property="og:site_name" content="ASU Now: Access, Excellence, Impact" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Parallel contagions: Coronavirus and xenophobia" />
+<meta property="og:url" content="https://asunow.asu.edu/20200402-discoveries-parallel-contagions" />
+<meta property="og:description" content="While plenty of stories of sacrifice and goodwill surrounding COVID-19 have surfaced since the global pandemic began, two ASU professors are shedding light on the darker side of this troubling time. Aggie J. Yellow Horse and Karen J. Leong, two professors in ASU’s School of Social Transformation, have written a paper about the anti-immigration and anti-Asian backlash that COVID-19 has caused throughout the country." />
+<meta property="og:updated_time" content="2020-04-10T14:56:34-07:00" />
+<meta property="og:image" content="https://asunow.asu.edu/sites/default/files/article_heros/istock-503120039_0.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@asunews" />
+<meta name="twitter:creator:id" content="18713025" />
+<meta name="twitter:url" content="https://asunow.asu.edu/20200402-discoveries-parallel-contagions" />
+<meta name="twitter:title" content="Parallel contagions: Coronavirus and xenophobia" />
+<meta name="twitter:description" content="Crisis has a way of bringing out the best and worst in people.While plenty of stories of sacrifice and goodwill surrounding COVID-19 have surfaced since the global pandemic began, two Arizona State" />
+<meta name="twitter:image" content="https://asunow.asu.edu/sites/default/files/article_heros/istock-503120039_0.jpg" />
+<meta property="article:published_time" content="2020-04-10T19:47:00-07:00" />
+<meta property="article:modified_time" content="2020-04-10T14:56:34-07:00" />
+<meta itemprop="name" content="Parallel contagions: Coronavirus and xenophobia" />
+<meta itemprop="description" content="Crisis has a way of bringing out the best and worst in people.While plenty of stories of sacrifice and goodwill surrounding COVID-19 have surfaced since the global pandemic began, two Arizona State University professors are shedding light on the darker side of this troubling time." />
+<meta itemprop="image" content="https://asunow.asu.edu/sites/default/files/article_heros/istock-503120039_0.jpg" />
+    <!-- %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"} -->
+    <meta content='width=device-width, initial-scale=1' name='viewport' />
+    <!--[if lt IE 9]>
+      <script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script>
+    <![endif]-->
+    <meta http-equiv="cleartype" content="on" />
+  <title>Parallel contagions: Coronavirus and xenophobia | ASU Now: Access, Excellence, Impact</title>
+  <link type="text/css" rel="stylesheet" href="https://asunow.asu.edu/sites/default/files/css/css_MdWjIWSZAk3IpeBkd6flKftJkFvAHy8yehoud--C3nk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://asunow.asu.edu/sites/default/files/css/css_n9nqGYq-XY7dk7eEBEm_pK3fo68lAqV0IXUxKe45-OY.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://asunow.asu.edu/sites/default/files/css/css__0TMi3WWCAL03H7FR1bP99jjTeasJ_tVIcRtdcyT1Jk.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://asunow.asu.edu/sites/default/files/css/css_qtlDE-wC-GQKWczyUJ7m439RHZLRH68J6PI2XxqLYkc.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://asunow.asu.edu/sites/default/files/css/css_5vui1Bbj3zLfqLLyb_9knN7sI6fEGhyEArCpOFXLU_s.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="https://asunow.asu.edu/sites/default/files/css/css_6fpIwcZsYQTwYnGohzDqYFu6LXIIqH8KV4EnEXvWj0I.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://asunow.asu.edu/sites/default/files/css/css_yIQqlzwfqg2Kfn_WBU_tkIOI9Jhp50naWvbohwRS19E.css" media="print" />
+<link type="text/css" rel="stylesheet" href="https://asunow.asu.edu/sites/default/files/css/css_Z4vBlmZSFJRV9zV8jkybJmp4OV4Fpvzbfh6EIhHflZ8.css" media="all" />
+  <script type="text/javascript" src="https://asunow.asu.edu/sites/default/files/js/js_DFy0zrT8lcRfib6US-AkpeIKys4eqyVxRBpuszdPkA8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(h,o,t,j,a,r){
+  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+  h._hjSettings={hjid:"95343",hjsv:6};
+  a=o.getElementsByTagName('head')[0];
+  r=o.createElement('script');r.async=1;
+  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+  a.appendChild(r);
+})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://asunow.asu.edu/sites/default/files/js/js_b3CE8FGnsqqQIkfcKCuPN4xwA2qS2ziveSO6I2YYajM.js"></script>
+<script type="text/javascript" src="https://asunow.asu.edu/sites/default/files/js/js_pISYkPDQWatV5my9Ad0CEgExr22BNZSerpova0cOMXw.js"></script>
+<script type="text/javascript" src="https://asunow.asu.edu/sites/default/files/js/js_UblElv7xjlgJ1eVv3CJlPMRCtGVpvB65CxeCxLgYeck.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var ASUHeader = ASUHeader || {};
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://asunow.asu.edu/sites/default/files/js/js_vaN1jFKTpg1Wit6ltL0OemI-Uafi2Sxz8kirMbBh_PE.js"></script>
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src="https://asunow.asu.edu/sites/default/files/js/js_Zegvaqvd1DiRpkKWJxXd9pKKTkqzyRjE2YPE0CtvQuY.js"></script>
+<script type="text/javascript" src="https://asunow.asu.edu/sites/default/files/js/js_mGdv9NgnlTOMtlPV85zXkRZDZFAqoY1DBA32ekWRKCg.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.ASUHeader = window.ASUHeader || {};ASUHeader.site_menu = ASUHeader.site_menu || {};ASUHeader.site_menu.json = '[{"title":"Home","path":"\/"},{"title":"Explore","path":"","children":[{"title":"Discoveries","path":"\/topics\/now\/discoveries"},{"title":"Solutions","path":"\/topics\/now\/solutions"},{"title":"Creativity","path":"\/topics\/now\/creativity"},{"title":"Entrepreneurship","path":"\/topics\/now\/entrepreneurship"},{"title":"Global Engagement","path":"\/topics\/now\/global-engagement"},{"title":"Arizona Impact","path":"\/topics\/now\/arizona-impact"},{"title":"Sun Devil Life","path":"\/topics\/now\/sun-devil-life"},{"title":"ASU News","path":"\/topics\/news\/saf\/asu-news"},{"title":"ASU Insight Videos","path":"\/topics\/news\/interests\/asu-insight-videos"},{"title":"Athletics","path":"\/topics\/news\/college_unit\/sun_devil_athletics"},{"title":"Events","path":"https:\/\/asuevents.asu.edu\/"},{"title":"Media Relations","path":"https:\/\/newsroom.asu.edu\/"},{"title":"Manage Subscriptions","path":"\/subscribe"},{"title":"Follow ASU Now","path":""},{"title":"","path":"https:\/\/facebook.com\/arizonastateuniversity"},{"title":"","path":"https:\/\/instagram.com\/asunow"},{"title":"","path":"https:\/\/twitter.com\/asunews"}]},{"title":"Got a Minute?","path":"\/got-a-minute"},{"title":"Expert Q&A","path":"\/topics\/news\/interests\/q-a"},{"title":"Thought Huddle","path":"\/thought-huddle"},{"title":"Sun Devil Shelf Life","path":"\/shelf-life"},{"title":"ASU Thrive","path":"\/thrive-magazine"},{"title":"Narrative Storytelling","path":"\/narrative-storytelling-initiative"}]';ASUHeader.site_menu.site_name = "ASU Now: Access, Excellence, Impact";ASUHeader.site_title = {"title":"ASU Now: Access, Excellence, Impact","site_url":"\/"};
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+ASUHeader.gsa = "**d"
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"innovation_asu_news","theme_token":"t3Jzn6UBbmZlAvwRCbGwX-K7KT3n6Ep7uq3XgiJ9M3o","jquery_version":"1.10","js":{"profiles\/openasu\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets.js":1,"profiles\/openasu\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets-spotlight.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_hero\/js\/webspark_hero.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_newsevents\/js\/webspark_newsevents.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_panels_styles\/plugins\/styles\/customstyles\/js\/customstyles.js":1,"profiles\/openasu\/themes\/innovation\/js\/innovation.js":1,"\/profiles\/openasu\/themes\/innovation\/js\/innovation.js":1,"public:\/\/google_tag\/google_tag.script.js":1,"0":1,"profiles\/openasu\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/openasu\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"profiles\/openasu\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"profiles\/openasu\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.tabs.min.js":1,"profiles\/openasu\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.accordion.min.js":1,"profiles\/openasu\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"misc\/ajax.js":1,"profiles\/openasu\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"profiles\/openasu\/modules\/panopoly\/panopoly_images\/panopoly-images.js":1,"profiles\/openasu\/modules\/contrib\/admin_menu\/admin_devel\/admin_devel.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/asu_gcse\/\/js\/asu_gcse.js":1,"sites\/all\/modules\/contentanalysis\/contentanalysis.js":1,"sites\/all\/modules\/contentoptimizer\/contentoptimizer.js":1,"profiles\/openasu\/modules\/contrib\/google_cse\/google_cse.js":1,"sites\/all\/modules\/kwall_custom\/kwall_custom.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/mega_footer\/js\/megafoot.js":1,"profiles\/openasu\/modules\/panopoly\/panopoly_admin\/panopoly-admin.js":1,"profiles\/openasu\/modules\/panopoly\/panopoly_magic\/panopoly-magic.js":1,"profiles\/openasu\/modules\/panopoly\/panopoly_theme\/js\/panopoly-accordion.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/uto_carousel\/js\/jquery.flexslider-min.js":1,"profiles\/openasu\/modules\/contrib\/caption_filter\/js\/caption-filter.js":1,"1":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/iframe\/iframe.js":1,"sites\/all\/libraries\/jquery.imagesloaded\/jquery.imagesloaded.min.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_megamenu\/js\/webspark_megamenu.js":1,"profiles\/openasu\/libraries\/emulatetab\/src\/emulatetab.joelpurra.min.js":1,"profiles\/openasu\/modules\/custom\/asu_brand\/asu_brand.js":1,"profiles\/openasu\/modules\/contrib\/tb_megamenu\/js\/tb-megamenu-frontend.js":1,"profiles\/openasu\/modules\/contrib\/tb_megamenu\/js\/tb-megamenu-touch.js":1,"sites\/all\/modules\/radioactivity\/js\/radioactivity.js":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_megamenu\/js\/webspark_megamenu_pre.js":1,"\/\/maps.googleapis.com\/maps\/api\/js":1,"sites\/all\/libraries\/innovation_asu_news_bootstrap\/js\/bootstrap.min.js":1,"misc\/progress.js":1,"sites\/all\/modules\/colorbox_node\/colorbox_node.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/jquery-browser.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/jquery-ui\/js\/jquery-ui-1.10.4.custom.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/lodash.min.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/affix.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/alert.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/bootstrap.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/button.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/carousel.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/collapse.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/dropdown.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/moment.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/jquery.touchSwipe.min.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/jquerypp.custom.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/lightningtouch.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/main.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/app\/article-list.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/modal.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/modernizr-2.8.3.custom.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/modernizr-2.8.3.custom-events.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/scrollspy.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/slick-1.5.5.min.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/smoothscroll.min.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/social-share.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/tab.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/tooltip.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/transition.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/app\/asunews-common.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/app\/news-topic.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/app\/media-articles.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/app\/now-topic.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/app\/asu-now-search.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/app\/article-map.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/app\/article-home-saf.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/app\/event-list.js":1,"sites\/all\/themes\/innovation_asu_news\/js\/zeroclipboard\/ZeroClipboard.min.js":1,"2":1,"3":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/asu_gcse\/\/css\/asu_gcse.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/asu_maps_enhanced\/css\/asu_maps_enhanced.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/asu_spotlight\/css\/asuflex.css":1,"sites\/all\/modules\/colorbox_node\/colorbox_node.css":1,"profiles\/openasu\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/openasu\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"profiles\/openasu\/modules\/contrib\/google_cse\/google_cse.css":1,"modules\/node\/node.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_admin\/panopoly-admin-navbar.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_core\/css\/panopoly-dropbutton.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_magic\/css\/panopoly-magic.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_theme\/css\/panopoly-featured.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_theme\/css\/panopoly-accordian.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_theme\/css\/panopoly-layouts.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets-spotlight.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_wysiwyg\/panopoly-wysiwyg.css":1,"profiles\/openasu\/modules\/contrib\/radix_layouts\/radix_layouts.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/uto_carousel\/css\/webspark_carousel.css":1,"sites\/all\/modules\/video_filter\/video_filter.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_banner\/css\/webspark_banner.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_content_callout\/css\/webspark_content_callout.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_hero\/css\/webspark_hero.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_jumbohero\/css\/webspark_jumbohero.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_panels_styles\/plugins\/styles\/customstyles\/css\/customstyles.css":1,"profiles\/openasu\/modules\/contrib\/views\/css\/views.css":1,"profiles\/openasu\/modules\/contrib\/caption_filter\/caption-filter.css":1,"sites\/all\/modules\/chartbeat\/chartbeat.css":1,"sites\/all\/libraries\/colorbox\/example1\/colorbox.css":1,"profiles\/openasu\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/openasu\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/radioactivity\/css\/radioactivity.css":1,"profiles\/openasu\/libraries\/fontawesome\/css\/font-awesome.css":1,"profiles\/openasu\/modules\/contrib\/tb_megamenu\/css\/bootstrap.css":1,"profiles\/openasu\/modules\/contrib\/tb_megamenu\/css\/base.css":1,"profiles\/openasu\/modules\/contrib\/tb_megamenu\/css\/default.css":1,"profiles\/openasu\/modules\/contrib\/tb_megamenu\/css\/compatibility.css":1,"sites\/all\/libraries\/innovation_asu_news_bootstrap\/css\/bootstrap.min.css":1,"sites\/all\/modules\/addtoany\/addtoany.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/mega_footer\/css\/megafoot.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_megamenu\/css\/webspark_megamenu.css":1,"profiles\/openasu\/modules\/webspark_featurescustom\/webspark_newsevents\/css\/webspark_newsevents.css":1,"profiles\/openasu\/themes\/kalatheme\/css\/tweaks.css":1,"profiles\/openasu\/themes\/kalatheme\/css\/panopoly.css":1,"profiles\/openasu\/themes\/innovation\/css\/innovation-main.css":1,"profiles\/openasu\/themes\/innovation\/css\/buttons.css":1,"profiles\/openasu\/themes\/innovation\/css\/forms.css":1,"profiles\/openasu\/themes\/innovation\/css\/nav.css":1,"profiles\/openasu\/themes\/innovation\/fonts\/roboto\/css\/roboto.css":1,"sites\/all\/themes\/innovation_asu_news\/css\/main.css":1,"sites\/all\/themes\/innovation_asu_news\/css\/temp.css":1,"sites\/all\/themes\/innovation_asu_news\/css\/kwall-main.css":1,"profiles\/openasu\/themes\/innovation\/css\/print.css":1,"sites\/all\/themes\/innovation_asu_news\/css\/kwall-print.css":1,"profiles\/openasu\/modules\/panopoly\/panopoly_images\/panopoly-images.css":1,"public:\/\/css_injector\/css_injector_4.css":1,"public:\/\/css_injector\/css_injector_9.css":1}},"chartbeat":{"uid":61096,"domain":"asunow.asu.edu","useCanonical":true,"noCookies":false},"colorbox":{"transition":"elastic","speed":"350","opacity":"0.85","slideshow":false,"slideshowAuto":true,"slideshowSpeed":"2500","slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"\u2190 Go back","overlayClose":true,"returnFocus":true,"maxWidth":"100%","maxHeight":"100%","initialWidth":"300","initialHeight":"250","fixed":true,"scrolling":false,"mobiledetect":true,"mobiledevicewidth":"480px"},"googleCSE":{"cx":"007921449323584335659:7htbgpmmreu","language":"","resultsWidth":600,"domain":"www.google.com","showWaterMark":1},"CToolsModal":{"modalSize":{"type":"scale","width":".9","height":".9","addWidth":0,"addHeight":0,"contentRight":25,"contentBottom":75},"modalOptions":{"opacity":".55","background-color":"#FFF"},"animationSpeed":"fast","modalTheme":"CToolsModalDialog","throbberTheme":"CToolsModalThrobber"},"panopoly_magic":{"pane_add_preview_mode":"automatic"},"asu_brand":{"asu_sso_signedin":"false","asu_sso_signinurl":"\/cas?destination=node\/85398","asu_sso_signouturl":"\/caslogout","overrides":"[\u0022www.asu.edu\u0022]"},"better_exposed_filters":{"views":{"article_trending":{"displays":{"block_1":{"filters":[]}}}}},"radioactivity":{"emitters":{"emitDefault":[{"accuracy":"100","bundle":"featured_article","energy":10,"entity_id":"85398","entity_type":"node","field_name":"field_article_trending","language":"und","storage":"Live","type":"none","checksum":"53bafe354d275a61a5b66e4fdcf33c25"}]},"config":{"emitPath":"\/sites\/all\/modules\/radioactivity\/emit.php","fpEnabled":false,"fpTimeout":15}},"colorbox_node":{"width":"100%","height":"100%"}});
+//--><!]]>
+</script>
+</head>
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-85398 node-type-featured-article region-content" ><!-- Google Tag Manager ASU Universal-->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KDWN8Z"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KDWN8Z');</script>
+<!-- End Google Tag Manager ASU Universal -->
+  <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTJ886H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  
+<div id="page-wrapper"><div id="page">
+
+        <!-- Page Header -->
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="column col-md-12">
+					  <div class="region region-header">
+    <div class="accessibility-hide"><a href="#main-wrapper" id="skip_to_content">Skip to Main Page Content</a></div><div id="block-asu-brand-asu-brand-header" class="block block-asu-brand">
+
+    
+  <div class="content">
+    <!-- START /asuthemes/4.9/headers/default.shtml -->
+<div id="main-search" class="main-search closed">
+  <form target="_top" action="https://search.asu.edu/search" method="get" name="gs" role="search">
+    <label for="asu_search_box">Search</label>
+    <input name="site" type="hidden" value="default_collection" />
+    <input name="sort" type="hidden" value="date:D:L:d1" />
+    <input name="output" type="hidden" value="xml_no_dtd" />
+    <input name="proxystylesheet" type="hidden" value="asu_frontend" />
+    <input name="ie" type="hidden" value="UTF-8" />
+    <input name="oe" type="hidden" value="UTF-8" />
+    <input name="client" type="hidden" value="asu_frontend" />
+    <input name="q" class="asu_search_box" id="asu_search_box" placeholder="Search" autocomplete="off" type="text" />
+    <input class="asu_search_button" type="submit" value="Search" />
+  </form>
+</div>
+<div id="asu-report-accessiblity" class="accessibility-hide">
+  <a href="https://www.asu.edu/accessibility/" class="sr-only">Report an accessibility problem</a>
+</div>
+<div id="asu_hdr" class="asu_hdr_white">
+  <div id="asu_mobile_hdr">
+    <div id="asu_logo">
+      <a id="asu-hdr-full-logo" href="https://www.asu.edu/" target="_top">
+        <img alt="Arizona State University" src="https://www.asu.edu/asuthemes/4.9/assets/arizona-state-university-logo.png"
+      /></a>
+      <a id="asu-hdr-mobile-logo" href="https://www.asu.edu/" target="_top">
+        <img alt="Arizona State University" src="https://www.asu.edu/asuthemes/4.9/assets/asu-logo.png"
+      /></a>
+    </div>
+    <div class="asuhide f-navicon" id="asu_mobile_button" onclick="javascript:ASUHeader.toggleASU();" role="button">
+      <a href="javascript:ASUHeader.toggleASU();">Menu</a>
+    </div>
+    <div class="f-search" id="search_new" onclick="javascript:ASUHeader.toggleASU('main-search');"></div>
+  </div>
+  <div class="closed" id="asu_mobile_menu">
+    <div id="asu_nav_wrapper">
+      <span class="hidden"> Sign In / Sign Out </span>
+      <ul id="asu_login_module">
+        <li class="end" id="asu_hdr_ssi">
+          <a href="//weblogin.asu.edu/cgi-bin/login" onclick="this.href=ASUHeader.alterLoginHref(this.href);"
+            onfocus="this.href=ASUHeader.alterLoginHref(this.href);"
+            onmouseover="this.href=ASUHeader.alterLoginHref(this.href);" target="_top">Sign In</a>
+        </li>
+      </ul>
+      <div id="asu_nav_menu" role="navigation" aria-labelledby="asuNavLabel">
+        <span class="sr-only" id="asuNavLabel">
+          Navigation for Entire University
+        </span>
+        <div id="asu_universal_nav">
+          <ul>
+            <li class="parent">
+              <a href="//www.asu.edu/" target="_top">ASU Home</a>
+              <ul>
+                <li>
+                  <a class="first" href="//www.asu.edu/?feature=newsevents" target="_top"
+                    title="News and Events">News/Events</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/?feature=academics" target="_top" title="Academics">Academics</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/?feature=research" target="_top" title="Research">Research</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/?feature=athletics" target="_top" title="Athletics">Athletics</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/?feature=alumni" target="_top" title="Alumni">Alumni</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/?feature=giving" target="_top" title="Giving">Giving</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/?feature=president" target="_top" title="President">President</a>
+                </li>
+                <li>
+                  <a href="//www.asu.edu/about" target="_top" title="About ASU">About ASU</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="//my.asu.edu/" target="_top">My ASU</a></li>
+            <li class="parent">
+              <a href="//www.asu.edu/colleges/" target="_top">Colleges and Schools</a>
+              <ul>
+                <li>
+                  <a class="first" href="//artsandsciences.asu.edu/" target="_top"
+                    title="Arts and Sciences website">Arts and Sciences</a>
+                </li>
+                <li>
+                  <a href="//wpcarey.asu.edu/" target="_top"
+                    title="W. P. Carey School of Business Web and Morrison School of Agribusiness website">Business</a>
+                </li>
+                <li>
+                  <a href="//herbergerinstitute.asu.edu" target="_top"
+                    title="Herberger Institute for Design and the Arts website">Design and the Arts</a>
+                </li>
+                <li>
+                  <a href="//education.asu.edu/" target="_top"
+                    title="Mary Lou Fulton Teachers College website">Education</a>
+                </li>
+                <li>
+                  <a href="//engineering.asu.edu/" target="_top" title="Engineering website">Engineering</a>
+                </li>
+                <li>
+                  <a href="//sfis.asu.edu/" target="_top" title="Future of Innovation in Society website">Future of
+                    Innovation in Society</a>
+                </li>
+                <li>
+                  <a href="//graduate.asu.edu" target="_top" title="Graduate College website">Graduate</a>
+                </li>
+                <li>
+                  <a href="//chs.asu.edu/" target="_top" title="Health Solutions website">Health Solutions</a>
+                </li>
+                <li>
+                  <a href="//honors.asu.edu/" target="_top" title="Barrett, The Honors College website">Honors</a>
+                </li>
+                <li>
+                  <a href="//cronkite.asu.edu" target="_top"
+                    title="Walter Cronkite School of Journalism and Mass Communication website">Journalism</a>
+                </li>
+                <li>
+                  <a href="//www.law.asu.edu/" target="_top" title="Sandra Day O' Connor College of Law website">Law</a>
+                </li>
+                <li>
+                  <a href="//nursingandhealth.asu.edu/" target="_top"
+                    title="College of Nursing and Health Innovation website">Nursing and Health Innovation</a>
+                </li>
+                <li>
+                  <a href="//copp.asu.edu" target="_top" title="College of Public Programs website">Public Service and
+                    Community Solutions</a>
+                </li>
+                <li>
+                  <a href="//schoolofsustainability.asu.edu" target="_top"
+                    title="School of Sustainability website">Sustainability</a>
+                </li>
+                <li>
+                  <a href="//uc.asu.edu/" target="_top" title="University College website">University College</a>
+                </li>
+                <li>
+                  <a target="_top" href="https://thunderbird.asu.edu/"
+                    title="Thunderbird School of Global Management website">Thunderbird School of Global Management</a>
+                </li>
+              </ul>
+            </li>
+            <li class="parent">
+              <a href="//www.asu.edu/map/" target="_top">Map and Locations</a>
+              <ul>
+                <li>
+                  <a class="border first" href="//www.asu.edu/map/" target="_top">Map</a>
+                </li>
+                <li>
+                  <a href="//campus.asu.edu/tempe/" target="_top" title="Tempe campus">Tempe</a>
+                </li>
+                <li>
+                  <a href="//campus.asu.edu/west/" target="_top" title="West campus">West</a>
+                </li>
+                <li>
+                  <a href="//campus.asu.edu/polytechnic/" target="_top" title="Polytechnic campus">Polytechnic</a>
+                </li>
+                <li>
+                  <a href="//campus.asu.edu/downtown/" target="_top" title="Downtown Phoenix campus">Downtown
+                    Phoenix</a>
+                </li>
+                <li>
+                  <a href="//asuonline.asu.edu/" target="_top" title="Online and Extended campus">Online and
+                    Extended</a>
+                </li>
+                <li>
+                  <a class="border" href="//havasu.asu.edu/" target="_top">Lake Havasu</a>
+                </li>
+                <li>
+                  <a href="https://corporate.asu.edu/" target="_top">Corporate Engagement and Strategic Partnerships</a>
+                </li>
+                <li>
+                  <a href="//asuresearchpark.com/" target="_top">Research Park</a>
+                </li>
+                <li>
+                  <a href="//washingtoncenter.asu.edu/" target="_top">Washington D.C.</a>
+                </li>
+                <li>
+                  <a href="//wpcarey.asu.edu/mba/china-program/english/" target="_top">China</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="//isearch.asu.edu/" target="_top" title="Directory, Index and other info">Directory</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="asu_search">
+      <div id="asu_search_module" class="asu_search_module" name="asu_search_module">
+        <form target="_top" action="https://search.asu.edu/search" method="get" name="gs" role="search">
+          <label for="masu_search_box">Search</label>
+          <input name="site" type="hidden" value="default_collection" />
+          <input name="sort" type="hidden" value="date:D:L:d1" />
+          <input name="output" type="hidden" value="xml_no_dtd" />
+          <input name="proxystylesheet" type="hidden" value="asu_frontend" />
+          <input name="ie" type="hidden" value="UTF-8" />
+          <input name="oe" type="hidden" value="UTF-8" />
+          <input name="client" type="hidden" value="asu_frontend" />
+          <input name="q" class="asu_search_box" id="masu_search_box" placeholder="Search" autocomplete="off"
+            type="text" />
+          <input class="asu_search_button" type="submit" value="Search" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  <!--//--><![CDATA[//><!--
+  ASUHeader.default_search_text = "Search ASU";
+  ASUHeader.default_search_alttext = "Search ASU";
+
+  if (typeof ASUHeader.signin_callback_url == "undefined") {
+    ASUHeader.signin_callback_url = '';
+  }
+  if (typeof ASUHeader.signin_url == "undefined") {
+    ASUHeader.signin_url = '';
+  }
+  if (typeof ASUHeader.signout_url == "undefined") {
+    ASUHeader.signout_url = 'https://webapp4.asu.edu/myasu/Signout';
+  }
+  if (typeof ASUHeader.user_signedin == "undefined" || (ASUHeader.user_signedin != false && typeof ASUHeader.user_displayname == "undefined")) {
+    ASUHeader.checkSSOCookie();
+  }
+  if (ASUHeader.user_signedin == true) {
+    ASUHeader.setSSOLink();
+  }
+  if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+    document.getElementById('asu_hdr').className = document.getElementById('asu_hdr').className + " chrome";
+  }
+  ASUHeader.generateSiteTitle();
+  //--><!]]>
+
+</script>
+<div style="clear:both;"></div>
+<!-- END /asuthemes/4.9/headers/default.shtml -->
+  </div>
+</div>
+  </div>
+					                      <div class="header__sitename element-invisible"><span>ASU Now: Access, Excellence, Impact</span>
+                      </div>
+									</div>
+                </div>
+            </div>
+        </header><!-- /.header -->
+
+
+        <!-- Nav Bar -->
+        <div id="ASUNavMenu" class="navmenu">
+            <div class="container">
+                <!--Commented to work with mega menu-->
+                <nav class="navbar-collapse collapse">
+                      <div class="region region-menu">
+    <div  class="block block-tb-megamenu">
+    <div  class="tb-megamenu tb-megamenu-main-menu">
+      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar tb-megamenu-button" type="button">
+      <i class="fa fa-reorder"></i>
+    </button>
+    <div class="nav-collapse  always-show">
+    <ul  class="tb-megamenu-nav nav level-0 items-9">
+  <li  data-id="984" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega" aria-level="1">
+  <a href="/"  title="Home">
+        Home          </a>
+  </li>
+
+<li  data-id="1828" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega dropdown" aria-level="1">
+  <a href="#"  class="dropdown-toggle" aria-haspopup="true">
+        Explore          <span class="caret"></span>
+          </a>
+  <div  data-class="" data-width="1000" style="width: 1000px;" class="tb-megamenu-submenu dropdown-menu mega-dropdown-menu nav-child">
+  <div class="mega-dropdown-inner">
+    <div  class="tb-megamenu-row row-fluid">
+  <div  data-class="column col-sm-4 col-md-3 design-principles" data-width="6" data-hidewcol="" id="tb-megamenu-column-1" class="tb-megamenu-column span6  mega-col-nav column col-sm-4 col-md-3 design-principles">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-8">
+  <li  data-id="4565" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/topics/now/discoveries"  class="discoveries" title="Discoveries">
+        Discoveries          </a>
+  </li>
+
+<li  data-id="4566" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/topics/now/solutions"  class="solutions" title="Solutions">
+        Solutions          </a>
+  </li>
+
+<li  data-id="4567" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/topics/now/creativity"  class="creativity" title="Creativity">
+        Creativity          </a>
+  </li>
+
+<li  data-id="4568" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/topics/now/entrepreneurship"  class="entrepreneurship" title="Entrepreneurship">
+        Entrepreneurship          </a>
+  </li>
+
+<li  data-id="4569" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/topics/now/global-engagement"  class="globalimpact" title="Global Engagement">
+        Global Engagement          </a>
+  </li>
+
+<li  data-id="4570" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/topics/now/arizona-impact"  class="arizona-impact" title="Arizona Impact">
+        Arizona Impact          </a>
+  </li>
+
+<li  data-id="4572" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/topics/now/sun-devil-life"  class="sun-devil-life" title="Sun Devil Life">
+        Sun Devil Life          </a>
+  </li>
+
+<li  data-id="9129" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/topics/news/saf/asu-news"  class="asu-news" title="ASU News">
+        ASU News          </a>
+  </li>
+</ul>
+  </div>
+</div>
+
+<div  data-class="" data-width="6" data-hidewcol="" id="tb-megamenu-column-2" class="tb-megamenu-column span6  mega-col-nav">
+  <div class="tb-megamenu-column-inner mega-inner clearfix">
+        <ul  class="tb-megamenu-subnav mega-nav level-1 items-9">
+  <li  data-id="28681" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/topics/news/interests/asu-insight-videos"  style="font-weight:bold" title="ASU Insight Videos">
+        ASU Insight Videos          </a>
+  </li>
+
+<li  data-id="28682" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/topics/news/college_unit/sun_devil_athletics"  style="font-weight:bold" title="Athletics">
+        Athletics          </a>
+  </li>
+
+<li  data-id="28683" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="https://asuevents.asu.edu/"  style="font-weight:bold" target="_blank" title="Events">
+        Events          </a>
+  </li>
+
+<li  data-id="28685" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="https://newsroom.asu.edu/"  style="font-weight:bold" title="Media Relations">
+        Media Relations          </a>
+  </li>
+
+<li  data-id="28684" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="/subscribe"  style="font-weight:bold" title="Manage Subscriptions">
+        Manage Subscriptions          </a>
+  </li>
+
+<li  data-id="28818" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="#"  style="font-weight:bold" title="Follow ASU Now">
+        Follow ASU Now          </a>
+  </li>
+
+<li  data-id="28819" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="https://facebook.com/arizonastateuniversity"  style="display: inline-block" target="_blank" title="&lt;i class=&quot;fa fa-facebook fa-lg&quot;&gt;&lt;/i&gt;">
+        <i class="fa fa-facebook fa-lg"></i>          </a>
+  </li>
+
+<li  data-id="28821" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="https://instagram.com/asunow"  style="display: inline-block" target="_blank" title="&lt;i class=&quot;fa fa-instagram fa-lg&quot;&gt;&lt;/i&gt;">
+        <i class="fa fa-instagram fa-lg"></i>          </a>
+  </li>
+
+<li  data-id="28820" data-level="2" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-2 mega" aria-level="2">
+  <a href="https://twitter.com/asunews"  style="display: inline-block" target="_blank" title="&lt;i class=&quot;fa fa-twitter fa-lg&quot;&gt;&lt;/i&gt;">
+        <i class="fa fa-twitter fa-lg"></i>          </a>
+  </li>
+</ul>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</li>
+
+<li  data-id="28998" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega" aria-level="1">
+  <a href="/got-a-minute" >
+        Got a Minute?          </a>
+  </li>
+
+<li  data-id="29667" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega" aria-level="1">
+  <a href="/topics/news/interests/q-a" >
+        Expert Q&A          </a>
+  </li>
+
+<li  data-id="32589" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega" aria-level="1">
+  <a href="/thought-huddle" >
+        Thought Huddle          </a>
+  </li>
+
+<li  data-id="33664" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega" aria-level="1">
+  <a href="/shelf-life" >
+        Sun Devil Shelf Life          </a>
+  </li>
+
+<li  data-id="34637" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega" aria-level="1">
+  <a href="/thrive-magazine" >
+        ASU Thrive          </a>
+  </li>
+
+<li  data-id="37018" data-level="1" data-type="menu_item" data-class="" data-xicon="" data-caption="" data-alignsub="" data-group="0" data-hidewcol="0" data-hidesub="0" class="tb-megamenu-item level-1 mega" aria-level="1">
+  <a href="/narrative-storytelling-initiative" >
+        Narrative Storytelling          </a>
+  </li>
+</ul>
+      </div>
+  </div>
+  </div>
+  </div>
+                </nav><!-- /#navbar -->
+            </div><!-- /.container -->
+        </div><!-- /.navmenu -->
+
+        <!-- Page Main -->
+        <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
+                <a id="main-content"></a>
+
+                <div id="top-content" class="column container">
+                    <!--
+                        <h1 id="page-title" class="title">
+                                                    </h1>
+                    -->
+                    
+                                            <div id="tabs">
+                                                    </div>
+                    
+                                    </div> <!-- /#top-content -->
+
+                <div id="content" class="column container">
+                    <div id="page-content">
+                          <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <script type="text/javascript">
+    var gigya_article_info_85398 = {
+        thumburl: "",
+        articleTitle: "Parallel contagions: Coronavirus and xenophobia",
+        articleSubTitle: "ASU professors say Asian Americans are subject to harassment, bullying and discrimination amid global pandemic",
+        articleUrl: "https://asunow.asu.edu/20200402-discoveries-parallel-contagions"
+    }
+</script>
+
+<article data-nid="85398" itemscope itemtype="https://schema.org/NewsArticle"  class=""> <!-- declares the entity type -->
+    <meta itemprop="about" content="ASU Art Museum internship prepares student for working in art world"/>
+    <!-- declares the subject of the article -->
+    <meta itemprop="publisher" content="ASU News"/>
+    <!-- declares the publisher of the article -->
+
+    <div class="article-hero discoveries ">
+        
+              <div class="image med" style="background-image: url('https://asunow.asu.edu/sites/default/files/styles/asu_news_article_hero/public/article_heros/istock-503120039_0.jpg?itok=Eqd8WoWr');">&nbsp;</div>
+        <img alt="image title" class="img-sr-only " src="https://asunow.asu.edu/sites/default/files/styles/asu_news_article_hero/public/article_heros/istock-503120039_0.jpg?itok=Eqd8WoWr" itemprop="image">
+    
+        <div class="item-content pad-top-md">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="share-links discoveries">
+                            <a href="#" onclick="tweetWindow('https://asunow.asu.edu/20200402-discoveries-parallel-contagions', 'Parallel contagions: Coronavirus and xenophobia')" title="Twitter" aria-label="Twitter" data-ua-provider="twitter" data-ua-image=""
+                               data-ua-description="ASU professors say Asian Americans are subject to harassment, bullying and discrimination amid global pandemic" data-ua-linkback="https://asunow.asu.edu/20200402-discoveries-parallel-contagions"
+                               data-ua-title="Parallel contagions: Coronavirus and xenophobia" data-ua-context="Now Feature Article Twitter Share"><i class="fa fa-twitter"></i></a>
+                            <a href="#" onclick="faceWindow('https://asunow.asu.edu/20200402-discoveries-parallel-contagions')" title="Facebook" aria-label="Facebook"
+                                data-ua-provider="facebook" data-ua-image=""
+                               data-ua-description="ASU professors say Asian Americans are subject to harassment, bullying and discrimination amid global pandemic" data-ua-linkback="https://asunow.asu.edu/20200402-discoveries-parallel-contagions"
+                               data-ua-title="Parallel contagions: Coronavirus and xenophobia" data-ua-context="Now Feature Article FB Share"><i class="fa fa-facebook"></i></a>
+                            <a href="#" onclick="linkedWindow('https://asunow.asu.edu/20200402-discoveries-parallel-contagions')" title="LinkedIn" aria-label="LinkedIn" data-ua-provider="linkedin" data-ua-image=""
+                               data-ua-description="ASU professors say Asian Americans are subject to harassment, bullying and discrimination amid global pandemic" data-ua-linkback="https://asunow.asu.edu/20200402-discoveries-parallel-contagions"
+                               data-ua-title="Parallel contagions: Coronavirus and xenophobia" data-ua-context="Now Feature Article LinkedIn Share"><i class="fa fa-linkedin"></i></a>
+                            <a href="mailto:?subject=Parallel contagions: Coronavirus and xenophobia&amp;body=Check out this story on ASU Now: https://asunow.asu.edu/20200402-discoveries-parallel-contagions" title="Email" aria-label="Email"><i class="fa fa-envelope"></i></a>
+                        </div>
+
+                        <div class="principle-tag"><a class="tag discoveries" href="/topics/now/discoveries">Discoveries</a></div>
+
+                        <h1 class="title" itemprop="headline">Parallel contagions: Coronavirus and xenophobia</h1>
+
+                        <div class="tags">
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container article-body first-section discoveries">
+
+        <section itemprop="articleBody">
+            <div class="row">
+                 <!-- Main Content -->
+
+                <div class="col-md-4 col-md-push-8 pad-bot-sm">
+                                    </div>
+
+                <div class="col-md-8 col-md-pull-4 pad-left-md">
+                    <span class="asu-publish-date">April 10, 2020</span>
+                                            <h2>ASU professors say Asian Americans are subject to harassment, bullying and discrimination amid global pandemic</h2>
+                    
+                    <p>Crisis has a way of bringing out the best and worst in people.</p><p>While plenty of stories of sacrifice and goodwill surrounding COVID-19 have surfaced since the global pandemic began, two Arizona State University professors are shedding light on the darker side of this troubling time.</p><p><a href="https://sst.asu.edu/content/aggie-yellow-horse">Aggie J. Yellow Horse</a> and <a href="https://sst.asu.edu/content/karen-leong-1">Karen J. Leong</a>, both professors in ASU’s <a href="https://sst.asu.edu/">School of Social Transformation</a>, claim that COVID-19 has caused anti-immigration and anti-Asian backlash throughout the country, and that Asian Americans are being scapegoated by the public and national leaders — sometimes resulting in physical attacks, bullying and wide-ranging acts of discrimination.  </p><p>ASU Now spoke to Yellow Horse and Leong about their findings and their article, “<a href="http://www.kzoo.edu/praxis/racism-and-covid/?fbclid=IwAR1T_MjfFSVXKF_WO6-BkXFs4bk_FQkNP0JebzMx_T0optXt1Hsz2-ZcCfk&amp;utm_campaign=ASU_SST+Weekly+Newsletter+2020+-+Mar.+27&amp;utm_medium=email&amp;utm_source=All%20Subscribers&amp;utm_term=ASU&amp;utm_content=http%3a%2f%2fwww.kzoo.edu%2fpraxis%2fracism-and-covid%2f%3ffbclid%3dIwAR1T_MjfFSVXKF_WO6-BkXFs4bk_FQkNP0JebzMx_T0optXt1Hsz2-ZcCfk">Xenophobia, Anti-Asian Racism and COVID-19</a>,” which was recently published by the Praxis Center, an online blog and website dedicated to teaching and social justice activism.</p><div class="caption caption-left panopoly-image-quarter"><div class="caption-width-container" style="width: auto;"><div class="caption-inner"><a href="/files/aggieheadshotasujpg"><img alt="Woman in brown hair" title="Aggie Yellow Horse" class="media-element file-teaser panopoly-image-quarter" data-delta="1" typeof="foaf:Image" src="https://asunow.asu.edu/sites/default/files/styles/panopoly_image_quarter/public/aggie_headshot_asu.jpg?itok=7b47AiDe"></a><p class="caption-text">Aggie J. Yellow Horse </p></div></div></div><p><strong>Question: During a crisis, it seems as if enlightenment and "wokeness" goes out the window. What do you think is happening in regard to xenophobia, violence, harassment and acts of discrimination against Chinese Americans and other Asian Americans right now?</strong></p><p><strong>Leong:</strong> In general I believe that no contemporary society nor individual is fully enlightened when it comes to racism, especially when we are referring to structural racism — by which I mean how our society has been built upon disadvantaging certain groups based on race and/or nationality, advantaging other groups, and then ignoring the existence of some groups altogether — like American Indians who are their own nations. So we shouldn’t be surprised that when faced with crises we do familiar things, like excluding and scapegoating.</p><p>As a nation, the United States defined Americans as early as the Naturalization Act of 1790 through the process of exclusion. Since then, our immigration and naturalization laws have identified people who don’t belong based on race, gender, class, able-bodiedness, mental health and sexuality. All of these criteria have been used to exclude people from full inclusion in our national community. Benedict Anderson described how societies define who does and does not belong, and who or who does not deserve protections, as a process of “imagining community." Sociologists call this fear of foreign threats to social well-being a “moral panic,” while historian John Higham described political and violent reactions against immigrants and perceived foreigners in history “nativism,” or an attempt to protect the interests of presumed “native peoples” from external threats.</p><p>When political leaders insisted on and persisted in naming COVID-19 as “a Chinese virus,” they attached that virus to Chinese (people), Chinese Americans and Asian Americans, who then may be suspected as carriers of this virus. </p><p><strong>Q: Your paper contends that by continually calling this the "Wuhan virus" or "Chinese virus" incites the problem. Why do you feel that way and how do you suggest we address this?</strong></p><p><strong>Yellow Horse:</strong> The familiar justification for using the terms like "Wuhan virus" or "Chinese virus" is that it is common to add geographic markers to a public health outbreak, such as “Spanish flu” and “Ebola” — Ebola is the name of river in Democratic Republic of the Congo. Throughout U.S. history, many Americans have shown that it is hard to distinguish geographic markers from those of nation or race. Asian Americans’ heritage has been confused with national affiliation and loyalty. For example, Japanese Americans were suspected to be loyal to Japan during World War II based on their Japanese heritage. Many Asian Americans are perceived to be linked with COVID-19 based on their appearance and have been the target of racial discrimination, harassment and hate crimes since the pandemic began. Using these terms is scientifically incorrect — COVID-19 does not originate from certain racial and national origins — and can cause serious stigma. Interestingly, the H1N1 pandemic not only doesn’t identify North America as its origin, pigs were blamed for it: “the swine flu." So, the easiest way to address the problems of scapegoating is to simply stop using the incorrect term, and refer to the disease as COVID-19 as recommended by the World Health Organization.</p><p>There are other reasons we need to call the virus by its name. Thinking of COVID-19 as a “foreign virus” or “Chinese virus” may have contributed to lack of appropriate timely preparation and response in the U.S. since January because the pandemic was viewed as the “Asian problem” or a foreign problem. </p><p><strong>Q: How do you define xenophobia, and what should it look like to all of us?</strong></p><p><strong>Yellow Horse:</strong> Xenophobia is the fear of the other. It contributes to the dislike or unfavorable preconceived ideas or prejudice against people from other countries, and it can appear in multiple ways. It shows up in public policy and political statements like travel bans, school policies and political statements; in media representations like fear of masks; in reactions to individuals like harassment in public places including avoidance, child bullying and racial slurs; and in targeting certain communities, such as avoiding Chinese/Asian businesses.</p><p><strong>Q: Your paper points out that there is a history of xenophobia in this country against Asians, and that the U.S. has a habit of using “others” as scapegoats by associating diseases with foreigners. Please give some examples.</strong></p><p><strong>Leong: </strong>We’ve seen this throughout U.S. and world history. There are quite few examples. Jewish people were blamed for the bubonic plague and Great Depression; Irish immigrants were accused of undermining American individualism, resulting in anti-Irish violence and nativism; Mexican and Latinx immigrants have been blamed for increased crime rates during times of recession.</p><p>After Chinese immigrant workers were no longer in demand for their labor in the late 19th century, and the United States entered into a recession, the vast unemployment among white Americans and European immigrants resulted in anti-Chinese violence throughout the western United States. Chinese women were the first to be denied entry based on nationality with the Page Law of 1875, despite the fact that most were trying to unite with their family. The popular perception was that Chinese women immigrants were prostitutes and thus were spreading sexually transmitted diseases to young white American males. Several West Coast publications cited Chinatowns as places that would infect U.S. society with opium addiction and Chinese laundries were accused of unsanitary practices. These rumors and the lack of Chinese families were cited as evidence that Chinese were too immoral to be true Americans, which resulted in the passage of the Chinese Exclusion Act in 1882.</p><p>Historian Natalia Molina has shown how Mexican, Chinese and Japanese immigrants became targets of public health authorities in Los Angeles in the 1920s, and how their working class and race together resulted in less access to running water and waste disposal, which only further stigmatized these communities as unhygienic. These assumptions informed public health practice. The Great Depression resulted in full scapegoating by Los Angeles authorities of Mexican Americans as overtaxing public resources and threatening public health.</p><p><strong>Q: The article states that the lack of federal response in condemning xenophobia by public officials has you worried. What would you like to see happen?</strong></p><p><strong>Leong:</strong> As with any institution, leadership from the top sets the example for others to follow. Community efforts on the ground and statements by some journalists, media figures and scholars are significant and make a difference but are not being heard by some Americans who continue to associate COVID-19 with China and Asian Americans. At this point it would be valuable for the White House and other officials to continually and consistently remind Americans that Chinese American, Asian American, and Chinese people are not spreading COVID-19 any more than any other ethnic, racial or national group. Governors need to reiterate this message statewide, as do mayors. We should remember in fact there are courageous Chinese doctors and journalists who were punished for trying to get the truth out about the virus. </p><div class="caption caption-right panopoly-image-quarter"><div class="caption-width-container" style="width: auto;"><div class="caption-inner"><a href="/files/karenleongjpg"><img alt="Woman in glasses smiling" title="" class="media-element file-teaser panopoly-image-quarter" data-delta="2" typeof="foaf:Image" src="https://asunow.asu.edu/sites/default/files/styles/panopoly_image_quarter/public/karen_leong.jpg?itok=QJy6LU6S"></a><p class="caption-text">Karen J. Leong</p></div></div></div><p>History has shown us that speaking out at all levels, but especially from positions of leadership and authority, and following this up with protection and actions affirming inclusion and belonging can make a big difference. That is why when our colleague in the School of Social Transformation, Professor H.L.T. Quan, invited us to submit an article to the Praxis Center<i> </i>blog that she curates for the ARCUS center at Kalamazoo College, we were happy to contribute. She is extending that platform to broaden our understanding about the different ways the pandemic is affecting diverse people and communities.</p><p><strong>Q: How is this issue relevant for our ASU community and what can we do to work toward social cohesion? </strong></p><p><strong>Yellow Horse:</strong> I taught a course on Asian American Immigrant Health (APA 360) during Session A as the current pandemic was progressing since January. In early February I added some reading materials as “food for thought” relating the current coronavirus event to how Asian Americans have been historically racialized through the <a href="https://docs.google.com/document/d/1-DLnAY5r-f4DRLZgndR_Bu47nqHVtAOKem5QRmbz7bg/edit">Yellow Peril stereotypes</a>. At the time, the current event was not declared as a pandemic by the World Health Organization, and racist and xenophobic incidents were just beginning to rise nationwide. In our virtual classroom discussion the following week, many of my students who are Asians and Asian Americans shared their personal experiences of being targeted for harassment and discrimination where “non-Asian individuals would point and laugh at me as I am making my way to class” and their parents warning them not to wear the mask in public so they would not become targeted. My other students also expressed witnessing others making “jokes about people of Asian descent having a virus”. One student shared, “(a)lthough I am not an Asian American, I've found these reports rather aggravating because they are very distasteful and hurtful.” I was impressed and grateful to see that students really took the initiative to engage in respectful and supportive discussion on how they can support each other, and not be the bystanders when witnessing harassment and discrimination against their fellow students. </p><p>I think my students were exemplary and inspiring as they acknowledge the need for social cohesion during this challenging time and start the conversations about what actions they can take towards building social cohesion. We are actually seeing how individuals and communities are working together at this time: During the pandemic, individuals and communities have come together to organize to ensure that elderly persons have safe access to basic needs and schoolchildren have access to healthy food during school closures. I strongly urge that it is important to remember that Asian Americans and other groups facing greater stigmatization due to xenophobia and racism may feel vulnerable and need support. </p><p><em><span>People around bustling Dixon St in Haymarket in Sydney, Australia at night.</span> Photo by iStock/Getty Images</em>  </p></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 pad-left-md">
+                <div class="tag-list pad-top-xl space-bot-lg">
+                                        <a class="tag discoveries" href="/topics/now/discoveries">Discoveries</a>
+                                                                <a class="tag general" href="/topics/news/interests/q-a">Expert Q-and-A</a>
+                                            <a class="tag general" href="/topics/news/interests/international-engagement">International</a>
+                                            <a class="tag general" href="/topics/news/interests/diversity">Diversity</a>
+                                            <a class="tag general" href="/topics/news/interests/humanities">Humanities</a>
+                                            <a class="tag general" href="/topics/news/interests/social-science">Social science</a>
+                                            <a class="tag general" href="/topics/news/college-unit/school-social-transformation">School of Social Transformation</a>
+                                            <a class="tag general" href="/topics/news/college-unit/college-liberal-arts-and-sciences">The College of Liberal Arts and Sciences</a>
+                                            <a class="tag general" href="/topics/news/constituent-type/community">Community</a>
+                                            <a class="tag general" href="/topics/news/constituent-type/asu-faculty">Faculty</a>
+                                            <a class="tag general" href="/topics/news/constituent-type/asu-staff">Staff</a>
+                                            <a class="tag general" href="/topics/news/constituent-type/international">International student</a>
+                                            <a class="tag general" href="/topics/news/constituent-type/policy-makers">Policy makers</a>
+                                    </div>
+                                <div class="space-bot-lg">
+                                        <div class="clearfix">
+                        
+                        <div class="author-bio">
+                            <h5><span itemprop="author">Marshall Terrill </span></h5>
+                                                            <p class="small departments">Reporter , ASU Now</p>
+                            
+                            <p class="small">
+                                                                    <span class="phone-number">480-727-5176</span>
+                                                                                                    <a class="email" href="mailto:marshall.terrill@asu.edu ">marshall.terrill@asu.edu </a>
+                                                            </p>
+                        </div>
+                    </div>
+                                    </div>
+                            </div>
+            <!--<div class="col-md-3">
+                <div id="related-events" class="content-border-left">
+                    <h3>Related Event</h3>
+                    <div id="related-events-items">
+                    </div>
+                </div>
+                <script type="text/template" id="event-list-tpl">
+                    {{ var count = 0; }}
+                    {{ _.each( articles.nodes, function(article){ }}
+                    {{ if ( count++ >= thumbsObj.ItemsPerPage ){ return; } }}
+                    <div class="now-event-list-item sidebar">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="date-image" style="background-image: url('{{-article.node.event_image}}');">
+                                    <img class="img-sr-only" alt="{{-article.node.event_image_alt_text}}" src="{{-article.node.event_image}}">
+
+                                    <div class="event-date ">
+                                        <time datetime="2014-10-30">
+                                            <span class="weekday">{{-article.node.startDay}}</span>
+                                            <span class="month">{{-article.node.startMonth}}</span>
+                                            <span class="date">{{-article.node.startDate}}</span>
+                                            <span class="time">{{-article.node.startTime}}&nbsp;-&nbsp;{{-article.node.endTime}}</span>
+                                        </time>
+                                    </div>
+                                    <a href="{{-thumbsObj.EventsUrl}}{{-article.node.url}}">&nbsp;</a>
+                                </div>
+                                <div class="title"><a href="{{-thumbsObj.EventsUrl}}{{-article.node.url}}">{{-article.node.title}}</a></div>
+                                <div class="small">{{-article.node.location}}</div>
+
+                                {{ if ( typeof(article.node.buy_tickets_link) != 'undefined' && article.node.buy_tickets_link != "" ){ }}
+                                <div class="cta hidden-xs"><a href="{{-article.node.buy_tickets_link}}"><i class="fa fa-ticket"></i>&nbsp;{{-article.node.buy_tickets_text}}</a>
+                                </div>
+                                {{ } }}
+
+                            </div>
+                        </div>
+                    </div>
+                    {{ }); }}
+                </script>
+                <script>
+                    if ( typeof(EventListInit) == 'undefined'){
+                        window["EventListInit"] = [{
+                            id: "related-events",
+                            saf: "",
+                            items: 3,
+                            template: "#event-list-tpl",
+                            resultsSelector: "#related-events-items"
+
+                        }];
+                    }else{
+                        EventListInit.push({
+                            id: "related-events",
+                            saf: "",
+                            items: 3,
+                            template: "#event-list-tpl",
+                            resultsSelector: "#related-events-items"
+                        });
+                    }
+                </script>
+            </div>-->
+        </div>
+        <!--<div class="row">
+
+        </div>-->
+        </section>
+    </div>
+    <!-- /.container -->
+</article>  </div>
+</div>
+<div id="block-views-article-trending-block-1" class="block block-views">
+
+    
+  <div class="content">
+    
+<div class="trending-now-carousel-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Trending on ASU NOW</h2>
+            </div>
+            <div class="col-xs-12">
+                <div class="trending-now-carousel">
+                                            <div class="slide">
+                            <a href="/20200402-discoveries-parallel-contagions"><img src="https://asunow.asu.edu/sites/default/files/styles/asu_news_trending_thumb/public/article_heros/istock-503120039_0.jpg?itok=-SKd8_4W" alt="Sydney Chinatown"></a>
+
+                            <div class="carousel-bottom-content">
+                                <a class="tag invert discoveries" href="/topics/now/discoveries">Discoveries</a>
+                                <a class="article-title" href="/20200402-discoveries-parallel-contagions"><span>Parallel contagions: Coronavirus and xenophobia</span></a>
+                                                                    <a class="tag general" href="/topics/news/interests/q-a">Expert Q-and-A</a>
+                                                                    <a class="tag general" href="/topics/news/interests/international-engagement">International</a>
+                                                                    <a class="tag general" href="/topics/news/interests/diversity">Diversity</a>
+                                                                    <a class="tag general" href="/topics/news/interests/humanities">Humanities</a>
+                                                            </div>
+                        </div>
+                                            <div class="slide">
+                            <a href="/20200408-discoveries-why-older-adults-really-should-drink-their-health"><img src="https://asunow.asu.edu/sites/default/files/styles/asu_news_trending_thumb/public/article_heros/glass-2619011_1920.jpg?itok=UphNG2ek" alt="water pouring into glass"></a>
+
+                            <div class="carousel-bottom-content">
+                                <a class="tag invert discoveries" href="/topics/now/discoveries">Discoveries</a>
+                                <a class="article-title" href="/20200408-discoveries-why-older-adults-really-should-drink-their-health"><span>Why older adults really should drink to their health</span></a>
+                                                                    <a class="tag general" href="/topics/news/locations/downtown-phoenix-campus">Downtown Phoenix campus</a>
+                                                                    <a class="tag general" href="/topics/news/interests/healthy-living">Healthy Living</a>
+                                                                    <a class="tag general" href="/topics/news/interests/research">Research</a>
+                                                                    <a class="tag general" href="/topics/news/college-unit/college-health-solutions">College of Health Solutions</a>
+                                                            </div>
+                        </div>
+                                            <div class="slide">
+                            <a href="/20200410-asu-law-embraces-new-realities-opportunities-remote-teaching-environment"><img src="https://asunow.asu.edu/sites/default/files/styles/asu_news_trending_thumb/public/kaipo_class.png?itok=JUI7lCRM" alt="photo of ASU Law seminar class"></a>
+
+                            <div class="carousel-bottom-content">
+                                <a class="tag invert sun_devil_life" href="/topics/now/sun_devil_life">Sun Devil Life</a>
+                                <a class="article-title" href="/20200410-asu-law-embraces-new-realities-opportunities-remote-teaching-environment"><span>ASU Law embraces new realities, opportunities in remote teaching environment</span></a>
+                                                                    <a class="tag general" href="/topics/news/locations/online">Online</a>
+                                                                    <a class="tag general" href="/topics/news/college-unit/sandra-day-oconnor-college-law">Sandra Day O'Connor College of Law</a>
+                                                                    <a class="tag general" href="/topics/news/interests/law">Law</a>
+                                                                    <a class="tag general" href="/topics/news/interests/academics">Academics</a>
+                                                            </div>
+                        </div>
+                                            <div class="slide">
+                            <a href="/20200410-asu-department-psychology-goes-online-teaching-and-therapy"><img src="https://asunow.asu.edu/sites/default/files/styles/asu_news_trending_thumb/public/amith-nair-ihj7xouuyxs-unsplash.jpg?itok=P695PlTv" alt="Department of Psychology goes digital"></a>
+
+                            <div class="carousel-bottom-content">
+                                <a class="tag invert sun_devil_life" href="/topics/now/sun_devil_life">Sun Devil Life</a>
+                                <a class="article-title" href="/20200410-asu-department-psychology-goes-online-teaching-and-therapy"><span>ASU Department of Psychology goes online for teaching, and therapy</span></a>
+                                                                    <a class="tag general" href="/topics/news/locations/tempe-campus">Tempe campus</a>
+                                                                    <a class="tag general" href="/topics/news/locations/online">Online</a>
+                                                                    <a class="tag general" href="/topics/news/college-unit/college-liberal-arts-and-sciences">The College of Liberal Arts and Sciences</a>
+                                                                    <a class="tag general" href="/topics/news/college-unit/department-of-psychology">Department of Psychology</a>
+                                                            </div>
+                        </div>
+                                            <div class="slide">
+                            <a href="/20200410-creativity-virtual-visits-take-students-field-digitally"><img src="https://asunow.asu.edu/sites/default/files/styles/asu_news_trending_thumb/public/20200408_virtual_field_trips_006.jpg?itok=GyIMaOAl" alt="virtual field trip screenshot"></a>
+
+                            <div class="carousel-bottom-content">
+                                <a class="tag invert creativity" href="/topics/now/creativity">Creativity</a>
+                                <a class="article-title" href="/20200410-creativity-virtual-visits-take-students-field-digitally"><span>Virtual visits take students into the field digitally</span></a>
+                                                                    <a class="tag general" href="/topics/news/locations/tempe-campus">Tempe campus</a>
+                                                                    <a class="tag general" href="/topics/news/college-unit/school-earth-and-space-exploration">School of Earth and Space Exploration</a>
+                                                                    <a class="tag general" href="/topics/news/college-unit/college-liberal-arts-and-sciences">The College of Liberal Arts and Sciences</a>
+                                                                    <a class="tag general" href="/topics/news/interests/family-activities">Family activities</a>
+                                                            </div>
+                        </div>
+                                            <div class="slide">
+                            <a href="/20200407-arizona-impact-pardis-mahdavi-named-social-sciences-dean-college-liberal-arts-and-sciences"><img src="https://asunow.asu.edu/sites/default/files/styles/asu_news_trending_thumb/public/20190716-pardis-mahdavi-1-cropped_0.jpg?itok=EBU5TUvM" alt="Brunette woman in yellow top"></a>
+
+                            <div class="carousel-bottom-content">
+                                <a class="tag invert arizona_impact" href="/topics/now/arizona_impact">Arizona Impact</a>
+                                <a class="article-title" href="/20200407-arizona-impact-pardis-mahdavi-named-social-sciences-dean-college-liberal-arts-and-sciences"><span>Pardis Mahdavi named social sciences dean for The College</span></a>
+                                                                    <a class="tag general" href="/topics/news/locations/tempe-campus">Tempe campus</a>
+                                                                    <a class="tag general" href="/topics/news/college-unit/school-social-transformation">School of Social Transformation</a>
+                                                                    <a class="tag general" href="/topics/news/college-unit/college-liberal-arts-and-sciences">The College of Liberal Arts and Sciences</a>
+                                                                    <a class="tag general" href="/topics/news/interests/social-science">Social science</a>
+                                                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  </div>
+</div>
+  </div>
+                    </div><!-- /#page-content -->
+                </div><!-- /#content -->
+
+            </div></div> <!-- /#main, /#main-wrapper -->
+
+        <!-- Page Footer -->
+        <footer id="page-footer">
+            <div class="container">
+                <div class="row row-full">
+                      <div class="region region-footer">
+    <div id="block-mega-footer-mega-footer" class="block block-mega-footer">
+
+    
+  <div class="content">
+    <div class='megafoot'><div class='row'><div class='col-md-4 col-sm-12 space-bot-md megafoot-border'><div class='mega-dept-title'>ASU Now</div><address>Discover the New American University<br />Tempe, AZ<br />Phone: <a class='phone-link' href='tel:480-965-3502'>480-965-3502</a><br /></address><p><a class='contact-link' href='/contact'>Contact us</a></p><ul class='dgtl-mkting-101'><li><a  href="https://facebook.com/arizonastateuniversity" title="Facebook"><span class="fa fa-facebook-square"><span class="sr-only">Facebook</span></span></a></li><li><a  href="https://twitter.com/asunews" title="Twitter"><span class="fa fa-twitter-square"><span class="sr-only">Twitter</span></span></a></li><li><a  href="https://www.youtube.com/user/ASU" title="YouTube"><span class="fa fa-youtube-square"><span class="sr-only">YouTube</span></span></a></li><li><a  href="https://instagram.com/asunow" title="Instagram"><span class="fa fa-instagram"><span class="sr-only">Instagram</span></span></a></li></ul><a class='btn btn-primary' href='/subscribe'>Manage Subscriptions</a></div><div class='col-md-2 col-sm-3 space-bot-md'>
+          <h2 data-toggle='collapse' data-target='#mega_accord0' class='big-foot-head'>ASU Now<span class='caret'></span></h2>
+          <ul class='big-foot-nav  collapse in' id='mega_accord0' style=''><li><a href='/topics/news/interests/asu-insight-videos'>ASU Insight Videos</a></li><li><a href='https://newsroom.asu.edu/'>Media Relations</a></li><li><a href='/topics/now/discoveries'>Discoveries</a></li><li><a href='/topics/now/solutions'>Solutions</a></li><li><a href='/topics/now/creativity'>Creativity</a></li><li><a href='/topics/now/entrepreneurship'>Entrepreneurship</a></li><li><a href='/topics/now/global-engagement'>Global Engagement</a></li><li><a href='/topics/now/arizona-impact'>Arizona Impact</a></li><li><a href='/topics/now/sun-devil-life'>Sun Devil Life</a></li></ul></div><div class='col-md-2 col-sm-3 space-bot-md'>
+          <h2 data-toggle='collapse' data-target='#mega_accord1' class='big-foot-head'>University<span class='caret'></span></h2>
+          <ul class='big-foot-nav  collapse in' id='mega_accord1' style=''><li><a href='https://students.asu.edu/apply'>Admissions</a></li><li><a href='https://students.asu.edu/financialaid'>Financial Aid</a></li><li><a href='https://president.asu.edu'>President's Office</a></li><li><a href='http://about.asu.edu'>About ASU</a></li><li><a href='https://www.asu.edu'>ASU Home</a></li><li><a href='https://cfo.asu.edu/emergency-alert'>Emergency</a></li></ul></div><div class='col-md-2 col-sm-3 space-bot-md'>
+          <h2 data-toggle='collapse' data-target='#mega_accord2' class='big-foot-head'>Events<span class='caret'></span></h2>
+          <ul class='big-foot-nav  collapse in' id='mega_accord2' style=''><li><a href='https://asuevents.asu.edu'>ASU Events</a></li><li><a href='https://asunow.asu.edu/topics/news/college_unit/sun_devil_athletics'>Athletics</a></li></ul></div></div></div>  </div>
+</div>
+<div id="block-asu-brand-asu-brand-footer" class="block block-asu-brand">
+
+    
+  <div class="content">
+    <div id="innovation-footer">
+  <div id="innovation-bar">
+    <div class="innovation-top">
+      <div class="innovation-status">
+         <a href="https://www.asu.edu/rankings"><span>ASU is No.1 in the U.S. for innovation</span></a>
+      </div>
+      <div class="innovation-hidden">
+        <a href="https://www.asu.edu/rankings"><img src="//www.asu.edu/asuthemes/4.9/assets/ASU-number-1-innovation-best-colleges.png" alt="Best Colleges U.S. News Most Innovative 2020"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-menu">
+    <ul class="default">
+      <li class="innovation-mobile-only"><a href="https://my.asu.edu/">My ASU</a></li>
+      <li><a href="https://www.asu.edu/copyright/">Copyright and Trademark</a></li>
+      <li><a href="https://www.asu.edu/accessibility/">Accessibility</a></li>
+      <li><a href="https://www.asu.edu/privacy/">Privacy</a></li>
+      <li><a href="https://www.asu.edu/tou/">Terms of Use</a></li>
+      <li><a href="https://www.asu.edu/asujobs">Jobs</a></li>
+      <li><a href="https://www.asu.edu/emergency/">Emergency</a></li>
+      <li class="no-border"><a href="https://www.asu.edu/contactasu/">Contact ASU</a></li>
+    </ul>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+                </div>
+            </div>
+        </footer><!-- /#footer -->
+
+        
+    </div>
+</div>
+<!-- /#page, /#page-wrapper -->
+
+<!--  ASU GOOGLE ANALYTICS CUSTOM DIMENSIONS  -->
+  <script type="text/javascript">
+  var _sf_async_config=Drupal.settings.chartbeat;
+  (function(){
+    function loadChartbeat() {
+      window._sf_endpt=(new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src',
+         (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+         "static.chartbeat.com/js/chartbeat.js");
+      document.body.appendChild(e);
+    }
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+       loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+</script><script type="text/javascript" src="https://asunow.asu.edu/sites/default/files/js/js_29qYXJz8NLGg8Aomg-RZPjJcj9yEdEst1BMZ9gZbs-4.js"></script>
+<script type="text/javascript" src="https://asunow.asu.edu/sites/default/files/js/js__cTTgdWQR660iowH6NC3bQY8bs4h5YbtQN5to26hIBQ.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"32195de049","applicationID":"18645603","transactionName":"ZgcENkRSDBYDVUBaWF9NJwFCWg0LTUZVVFJuDwcMV1QHFz1YW1dSbhQPB0FsEgQFUw==","queueTime":0,"applicationTime":315,"atts":"SkAHQAxIHxg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

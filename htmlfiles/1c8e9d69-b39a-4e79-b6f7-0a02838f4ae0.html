@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"1402444c6f",applicationID:"247275072"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-16244834-19"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("config", "UA-16244834-19", {"groups":"default","anonymize_ip":true,"allow_ad_personalization_signals":false});document.addEventListener("click", function (event) {
+  var el = event.target || event.srcElement,
+      track = true,
+      href = (typeof (el.getAttribute('href')) != 'undefined') ? el.getAttribute('href') : "",
+      fileTypes = /\.(avi|csv|dat|dmg|doc.*|exe|flv|gif|jpg|mov|mp3|mp4|msi|pdf|png|ppt.*|rar|swf|txt|wav|wma|wmv|xls.*|zip|dwg|dotx|pub|)$/i;
+
+  if (href != null && !href.match(/^javascript:/i)) {
+    var isThisDomain = href.match(document.domain.split('.').reverse()[1] + '.' + document.domain.split('.').reverse()[0]),
+        elEv = [],
+        extension = '';
+
+    elEv.value = 0;
+    elEv.non_i = false;
+    if (href.match(/^mailto:/i)) {
+      elEv.category = "email";
+      elEv.action = "click";
+      elEv.label = href.replace(/^mailto:/i, '');
+      elEv.loc = href;
+    }
+    else if (href.match(fileTypes && !isThisDomain)) {
+      extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+      elEv.category = "external-download";
+      elEv.action = "click-" + extension[0];
+      elEv.label = href.replace(/ /g, "-");
+      elEv.loc = href;
+    }
+    else if (href.match(fileTypes)) {
+      extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+      elEv.category = "download";
+      elEv.action = "click-" + extension[0];
+      elEv.label = href.replace(/ /g, "-");
+      elEv.loc = href;
+    }
+    else if (href.match(/^https?:/i) && !isThisDomain) {
+      elEv.category = "external";
+      elEv.action = "click";
+      elEv.label = href.replace(/^https?:\/\//i, '');
+      elEv.non_i = true;
+      elEv.loc = href;
+    }
+    else if (href.match(/^tel:/i)) {
+      elEv.category = "telephone";
+      elEv.action = "click";
+      elEv.label = href.replace(/^tel:/i, '');
+      elEv.loc = href;
+    }
+    else {
+      track = false;
+    }
+
+    if (track) {
+      ga('send', 'event', elEv.category.toLowerCase(), elEv.action.toLowerCase(), elEv.label.toLowerCase(), elEv.value);
+      if (el.getAttribute('target') === undefined || el.getAttribute('target').toLowerCase() !== '_blank') {
+        setTimeout(function () {
+          location.href = elEv.loc;
+        }, 400);
+        return false;
+      }
+
+    }
+  }
+});</script>
+<meta name="geo.position" content="47.605131; -122.1655305" />
+<meta name="robots" content="index, follow" />
+<meta property="og:site_name" content="City of Bellevue" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://bellevuewa.gov/city-news/police-chief-makes-plea-chinese-community" />
+<meta name="twitter:title" content="Police chief makes plea to Chinese community" />
+<meta property="og:type" content="article" />
+<meta name="description" content="There are reports in the media, on social media and spreading throughout the community that people of Chinese heritage are increasingly becoming targets of hate crimes and being blamed for COVID-19." />
+<meta name="twitter:description" content="There are reports in the media, on social media and spreading throughout the community that people of Chinese heritage are increasingly becoming targets of hate crimes and being blamed for COVID-19." />
+<meta property="og:url" content="https://bellevuewa.gov/city-news/police-chief-makes-plea-chinese-community" />
+<meta property="og:title" content="Police chief makes plea to Chinese community" />
+<meta name="twitter:url" content="https://bellevuewa.gov/city-news/police-chief-makes-plea-chinese-community" />
+<meta property="og:description" content="There are reports in the media, on social media and spreading throughout the community that people of Chinese heritage are increasingly becoming targets of hate crimes and being blamed for COVID-19." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/bellevue/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://bellevuewa.gov/city-news/police-chief-makes-plea-chinese-community" />
+<link rel="revision" href="https://bellevuewa.gov/city-news/police-chief-makes-plea-chinese-community" />
+
+    <title>Police chief makes plea to Chinese community | City of Bellevue</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_1ODWZoSG8V58tbwM2V0uqLW2CMoc7SfisZRs2mN4qFU.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_4ibrtXs0n2Ul92W3NZSJEQCZEwbqzSeudfQHdPOcpH8.css" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_Egha8mWW5bW_kXgQfmJL9LbfGuP4yr5dpu0I9Yde6Pc.css" />
+<link rel="stylesheet" media="all" href="//customer.cludo.com/css/templates/v1.1/essentials/cludo-search.min.css" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/jquery-bootstrap-scrolling-tabs@2.6.1/dist/jquery.scrolling-tabs.min.css" />
+<link rel="stylesheet" media="all" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Ua8euWzEVw2W6X49mlmnXR7FZAovTbujcwIzyWMXKo8.css" />
+
+      
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_e0qY_qw8ii-TPwaIl-aWWe4q2K54B4euiuzMDTZGu1Y.js"></script>
+<![endif]-->
+
+        </head>
+<body class="role-anonymous page-node-article page-node-193341 department-police path-node page-node-type-article">
+<a href="#main-content" class="visually-hidden focusable" tabindex="1">
+  Skip to main content
+</a>
+
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+        <div class="region region-site-alerts">
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_0P91aXIYGRcxjbFaS21z5ZYyztIYW6grVaKDoQXZACc.css" />
+<script src="/sites/default/files/js/js_XK9wf2P1IXMeCFISKsG2evuXH3NEQ-7yBRNJux7vEyQ.js"></script>
+<div class="views-element-container block-site-alerts block block-views block-views-blockalerts-block-global" id="block-views-block-alerts-block-global">
+  
+    
+      <div><div class="site-alert js-view-dom-id-df1394b43150ee131a8e5f25623649233c2777c722e2415ff202374ce460e011">
+  
+  
+  
+
+  
+  
+  
+
+  
+  <div data-blazy="" class="slick slick--view--alerts slick--view--alerts--block-global unslick blazy slick--optionset--default slick--less" id="slick-views-alerts-block-global-1"><div class="slick__slide slide slide--0"><div
+    class="alert alert-warning alert-dismissible fade show"
+    role="alert"
+    data-nid="193236"><h4 class="alert-heading"><span class="field field--name-title field--type-string field--label-hidden">COVID-19 Alert</span></h4><div class="node__content"><div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">The city is responding to the COVID-19 outbreak with <a href="https://bellevuewa.gov/city-government/departments/city-managers-office/communications/emergencies-and-extreme-weather/covid-19">actions</a>, <a href="https://bellevuewa.gov/city-news/covid-19-updates">updates</a> and <a href="https://bellevuewa.gov/city-government/departments/city-managers-office/communications/emergencies/covid-19/business-resources">business resources</a>. Get and give help at <a href="https://bellevuewa.gov/city-government/departments/city-managers-office/communications/emergencies/covid-19/community-resources">community resources</a>. </div></div><button type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label=Close
+          data-nid="193236"><span aria-hidden="true">&times;</span></button></div></div></div>
+  
+
+  
+  
+  
+
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+  
+      <aside class="global-navigation">
+        <div class="region region-global-navigation">
+    <nav role="navigation" aria-labelledby="block-pushnavigation-menu" id="block-pushnavigation" class="push-nav-menu block block-menu navigation menu--push-navigation-toggle">
+      
+  <h2 id="block-pushnavigation-menu">Bellevue home</h2>
+  
+
+        
+    
+          <ul class="menu nav menu-level-0">
+      
+          
+              <li class="menu__item">
+        <a href="/" class="menu__link" data-drupal-link-system-path="&lt;front&gt;">Bellevue Home</a>
+      
+      
+      </li>
+          
+            <li class="expanded dropdown-item menu__item">
+                  <a href="/city-government" class="dropdown-toggle menu__link" data-drupal-link-system-path="node/61956">City Government</a>
+                <span class="fa fa-angle-right" data-toggle=".menu-level-1" tabindex="0" title="City Government"></span>
+      
+                  
+          <div class="dropdown-menu-list menu-level-1">
+    <ul class="menu-list-1">
+
+  
+          
+              <li class="menu__item">
+        <a href="/city-government/boards-commissions-and-committees" class="menu__link">Boards, Commissions and Committees</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/code-link" class="menu__link">City Code, Resolutions and Ordinances</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/city-council" class="menu__link" data-drupal-link-system-path="node/61966">City Council</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/city-managers-office/communications" class="menu__link" data-drupal-link-system-path="node/70876">Communications</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments" class="menu__link" data-drupal-link-system-path="node/85">Departments</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/east-bellevue-community-council" class="menu__link" data-drupal-link-system-path="node/65081">East Bellevue Community Council</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/hot-topics-initiatives-link" class="menu__link">Hot Topics and Initiatives</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/Public-Records-Requests" class="menu__link">Public Records Requests</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/sister-cities" class="menu__link" data-drupal-link-system-path="node/65166">Sister Cities</a>
+      
+      
+      </li>
+          </ul>
+    </div>
+  
+    
+  
+      
+      </li>
+          
+            <li class="expanded dropdown-item menu__item">
+                  <a href="/city-government/departments" class="dropdown-toggle menu__link" data-drupal-link-system-path="node/85">Departments</a>
+                <span class="fa fa-angle-right" data-toggle=".menu-level-1" tabindex="0" title="Departments"></span>
+      
+                  
+          <div class="dropdown-menu-list menu-level-1">
+    <ul class="menu-list-1">
+
+  
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/city-attorneys-office" class="menu__link" data-drupal-link-system-path="node/70851">City Attorney&#039;s Office</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/city-clerks-office" class="menu__link" data-drupal-link-system-path="node/70861">City Clerk&#039;s Office</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/city-managers-office" class="menu__link" data-drupal-link-system-path="node/70871">City Manager&#039;s Office</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/city-managers-office/communications" class="menu__link" data-drupal-link-system-path="node/70876">Communications</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/community-development" class="menu__link" data-drupal-link-system-path="node/70886">Community Development</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/development" class="menu__link" data-drupal-link-system-path="node/70891">Development Services</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/fire/emergency-management" class="menu__link" data-drupal-link-system-path="node/70901">Emergency Management</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/finance" class="menu__link" data-drupal-link-system-path="node/70911">Finance &amp; Asset Management</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/fire" class="menu__link" data-drupal-link-system-path="node/70921">Fire</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/human-resources" class="menu__link" data-drupal-link-system-path="node/70931">Human Resources</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/ITD" class="menu__link" data-drupal-link-system-path="node/70941">Information Technology</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/parks" class="menu__link" data-drupal-link-system-path="node/70946">Parks &amp; Community Services</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/police" class="menu__link" data-drupal-link-system-path="node/70951">Police</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/transportation" class="menu__link" data-drupal-link-system-path="node/70961">Transportation</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/utilities" class="menu__link" data-drupal-link-system-path="node/70971">Utilities</a>
+      
+      
+      </li>
+          </ul>
+    </div>
+  
+    
+  
+      
+      </li>
+          
+            <li class="expanded dropdown-item menu__item">
+                  <a href="/discover-bellevue" class="dropdown-toggle menu__link" data-drupal-link-system-path="node/65186">Discover Bellevue</a>
+                <span class="fa fa-angle-right" data-toggle=".menu-level-1" tabindex="0" title="Discover Bellevue"></span>
+      
+                  
+          <div class="dropdown-menu-list menu-level-1">
+    <ul class="menu-list-1">
+
+  
+          
+              <li class="menu__item">
+        <a href="/discover-bellevue/about-us" class="menu__link" data-drupal-link-system-path="node/65191">About Us</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/discover-bellevue/bellevue-television" class="menu__link">Bellevue Television</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-news" class="menu__link" data-drupal-link-system-path="node/107">City News</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/discover-bellevue/things-to-do" class="menu__link" data-drupal-link-system-path="node/65316">Things to Do</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/discover-bellevue/arts-in-bellevue" class="menu__link" data-drupal-link-system-path="node/65311">Arts in Bellevue</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/discover-bellevue/parks-and-trails-link" class="menu__link">Parks and Trails</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/discover-bellevue/economic-development-link" class="menu__link">Economic Development</a>
+      
+      
+      </li>
+          </ul>
+    </div>
+  
+    
+  
+      
+      </li>
+          
+            <li class="expanded dropdown-item menu__item">
+                  <a href="/doing-business" class="dropdown-toggle menu__link" data-drupal-link-system-path="node/65321">Doing Business</a>
+                <span class="fa fa-angle-right" data-toggle=".menu-level-1" tabindex="0" title="Doing Business"></span>
+      
+                  
+          <div class="dropdown-menu-list menu-level-1">
+    <ul class="menu-list-1">
+
+  
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/development" class="menu__link" data-drupal-link-system-path="node/70891">Building and Zoning</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/community-development/economic-development" class="menu__link" data-drupal-link-system-path="node/64006">Doing Business in Bellevue</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/doing-business/doing-business-with-bellevue" class="menu__link" data-drupal-link-system-path="node/65326">Doing Business with Bellevue</a>
+      
+      
+      </li>
+          </ul>
+    </div>
+  
+    
+  
+      
+      </li>
+          
+            <li class="expanded dropdown-item menu__item">
+                  <a href="/public-safety" class="dropdown-toggle menu__link" data-drupal-link-system-path="node/65346">Public Safety</a>
+                <span class="fa fa-angle-right" data-toggle=".menu-level-1" tabindex="0" title="Public Safety"></span>
+      
+                  
+          <div class="dropdown-menu-list menu-level-1">
+    <ul class="menu-list-1">
+
+  
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/police" class="menu__link" data-drupal-link-system-path="node/70951">Police</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/fire" class="menu__link" data-drupal-link-system-path="node/70921">Fire</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/city-managers-office/communications/emergencies-and-extreme-weather" class="menu__link">Emergencies and Extreme Weather</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/public-safety/emergency-preparedness" class="menu__link">Emergency Preparedness</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/public-safety/municipal-court" class="menu__link">Municipal Court</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/public-safety/neighborhood-traffic-safety" class="menu__link">Neighborhood Traffic Safety</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/public-safety/probation" class="menu__link">Probation</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/city-attorneys-office/apply-for-a-public-defender" class="menu__link" data-drupal-link-system-path="node/62136">Public Defenders</a>
+      
+      
+      </li>
+          </ul>
+    </div>
+  
+    
+  
+      
+      </li>
+          
+            <li class="expanded dropdown-item menu__item">
+                  <a href="/resident-resources" class="dropdown-toggle menu__link" data-drupal-link-system-path="node/65351">Resident Resources</a>
+                <span class="fa fa-angle-right" data-toggle=".menu-level-1" tabindex="0" title="Resident Resources"></span>
+      
+                  
+          <div class="dropdown-menu-list menu-level-1">
+    <ul class="menu-list-1">
+
+  
+          
+              <li class="menu__item">
+        <a href="/resident-resources/resident-services" class="menu__link" data-drupal-link-system-path="node/65386">Resident Services</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/finance/mybellevue/customer-assistance" class="menu__link" data-drupal-link-system-path="node/64861">Customer Assistance</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/community-development/conflict-assistance" class="menu__link" data-drupal-link-system-path="node/63876">Conflict Assistance</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/city-managers-office/diversity" class="menu__link" data-drupal-link-system-path="node/63776">Diversity Advantage</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/resident-resources/languages" class="menu__link" data-drupal-link-system-path="node/65366">Languages</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/community-development" class="menu__link" data-drupal-link-system-path="node/70886">Neighborhoods</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/resident-resources/newcomers-guide" class="menu__link" data-drupal-link-system-path="node/65371">Newcomers Guide</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/resident-resources/permits-parking-utilities" class="menu__link" data-drupal-link-system-path="node/65376">Permits, Parking and Utilities</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/volunteering" class="menu__link" data-drupal-link-system-path="node/65401">Volunteering</a>
+      
+      
+      </li>
+          
+              <li class="menu__item">
+        <a href="/city-government/departments/parks/community-services/human-services/local-service-agencies" class="menu__link" data-drupal-link-system-path="node/66851">Local Service Agencies</a>
+      
+      
+      </li>
+          </ul>
+    </div>
+  
+    
+  
+      
+      </li>
+      
+          </ul>
+    
+  
+
+
+  </nav>
+
+  </div>
+
+    </aside>
+  
+  <div role="main"
+       class="main-container js-quickedit-main-content">
+
+        <div class="header-wrapper">
+      <div class="container header" role="heading">
+        <div class="row">
+          <div class="col col-sm-12">
+            <nav class="navbar navbar-light">
+              <div class="navbar-brand">
+                <a tabindex="1" href="/">City of Bellevue, WA</a>
+                                                      <a href="/city-government/departments/police" class="department-title">Police</a>
+                                                </div>
+                                                <div class="navbar-brand title-search" tabindex="1">
+                      <div class="region region-header">
+    <div id="block-temporarysearchblock" class="block-inline block block-block-content block-block-content13818835-e6d1-4a99-a2c5-a8ccca43763e">
+  
+    
+        <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div id="cludo-search-form" role="search"><input name="searchrequest" id="cludo-search-form-input" tabindex="1" type="search" placeholder="Search" value="" title="Type search term" autocomplete="off" aria-autocomplete="list" aria-haspopup="true"></input><button type="button" title="Search" tabindex="1">Go!</button></div></div>
+      
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+
+                  </div>
+                                                            <button id="navbar-toggler" class="navbar-toggler" type="button"
+                        tabindex="1">
+                  <i class="fas fa-bars"></i> <span
+                    class="navbar-toggler-text">Menu </span>
+                </button>
+                          </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+                      <div class="header-image-wrapper" role="banner">
+            <div class="region region-featured">
+    <div class="views-element-container block block-views block-views-blockheader-banner-block-1" id="block-views-block-header-banner-block-1">
+  
+    
+      <div><div class="js-view-dom-id-101199886904ba452e81080ed0992bed41a76f4d79b2023d29de675004150d77">
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <div class="js-view-dom-id-fccdd84ccf918ee6ddd9c7a0ea9b6e89106b2a57edeabd9eac145d9a673fa96e">
+  
+  
+  
+
+  
+  
+  
+
+  
+      <div class="views-row"><div class="views-field views-field-field-media-image"><div class="field-content">  <img src="/sites/default/files/styles/header_image/public/media/header_image/migrated/Banner3.jpg?itok=wdqeZ90J" width="1600" height="400" alt="Banner3.jpg" title="Banner3.jpg" typeof="foaf:Image" class="image-style-header-image" />
+
+
+</div></div></div>
+
+  
+
+  
+  
+  
+
+  
+</div>
+
+
+  
+  
+  
+
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+        </div>
+          
+                      <div class="sub-header-wrapper" role="heading">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                  <div class="region region-sub-header">
+    <div id="block-bellevue-breadcrumbs" class="block-inline block block-system block-system-breadcrumb-block">
+  
+    
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li>
+                  <a href="/">City of Bellevue</a>
+              </li>
+          <li>
+                  <a href="/city-news">City News</a>
+              </li>
+            <li> Police chief makes plea to Chinese community</li>
+    </ol>
+  </nav>
+
+  </div>
+<div id="block-fontsizeandprintelements" class="block-inline block block-block-content block-block-content72f78921-35ed-4ba8-9d66-86440d6eeee1">
+  
+    
+        <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><li class="list-inline-item">
+<a href="#" class="fs-plus" title="Increase Text Size"><em class="fa fa-font"></em></a>
+</li>
+<li class="list-inline-item">
+<a href="#" class="fs-minus" title="Decrease Text Size"><em class="fa fa-font"></em></a>
+</li>
+<li class="list-inline-item">
+<a href="#" onclick="javascript:window.print(); return false;" class="print"><em class="fa fa-print"></em></a>
+</li>
+</ul></div>
+      
+    </div>
+  </div>
+
+  </div>
+<div id="block-kwallsharebar" class="block-inline block block-kwall-share-bar block-kwall-share-bar-block">
+  
+    
+      
+<div class="kwall-share-bar">
+  <ul class="share-list">
+          <li>
+                                      <a class="share-on email"
+             href="mailto:?Subject=Police chief makes plea to Chinese community&amp;Body=https://bellevuewa.gov/city-news/police-chief-makes-plea-chinese-community"
+             target="popup"
+             onclick="window.open('mailto:?Subject=Police chief makes plea to Chinese community&amp;Body=https://bellevuewa.gov/city-news/police-chief-makes-plea-chinese-community', 'popup', 'width=600, height=600'); return false;"><i
+                class="fas fa-envelope"></i></a>
+                              </li>
+          <li>
+                                              <a class="share-on twitter"
+             href="https://twitter.com/intent/tweet?text=Police chief makes plea to Chinese community&amp;url=https://bellevuewa.gov/city-news/police-chief-makes-plea-chinese-community"
+             target="popup"
+             onclick="window.open('https://twitter.com/intent/tweet?text=Police chief makes plea to Chinese community&amp;url=https://bellevuewa.gov/city-news/police-chief-makes-plea-chinese-community', 'popup', 'width=600, height=600'); return false;"><i
+                class="fab fa-twitter"></i></a>
+                      </li>
+          <li>
+                                                      <a class="share-on facebook"
+             href="https://www.facebook.com/sharer/sharer.php?u=https://bellevuewa.gov/city-news/police-chief-makes-plea-chinese-community&amp;t=Police chief makes plea to Chinese community"
+             target="popup"
+             onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://bellevuewa.gov/city-news/police-chief-makes-plea-chinese-community&amp;t=Police chief makes plea to Chinese community', 'popup', 'width=600, height=600'); return false;"><i
+                class="fab fa-facebook-f"></i></a>
+              </li>
+      </ul>
+</div>
+
+  </div>
+
+  </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+          
+    <div class="container content-wrapper">
+      <div class="row">
+
+                                      <aside class="col-sm-3 sidebar-left" role="complementary">
+                <div class="region region-sidebar-left">
+    <div id="block-articlesmenubasedonthetaxonomy" class="main-navigation block block-custom-module block-custom-module-articles-menu">
+  
+    
+      
+<nav class="navigation">
+      <h2 class="title"><a href="/city-news">City News</a></h2>
+  
+  <ul class="menu taxonomy-menu">
+          <li class="menu-item">
+        <a href="/city-news?dept=city-clerks-office" data-term="city-clerks-office">City Clerk&#039;s Office News</a>
+      </li>
+          <li class="menu-item">
+        <a href="/city-news?dept=city-council" data-term="city-council">City Council News</a>
+      </li>
+          <li class="menu-item">
+        <a href="/city-news?dept=city-managers-office" data-term="city-managers-office">City Manager&#039;s Office News</a>
+      </li>
+          <li class="menu-item">
+        <a href="/city-news?dept=community-development" data-term="community-development">Community Development News</a>
+      </li>
+          <li class="menu-item">
+        <a href="/city-news?dept=development-services" data-term="development-services">Development Services News</a>
+      </li>
+          <li class="menu-item">
+        <a href="/city-news?dept=fire" data-term="fire">Fire News</a>
+      </li>
+          <li class="menu-item">
+        <a href="/city-news?dept=parks--community-services" data-term="parks--community-services">Parks &amp; Community Services News</a>
+      </li>
+          <li class="menu-item">
+        <a href="/city-news?dept=police" data-term="police">Police News</a>
+      </li>
+          <li class="menu-item">
+        <a href="/city-news?dept=transportation" data-term="transportation">Transportation News</a>
+      </li>
+          <li class="menu-item">
+        <a href="/city-news?dept=utilities" data-term="utilities">Utilities News</a>
+      </li>
+      </ul>
+</nav>
+
+  </div>
+
+  </div>
+
+            </aside>
+                  
+                
+                
+        <section class="col-sm-9 content-outer">
+
+          <a id="main-content"></a>
+
+          
+                    
+          <div class="row">
+
+            <section class="col-sm-9 content-outer col-sm-12">
+
+                                                                <div class="region region-help">
+    <div id="block-bellevue-page-title" class="block block-core block-page-title-block">
+  
+    
+      
+  <h1 class="page-title"><span property="schema:name" class="field field--name-title field--type-string field--label-hidden">Police chief makes plea to Chinese community</span>
+</h1>
+
+
+  </div>
+<div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+                              
+                                                                <div class="region region-content">
+    <div id="block-bellevue-content" class="block block-system block-system-main-block">
+  
+    
+      
+
+
+  
+<article role="article" about="/city-news/police-chief-makes-plea-chinese-community" typeof="schema:Article" class="node node--type-article node--view-mode-full">
+  
+    <span property="schema:name" content="Police chief makes plea to Chinese community" class="rdf-meta hidden"></span>
+
+  <div class="node__content">
+        
+
+            <div property="schema:text" class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>There are reports in the media, on social media and spreading throughout the community that people of Chinese heritage are increasingly becoming targets of hate crimes and being blamed for COVID-19.</p>
+
+<p>"I am disturbed to hear that people are being targeted and blamed for COVID 19," said Police Chief Steve Mylett. "If this is happening here in Bellevue it needs to stop. I encourage any victim of a hate crime or bias-related incident to contact their local police department and report the incident. We need to know about it. We will vigorously pursue and arrest anyone who commits a hate crime in Bellevue."</p>
+
+<p>The chief says he's convinced incidents are occurring and they're just not being reported. "I need our Chinese neighbors to tell us if they are a victim of hate because of their Chinese heritage. The Bellevue Police Department is here to protect and serve you, but we can't help if we don't know about it."  </p>
+
+<h2>How to report</h2>
+
+<p>To report an immediate threat or ongoing incident, call 911 immediately. If an incident occurred in the recent past, you can easily <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="c321c531-eaa0-4e89-b1f7-8107ebd0db19" href="/city-government/departments/police/report-and-prevent-crime/report-a-crime-online" title="Report a Crime Online">report it online</a>. An officer will review it and will contact you if more information is needed.  </p>
+
+<p>"These are stressful times for everyone. COVID-19 doesn't recognize race, nationality or ethnicity, and viruses don't discriminate," Mylett said. "Please, stop blaming, support one another, heed the orders to stay home. The life you save may be your own or someone close to you.”</p></div>
+      
+          <div class="date">
+        Published on 03/25/2020
+      </div>
+      </div>
+</article>
+
+  </div>
+
+  </div>
+
+                              
+            </section>
+
+                        
+          </div>
+
+                                <aside class="row" role="complementary">
+              <div class="col-sm-12">
+                
+              </div>
+            </aside>
+          
+          
+        </section>
+
+      </div>
+    </div>
+
+        
+        
+  </div>
+
+
+  
+  
+  
+  
+  
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+              <div class="row">
+          <aside  class="col-sm-3">
+                            <div class="region region-footer-first">
+    <div id="block-footercontacts" class="block block-block-content block-block-contenta1bd97ac-6760-410c-b751-48631c59011b">
+  
+    
+        <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><h3><a href="/"><img alt="City of Bellevue seal" src="/themes/custom/bellevue/images/logo.png" /><span>City of Bellevue, WA</span></a></h3>
+
+<ul>
+	<li>450 110th Avenue NE</li>
+	<li>Bellevue, WA 98004</li>
+	<li><a href="https://www.google.com/maps/place/Bellevue+City+Hall/@47.6144305,-122.1929512,18z"><em class="fa fa-map-marker"></em>  Directions to City Hall</a></li>
+	<li><em class="far fa-clock"></em>  8am - 5pm Weekdays</li>
+</ul>
+</div>
+      
+    </div>
+  </div>
+
+  </div>
+<nav role="navigation" aria-labelledby="block-footermenucontacts-menu" id="block-footermenucontacts" class="block block-menu navigation menu--footer-menu-contacts">
+            
+  <h2 class="visually-hidden" id="block-footermenucontacts-menu"></h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="tel:4254526800" class="phone"><i class="fa fas fa-phone" aria-hidden="true"></i> 425-452-6800</a>
+              </li>
+                <li class="menu-item">
+        <a href="mailto:servicefirst@bellevuewa.gov" class="email"><i class="fa fas fa-envelope" aria-hidden="true"></i> servicefirst@bellevuewa.gov</a>
+              </li>
+                <li class="menu-item">
+        <a href="/city-government/departments/civic-services/mybellevue/customer-assistance/" class="main">MyBellevue Customer Assistance</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contact-us" data-drupal-link-system-path="node/65171"><i class="fa fas fa-envelope" aria-hidden="true"></i> Contact Us / Employee Directory</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.governmentjobs.com/careers/bellevuewa" class="briefcase"><i class="fa fas fa-briefcase" aria-hidden="true"></i> Careers</a>
+              </li>
+                <li class="menu-item">
+        <a href="/city-government/departments/city-managers-office/accessibility" data-drupal-link-system-path="node/63681"><i class="fa fas fa-wheelchair" aria-hidden="true"></i> ADA/Title VI Notices</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+                      </aside>
+          <aside  class="col-sm-3">
+                            <div class="region region-footer-second">
+    <nav role="navigation" aria-labelledby="block-footermenulanguages-menu" id="block-footermenulanguages" class="block block-menu navigation menu--footer-menu-languages">
+      
+  <h2 id="block-footermenulanguages-menu">Languages</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/spanish-espanol/welcome">Español</a>
+              </li>
+                <li class="menu-item">
+        <a href="/chinese/welcome">中文</a>
+              </li>
+                <li class="menu-item">
+        <a href="/vietnamese/welcome">Tiếng Việt</a>
+              </li>
+                <li class="menu-item">
+        <a href="/korean/welcome">한국어</a>
+              </li>
+                <li class="menu-item">
+        <a href="/russian/welcome">Pусский</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+                      </aside>
+          <aside  class="col-sm-3">
+                            <div class="region region-footer-third">
+    <nav role="navigation" aria-labelledby="block-footermenusitenavigation-menu" id="block-footermenusitenavigation" class="block block-menu navigation menu--footer-menu-site-navigation">
+      
+  <h2 id="block-footermenusitenavigation-menu">Site Navigation</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/" data-drupal-link-system-path="&lt;front&gt;">Bellevue Home</a>
+              </li>
+                <li class="menu-item">
+        <a href="/city-government" data-drupal-link-system-path="node/61956">City Government</a>
+              </li>
+                <li class="menu-item">
+        <a href="/discover-bellevue" data-drupal-link-system-path="node/65186">Discover Bellevue</a>
+              </li>
+                <li class="menu-item">
+        <a href="/doing-business" data-drupal-link-system-path="node/65321">Doing Business</a>
+              </li>
+                <li class="menu-item">
+        <a href="/public-safety" data-drupal-link-system-path="node/65346">Public Safety</a>
+              </li>
+                <li class="menu-item">
+        <a href="/resident-resources" data-drupal-link-system-path="node/65351">Resident Resources</a>
+              </li>
+                <li class="menu-item">
+        <a href="#main-content" class="back-to-top">Back to Top</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+                      </aside>
+          <aside  class="col-sm-3">
+                            <div class="region region-footer-fourth">
+    <div id="block-footertwittertimeline" class="block block-block-content block-block-content7bff4895-ff3d-4b4a-ab18-1887a7efd339">
+  
+      <h2>Social Media</h2>
+    
+        <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><a class="twitter-timeline" data-theme="light" data-tweet-limit="1" href="https://twitter.com/bellevuewa" data-height="295">Tweets by bellevuewa</a><script src="//platform.twitter.com/widgets.js" charset="utf-8"></script><div class="footer-social-icons inside-padding"><a href="https://twitter.com/bellevuewa" target="_blank"><em class="fa fa-twitter"></em></a><a href="https://www.facebook.com/bellevuewashington" target="_blank"></div>
+      
+    </div>
+  </div>
+
+  </div>
+<nav role="navigation" aria-labelledby="block-footermenusocialmedia-menu" id="block-footermenusocialmedia" class="block block-menu navigation menu--footer-menu-social-media">
+            
+  <h2 class="visually-hidden" id="block-footermenusocialmedia-menu"></h2>
+  
+
+        
+              <ul class="menu">
+                    <li aria-label="Facebook" class="menu-item">
+        <a href="https://www.facebook.com/bellevuewashington" class="facebook" target="_blank"><i class="fa fab fa-facebook" aria-hidden="true"></i></a>
+              </li>
+                <li aria-label="Twitter" class="menu-item">
+        <a href="https://twitter.com/bellevuewa" class="twitter" target="_blank"><i class="fa fab fa-twitter" aria-hidden="true"></i></a>
+              </li>
+                <li aria-label="Youtube" class="menu-item">
+        <a href="https://www.youtube.com/channel/UCW22suSoHWumwarCbu3NkOg" class="youtube" target="_blank"><i class="fa fab fa-youtube" aria-hidden="true"></i></a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+                      </aside>
+        </div>
+                    <div class="row">
+          <aside  class="col-sm-3 col-sm-12">
+                            <div class="region region-footer-full">
+    <div id="block-footerallrightsreserved" class="block block-block-content block-block-content285fd330-7bd4-4460-b9e3-ade5d724295a">
+  
+    
+        <div class="layout layout--onecol">
+    <div  class="layout__region layout__region--content">
+      
+
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>© 2019 City of Bellevue | All Rights Reserved. | <a href="/city-government/departments/city-managers-office/accessibility">ADA/Title VI Notices</a> | <a href="/terms-of-use">Terms of Use</a> | <a href="/privacy-security">Privacy Policy</a> | <a href="/sitemap">Site Map</a> </p></div>
+      
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+
+                      </aside>
+        </div>
+          </div>
+  </footer>
+
+  </div>
+
+
+
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/193341","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","themeUrl":"themes\/custom\/bellevue"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"google_analytics":{"account":"UA-16244834-19","trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":true,"extNofollow":true,"extFollowNoOverride":true,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":".*\\.(pdf|doc|docx)$","extCssExclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":null}},"user":{"uid":0,"permissionsHash":"4f5d3e1698055cdba1a0391c511d67e9daf1649db656f65d2fb15030bf266896"},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25},"blazyIo":{"enabled":false,"disconnect":false,"rootMargin":"0px","threshold":[0]},"slick":{"accessibility":true,"adaptiveHeight":false,"autoplay":false,"autoplaySpeed":3000,"pauseOnHover":true,"pauseOnDotsHover":false,"arrows":true,"downArrow":false,"downArrowTarget":"","downArrowOffset":0,"centerMode":false,"centerPadding":"50px","dots":false,"dotsClass":"slick-dots","draggable":true,"fade":false,"focusOnSelect":false,"infinite":true,"initialSlide":0,"lazyLoad":"ondemand","mouseWheel":false,"randomize":false,"rtl":false,"rows":1,"slidesPerRow":1,"slide":"","slidesToShow":1,"slidesToScroll":1,"speed":500,"swipe":true,"swipeToSlide":false,"edgeFriction":0.34999999999999998,"touchMove":true,"touchThreshold":5,"useCSS":true,"cssEase":"ease","cssEaseBezier":"","cssEaseOverride":"","useTransform":true,"easing":"linear","variableWidth":false,"vertical":false,"verticalSwiping":false,"waitForAnimate":true,"pauseOnFocus":true}}</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/sites/default/files/js/js_mNogFExGUPOtyfMv6yLKJ_Oe1uHcu_Gk-MN8fBu3x3o.js"></script>
+<script src="//customer.cludo.com/scripts/bundles/search-script.min.js"></script>
+<script src="/sites/default/files/js/js_GTUE3a_F5Q3E4RhpZd-We3HpEqRhMN052N9wW0H1reM.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery-bootstrap-scrolling-tabs@2.6.1/dist/jquery.scrolling-tabs.min.js" crossorigin="anonymous"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"></script>
+<script src="/sites/default/files/js/js_gNFuAy6mD2yJbfXubGmEFLomQ7OyE1eQvewIXeNV__k.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1402444c6f","applicationID":"247275072","transactionName":"MgdRMkQCVhADVkZdVwtNcgVCClcNTUVTU106AVIFXgY=","queueTime":0,"applicationTime":37,"atts":"HkBSRAwYRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
