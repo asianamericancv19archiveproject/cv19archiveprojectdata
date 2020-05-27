@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8" />
+<script>(function(){function a(g,h,i){var j=new Date;j.setTime(j.getTime()+1e3*(60*(60*(24*i))));var k="expires="+j.toUTCString(),l=g+"="+h+";"+k+";path=/;";"undefined"!=typeof ezdomain&&(l+="domain="+ezdomain),document.cookie=l}var b=window.addEventListener?"addEventListener":"attachEvent",c=window[b],f="attachEvent"==b?"onmessage":"message";c(f,function(g){"undefined"!=typeof g.data.ezstatus&&(__ez.bit.AddAndFire(_ezaq.page_view_id,[new __ezDotData("dg",g.data.ezstatus)]),a("ezdg",g.data.ezstatus,730))})})();</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck={};__ez.template={};__ez.template.isOrig=true;__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.ck.get=function(cname,did){if(did!==null)cname=cname+"_"+did;var name=cname+"=";var decodedCookie=decodeURIComponent(document.cookie);var ca=decodedCookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)===' '){c=c.substring(1)}
+if(c.indexOf(name)===0){return c.substring(name.length,c.length)}}
+return ""};__ez.ck.setByCat=function(cookie,categoryId){if(location.protocol==='https:'){cookie=cookie+"; Secure; SameSite=Lax;";}
+if(cookie.indexOf('path=')===-1){cookie+='; path=/';}
+if(typeof cmpIsOn==="undefined"){document.cookie=cookie;return;}
+if(typeof categoryId==="undefined"||categoryId===null){return;}
+var cmpCookie=__ez.ck.get("ezCMPCookieConsent",null);cmpCookie=cmpCookie.substring(1,cmpCookie.length);if(cmpCookie.indexOf(categoryId+"=1")!==-1){document.cookie=cookie;}else if(cmpCookie===""){if(typeof cmpCookies!=="undefined"){if(typeof cmpCookies[categoryId]==="undefined"){cmpCookies[categoryId]=[];}
+cmpCookies[categoryId].push(cookie);}}};__ez.queue=(function(){var count=0,incr=0,items=[],timeDelayFired=false,hpItems=[],lpItems=[],allowLoad=true;var obj={func:function(name,funcName,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError){var self=this;this.name=name;this.funcName=funcName;this.parameters=parameters===null?null:(parameters instanceof Array)?parameters:[parameters];this.isBlock=isBlock;this.blockedBy=blockedBy;this.deleteWhenComplete=deleteWhenComplete;this.isError=false;this.isComplete=false;this.isInitialized=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){log("... func = "+name);self.isInitialized=true;self.isComplete=true;log("... func.apply: "+name);var funcs=self.funcName.split('.');var func=null;if(funcs.length>3){}else if(funcs.length===3){func=window[funcs[0]][funcs[1]][funcs[2]];}else if(funcs.length===2){func=window[funcs[0]][funcs[1]];}else{func=window[self.funcName];}
+if(typeof func!=='undefined'&&func!==null){func.apply(null,this.parameters);}
+if(self.deleteWhenComplete===true)delete items[name];if(self.isBlock===true){log("----- F'D: "+self.name);processAll();}}},file:function(name,path,isBlock,blockedBy,async,defer,proceedIfError){var self=this;this.name=name;this.path=path;this.async=async;this.defer=defer;this.isBlock=isBlock;this.blockedBy=blockedBy;this.isInitialized=false;this.isError=false;this.isComplete=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){self.isInitialized=true;log("... file = "+name);var scr=document.createElement('script');scr.src=path;if(async===true)scr.async=true;else if(defer===true)scr.defer=true;scr.onerror=function(){log("----- ERR'D: "+self.name);self.isError=true;if(self.isBlock===true){processAll();}};scr.onreadystatechange=scr.onload=function(){var state=scr.readyState;log("----- F'D: "+self.name);if((!state||/loaded|complete/.test(state))){self.isComplete=true;if(self.isBlock===true){processAll();}}};document.getElementsByTagName('head')[0].appendChild(scr);}}};function init(){window.addEventListener("load",function(){setTimeout(function(){timeDelayFired=true;log('TDELAY -----');processAll();},5000);},false);}
+function addFile(name,path,isBlock,blockedBy,async,defer,proceedIfError,priority){var item=new obj.file(name,path,isBlock,blockedBy,async,defer,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+items[name]=item;checkIfBlocked(item);}
+function setallowLoad(settobool){allowLoad=settobool}
+function addFunc(name,func,parameters,isBlock,blockedBy,autoInc,deleteWhenComplete,proceedIfError,priority){if(autoInc===true)name=name+"_"+incr++;var item=new obj.func(name,func,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+items[name]=item;checkIfBlocked(item);}
+function addTimeDelayFile(name,path){var item=new obj.file(name,path,false,[],false,false,true);item.isTimeDelay=true;log(name+' ... '+' FILE! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+function addTimeDelayFunc(name,func,parameters){var item=new obj.func(name,func,parameters,false,[],true,true);item.isTimeDelay=true;log(name+' ... '+' FUNCTION! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+function checkIfBlocked(item){if(isBlocked(item)===true||allowLoad==false)return;item.process();}
+function isBlocked(item){if(item.isTimeDelay===true&&timeDelayFired===false){log(item.name+" blocked = TIME DELAY!");return true;}
+if(item.blockedBy instanceof Array){for(var i=0;i<item.blockedBy.length;i++){var block=item.blockedBy[i];if(items.hasOwnProperty(block)===false){log(item.name+" blocked = "+block);return true;}else if(item.proceedIfError===true&&items[block].isError===true){return false;}else if(items[block].isComplete===false){log(item.name+" blocked = "+block);return true;}}}
+return false;}
+function log(msg){var href=window.location.href;var reg=new RegExp('[?&]ezq=([^&#]*)','i');var string=reg.exec(href);var res=string?string[1]:null;if(res==="1")console.debug(msg);}
+function processAll(){count++;if(count>200)return;log("let's go");processItems(hpItems);processItems(lpItems);}
+function processItems(list){for(var i in list){if(list.hasOwnProperty(i)===false)continue;var item=list[i];if(item.isComplete===true||isBlocked(item)||item.isInitialized===true||item.isError===true){if(item.isError===true){log(item.name+': error')}else if(item.isComplete===true){log(item.name+': complete already')}else if(item.isInitialized===true){log(item.name+': initialized already')}}else{item.process();}}}
+init();return{addFile:addFile,addDelayFile:addTimeDelayFile,addFunc:addFunc,addDelayFunc:addTimeDelayFunc,items:items,processAll:processAll,setallowLoad:setallowLoad};})();__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};var __ezDotData=function(name,val){if(typeof(name)!='string'&&name.length==2){val=name[1];name=name[0];}
+this.name=name;this.val=val;};__ez.dot.b64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9+/=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/rn/g,"n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}};__ez.dot.dataToStr=function(pixelData){if(typeof pixelData==="undefined"){return[]}
+try{for(var i in pixelData){pixelData[i].val=pixelData[i].val+'';}}catch(e){}
+return pixelData};__ez.dot.getCC=function(){var countryCode="XX";if(typeof _ezaq!=="undefined"&&_ezaq.hasOwnProperty("country")){countryCode=_ezaq.country;}
+return countryCode;};__ez.dot.getDID=function(){var domainId="0";if(typeof _ezaq!=="undefined"&&_ezaq.hasOwnProperty("domain_id")){domainId=_ezaq.domain_id.toString();}
+return domainId;};__ez.dot.getEpoch=function(tEpoch){if(typeof _ezaq!=="undefined"&&_ezaq.hasOwnProperty("t_epoch")){tEpoch=_ezaq.t_epoch;}
+return tEpoch};__ez.dot.getPageviewId=function(){var pageviewId="";if(typeof _ezaq!=="undefined"&&_ezaq.hasOwnProperty("page_view_id")){pageviewId=_ezaq.page_view_id;}
+return pageviewId;};__ez.dot.getURL=function(pxURL){if((typeof ezJsu!=="undefined"&&ezJsu==true)||(typeof _ez_sa!=="undefined"&&_ez_sa==true)||(typeof isAmp!=='undefined'&&isAmp===true)||(typeof ezWp!=='undefined'&&ezWp===true)){pxURL="//g.ezoic.net"+pxURL;}
+return pxURL;};__ez.dot.isValid=function(pixelData){for(var i=0;i<pixelData.length;i++){if(pixelData[i]instanceof __ezDotData===false){console.error("Invalid data. ",pixelData[i]);return false}}
+return true};__ez.dot.isDefined=function(){for(var i=0;i<arguments.length;i++){if(typeof arguments[i]==='undefined'||arguments[i]===null){console.error("Argument not defined. ",arguments);return false}}
+return true};__ez.dot.isAnyDefined=function(){var result=false;for(var i=0;i<arguments.length;i++){if(typeof arguments[i]!=='undefined'&&arguments[i]!==null){result=true}}
+if(result==false){console.error("isAnyDefined Arguments not defined. ",arguments);}
+return result};__ez.dot.getSlotIID=function(slot){var iid="0";try{var map=__ez.dot.getTargetingMap(slot),dvid=__ez.dot.getElementId(slot);if(dvid.indexOf("div-gpt-ad")===-1){return iid;}
+if(typeof map!=="undefined"){for(var key in map){if(key.indexOf('iid')!==-1&&typeof map[key][0]!=="undefined"){iid=map[key][0];break;}}}}catch(e){}
+return iid;};__ez.dot.getElementId=function(slot){if(typeof(slot.ElementId)!='undefined'){return slot.ElementId;}else{return slot.getSlotElementId()}};__ez.dot.getAdUnitPath=function(slot){if(typeof(slot.AdUnitPath)!='undefined'){return slot.AdUnitPath;}else{return slot.getAdUnitPath()}};__ez.dot.getSizes=function(slot){if(typeof(slot.Sizes)!='undefined'){return slot.Sizes;}else{return slot.getSizes();}};__ez.dot.getTargeting=function(slot,key){if(typeof(slot.Targeting)!='undefined'){return slot.Targeting[key];}else{return slot.getTargeting(key)[0];}};__ez.dot.getTargetingMap=function(slot){if(typeof(slot.Targeting)!='undefined'){return slot.Targeting;}else{return slot.getTargetingMap();}};__ez.dot.getAdUnit=function(adSlot){if(__ez.template.isOrig===true){return __ez.dot.getAdUnitPath(adSlot).split("/").pop()+"|~ez~|"+__ez.dot.getElementId(adSlot);}
+return __ez.dot.getElementId(adSlot);};__ez.bit=(function(){var pixels=[],pxURL="/detroitchicago/greenoaks.gif";function AddAndFirePixel(pvId,pixelData){AddPixel(pvId,pixelData);Fire();}
+function AddPixel(pvId,pixelData){if(__ez.dot.isDefined(pvId)&&__ez.dot.isValid(pixelData)){pixels.push({type:"pageview",pageview_id:pvId,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(pixelData)})}}
+function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender")return;if(__ez.dot.isDefined(pixels)&&pixels.length>0){(new Image()).src=__ez.dot.getURL(pxURL)+"?orig="+(__ez.template.isOrig===true?1:0)+"&ds="+btoa(JSON.stringify(pixels));}
+pixels=[]}
+return{Add:AddPixel,AddAndFire:AddAndFirePixel,Fire:Fire}})();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>__ez.pel=(function(){var pixels=[],pxURL="/porpoiseant/army.gif";function AddAndFirePixel(adSlot,pixelData){AddPixel(adSlot,pixelData,0,0,0,0,0);Fire();}
+function GetCurrentPixels(){return pixels;}
+function AddPixel(adSlot,pixelData,revenue,est_revenue,bid_floor_filled,bid_floor_prev,stat_source_id){if(!__ez.dot.isDefined(adSlot)||__ez.dot.isAnyDefined(adSlot.getSlotElementId,adSlot.ElementId)==false){return;}
+var ad_position_id=parseInt(__ez.dot.getTargeting(adSlot,'ap'));var impId=__ez.dot.getSlotIID(adSlot),adUnit=__ez.dot.getAdUnit(adSlot);var compId=parseInt(__ez.dot.getTargeting(adSlot,"compid"));var lineItemId=0;var creativeId=0;var ezimData=getEzimData(adSlot);if(typeof ezimData=='object'){if(ezimData.creative_id!==undefined){creativeId=ezimData.creative_id;}
+if(ezimData.line_item_id!==undefined){lineItemId=ezimData.line_item_id;}}
+if(__ez.dot.isDefined(impId,adUnit)&&__ez.dot.isValid(pixelData)){pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),revenue:revenue,est_revenue:est_revenue,ad_position:ad_position_id,ad_size:"",bid_floor_filled:bid_floor_filled,bid_floor_prev:bid_floor_prev,stat_source_id:stat_source_id,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:compId,line_item_id:lineItemId,creative_id:creativeId,data:__ez.dot.dataToStr(pixelData)});}}
+function AddPixelById(impFullId,pixelData){var vals=impFullId.split('/');if(__ez.dot.isDefined(impFullId)&&vals.length===3&&__ez.dot.isValid(pixelData)){var adUnit=vals[0],impId=vals[2];pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(pixelData)});}}
+function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender")return;if(__ez.dot.isDefined(pixels)&&pixels.length>0){var pixelURL=__ez.dot.getURL(pxURL)+"?orig="+(__ez.template.isOrig===true?1:0)+"&sts="+btoa(JSON.stringify(pixels));if(typeof window.isAmp!=='undefined'&&isAmp&&typeof window._ezaq!=='undefined'&&_ezaq.hasOwnProperty("domain_id")){pixelURL+="&visit_uuid="+_ezaq['visit_uuid'];}
+(new Image()).src=pixelURL;}
+pixels=[];}
+function getEzimData(adSlot){if(typeof _ezim_d=="undefined"){return false}
+var adUnitName=__ez.dot.getAdUnitPath(adSlot).split('/').pop();if(typeof _ezim_d==='object'&&_ezim_d.hasOwnProperty(adUnitName)){return _ezim_d[adUnitName];}
+for(var ezimKey in _ezim_d){if(ezimKey.split('/').pop()===adUnitName){return _ezim_d[ezimKey];}}
+return false;}
+return{Add:AddPixel,AddAndFire:AddAndFirePixel,AddById:AddPixelById,Fire:Fire,GetPixels:GetCurrentPixels,};})();var EzoicPixel=function(){this.pixels=[];this.pixelUrl="/ezoic/e.gif";if((typeof ezJsu!=="undefined"&&ezJsu===true)||(typeof _ez_sa!=="undefined"&&_ez_sa===true)||((typeof window.isAmp!='undefined')&&isAmp===true)||((typeof ezWp!=='undefined')&&ezWp===true)){this.pixelUrl="//g.ezoic.net"+this.pixelUrl}
+this.tEpoch=0;if(typeof _ezaq!=="undefined"&&_ezaq.hasOwnProperty("t_epoch")){this.tEpoch=_ezaq.t_epoch}};var EzoicPixelData=function(name,val){this.name=name;this.val=val;};EzoicPixel.prototype={constructor:EzoicPixel,AddAndFireImpPixel:function(adSlot,pixelData){this.AddImpPixel(adSlot,pixelData,0,0,0,0,0);this.FirePixels()},AddAndFirePVPixel:function(pvId,pixelData){this.AddPVPixel(pvId,pixelData);this.FirePixels()},AddImpPixel:function(adSlot,pixelData,revenue,est_revenue,bid_floor_filled,bid_floor_prev,stat_source_id){if(__ez.dot.isDefined(adSlot)==false||__ez.dot.isAnyDefined(adSlot.getSlotElementId,adSlot.ElementId)==false){return}
+var ad_position_id=parseInt(__ez.dot.getTargeting(adSlot,'ap'));var ad_size_array=__ez.dot.getSizes(adSlot)[0];var ad_size=ad_size_array.l.toString()+"x"+ad_size_array.j.toString();var domainId="0";var countryCode="XX";if(typeof _ezaq!=="undefined"&&_ezaq.hasOwnProperty("domain_id")){domainId=_ezaq.domain_id.toString()}
+if(typeof _ezaq!=="undefined"&&_ezaq.hasOwnProperty("country")){countryCode=_ezaq.country}
+var impId=__ez.dot.getSlotIID(adSlot),adUnit=__ez.dot.getSlotElementId(adSlot);if(__ez.dot.isDefined(impId,adUnit)&&this.validateData(pixelData)){pixelData=this.convertDataToStr(pixelData);this.pixels.push({type:"impression",impression_id:impId,domain_id:domainId,unit:adUnit,t_epoch:this.tEpoch,revenue:revenue,est_revenue:est_revenue,ad_position:ad_position_id,ad_size:ad_size,bid_floor_filled:bid_floor_filled,bid_floor_prev:bid_floor_prev,stat_source_id:stat_source_id,country_code:countryCode,data:pixelData})}},AddImpPixelById:function(impFullId,pixelData){var domainId="0";if(typeof _ezaq!=="undefined"&&_ezaq.hasOwnProperty("domain_id")){domainId=_ezaq.domain_id.toString()}
+var vals=impFullId.split('/');if(__ez.dot.isDefined(impFullId)&&vals.length===3&&this.validateData(pixelData)){var adUnit=vals[0];var impId=vals[2];pixelData=this.convertDataToStr(pixelData);this.pixels.push({type:"impression",impression_id:impId,domain_id:domainId,unit:adUnit,t_epoch:this.tEpoch,data:pixelData})}},AddPVPixel:function(pvId,pixelData){var domainId="0";if(typeof _ezaq!=="undefined"&&_ezaq.hasOwnProperty("domain_id")){domainId=_ezaq.domain_id.toString()}
+if(__ez.dot.isDefined(pvId)&&this.validateData(pixelData)){pixelData=this.convertDataToStr(pixelData);this.pixels.push({type:"pageview",pageview_id:pvId,domain_id:domainId,t_epoch:this.tEpoch,data:pixelData})}},FirePixels:function(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender"){return}
+if(__ez.dot.isDefined(this.pixels)&&this.pixels.length>0){(new Image()).src=this.pixelUrl+"?orig="+(__ez.template.isOrig===true?1:0)+"&pixels="+encodeURIComponent(JSON.stringify(this.pixels))}
+this.pixels=[]},NewData:function(name,val){return new EzoicPixelData(name,val)},convertDataToStr:function(pixelData){if(typeof pixelData==="undefined"){return[]}
+try{for(var i in pixelData){pixelData[i].val=pixelData[i].val+''}}catch(e){}
+return pixelData},validateData:function(pixelData){for(var i=0;i<pixelData.length;i++){if(pixelData[i]instanceof EzoicPixelData===false){console.error("Invalid pixelData. ",pixelData[i]);return false}}
+return true}};</script>
+<script data-ezscrex="false" data-cfasync="false">(function(){if("function"===typeof window.CustomEvent)return!1;window.CustomEvent=function(c,a){a=a||{bubbles:!1,cancelable:!1,detail:null};var b=document.createEvent("CustomEvent");b.initCustomEvent(c,a.bubbles,a.cancelable,a.detail);return b}})();</script><script data-ezscrex="false" data-cfasync="false">window.requestIdleCallback=window.requestIdleCallback||function(b){var a=Date.now();return setTimeout(function(){b({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-a))}})},1)};
+	(function(){function b(a,b){for(var c=[],f=0;f<a;f++){for(var d=f*b*Math.random(),l=!0,k=2;k<=Math.sqrt(d);++k)if(0===d%k){l=!1;break}l&&c.push(d)}return c}function a(){var a=this;a.age=0;setInterval(function(){a.age++},1E3)}if("1"==window.ihajsdjhsadhjk){var d=new a;b(6,d);window.ihajsdjhsadhjk=null;window.doezifk="1"}"1"==window.doezifk&&(b(50,1E9),pointlessComputationsButton.disabled=!1,window.doezifk=null,window.ihajsdjhsadhjk="1");if("function"===typeof window.EzoIvent)return!1;window.EzoIvent=
+	function(a,b){b=b||{bubbles:!1,cancelable:!1,detail:null};var c=document.createEvent("EzoIvent");c.initCustomEvent(a,b.bubbles,b.cancelable,b.detail);return c}})();__ez.nap=[];__ez.nap[0]=0;__ez.nap[1]=45;__ez.nap[2]=[];__ez.nap[3]=0;__ez.nap[4]=1;__ez.nap[5]=[];
+	var ezocfol=function(b){b=_findNetworkQuietPeriods(__ez.nap[2],window.ezodomstart,b);b=_findOverlappingQuietPeriods(b,__ez.nap[5]);if("undefined"!=typeof b){var a=0,d=Math.max(b[b.length-1].cpuQuietPeriod.end,b[b.length-1].cpuQuietPeriod.end);b.forEach(function(b){a+=Math.floor(b.quietPeriodLength/55)});(a>=__ez.sswp&&1<a||10<=a||d<Date.now()-5E3)&&clearInterval(window.ezoIint);__ez.nap[0]=a;window.dispatchEvent(new CustomEvent("EzoIvent",{detail:[__ez.nap[0],50]}))}};
+	_findOverlappingQuietPeriods=function(b,a){var d=a.slice(),c=b.slice();d.shift();c.shift();var f=[];d.forEach(function(e){c.forEach(function(c){e.start>=c.start?c.end>=e.start+55&&f.push({cpuQuietPeriod:e,networkQuietPeriod:c,cpuQuietPeriods:a,networkQuietPeriods:b,quietPeriodLength:Math.min(e.duration,c.duration)}):e.end>=c.start+55&&f.push({cpuQuietPeriod:e,networkQuietPeriod:c,cpuQuietPeriods:a,networkQuietPeriods:b,quietPeriodLength:Math.min(e.duration,c.duration)})})});if(0<f.length)return f};
+	var netStartTime=0;_findNetworkQuietPeriods=function(b,a,d){0==netStartTime&&(netStartTime=a-1);a=[];for(var c in b){var f=b[c];0>f.end&&(f.end=99);a.push({time:f.start,isStart:!0});0<f.end&&a.push({time:f.end,isStart:!1})}a.sort(function(a,b){return a.time-b.time});var e=0,g=netStartTime,h=[];a.forEach(function(a){a.isStart?(e===__ez.nap[4]&&h.push({start:g,end:a.time,duration:a.time-g}),e++):(e--,e===__ez.nap[4]&&(g=a.time))});e<=__ez.nap[4]&&h.push({start:g,end:d,duration:d-g});return h};
+	function hashCode(b){for(var a,d=0;d<b.length;d++)a=Math.imul(31,a)+b.charCodeAt(d)|0;return a}
+	var ezogetrqbykey=function(b){for(var a=0,d=__ez.nap[2].length;a<d;a++)if(__ez.nap[2][a].id==b)return a},ezorqs=function(b,a){indexKey=window.ezogetrqbykey(a);"undefined"==typeof indexKey&&(__ez.nap[2].push({start:Date.now(),end:-1,id:a}),__ez.nap[3]++,setTimeout(function(){window.ezorqe(b,a)},2E3))},ezorqe=function(b,a,d){indexKey=window.ezogetrqbykey(a);"undefined"!=typeof indexKey&&-1==__ez.nap[2][indexKey].end?(__ez.nap[2][indexKey].end=Date.now(),__ez.nap[3]--):1==d&&__ez.nap[3]--};
+	(function(){if("undefined"!=typeof window.__ez.ssaf&&-1<window.__ez.ssaf.indexOf(19)){var b=window.setInterval;window.setInterval=function(a,d){var c=d;90>c&&56!=c&&(c=90);if(3>arguments.length)return b(a,c);var f=Array.prototype.slice.call(arguments).slice(2);return b(a.bind(window,f),c)}}})();
+	(function(){if("undefined"!=typeof window.__ez.ssaf&&-1<window.__ez.ssaf.indexOf(19)){var b=window.setTimeout;window.setTimeout=function(a,d){var c=d;90>c&&(c=90);if(3>arguments.length)return b(a,c);var f=this,e=Array.prototype.slice.call(arguments,2);return b(a instanceof Function?function(){a.apply(f,e)}:a,c)}}})();
+	(function(){var b=window.XMLHttpRequest,a=function(){var a=new b;"undefined"!=typeof this.open?a.open=this.open:this.open=b.open;"undefined"!=typeof this.abort?a.abort=this.abort:this.open=b.open;"undefined"!=typeof this.getAllResponseHeaders?a.getAllResponseHeaders=this.getAllResponseHeaders:this.getAllResponseHeaders=b.getAllResponseHeaders;"undefined"!=typeof this.getResponseHeader?a.getResponseHeader=this.getResponseHeader:this.getResponseHeader=b.getResponseHeader;"undefined"!=typeof this.overrideMimeType?
+	a.overrideMimeType=this.overrideMimeType:this.overrideMimeType=b.overrideMimeType;"undefined"!=typeof this.setRequestHeader?a.setRequestHeader=this.setRequestHeader:this.setRequestHeader=b.setRequestHeader;var d=Math.random();a.addEventListener("loadstart",function(a){window.ezorqs(a,d)});a.addEventListener("loadend",function(a){window.ezorqe(a,d)});a.addEventListener("error",function(a){window.ezorqe(a,d)});a.addEventListener("abort",function(a){window.ezorqe(a,d)});return a};a.prototype=b.prototype;
+	for(var d in b)a[d]=b[d];window.XMLHttpRequest=a})();window.ezoFetchConst=window.fetch;window.fetch=function(b){var a=arguments,d=this,c=Math.random();window.ezorqs(b,c);return new Promise(function(b,e){window.ezoFetchConst.apply(d,a).then(function(a){window.ezorqe(a,c);b(a)})["catch"](function(a){window.ezorqe(a,c);e(a)})})};var _fEzDt=function(){return Date.now()};
+	document.addEventListener("DOMContentLoaded",function(){window.ezodomstart=Date.now();if("requestIdleCallback"in window){var b=0;window.ezoIint=setInterval(function(){window.requestIdleCallback(function(a){var d=Date.now();a=a.timeRemaining();var c=_fEzDt();a<c&&(a>__ez.nap[1]?0==b&&(b=d):0!=b&&(a={start:b,end:d-(50-a)},a.duration=a.end-a.start,55<=a.duration&&(__ez.nap[5].push(a),window.ezocfol(d)),b=0))})},56)}else window.dispatchEvent(new CustomEvent("EzoIvent",{detail:[-1,-1]})),clearInterval(window.ezoIint)});
+	"undefined"!=typeof window.__ez.ssaf&&-1<window.__ez.ssaf.indexOf(16)&&(window.addEventListener("load",function(){window.__ez__w_load=!0}),window.addEventListener("DOMContentLoaded",function(){window.__ez__w_dom=!0}),"undefined"!==typeof window.__ez.sshsdef&&!1===window.__ez.sshsdef&&function(){if(Element.prototype.addEventListener){window.__ez__ael=window.addEventListener;window.__ez__ael__proto=window.__ez__ael.prototype;var b=function(){"domcontentloaded"==arguments[0].toLowerCase()?arguments[0]=
+	"EzoicDOMContentLoaded":"load"==arguments[0].toLowerCase()&&(arguments[0]="Ezoicload");window.__ez__ael.apply(window,arguments)};window.__ez__ael.prototype=window.__ez__ael__proto;window.addEventListener=b;document.addEventListener=b}}());window.ezorqs=ezorqs;window.ezorqe=ezorqe;window.ezocfol=ezocfol;window.ezogetrqbykey=ezogetrqbykey;__ez.nap=__ez.nap;</script>
+<!-- Chartbeat Script Added by CJ 1-13-16 -->
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<!-- End Chartbeat Script -->
+<!-- Google Page-Level Ads Added by CJ 5-18-17 -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5943308810780921",
+    enable_page_level_ads: true
+  });
+</script>
+<!-- End Google Page-Level Ads Script -->
+
+<meta name="viewport" content="width=device-width" />
+<meta name="google-site-verification" content="icGkRsUSvrcw38w8ORla0DtiEaru5iJXh_VFH4S1N4c" />
+<title>Asian Americans Hate-Crime Targets: &#039;Chinese Virus&#039; Bigots Condemned By LA Council - MyNewsLA.com</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://mynewsla.com/xmlrpc.php" />
+<!--[if lt IE 9]>
+	<script src="https://mynewsla.com/wp-content/themes/fearless/js/html5shiv.js" type="text/javascript"></script>
+<![endif]-->
+<meta name="generator" content="WordPress 5.3.2" />
+<meta name="template" content="Fearless - Modern, Clean, &amp; Responsive WP Magazine 1.7.1" />
+
+<!-- This site is optimized with the Yoast SEO plugin v12.6.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Asian Americans Hate-Crime Targets: &#039;Chinese Virus&#039; Bigots Condemned By LA Council - MyNewsLA.com" />
+<meta property="og:description" content="Share this article:In an effort to curb anti-Asian American sentiment that has sprouted since the start of the COVID-19 pandemic, the Los Angeles City Council Wednesday voted in favor of a resolution to support a federal bill that would direct local authorities to take action against hate incidents. The council&#8217;s resolution supports H.R. 908, a &hellip;" />
+<meta property="og:url" content="https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/" />
+<meta property="og:site_name" content="MyNewsLA.com" />
+<meta property="article:tag" content="Americans" />
+<meta property="article:tag" content="Asian" />
+<meta property="article:tag" content="city" />
+<meta property="article:tag" content="Condemns" />
+<meta property="article:tag" content="council" />
+<meta property="article:tag" content="COVID-19" />
+<meta property="article:tag" content="hate" />
+<meta property="article:section" content="Crime" />
+<meta property="article:published_time" content="2020-05-13T22:47:02+00:00" />
+<meta property="article:modified_time" content="2020-05-13T23:05:07+00:00" />
+<meta property="og:updated_time" content="2020-05-13T23:05:07+00:00" />
+<meta property="og:image" content="https://mynewsla.com/wp-content/uploads/2014/09/MNLA_Featured_16-9_0268-e1504902137934.jpg" />
+<meta property="og:image:secure_url" content="https://mynewsla.com/wp-content/uploads/2014/09/MNLA_Featured_16-9_0268-e1504902137934.jpg" />
+<meta property="og:image:width" content="640" />
+<meta property="og:image:height" content="360" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mynewsla.com/#website","url":"https://mynewsla.com/","name":"MyNewsLA.com","description":"Breaking news for greater Los Angeles and Orange County","potentialAction":{"@type":"SearchAction","target":"https://mynewsla.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/#primaryimage","url":"https://mynewsla.com/wp-content/uploads/2014/09/MNLA_Featured_16-9_0268-e1504902137934.jpg","width":640,"height":360,"caption":"the la city council chamber"},{"@type":"WebPage","@id":"https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/#webpage","url":"https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/","inLanguage":"en-US","name":"Asian Americans Hate-Crime Targets: &#039;Chinese Virus&#039; Bigots Condemned By LA Council - MyNewsLA.com","isPartOf":{"@id":"https://mynewsla.com/#website"},"primaryImageOfPage":{"@id":"https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/#primaryimage"},"datePublished":"2020-05-13T22:47:02+00:00","dateModified":"2020-05-13T23:05:07+00:00","author":{"@id":"https://mynewsla.com/#/schema/person/a5c7a05dd18ff7336c9c65d1da85d2ec"},"breadcrumb":{"@id":"https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://mynewsla.com/","url":"https://mynewsla.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://mynewsla.com/category/crime/","url":"https://mynewsla.com/category/crime/","name":"Crime"}},{"@type":"ListItem","position":3,"item":{"@type":"WebPage","@id":"https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/","url":"https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/","name":"Asian Americans Hate-Crime Targets: &#8216;Chinese Virus&#8217; Bigots Condemned By LA Council"}}]},{"@type":["Person"],"@id":"https://mynewsla.com/#/schema/person/a5c7a05dd18ff7336c9c65d1da85d2ec","name":"Contributing Editor","image":{"@type":"ImageObject","@id":"https://mynewsla.com/#authorlogo","url":"https://secure.gravatar.com/avatar/6456a4194ef8888719fa536309a584b9?s=96&d=mm&r=g","caption":"Contributing Editor"},"sameAs":[]}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<meta name="generator" content="AMP for WP 0.9.98.21"/><link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="MyNewsLA.com &raquo; Feed" href="https://mynewsla.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="MyNewsLA.com &raquo; Comments Feed" href="https://mynewsla.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="MyNewsLA.com &raquo; Asian Americans Hate-Crime Targets: &#8216;Chinese Virus&#8217; Bigots Condemned By LA Council Comments Feed" href="https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mynewsla.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='https://mynewsla.com/wp-includes/css/dashicons.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wunderground-css'  href='https://mynewsla.com/wp-content/plugins/wunderground/assets/css/wunderground.css?ver=2.1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://mynewsla.com/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dtherptstyles-css'  href='https://mynewsla.com/wp-content/plugins/dt-hatom-error-plugin-1-1-5/hatom-style.css?ver=1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='symple_shortcode_styles-css'  href='https://mynewsla.com/wp-content/plugins/symple-shortcodes/shortcodes/css/symple_shortcodes_styles.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpb-google-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans&#038;ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='weather-atlas-css'  href='https://mynewsla.com/wp-content/plugins/weather-atlas/public/css/weather-atlas-public.min.css?ver=1.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='weather-icons-css'  href='https://mynewsla.com/wp-content/plugins/weather-atlas/public/font/weather-icons/weather-icons.min.css?ver=1.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css-css'  href='https://mynewsla.com/wp-content/plugins/wordpress-popular-posts/public/css/wpp.css?ver=4.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='https://mynewsla.com/wp-content/themes/fearless/fancybox/jquery.fancybox-1.3.4.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='normalize-css'  href='https://mynewsla.com/wp-content/themes/fearless/css/normalize.css?ver=2.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='fearless-css'  href='https://mynewsla.com/wp-content/themes/fearless-child/style.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='fearless-responsive-css'  href='https://mynewsla.com/wp-content/themes/fearless/css/fearless-responsive.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://mynewsla.com/wp-content/plugins/symple-shortcodes/shortcodes/css/font-awesome.min.css?ver=5.3.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://mynewsla.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-includes/js/jquery/ui/menu.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4'></script>
+<script type='text/javascript'>
+( 'fetch' in window ) || document.write( '<script src="https://mynewsla.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://mynewsla.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.26.0-0"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://mynewsla.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://mynewsla.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );
+</script>
+<script type='text/javascript' src='https://mynewsla.com/wp-includes/js/dist/dom-ready.min.js?ver=2.5.1'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-includes/js/dist/a11y.min.js?ver=2.5.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var uiAutocompleteL10n = {"noResults":"No results found.","oneResult":"1 result found. Use up and down arrow keys to navigate.","manyResults":"%d results found. Use up and down arrow keys to navigate.","itemSelected":"Item selected."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://mynewsla.com/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WuWidget = {"apiKey":"3ffab52910ec1a0e","_wpnonce":"a72a0b640f","ajaxurl":"https:\/\/mynewsla.com\/wp-admin\/admin-ajax.php","is_admin":"","subdomain":"www"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://mynewsla.com/wp-content/plugins/wunderground/assets/js/widget.min.js?ver=2.1.3'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-content/plugins/weather-atlas/public/js/weather-atlas-public.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-content/plugins/weather-atlas/public/js/jquery-cookie.min.js?ver=1.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpp_params = {"sampling_active":"1","sampling_rate":"200","ajax_url":"https:\/\/mynewsla.com\/wp-json\/wordpress-popular-posts\/v1\/popular-posts\/","ID":"114580","token":"dfda01a72d","debug":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://mynewsla.com/wp-content/plugins/wordpress-popular-posts/public/js/wpp-4.2.0.min.js?ver=4.2.2'></script>
+<link rel='https://api.w.org/' href='https://mynewsla.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mynewsla.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://mynewsla.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://mynewsla.com/?p=114580' />
+<link rel="alternate" type="application/json+oembed" href="https://mynewsla.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmynewsla.com%2Fcrime%2F2020%2F05%2F13%2Fasian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://mynewsla.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmynewsla.com%2Fcrime%2F2020%2F05%2F13%2Fasian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council%2F&#038;format=xml" />
+<link rel="shortcut icon" type="image/x-icon" href="https://mynewsla.com/wp-content/uploads/2014/08/favicon.ico" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400|Open+Sans:400,400italic,700" />
+<style>
+@media only screen and ( max-width: 960px ) {
+  #header-background-image-wrapper {
+    display: none;
+  }
+  #header {
+    background: url('https://mynewsla.com/wp-content/uploads/2014/09/MNLA_Banner_0005-edit-tablet.jpg') no-repeat top;
+    background-size: 100%;
+  }
+}
+@media only screen and ( max-width: 640px ) {
+  #header-background-image-wrapper {
+    display: none;
+  }
+  #header {
+    background: url('https://mynewsla.com/wp-content/uploads/2014/09/MNLA_Banner_0005-edit-mobile.jpg') no-repeat top;
+    background-size: 100%;
+  }
+}
+.button:hover,
+.flexslider .category-label,
+.layout-module .widget-title > span,
+.pagination a:hover,
+.pagination .current,
+#primary-navigation .menu li.current-menu-item,
+#primary-navigation .menu li.current-menu-ancestor,
+#primary-navigation .menu li.current_page_item,
+#primary-navigation .menu > li:hover,
+#primary-navigation .menu > li.sfHover,
+#primary-navigation .menu ul a:hover,
+#primary-navigation .menu ul li.current-menu-item a,
+.review-box .heading,
+#searchform #searchsubmit:hover,
+#secondary .widget_fearless_tabs .headings a:hover,
+#secondary .widget_fearless_tabs .headings a.active,
+section.top-reviews .review-column-1 h2,
+.sidebar-primary .widget-title,
+.wpcf7-submit:hover
+{ background-color: #ff8a00; }
+.fearless-star-rating-over {
+color: #ff8a00; }
+#topbar,
+.widget_archive ul li:hover,
+.widget_categories ul li:hover,
+#primary-navigation,
+#primary-navigation .menu > li > ul,
+.featured-slider.flexslider .category-label-wrapper,
+.layout-module .widget-title {
+border-color: #ff8a00; }
+a { color: #0044aa; }
+a:hover, a:focus, a:active { color: #ff8a00; }
+#topbar { background-color: #002266; }
+#primary-navigation,
+#primary-navigation .menu ul,
+#primary-navigation select.tinynav { background-color: #002266; }
+#footer { background-color: #002266; }
+html { font-size: 62.5%; }
+body, #menubar-search-query, .review-box .heading, .review-box .short-summary { font-family: "Open Sans"; }
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-title { font-family: "Bitter"; font-weight: 400; }
+
+/* Begin user custom CSS */
+.wp-caption-text {
+text-align: left;
+padding:0 .5em
+}
+
+#ticker {
+height: auto;
+}
+
+#ticker .ticker-title {
+margin-top:.2em;
+font-size:14px;
+}
+
+#ticker p.ticker-content {
+font-size:14px;
+line-height:18px;
+}
+
+@media only screen and (max-width: 420px) {
+#div-gpt-ad-1437204727699-0,
+#text-11 div.textwidget,
+#text-11,
+#text-15 div.textwidget,
+#text-15,
+#text-16 div.textwidget,
+#text-16,
+#text-18 div.textwidget,
+#text-18,
+#text-19 div.textwidget,
+#text-19,
+#text-20 div.textwidget,
+#text-20 {
+    width: 320px !important;
+margin-right: auto;
+margin-left: auto;
+}
+#text-15 div.textwidget {
+margin: 0px !important;
+}
+aside#secondary {
+width: 117% !important;
+margin-left: -8% !important;
+}
+body {
+padding: 0 !important;
+}
+}
+/* End user custom CSS */
+</style>
+<script>
+jQuery(document).ready(function($){
+	$('#primary-navigation > ul, #secondary-navigation > ul').tinyNav({
+		active: 'current-menu-item',
+		header: 'Menu'
+	});
+});
+</script>
+<script type='text/javascript'>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') + 
+    '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+    })();
+    </script>
+    <script type='text/javascript'>
+    googletag.cmd.push(function() {
+//make header leaderboard responsive
+        var mapTop = googletag.sizeMapping().
+                addSize([900, 580], [728, 90]).
+                addSize([600, 200], [[468, 60], [320,100]]).
+                addSize([0, 0], [[320, 100], [320, 50]]).
+                build();
+    googletag.defineSlot('/30582678/MLA/mynewsla/crime',[ [728,90],[468,60],[320,100],[320,50]], 'div-gpt-ad-1437204727699-0')
+         .defineSizeMapping(mapTop)
+         .addService(googletag.pubads())
+         .setTargeting('pos', 'top');
+//use standard 300x250 under article
+googletag.defineSlot('/30582678/MLA/mynewsla/crime', [300,250], 'div-gpt-ad-1437204727699-1').addService(googletag.pubads()).setTargeting('pos', 'underarticle');
+//make optional bottom leaderboard responsive
+        var mapBottom = googletag.sizeMapping().
+                //addSize([900, 580], [728, 90]).
+                addSize([600, 200], [[468, 60], [320,100]]).
+                addSize([0, 0], [[320, 100], [320, 50]]).
+                build();
+    googletag.defineSlot('/30582678/MLA/mynewsla/crime',[[468,60],[320,100],[320,50]], 'div-gpt-ad-1437204727699-2')
+        .defineSizeMapping(mapBottom)
+        .addService(googletag.pubads())
+        .setTargeting('pos', 'bottom');
+//last three slots are for standard 300px ads in sidebar that will fit on most mobile devices. Positions atf and btf are above and below the fold.
+    googletag.defineSlot('/30582678/MLA/mynewsla/crime', [300,250], 'div-gpt-ad-1437204727699-3').addService(googletag.pubads()).setTargeting('pos', 'atf');
+    googletag.defineSlot('/30582678/MLA/mynewsla/crime', [[300,600],[160,600]], 'div-gpt-ad-1437204727699-4').addService(googletag.pubads());
+    googletag.defineSlot('/30582678/MLA/mynewsla/crime', [300,250], 'div-gpt-ad-1437204727699-5').addService(googletag.pubads()).setTargeting('pos', 'btf');
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+    });
+    </script><style>
+    #wp-admin-bar-ampforwp-view-amp a{
+    background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjMxNHB4IiBoZWlnaHQ9IjMxNXB4IiB2aWV3Qm94PSIwIDAgMzE0IDMxNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNDEgKDM1MzI2KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5TaGFwZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSIjODI4NzhjIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSIyNjA3MSIgZmlsbD0iIzgyODc4YyI+CiAgICAgICAgICAgIDxnIGlkPSJDYXBhXzEiPgogICAgICAgICAgICAgICAgPGcgaWQ9Il94MzJfNDAuX1Bvd2VyIj4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTU3LjAwNywwIEM3MC4yOTIsMCAwLDcwLjI5MiAwLDE1Ny4wMDcgQzAsMjQzLjcxNSA3MC4yOTIsMzE0LjAxNCAxNTcuMDA3LDMxNC4wMTQgQzI0My43MTYsMzE0LjAxNCAzMTQuMDE0LDI0My43MTUgMzE0LjAxNCwxNTcuMDA3IEMzMTQuMDE0LDcwLjI5MiAyNDMuNzE2LDAgMTU3LjAwNywwIFogTTE1Ny4wMDcsMjgyLjYxMiBDODcuNjM0LDI4Mi42MTIgMzEuNDAyLDIyNi4zNzIgMzEuNDAyLDE1Ny4wMDcgQzMxLjQwMiw4Ny42MzQgODcuNjM0LDMxLjQwMiAxNTcuMDA3LDMxLjQwMiBDMjI2LjM3MSwzMS40MDIgMjgyLjYxMSw4Ny42MzQgMjgyLjYxMSwxNTcuMDA3IEMyODIuNjEyLDIyNi4zNzIgMjI2LjM3MiwyODIuNjEyIDE1Ny4wMDcsMjgyLjYxMiBaIE0yMDQuMTExLDE0MS4zNjggTDE2My40NzksMTQxLjUzMyBDMTU5LjEzOSwxNDEuNTUzIDE1Ny41NDQsMTM4LjYyMyAxNTkuOTA1LDEzNC45NzkgTDIwMy4zOTcsNjguMTA5IEMyMDguMTI2LDYwLjg0MSAyMDYuOTg0LDU5LjkyMiAyMDAuODYxLDY2LjA1MyBMMTA1LjMwNSwxNjEuNiBDOTkuMTcyLDE2Ny43MzIgMTAxLjIzMiwxNzIuNjc2IDEwOS45MDYsMTcyLjY0MSBMMTQyLjY3OSwxNzIuNTA4IEMxNTEuMzQ3LDE3Mi40NzIgMTU0LjU1MiwxNzguMzM1IDE0OS44MjQsMTg1LjYwNSBMMTA2LjMzNCwyNTIuNDc3IEMxMDMuOTcyLDI1Ni4xMTIgMTA0LjU0MiwyNTYuNTgxIDEwNy42MiwyNTMuNTI3IEwxNzUuOTE1LDE4NS43MTcgQzE3OC45ODgsMTgyLjY1OSAxODMuOTUsMTc3LjY4NiAxODYuOTgzLDE3NC41OTYgTDIwOC43ODgsMTUyLjQ4NSBDMjE0Ljg3NSwxNDYuMzE3IDIxMi43NzUsMTQxLjMzIDIwNC4xMTEsMTQxLjM2OCBaIiBpZD0iU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+) !important;
+    background-size: 18px !important;
+    background-repeat: no-repeat !important;
+ 		background-position: 4px 7px !important;
+ 		text-indent: -99999px;
+ 		width: 12px;
+}</style>
+<style type="text/css"></style>
+
+<style type="text/css">
+.synved-social-resolution-single {
+display: inline-block;
+}
+.synved-social-resolution-normal {
+display: inline-block;
+}
+.synved-social-resolution-hidef {
+display: none;
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx),
+only screen and (min-resolution: 192dpi) {
+	.synved-social-resolution-normal {
+	display: none;
+	}
+	.synved-social-resolution-hidef {
+	display: inline-block;
+	}
+}
+</style>
+<!-- NativeAds.com Script added by CJ 12-26-18 -->
+<script type="text/javascript" src="//s.ntv.io/serve/load.js" async></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-54695600-1', 'auto');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+
+</script>
+<link rel="amphtml" href="https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/?ezoic_amp=1">
+
+<script data-ezscrex="false" data-cfasync="false" type="text/javascript">window.google_analytics_uacct = "UA-97845889-43";</script>
+<script data-ezscrex="false" data-cfasync="false" type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['e._setAccount', 'UA-97845889-43']);
+_gaq.push(['f._setAccount', 'UA-38339005-1']);
+_gaq.push(['e._setDomainName', 'mynewsla.com']);
+_gaq.push(['f._setDomainName', 'mynewsla.com']);
+_gaq.push(['e._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['e._setCustomVar',2,'t','126',3]);
+_gaq.push(['e._setCustomVar',3,'rid','0',2]);
+_gaq.push(['e._setCustomVar',4,'bra','mod33',3]);
+_gaq.push(['e._setAllowAnchor',true]);
+_gaq.push(['e._setSiteSpeedSampleRate', 10]);
+_gaq.push(['f._setCustomVar',1,'template','old_site_gc',3]);
+_gaq.push(['f._setCustomVar',2,'domain','mynewsla.com',3]);
+_gaq.push(['f._setSiteSpeedSampleRate', 20]);
+_gaq.push(['e._trackPageview']);
+_gaq.push(['f._trackPageview']);
+
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">var ezouid = "1";</script><base href="https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/"><script type='text/javascript'>
+var ezoTemplate = 'old_site_gc';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script><!-- START EZHEAD -->
+<script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 56569;
+var ezdomain = 'mynewsla.com';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">var _ezaq = {"ad_cache_level":0,"ad_lazyload_version":0,"city":"Saint Paul","country":"US","days_since_last_visit":-1,"domain_id":56569,"engaged_time_visit":0,"ezcache_level":0,"forensiq_score":-1,"form_factor_id":1,"framework_id":1,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"metro_code":613,"page_ad_positions":"","page_view_count":0,"page_view_id":"293e5401-e508-401a-4609-414dbefe6f9e","position_selection_id":0,"postal_code":"55105","pv_event_count":0,"response_time_orig":101,"serverid":"3.228.18.168:4405","state":"MN","t_epoch":1589746044,"template_id":126,"time_on_site_visit":0,"url":"https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/","user_id":0,"word_count":855,"worst_bad_word_level":0};var _ezExtraQueries = "&ez_orig=1";</script><script data-ezscrex='false' data-cfasync='false' type="text/javascript" src="/detroitchicago/rochester.js?cb=188-7&v=8" async></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="text/javascript"></script>
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl() {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_56569=" + new Date().getTime() + "|293e5401-e508-401a-4609-414dbefe6f9e|false; " + expires, 3);
+}
+function attach_ezolpl() {
+    if(window.attachEvent) {
+        window.attachEvent('onload', create_ezolpl);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl();
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl;
+        }
+    }
+}
+attach_ezolpl();
+</script></head>
+<body class="wordpress ltr en_US child-theme y2020 m05 d17 h13 sunday logged-out singular singular-post singular-post-114580 post-format-standard symple-shortcodes  symple-shortcodes-responsive chrome topbar-enabled logo-image-enabled layout-2c-l">
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="container" class="hfeed">
+
+	<div id="topbar"><div class="topbar-left social_icons"><ul class="social-icons"><li><a href="https://www.facebook.com/MyNewsLA" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span class="screen-reader-text">Facebook</span></a></li><li><a href="https://plus.google.com/+Mynewsla/posts" title="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i><span class="screen-reader-text">Google Plus</span></a></li><li><a href="https://instagram.com/mynewsla" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i><span class="screen-reader-text">Instagram</span></a></li><li><a href="https://mynewsla.com/feed/" title="RSS Feed"><i class="fa fa-rss" aria-hidden="true"></i><span class="screen-reader-text">RSS Feed</span></a></li><li><a href="https://twitter.com/MyNewsLA" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span class="screen-reader-text">Twitter</span></a></li></ul></div><div class="topbar-right secondary_navigation"><nav id="secondary-navigation" role="navigation">
+	<h1 class="screen-reader-text">Menu</h1>
+	<div class="screen-reader-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+	<ul id="menu-secondary-navigation" class="menu"><li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="https://mynewsla.com/about/">About</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="https://mynewsla.com/staff/">Staff</a></li>
+<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="https://mynewsla.com/contact/">Contact</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="https://mynewsla.com/advertise/">Advertise</a></li>
+<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="https://mynewsla.com/faq/">FAQ</a></li>
+<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-57"><a href="https://mynewsla.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56"><a href="https://mynewsla.com/terms-service/">Terms of Service</a></li>
+</ul></nav><!-- #secondary-navigation --></div></div><!-- #topbar -->
+	<header id="header" role="banner">
+
+		<div id="header-background-image-wrapper"><img src="https://mynewsla.com/wp-content/uploads/2017/07/MNLA_Banner_0005_optimized.jpg" id="header-background-image" alt="Header image" width="1280" height="270" /></div>
+		<div id="branding">
+			<h1 id="site-title"><a href="https://mynewsla.com/" rel="home"><span>MyNewsLA.com</span><img src="https://mynewsla.com/wp-content/uploads/2014/09/MyNewsLA_Logo_TEST6.png" alt="Logo" width="175" height="90" /></a></h1>
+			<h2 id="site-description">Breaking news for greater Los Angeles and Orange County</h2>
+		</div><!-- #branding -->
+
+					<aside id="header-widget-area" class="widget-area">
+<!--			<style>
+.header-responsive-ad-unit { margin-left:5px;width: 280px; height: 50px; }
+@media(min-width: 500px) { .header-responsive-ad-unit { width: 468px; height: 60px; } }
+@media(min-width: 800px) { .header-responsive-ad-unit { width: 700px; height: 90px; } }
+</style> -->
+
+<!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Header Responsive Ad Unit -->
+<!--<ins class="adsbygoogle header-responsive-ad-unit"
+     style="display:block"
+     data-ad-client="ca-pub-5943308810780921"
+     data-ad-slot="3849371494"></ins>
+<script>
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>-->
+
+			
+			
+			
+			<section id="text-8" class="widget widget_text">			<div class="textwidget"><!-- Ezoic - Default Leaderboard 1 - top_of_page -->
+<div id="ezoic-pub-ad-placeholder-109">
+<!-- responsive_header_unit_top-->
+<div id='div-gpt-ad-1437204727699-0'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1437204727699-0'); });
+</script>
+</div>
+</div>
+<!-- End Ezoic - Default Leaderboard 1 - top_of_page --></div>
+		</section></aside>
+		
+		
+<nav id="primary-navigation" role="navigation">
+	<h3 class="screen-reader-text">Menu</h3>
+	<div class="screen-reader-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+	<ul id="menu-primary-navigation" class="menu sf-menu"><li id="menu-item-7" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-7"><a href="https://mynewsla.com/category/crime/">Crime</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9"><a href="https://mynewsla.com/category/government/">Government</a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15"><a href="https://mynewsla.com/category/business/">Business</a></li>
+<li id="menu-item-8" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8"><a href="https://mynewsla.com/category/education/">Education</a></li>
+<li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13"><a href="https://mynewsla.com/category/sports/">Sports</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10"><a href="https://mynewsla.com/category/hollywood/">Hollywood</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11"><a href="https://mynewsla.com/category/life/">Life</a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12"><a href="https://mynewsla.com/category/orange-county/">OC</a></li>
+</ul>
+			<form id="menubar-search" method="get" action="https://mynewsla.com/" role="search" class="fa fa-search">
+			<label for="menubar-search-submit" class="screen-reader-text">Search</label>
+			<input type="search" id="menubar-search-query" name="s" value="" placeholder="Search&hellip;" />
+			<input type="submit" id="menubar-search-submit" value="Go" />
+		</form>
+	
+</nav><!-- #primary-navigation -->
+
+			<div id="ticker">
+		<ul id="js-news">
+							<li class="news-item"><a href="https://mynewsla.com/business/2020/05/17/orange-county-reports-155-more-cases-of-covid-19/">Orange County Reports 155 More Cases of COVID-19</a></li>
+							<li class="news-item"><a href="https://mynewsla.com/crime/2020/05/17/man-stabbed-to-death-on-venice-boardwalk-suspect-at-large/">Man Stabbed To Death On Venice Boardwalk, Suspect At Large</a></li>
+							<li class="news-item"><a href="https://mynewsla.com/crime/2020/05/17/aclu-sues-over-conditions-at-terminal-island-prison/">ACLU Sues Over Conditions at Terminal Island Prison</a></li>
+							<li class="news-item"><a href="https://mynewsla.com/uncategorized/2020/05/17/person-killed-in-temecula-crash-idd/">Person Killed in Temecula Crash ID'd</a></li>
+							<li class="news-item"><a href="https://mynewsla.com/weather/2020/05/17/sunny-skies-expected-by-midday-across-san-diego-county/">Sunny Skies Expected By Midday Across San Diego County</a></li>
+					</ul>
+	</div>
+        
+	</header><!-- #header -->
+
+	<div id="main">
+		<p id="breadcrumbs"><span><span><a href="https://mynewsla.com/" >Home</a> » <span><a href="https://mynewsla.com/category/crime/" >Crime</a> » <strong class="breadcrumb_last" aria-current="page">This Article</strong></span></span></span></p>		<script> 
+jQuery(window).ready(function () {
+    jQuery(".singular-page-25825 #text-8").hide();});
+</script>
+	<div id="primary">
+		<div id="content" class="hfeed" role="main">
+
+			
+			
+	
+		
+		<article id="post-114580" class="hentry post publish post-1 odd author-contributing-editor format-standard category-crime post_tag-americans post_tag-asian post_tag-city post_tag-condemns post_tag-council post_tag-covid-19 post_tag-hate">
+
+	
+		
+		<header class="entry-header">
+			
+			<h1 class="entry-title">Asian Americans Hate-Crime Targets: &#8216;Chinese Virus&#8217; Bigots Condemned By LA Council</h1>
+
+			<div class="entry-byline">Posted by <span class="author vcard"><a class="url fn n" rel="author" href="https://mynewsla.com/author/contributing-editor/" title="Contributing Editor">Contributing Editor</a></span> on <time class="published" datetime="2020-05-13T15:47:02-07:00" title="Wednesday, May 13th, 2020, 3:47 pm">May 13, 2020</time> in <span class="category"><a href="https://mynewsla.com/category/crime/" rel="tag">Crime</a></span>  | <a class="comments-link" href="https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/#respond" title="Comment on Asian Americans Hate-Crime Targets: &#8216;Chinese Virus&#8217; Bigots Condemned By LA Council">Leave a response</a></div>		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+						Share this article:<div class="synved-social-container synved-social-container-share" style="text-align: left"><a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook nolightbox" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fmynewsla.com%2Fcrime%2F2020%2F05%2F13%2Fasian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council%2F&#038;t=Asian%20Americans%20Hate-Crime%20Targets%3A%20%E2%80%98Chinese%20Virus%E2%80%99%20Bigots%20Condemned%20By%20LA%20Council&#038;s=100&#038;p&#091;url&#093;=https%3A%2F%2Fmynewsla.com%2Fcrime%2F2020%2F05%2F13%2Fasian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council%2F&#038;p&#091;images&#093;&#091;0&#093;=https%3A%2F%2Fmynewsla.com%2Fwp-content%2Fuploads%2F2014%2F09%2FMNLA_Featured_16-9_0268-e1504902137934.jpg&#038;p&#091;title&#093;=Asian%20Americans%20Hate-Crime%20Targets%3A%20%E2%80%98Chinese%20Virus%E2%80%99%20Bigots%20Condemned%20By%20LA%20Council" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="Facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://mynewsla.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter nolightbox" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmynewsla.com%2Fcrime%2F2020%2F05%2F13%2Fasian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council%2F&#038;text=I%27m%20sharing%20an%20article%20from%20MyNewsLA.com" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://mynewsla.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-reddit nolightbox" data-provider="reddit" target="_blank" rel="nofollow" title="Share on Reddit" href="http://www.reddit.com/submit?url=https%3A%2F%2Fmynewsla.com%2Fcrime%2F2020%2F05%2F13%2Fasian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council%2F&#038;title=Asian%20Americans%20Hate-Crime%20Targets%3A%20%E2%80%98Chinese%20Virus%E2%80%99%20Bigots%20Condemned%20By%20LA%20Council" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="reddit" title="Share on Reddit" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://mynewsla.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/reddit.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-pinterest nolightbox" data-provider="pinterest" target="_blank" rel="nofollow" title="Pin it with Pinterest" href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fmynewsla.com%2Fcrime%2F2020%2F05%2F13%2Fasian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council%2F&#038;media=https%3A%2F%2Fmynewsla.com%2Fwp-content%2Fuploads%2F2014%2F09%2FMNLA_Featured_16-9_0268-e1504902137934.jpg&#038;description=Asian%20Americans%20Hate-Crime%20Targets%3A%20%E2%80%98Chinese%20Virus%E2%80%99%20Bigots%20Condemned%20By%20LA%20Council" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="pinterest" title="Pin it with Pinterest" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://mynewsla.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/pinterest.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-linkedin nolightbox" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fmynewsla.com%2Fcrime%2F2020%2F05%2F13%2Fasian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council%2F&#038;title=Asian%20Americans%20Hate-Crime%20Targets%3A%20%E2%80%98Chinese%20Virus%E2%80%99%20Bigots%20Condemned%20By%20LA%20Council" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://mynewsla.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/linkedin.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-mail nolightbox" data-provider="mail" rel="nofollow" title="Share by email" href="mailto:?subject=Asian%20Americans%20Hate-Crime%20Targets%3A%20%E2%80%98Chinese%20Virus%E2%80%99%20Bigots%20Condemned%20By%20LA%20Council&#038;body=I%27m%20sharing%20an%20article%20from%20MyNewsLA.com:%20https%3A%2F%2Fmynewsla.com%2Fcrime%2F2020%2F05%2F13%2Fasian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council%2F" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="mail" title="Share by email" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://mynewsla.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/mail.png" /></a></div><figure id="attachment_750" class="wp-caption aligncenter" style="max-width: 640px"><a href="https://mynewsla.com/wp-content/uploads/2014/09/MNLA_Featured_16-9_0268-e1504902137934.jpg"><img class="size-post-thumbnail wp-image-750" src="https://mynewsla.com/wp-content/uploads/2014/09/MNLA_Featured_16-9_0268-640x360.jpg" alt="the la city council chamber" width="640" height="360" /></a><figcaption class="wp-caption-text">LA City Council Chamber. MyNewsLA.com photo by John Schreiber.</figcaption></figure>
+<p>In an effort to curb anti-Asian American sentiment that has sprouted since the start of the COVID-19 pandemic, the Los Angeles City Council Wednesday voted in favor of a resolution to support a federal bill that would direct local authorities to take action against hate incidents.</p>
+<p>The council&#8217;s resolution supports H.R. 908, a U.S. House of Representatives resolution that would condemn anti-Asian American sentiments and call on public officials to take action against credible threats of hate crimes.</p>
+<p>&#8220;Since this pandemic started, Asian Americans have been targeted. Asian Americans have been discriminated against, and even more worrisome Asian Americans have been assaulted and injured,&#8221; Councilman David Ryu said. &#8220;Perhaps worst of all, this discrimination and fear mongering is repeated at the highest levels of government.&#8221;</p><div class="OjYs2bJL" style="clear:both;float:left;width:100%;margin:0 0 20px 0;"><div align="center">
+<!-- Ezoic - In-Content Big Box - mid_content -->
+<div id="ezoic-pub-ad-placeholder-108">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- In-Post 300x250 Test Ad -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5943308810780921"
+     data-ad-slot="4114660296"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+<!-- End Ezoic - In-Content Big Box - mid_content --></div>
+<p>The hate incidents were spurred likely due to</p>
+<p>The origin of the new coronavirus has been traced to a market in Wuhan, the capital of central China&#8217;s Hubei province, by public health officials in that country. City officials claim that incidents of hate have been fueled in part by politicians who use terms like &#8220;Chinese Virus&#8221; to describe the outbreak, as President Donald Trump did on multiple occasions in March.</p>
+<p>&#8220;What we find in dealing with victims of hate crimes, and particularly where it&#8217;s random, the Asian American community is just like every other community,&#8221; District Attorney Jackie Lacey said, adding some of the incidents have happened in middle and high school settings. &#8220;Sometimes, they don&#8217;t want to report crimes, they&#8217;re afraid of retaliation, they fear public ridicule.&#8221;</p>
+<p>City Attorney Mike Feuer joined a conference call with Lacey that also addressed anti-Asian American hate incidents.</p><div class="ebEo5gV4" style="clear:both;float:left;width:100%;margin:0 0 20px 0;"><div style="background:#e6f0ff; border:1px solid black;">
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<div id="mc_embed_signup">
+<form action="//mynewsla.us8.list-manage.com/subscribe/post?u=2369115d68818872b1fba721c&id=b3da5e2411" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<h4>Like this story? Don’t miss any breaking news from MyNewsLA.com. Sign up here for your free newsletter.</h4>
+ 
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address </label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2369115d68818872b1fba721c_b3da5e2411" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+</div></div>
+<p>According to the Asian Pacific Policy and Planning Council, 1,700 hate incidents &#8212; not necessarily hate crimes &#8212; have taken place in the United States since the start of the pandemic, and 58% of them took place in New York and California, where Asian American and Pacific Islander communities are prevalent.</p>
+<p>&#8220;What that tells us is that this phenomenon is widespread,&#8221; said Manju Kulkarni, the executive director of the Asian Pacific Policy and Planning Council.</p>
+<p>The council&#8217;s website, <a href="http://www.a3pcon.org/stopaapihate">www.a3pcon.org/stopaapihate</a>, has more information on stopping hate incidents and for people to report incidents they have experienced.</p>
+<p>Feuer said no incidents that would be considered a hate crime against Asian Americans in Los Angeles have been reported to his office since March, but the purpose of Wednesday&#8217;s discussion was to help people understand that they can report hate incidents to local authorities.</p>
+<p>&#8220;All of us need to inspire people to come forward if they feel victimized,&#8221; Feuer said. &#8220;We have one crisis, a public health crisis, we cannot allow it to become a human relations crisis that will tear our communities apart.&#8221;</p>
+<div class="dtherpt"><span class="entry-title">Asian Americans Hate-Crime Targets: &#8216;Chinese Virus&#8217; Bigots Condemned By LA Council</span> was last modified: <span class="updated"> May 13th, 2020</span> by <span class="author vcard"><span class="fn">Contributing Editor</span></span></div></p><p style="font-weight:bold;">>> Want to read more stories like this?  <a href="http://eepurl.com/2K_5j" >Get our Free Daily Newsletters Here!</a></p>Follow us:<div class="synved-social-container synved-social-container-follow" style="text-align: left"><a class="synved-social-button synved-social-button-follow synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook nolightbox" data-provider="facebook" target="_blank" rel="nofollow" title="Follow us on Facebook" href="https://www.facebook.com/MyNewsLA/" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="Facebook" title="Follow us on Facebook" class="synved-share-image synved-social-image synved-social-image-follow" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://mynewsla.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png" /></a><a class="synved-social-button synved-social-button-follow synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter nolightbox" data-provider="twitter" target="_blank" rel="nofollow" title="Follow us on Twitter" href="https://twitter.com/MyNewsLA" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="twitter" title="Follow us on Twitter" class="synved-share-image synved-social-image synved-social-image-follow" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://mynewsla.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png" /></a><a class="synved-social-button synved-social-button-follow synved-social-size-24 synved-social-resolution-single synved-social-provider-rss nolightbox" data-provider="rss" target="_blank" rel="nofollow" title="Subscribe to our RSS feed" href="https://mynewsla.com/feed" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="rss" title="Subscribe to our RSS feed" class="synved-share-image synved-social-image synved-social-image-follow" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="https://mynewsla.com/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/rss.png" /></a></div>					</div><!-- .entry-content -->
+
+		<footer class="entry-footer">
+			<div class="entry-meta"><span class="category"><span class="before">Posted in </span><a href="https://mynewsla.com/category/crime/" rel="tag">Crime</a></span> <span class="post_tag"><span class="before">| Tagged </span><a href="https://mynewsla.com/tag/americans/" rel="tag">Americans</a>, <a href="https://mynewsla.com/tag/asian/" rel="tag">Asian</a>, <a href="https://mynewsla.com/tag/city/" rel="tag">city</a>, <a href="https://mynewsla.com/tag/condemns/" rel="tag">Condemns</a>, <a href="https://mynewsla.com/tag/council/" rel="tag">council</a>, <a href="https://mynewsla.com/tag/covid-19/" rel="tag">COVID-19</a>, <a href="https://mynewsla.com/tag/hate/" rel="tag">hate</a></span></div>		</footer><!-- .entry-footer -->
+
+	
+</article><!-- .hentry -->
+
+				
+
+					<div class="custom">
+				<ul>
+					<li id="text-13" class="widget-container widget_text">			<div class="textwidget"><!-- Ezoic - Default Big Box 5 - bottom_of_page -->
+<div id="ezoic-pub-ad-placeholder-106" style="display: inline-block;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- MyNewsLA Sidebar 300x250 Big Box -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px;"
+     data-ad-client="ca-pub-5943308810780921"
+     data-ad-slot="1360236696"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!-- End Ezoic - Default Big Box 5 - bottom_of_page -->
+<!-- Ezoic - Default Big Box 6 - bottom_of_page -->
+<div id="ezoic-pub-ad-placeholder-107" style="display: inline-block;">
+<!--JavaScript General Redirect Tag // Tag for network 10269: Marketplace: CalNews // Website: CalNews // Page: CalNews // Placement: MyNewsLA 300x250_3 (4400950) // created at: Aug 31, 2017 12:04:42 PM-->
+
+<!-- End of JavaScript Tag -->
+</div>
+<!-- End Ezoic - Default Big Box 6 - bottom_of_page --></div>
+		</li><br>				</ul>
+			</div>
+		
+
+			<aside class="related-posts">
+
+		<h2 class="related-posts-header">Related Posts</h2><article class="related-post related-post-1 related-by-tag"><h3><a href="https://mynewsla.com/business/2020/05/17/orange-county-reports-155-more-cases-of-covid-19/"><img src="https://mynewsla.com/wp-content/themes/fearless/images/missing-image-232x150.png" alt="Missing image" />Orange County Reports 155 More Cases of COVID-19<span class="arrow">&rarr;</span></a></h3></article><article class="related-post related-post-2 related-by-tag"><h3><a href="https://mynewsla.com/business/2020/05/17/four-more-covid-19-deaths-reported-in-oc-4/"><img src="https://mynewsla.com/wp-content/themes/fearless/images/missing-image-232x150.png" alt="Missing image" />4 More Coronavirus Deaths Reported in Orange County<span class="arrow">&rarr;</span></a></h3></article><article class="related-post related-post-3 related-by-tag"><h3><a href="https://mynewsla.com/government/2020/05/17/40-new-covid-19-deaths-reported-in-los-angeles-county-2/"><img width="232" height="150" src="https://mynewsla.com/wp-content/uploads/2020/03/Coronavirus-Testing-232x150.jpg" class="attachment-thumb-232 size-thumb-232 wp-post-image" alt="Testing for coronavirus" />40 New COVID-19 Deaths Reported in Los Angeles County<span class="arrow">&rarr;</span></a></h3></article><article class="related-post related-post-4 related-by-tag"><h3><a href="https://mynewsla.com/crime/2020/05/16/county-records-highest-amount-of-daily-covid-19-tests-third-day-in-row/"><img src="https://mynewsla.com/wp-content/themes/fearless/images/missing-image-232x150.png" alt="Missing image" />County Records Highest Amount Of Daily COVID-19 Tests Third Day In Row<span class="arrow">&rarr;</span></a></h3></article>
+	</aside>
+	<div>
+	<!-- Ezoic - native_bottom 111 - native_bottom -->
+    <div id="ezoic-pub-ad-placeholder-111">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-format="autorelaxed"
+	     data-ad-client="ca-pub-5943308810780921"
+	     data-ad-slot="3569493091"></ins>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+	</div>
+    <!-- End Ezoic - native_bottom 111 - native_bottom -->
+    </div>
+    <style>
+        #ad-10-8-15 {
+          text-align: center;
+          margin-bottom: 20px;  
+          overflow: hidden;
+        }
+        #ad-10-8-15 * {
+            max-width: 100% !important;
+        }
+        #ad-10-8-15 html * {
+            max-width: 100% !important;
+        }
+     </style>    
+     <div id="ad-10-8-15">
+     <!--JavaScript General Redirect Tag 
+     // Tag for network 10269: Marketplace: CalNews 
+     // Website: CalNews 
+     // Page: CalNews 
+     // Placement: MyNewsLA 728x90  (3669487) 
+     // created at: Aug 31, 2017 12:04:42 PM-->
+     <!-- Ezoic - Default Leaderboard 2 - bottom_of_page -->
+     <div id="ezoic-pub-ad-placeholder-110">
+     <!-- End of JavaScript Tag --> 
+     </div>
+     <!-- End Ezoic - Default Leaderboard 2 - bottom_of_page -->
+     </div>
+     <div id="unit_83078"><a href="https://idealmedia.com/">News from idealmedia.com <https://idealmedia.com/></a></div>
+     <script type="text/javascript" charset="utf-8">
+      (function() {
+        var sc = document.createElement('script'); sc.type = 'text/javascript'; sc.async = true;
+        sc.src = 'https://news.fark.com/data/js/83078.js'; sc.charset = 'utf-8';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sc, s);
+      }());
+    </script>
+
+		
+			<div class="fb-comments" data-href="https://mynewsla.com/crime/2020/05/13/asian-americans-hate-crime-targets-chinese-virus-bigots-condemned-by-la-council/" data-width="658" data-num-posts="10"></div><section id="comments" class="comments-type-facebook">
+
+	
+	
+</section><!-- #comments -->
+
+		
+	
+
+				
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+	
+			<aside id="secondary" class="widget-area sidebar-primary" role="complementary">
+
+			<section id="text-14" class="widget widget_text">			<div class="textwidget"><p style="text-align: center; font-size: x-small; ">Advertisement</p>
+<!-- Ezoic - Default Big Box 1 - sidebar -->
+<div id="ezoic-pub-ad-placeholder-100">
+<!-- 300x250_atf-->
+<div id='div-gpt-ad-1437204727699-3'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1437204727699-3'); });
+</script>
+</div>
+</div>
+<!-- End Ezoic - Default Big Box 1 - sidebar --></div>
+		</section><section id="custom_html-2" class="widget_text widget widget_custom_html"><h1 class="widget-title"><span>Get The Latest News by Email!</span></h1><div class="textwidget custom-html-widget"><!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+</style>
+<div id="mc_embed_signup">
+<form action="//mynewsla.us8.list-manage.com/subscribe/post?u=2369115d68818872b1fba721c&amp;id=b3da5e2411" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<h4>Sign up here for our free newsletters. We’ll send you the latest headlines every morning and every weekday afternoon.</h4>
+&nbsp;
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address </label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2369115d68818872b1fba721c_b3da5e2411" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup--></div></section><section id="text-5" class="widget widget_text">			<div class="textwidget"><!-- Ezoic - Default Large Skyscraper 1 - sidebar_middle -->
+<div id="ezoic-pub-ad-placeholder-101">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- MyNewsLA Sidebar 300x600 Large Skyscraper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-5943308810780921"
+     data-ad-slot="4313703098"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!-- End Ezoic - Default Large Skyscraper 1 - sidebar_middle --></div>
+		</section><section id="text-2" class="widget widget_text">			<div class="textwidget"><div class='weather-atlas-wrapper' style='background:#ff8a00;border:1px solid #ee7900;color:#fff;'><div class='weather-atlas-header' style='border-bottom:1px solid #ee7900'>FORECAST FOR LOS ANGELES</div><div class='weather-atlas-body'><div class='current_temp'><i class='wi wi-fw wi-weather-32'></i><span class='temp'>79°</span><div class='current_text'>Sunny</div></div><span class='current_text_2'>Feels like: 80<small>°F</small><br />Wind: 4<small>mph</small> S<br />Humidity: 47<small>%</small><br />Pressure: 29.89<small>"Hg</small><br />UV index: 10</span><div class='daily days' style='border-bottom:1px solid #ee7900'><span class='extended_day extended_day_1'>Sun</span><span class='extended_day extended_day_2'>Mon</span><span class='extended_day extended_day_3'>Tue</span></div><div class='daily'><span class='extended_day extended_day_1' title='Partly Cloudy'>79/63<small>°F</small><br /><i class='wi wi-fw wi-weather-30'></i></span><span class='extended_day extended_day_2' title='AM Showers'>69/57<small>°F</small><br /><i class='wi wi-fw wi-weather-39'></i></span><span class='extended_day extended_day_3' title='Mostly Sunny'>71/56<small>°F</small><br /><i class='wi wi-fw wi-weather-34'></i></span></div></div><div class='weather-atlas-footer' style='border-top:1px solid #ee7900'><a href='https://www.weather-us.com/en/california-usa/los-angeles' title='Weather Atlas - Weather forecast Los Angeles, California' style='color:#fff;' target='_blank' rel="noopener noreferrer">Weather forecast <span class='weather-atlas-footer-block'>Los Angeles, California &#9656;</span></a></div></div>
+</div>
+		</section><section id="text-9" class="widget widget_text">			<div class="textwidget"><!-- Ezoic - Default Big Box 2 - sidebar_bottom -->
+<div id="ezoic-pub-ad-placeholder-102">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- AOL 300x250 Replacement 1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5943308810780921"
+     data-ad-slot="8483921101"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!-- End Ezoic - Default Big Box 2 - sidebar_bottom --></div>
+		</section>
+<section id="wpp-2" class="widget popular-posts">
+<h1 class="widget-title"><span>Most Popular Today</span></h1>
+<!-- WordPress Popular Posts -->
+
+<ul class="wpp-list">
+<li>
+<a href="https://mynewsla.com/business/2020/05/15/suv-terror-for-two-girls-tossed-from-moms-suv-in-home-depot-red-light-vehicle-crash-240000-settlement/" title="SUV Terror For Two Girls Tossed From Mom&#8217;s SUV In Home Depot Red Light Vehicle Crash: $240,000 Settlement?" class="wpp-post-title" target="_self">SUV Terror For Two Girls Tossed From Mom&#8217;s SUV In Home Depot Red Light Vehicle Crash: $240,000 Settlement?</a>
+ <span class="wpp-meta post-stats"><span class="wpp-views">3,000 views</span></span>
+</li>
+<li>
+<a href="https://mynewsla.com/business/2020/05/17/four-more-covid-19-deaths-reported-in-oc-4/" title="4 More Coronavirus Deaths Reported in Orange County" class="wpp-post-title" target="_self">4 More Coronavirus Deaths Reported in Orange County</a>
+ <span class="wpp-meta post-stats"><span class="wpp-views">2,000 views</span></span>
+</li>
+<li>
+<a href="https://mynewsla.com/crime/2020/05/16/17-year-old-girl-found-fatally-stabbed-in-anaheim/" title="17-Year-Old Girl Found Fatally Stabbed In Anaheim" class="wpp-post-title" target="_self">17-Year-Old Girl Found Fatally Stabbed In Anaheim</a>
+ <span class="wpp-meta post-stats"><span class="wpp-views">2,000 views</span></span>
+</li>
+<li>
+<a href="https://mynewsla.com/crime/2020/05/16/man-killed-in-santa-clarita-stabbing-publicly-identified/" title="Man Killed In Santa Clarita Stabbing Publicly Identified" class="wpp-post-title" target="_self">Man Killed In Santa Clarita Stabbing Publicly Identified</a>
+ <span class="wpp-meta post-stats"><span class="wpp-views">1,400 views</span></span>
+</li>
+<li>
+<a href="https://mynewsla.com/life/2020/05/16/one-ticket-sold-with-all-six-superlotto-plus-numbers/" title="One Ticket Sold With All Six SuperLotto Plus Numbers" class="wpp-post-title" target="_self">One Ticket Sold With All Six SuperLotto Plus Numbers</a>
+ <span class="wpp-meta post-stats"><span class="wpp-views">1,000 views</span></span>
+</li>
+</ul>
+
+</section>
+<section id="text-6" class="widget widget_text">			<div class="textwidget"><!-- Ezoic - Default Big Box 3 - sidebar_bottom -->
+<div id="ezoic-pub-ad-placeholder-103">
+<!-- 300x250_btf-->
+<div id='div-gpt-ad-1437204727699-5'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1437204727699-5'); });
+</script>
+</div>
+</div>
+<!-- End Ezoic - Default Big Box 3 - sidebar_bottom --></div>
+		</section><section id="text-10" class="widget widget_text">			<div class="textwidget"><!-- Ezoic - Default Big Box 4 - sidebar_bottom -->
+<div id="ezoic-pub-ad-placeholder-104">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- AOL 300x250 Replacement 2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-5943308810780921"
+     data-ad-slot="9736404974"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!-- End Ezoic - Default Big Box 4 - sidebar_bottom --></div>
+		</section><section id="text-22" class="widget widget_text">			<div class="textwidget"><!-- Ezoic - Default Large Skyscraper 2 - sidebar_bottom -->
+<div id="ezoic-pub-ad-placeholder-105">
+<!-- Beginning YieldLift tag for [MLA] ### size: [[300,600]] -->
+  <script type="text/javascript" src="//os4m-d.openx.net/w/1.0/jstag?nc=102766797-YieldLift"></script>
+<script type="text/javascript">
+          (function() {
+            var gads = document.createElement("script");
+            gads.async = true;
+            gads.type = "text/javascript";
+            var useSSL = "https:" == document.location.protocol;
+            gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+            var node =document.getElementsByTagName("script")[0];
+            node.parentNode.insertBefore(gads, node);
+          })();
+</script>
+<script type='text/javascript'>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/102766797/YieldLift/MLA/BTF', [300, 600], 'div-gpt-ad-1456419094717-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+<!-- /102766797/YieldLift/MLA/BTF -->
+<div id='div-gpt-ad-1456419094717-0' style='height:600px; width:300px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1456419094717-0'); });
+</script>
+</div>
+<!-- End YieldLift Tag -->
+</div>
+<!-- End Ezoic - Default Large Skyscraper 2 - sidebar_bottom --></div>
+		</section>
+		</aside><!-- #secondary .widget-area -->
+	
+	
+	
+	</div><!-- #main -->
+
+	
+	<footer id="footer" class="footer-widgets-disabled" role="contentinfo">
+
+		
+					<p class="footer-copyright footer-left">©2020 CalNews Inc.</p>
+		
+		<nav id="footer-navigation" class="footer-right" role="navigation">
+	<h1 class="screen-reader-text">Menu</h1>
+	<ul id="menu-secondary-navigation-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="https://mynewsla.com/about/">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="https://mynewsla.com/staff/">Staff</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="https://mynewsla.com/contact/">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="https://mynewsla.com/advertise/">Advertise</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="https://mynewsla.com/faq/">FAQ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-57"><a href="https://mynewsla.com/privacy-policy/">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56"><a href="https://mynewsla.com/terms-service/">Terms of Service</a></li>
+</ul></nav><!-- #site-navigation -->
+	</footer><!-- #colophon -->
+
+</div><!-- #container -->
+
+<script type='text/javascript' src='https://mynewsla.com/wp-content/themes/fearless/js/jquery.backstretch.min.js?ver=2.0.3'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-includes/js/comment-reply.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-content/themes/fearless/fancybox/jquery.fancybox-1.3.4.pack.js?ver=1.3.4'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-content/themes/fearless/js/jquery.fitvids.min.js?ver=5.3.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var fearless_localized_strings = {"ticker_title":"Latest News"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://mynewsla.com/wp-content/themes/fearless/js/fearless.js?ver=1.0'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-content/plugins/symple-shortcodes/shortcodes/js/flexslider.js?ver=2.2.0'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-content/themes/fearless/js/jquery.hoverIntent.min.js?ver=r7'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-content/themes/fearless/js/jquery.superfish.min.js?ver=1.6.9'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-content/themes/fearless/js/jquery.ticker.js?ver=1.0'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-content/themes/fearless/js/jquery.tinynav.min.js?ver=1.1'></script>
+<script type='text/javascript' src='https://mynewsla.com/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-HSz-D9Br7TKYt"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-HSz-D9Br7TKYt.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+<script>
+jQuery(document).ready(function($){
+$("#tinynav1 option").html(function(i,str){
+  return str.replace(/Menu/g,
+     function(m,n){
+         return "About This Site";
+     });
+});
+$("#tinynav2 option").html(function(i,str){
+  return str.replace(/Menu/g,
+     function(m,n){
+         return "Sections";
+     });
+});
+});
+
+</script>
+
+<!-- Chartbeat Tag added by CJ 1-13-16-->
+<script type="text/javascript">
+  var _sf_async_config = { uid: 62357, domain: 'mynewsla.com', useCanonical: true };
+  (function() {
+    function loadChartbeat() {
+      window._sf_endpt = (new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+      document.body.appendChild(e);
+    };
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+      loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+</script>
+<!-- End Chartbeat Tag -->
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5943308810780921",
+    enable_page_level_ads: true
+  });
+</script>
+<script type='text/javascript' style='display:none;' async>
+__ez.queue.addFile('edmonton.php', '/detroitchicago/edmonton.webp?a=a&cb=7&shcb=32', true, [], true, false, false, false);
+__ez.queue.addFile('jellyfish.php', '/porpoiseant/jellyfish.webp?a=a&cb=7&shcb=32', false, [], true, false, false, false);
+</script>
+
+<script>var _audins_dom="mynewsla_com",_audins_did=56569;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezoic.net/detroitchicago/audins.js?cb=188-7");</script><noscript><div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-31iz6hfFutd16.gif?labels=Domain.mynewsla_com,DomainId.56569" border="0" height="1" width="1" alt="Quantcast"/></div></noscript><noscript><img src="https://sb.scorecardresearch.com/p?c1=2&c2=20015427&cv=2.0&cj=1"/></noscript>
+<script type='text/javascript' data-cfasync='false'></script></body>
+</html>

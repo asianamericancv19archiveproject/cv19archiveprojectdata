@@ -1,0 +1,2155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr" xmlns:og="http://ogp.me/ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<link rel="alternate" type="application/rss+xml" title="Inside Higher Ed" href="https://www.insidehighered.com/rss/feed/ihe" />
+<link rel="apple-touch-icon" href="https://www.insidehighered.com/sites/all/themes/ihecustom/images/apple-touch-icon.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"d618589be4",applicationID:"537611697"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<link rel="shortcut icon" href="https://www.insidehighered.com/sites/all/themes/ihecustom/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="description" content="The worldwide spread of COVID-19 has caused mass xenophobia, racism and discrimination, writes B. Venkat Mani, making the need for inclusive teaching all the more urgent." />
+<meta name="robots" content="follow, index" />
+<link rel="canonical" href="https://www.insidehighered.com/views/2020/05/14/inclusive-teaching-needed-help-combat-xenophobia-racism-and-discrimination-brought" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.insidehighered.com/views/2020/05/14/inclusive-teaching-needed-help-combat-xenophobia-racism-and-discrimination-brought" />
+<meta property="og:title" content="Inclusive teaching is needed to help combat the xenophobia, racism and discrimination brought on by COVID-19 | Inside Higher Ed" />
+<meta property="og:description" content="The worldwide spread of COVID-19 has caused mass xenophobia, racism and discrimination, writes B. Venkat Mani, making the need for inclusive teaching all the more urgent." />
+<meta property="og:image" content="https://www.insidehighered.com/sites/default/server_files/media/vector-of-a-sign-with-virus-crossed-out-on-it-vector-id1224019252.jpg" />
+<meta name="twitter:card" content="photo" />
+<meta name="twitter:url" content="https://www.insidehighered.com/views/2020/05/14/inclusive-teaching-needed-help-combat-xenophobia-racism-and-discrimination-brought" />
+<meta name="twitter:title" content="Inclusive teaching is needed to help combat the xenophobia, racism" />
+<meta name="twitter:description" content="The worldwide spread of COVID-19 has caused mass xenophobia, racism and discrimination, writes B. Venkat Mani, making the need for inclusive teaching all the more urgent." />
+<meta name="twitter:image" content="https://www.insidehighered.com/sites/default/server_files/media/vector-of-a-sign-with-virus-crossed-out-on-it-vector-id1224019252.jpg" />
+<meta property="og:title" content="Inclusive teaching is needed to help combat the xenophobia, racism and discrimination brought on by COVID-19" />
+<meta property="og:image" content="https://www.insidehighered.com/sites/all/themes/ihecustom/images/facebook_icon_large.jpg" />
+<meta name="msapplication-config" content="/IEconfig.xml" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inclusive teaching is needed to help combat the xenophobia, racism and discrimination brought on by COVID-19</title>
+<link type="text/css" rel="stylesheet" href="https://www.insidehighered.com/sites/default/server_files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.insidehighered.com/sites/default/server_files/css/css_f2HPF8cPPvFfXkP4-xUGmiIvl4KM1XDQPNbX3VvhKfQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.insidehighered.com/sites/default/server_files/css/css_jaVgFb6mljRHgAN1nrHwOv1CzprroHU9ztusVbTX7pg.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.insidehighered.com/sites/default/server_files/css/css_FehbAVfOouVymeLjP9S0UpU0VN01AxoIeXwwvIInJFI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.insidehighered.com/sites/default/server_files/css/css_-oOawH6EDcwEij-sBi2mMyrMxNOlPpbh_tFuhLj_7FU.css" media="print" />
+<script type="text/javascript" src="https://www.insidehighered.com/sites/default/server_files/js/js_7RvFvqDuUPUPYSfoHKIEMMzuUeJ1aAxyMxNkJnjOTec.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.insidehighered.com/sites/default/server_files/js/js_lS0S3Yo2imPxv8NSYejuui74lv4s_jI6PjqaAYEX4yo.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+googletag.slots = googletag.slots || {};
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+<script type="text/javascript" src="https://www.insidehighered.com/sites/default/server_files/js/js_s3L_uC35AiN5EGYY533su-jccnLRp2aKpOnjgPLbo34.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var mapping = googletag.sizeMapping()
+  .addSize([0, 0], [300, 250])
+  .addSize([750, 1], [728, 90])
+  .build();
+googletag.slots["story_leaderboard_2"] = googletag.defineSlot("/309842/site172.tmus/story_level_pages", [[728, 90], [300, 250]], "dfp-ad-story_leaderboard_2")
+  .addService(googletag.pubads())
+  .setTargeting("kw", "faculty")
+  .defineSizeMapping(mapping);
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["clone_of_story_level_pages"] = googletag.defineSlot("/309842/site172.tmus/story_level_pages", [[300, 250], [300, 600]], "dfp-ad-clone_of_story_level_pages")
+  .addService(googletag.pubads())
+  .setTargeting("tile", "1")
+  .setTargeting("kw", "faculty");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.insidehighered.com/sites/default/server_files/js/js_8pHSrYxl-dbhp2q9bqkK30WqhYT9b6OlF5MzeTpRO84.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var mapping = googletag.sizeMapping()
+  .addSize([0, 0], [[300, 250], [300, 50]])
+  .addSize([980, 1], [[970, 90], [970, 250]])
+  .build();
+googletag.slots["article_superleaderboard"] = googletag.defineSlot("/309842/site172.tmus/story_level_pages", [[970, 90], [970, 250], [300, 250], [300, 50]], "dfp-ad-article_superleaderboard")
+  .addService(googletag.pubads())
+  .setTargeting("kw", "faculty")
+  .defineSizeMapping(mapping);
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.insidehighered.com/sites/default/server_files/js/js_Xk8TsyNfILciPNmQPp9sl88cjH71DQWyeHE0MB62KO4.js"></script>
+<script type="text/javascript" src="https://www.insidehighered.com/sites/default/server_files/js/js_NtUpWgrl3lcVwsOYICzWPz7VUwSqXt4253axNp5d5DM.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.cmd.push(function() {
+  googletag.pubads().enableAsyncRendering();
+  googletag.pubads().enableSingleRequest();
+  googletag.pubads().collapseEmptyDivs();
+});
+
+googletag.enableServices();
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.insidehighered.com/sites/default/server_files/js/js_ZJH4ThTk_nEnUp03B-C3NLFxUYCXA11nH9CEGV7xqe4.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-2139597-1", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["www.insidehighered.com","sendowl.com"]);ga("set", "dimension1", "Racial groups");ga('require', 'GTM-WHJ3BQH');ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.insidehighered.com/sites/default/server_files/js/js_5ON6DrrQ7cXlfRDpjlFH1Kdpi8tZJVbKaz4P-OWLy6c.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"ihecustom","theme_token":"zGwBFX9khXl7AXXeJQSQsD15QcckHuEMTh6uA9RDBQY","jquery_version":"1.8","js":{"public:\/\/google_tag\/google_tag.script.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.8.3\/jquery.min.js":1,"0":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"1":1,"https:\/\/www.googletagservices.com\/tag\/js\/gpt.js":1,"misc\/drupal.js":1,"2":1,"3":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"sites\/all\/modules\/nice_menus\/js\/jquery.bgiframe.js":1,"sites\/all\/modules\/nice_menus\/js\/jquery.hoverIntent.js":1,"sites\/all\/modules\/nice_menus\/js\/superfish.js":1,"sites\/all\/modules\/nice_menus\/js\/nice_menus.js":1,"4":1,"misc\/ajax.js":1,"sites\/all\/modules\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/custom\/custom_behaviors\/custom_behaviors.js":1,"5":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/modules\/image_caption\/image_caption.min.js":1,"sites\/all\/modules\/disqus\/js\/disqus.js":1,"sites\/all\/modules\/views\/js\/base.js":1,"misc\/progress.js":1,"sites\/all\/modules\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"6":1,"sites\/all\/themes\/ihecustom\/js\/viewswork.js":1,"sites\/all\/themes\/ihecustom\/js\/jquery.stickem.js":1,"sites\/all\/themes\/ihecustom\/js\/general.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/panels\/plugins\/layouts\/twocol_bricks\/twocol_bricks.css":1,"sites\/all\/modules\/nice_menus\/css\/nice_menus.css":1,"sites\/all\/modules\/nice_menus\/css\/nice_menus_default.css":1,"sites\/all\/themes\/ihecustom\/css\/html-reset.css":1,"sites\/all\/themes\/ihecustom\/css\/wireframes.css":1,"sites\/all\/themes\/ihecustom\/css\/layout-fixed.css":1,"sites\/all\/themes\/ihecustom\/css\/page-backgrounds.css":1,"sites\/all\/themes\/ihecustom\/css\/tabs.css":1,"sites\/all\/themes\/ihecustom\/css\/messages.css":1,"sites\/all\/themes\/ihecustom\/css\/pages.css":1,"sites\/all\/themes\/ihecustom\/css\/blocks.css":1,"sites\/all\/themes\/ihecustom\/css\/navigation.css":1,"sites\/all\/themes\/ihecustom\/css\/views-styles.css":1,"sites\/all\/themes\/ihecustom\/css\/nodes.css":1,"sites\/all\/themes\/ihecustom\/css\/comments.css":1,"sites\/all\/themes\/ihecustom\/css\/forms.css":1,"sites\/all\/themes\/ihecustom\/css\/fields.css":1,"sites\/all\/themes\/ihecustom\/css\/print.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px","specificPagesDefaultValue":"admin*\nimagebrowser*\nimg_assist*\nimce*\nnode\/add\/*\nnode\/*\/edit\nprint\/*\nprintpdf\/*\nsystem\/ajax\nsystem\/ajax\/*"},"better_exposed_filters":{"views":{"career_advice":{"displays":{"block_6":{"filters":[]}}},"blogs":{"displays":{"block_7":{"filters":[]},"recent_blogs_below_comments":{"filters":[]}}},"views":{"displays":{"block_10":{"filters":[]},"recent_views_below_comments":{"filters":[]}}},"news_section":{"displays":{"default":{"filters":[]}}},"schools":{"displays":{"page_5":{"filters":{"title":{"required":false}}},"recent_featured":{"filters":[]}}},"topics":{"displays":{"default":{"filters":[]}}},"news_features_by_editorial_tag":{"displays":{"block_5":{"filters":[]}}},"News":{"displays":{"block_11":{"filters":[]},"block_8":{"filters":[]}}},"trending":{"displays":{"trending_nav":{"filters":[]}}}}},"disqusComments":"insidehighered","disqus":{"domain":"insidehighered","url":"https:\/\/www.insidehighered.com\/views\/2020\/05\/14\/inclusive-teaching-needed-help-combat-xenophobia-racism-and-discrimination-brought","title":"Inclusive teaching is needed to help combat the xenophobia, racism and discrimination brought on by COVID-19","identifier":"node\/331546"},"urlIsAjaxTrusted":{"\/college-search":true,"\/views\/ajax":true},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:5ff7db6c47decb90d164e8aa9bce54d7":{"view_name":"news_features_by_editorial_tag","view_display_id":"block_5","view_args":"","view_path":"node\/331546","view_base_path":null,"view_dom_id":"5ff7db6c47decb90d164e8aa9bce54d7","pager_element":0}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1,"trackDomainMode":2,"trackCrossDomains":["www.insidehighered.com","sendowl.com"]},"nice_menus_options":{"delay":"800","speed":"slow"}});
+//--><!]]>
+</script>
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<script type="text/javascript">
+  var isiPad = navigator.userAgent.match(/iPad/i) != null;
+  if (isiPad) {getElementById("iPadPush").style.display="block";}
+</script>
+<script type="text/javascript">var getElementsByClassName=function(className,tag,elm){if(document.getElementsByClassName){getElementsByClassName=function(className,tag,elm){elm=elm||document;var elements=elm.getElementsByClassName(className),nodeName=(tag)?new RegExp("\\b"+tag+"\\b","i"):null,returnElements=[],current;for(var i=0,il=elements.length;i<il;i+=1){current=elements[i];if(!nodeName||nodeName.test(current.nodeName)){returnElements.push(current)}}return returnElements}}else if(document.evaluate){getElementsByClassName=function(className,tag,elm){tag=tag||"*";elm=elm||document;var classes=className.split(" "),classesToCheck="",xhtmlNamespace="http://www.w3.org/1999/xhtml",namespaceResolver=(document.documentElement.namespaceURI===xhtmlNamespace)?xhtmlNamespace:null,returnElements=[],elements,node;for(var j=0,jl=classes.length;j<jl;j+=1){classesToCheck+="[contains(concat(' ', @class, ' '), ' "+classes[j]+" ')]"}try{elements=document.evaluate(".//"+tag+classesToCheck,elm,namespaceResolver,0,null)}catch(e){elements=document.evaluate(".//"+tag+classesToCheck,elm,null,0,null)}while((node=elements.iterateNext())){returnElements.push(node)}return returnElements}}else{getElementsByClassName=function(className,tag,elm){tag=tag||"*";elm=elm||document;var classes=className.split(" "),classesToCheck=[],elements=(tag==="*"&&elm.all)?elm.all:elm.getElementsByTagName(tag),current,returnElements=[],match;for(var k=0,kl=classes.length;k<kl;k+=1){classesToCheck.push(new RegExp("(^|\\s)"+classes[k]+"(\\s|$)"))}for(var l=0,ll=elements.length;l<ll;l+=1){current=elements[l];match=false;for(var m=0,ml=classesToCheck.length;m<ml;m+=1){match=classesToCheck[m].test(current.className);if(!match){break}}if(match){returnElements.push(current)}}return returnElements}}return getElementsByClassName(className,tag,elm)};</script>
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Inside Higher Ed",
+  "url" : "https://www.insidehighered.com",
+  "sameAs" : [
+	"https://www.facebook.com/InsideHigherEdDC",
+	"https://twitter.com/insidehighered",
+	"https://www.linkedin.com/company/inside-higher-ed"
+	],
+  "logo" : "https://www.insidehighered.com/sites/all/themes/ihecustom/logo.jpg",
+  "contactPoint" : [{
+	"@type" : "ContactPoint",
+	"telephone" : "+1-202-448-6101",
+	"contactType" : "customer support"
+  }]
+}
+</script>
+<script>
+        var Pelcro = window.Pelcro || (window.Pelcro = {}); 
+        Pelcro.siteid = "948";
+        Pelcro.environment={};
+		Pelcro.environment.ui="https://js.pelcro.com/ui/plugin/inside-higher-ed/main.min.js";
+		
+</script>
+<script src="https://js.pelcro.com/sdk/main.min.js" type="text/javascript"></script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-331546 node-type-views-entry section-views modern-article-width advice-landing">
+<div id="skip-link">
+<a href="#main-menu">Jump to Navigation</a>
+</div>
+<div class="region region-page-top">
+<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P948F7" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager">Google Tag Manager</iframe></noscript></div> 
+<div id="top-menu">
+<div class="topmenulinks">
+<ul class="links"><li class="menu-7630 first"><a href="/advertise" title=""> Advertise</a></li>
+<li class="menu-7631"><a href="/content/about-us" title="">About</a></li>
+<li class="menu-7632"><a href="/content/contact-us" title="">Contact</a></li>
+<li class="menu-19793 last"><a href="/content/sign-inside-higher-eds-newsletters" title="Get our Daily News Update by email">Subscribe</a></li>
+</ul> </div>
+</div>
+<div id="page-wrapper"><div id="page">
+<div id="header"><div class="section clearfix">
+<style>
+body {background:#fff;}
+
+#top-menu, #navigation, #secondmenu {
+	display:none;
+}
+.menu-seventeen .left-container {
+	float: left; 
+	width: 473px; 
+	margin-right: 10px; 
+	margin-top: 30px;
+}
+.menu-seventeen ul, .menu-seventeen li{
+	list-style-type:none;
+	display:inline;
+}
+.menu-seventeen ul.left-main {
+	width: 100%;
+	border-bottom: #ef7521 2px solid; 
+	text-align: center; 
+	padding: 10px; 
+	box-sizing: border-box; 
+	font-family: Roboto Slab; 
+	font-size: 16px;
+	display:inline-block;
+}
+.menu-seventeen ul.left-main li {
+	padding:0 11px;
+}
+.menu-seventeen ul.right-main li{
+	padding: 0 6px;
+}
+.menu-seventeen ul.left-sub {
+	text-align: center; 
+	padding: 7px 0 0 0; 
+	font-family: Roboto; 
+	font-size: 16px;
+	display:inline-block;
+	width:100%;
+}
+
+.menu-seventeen ul.left-sub li:first-of-type::before {
+	content:"Trending: \00a0 \00a0";
+	font-family:Roboto, sans-serif;
+	font-size:13px;
+	color:#777;
+}
+
+.menu-seventeen .right-container {
+	float: right; 
+	width: 473px; 
+	margin-left: 10px; 
+	margin-top: 30px;
+}
+.menu-seventeen ul.right-main {
+	width: 100%;
+	border-bottom: #ef7521 2px solid; 
+	text-align: center; 
+	padding: 10px; 
+	box-sizing: border-box; 
+	font-family: Roboto Slab; 
+	font-size: 16px;
+	display:inline-block;
+}
+.menu-seventeen ul.right-sub {
+	text-align: center; 
+	padding: 10px 0; 
+	font-family: Roboto; 
+	font-size: 16px;
+	display:inline-block;
+	width:100%;
+}
+.menu-seventeen ul.right-sub li,
+.menu-seventeen ul.left-sub li {
+	font-size:13px;
+	padding: 0 7px;
+}
+.menu-seventeen ul.right-sub li a,
+.menu-seventeen ul.left-sub li a{
+	font-family:Roboto, Arial, sans-serif;
+}
+.menu-seventeen ul.right-sub li a:hover,
+.menu-seventeen ul.left-sub li a:hover{
+	color:#ef7521;
+}
+.menu-seventeen ul.right-sub li:first-of-type,
+.menu-seventeen ul.left-sub li:first-of-type {
+	padding-left:0;
+}
+.menu-seventeen ul.right-sub li:last-of-type,
+.menu-seventeen ul.left-sub li:last-of-type {
+	padding-right:0;
+}
+
+.menu-seventeen ul.left-sub li:nth-of-type(2)::after {
+	content:"\A";
+	white-space: pre;
+}
+.nav-control-panel {
+	position:absolute;right:0;top:-6px;
+}
+.nav-control-panel li {
+	padding:0 9px;
+	height:25px;	
+	display:inline-block;
+}
+.nav-control-panel li img {
+	width:20px;
+}
+
+#new-nav-logo {
+	display:inline-block;
+}
+
+#block-search-form {
+	display:none;
+}
+
+.nav-list-links {
+	width:220px;	
+	position:absolute;
+	right:0;
+	top:30px;
+	z-index:1;
+	padding:6px 12px 0 12px;
+	border:1px solid #bbb;
+	box-sizing:border-box;
+	box-shadow: #bbb -1px 1px 2px !important;
+	background: #fff; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fff, #eee); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fff, #eee); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fff, #eee); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fff, #eee); /* Standard syntax */
+	display:none;
+}
+
+.nav-list-links ul, .nav-list-links ul li, .nav-list-links.show-nav, .new-nav-search.show-search{
+	display:block;
+}
+
+.nav-list-links ul {
+	margin-bottom:12px;
+	margin-top:6px;
+	font-family:"Roboto", Arial, serif;
+	font-size:16px;
+	line-height: 22px;
+}
+
+.nav-list-links ul li {
+	padding-left:8px;
+}
+
+.nav-list-links ul li:first-of-type {
+	padding-left:0;
+}
+
+.nav-list-links ul li a{
+	color:#000;
+	text-decoration:none;
+}
+
+.nav-list-links ul li a:hover{
+	color:#ef7521;
+	text-decoration:underline;
+}
+
+.nav-list-close {
+	position:absolute;
+	top:6px;
+	right:8px;
+	font-weight:bold;
+	font-size:20px;
+}
+
+.new-nav-search {
+	position:absolute;
+	right:0;
+	top:30px;
+	padding:15px;	
+	box-sizing: border-box;
+	border: 1px solid #bbb;
+    box-shadow: #bbb -1px 1px 3px !important;
+	background: #fff; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fff, #eee); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fff, #eee); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fff, #eee); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fff, #eee); /* Standard syntax */
+	z-index:1;
+	display:none;
+	font-family:Roboto, Arial, san-serif;
+}
+
+.new-nav-search * {font-family:Roboto, Arial, san-serif;}
+
+.new-nav-search input, .new-nav-search select {
+	box-sizing:border-box;
+	height:34px;
+	border:0;
+	background:#fff;
+	border:1px solid #bbb;
+}
+.new-nav-search input[type="text"] {
+	background:#fff;
+	padding-left:6px;
+	color:#ccc;
+	margin-right:3px;
+	border:1px solid #bbb;
+}
+.new-nav-search input[type="text"]:focus { 
+	color:#000;
+}
+.new-nav-search input[type="submit"] {
+	padding:0 10px;
+	cursor:pointer;
+	background:#ef7521;
+	color:#fff;
+	margin-left:3px;
+	border:0;
+}
+.homepage .pane-news h2.pane-title,
+.homepage .pane-quick-takes h2.pane-title,
+.homepage .pane-idl-special-topic-for-dnu h2.pane-title,
+.homepage .pane-special-topic-for-dnu h2.pane-title, 
+.panels-flexible-region-homepage-middle-inside .pane-views h2:first-of-type {
+	margin-bottom:18px;
+}
+
+.homepage .views-blogs h3 a {
+	color:#999 !important;
+}
+
+.modern-article-width .opinion-tag a, 
+.modern-article-width .topicstop a,
+.section-news .views-field-field-art-cat .topicstop a {
+	border: 0;
+    background: #fff;    
+    color: #333;
+    font-weight: 500;
+    font-family: "Roboto", san-serif;
+    font-size: 14px;
+    text-transform: capitalize;	
+}
+
+.modern-article-width .opinion-tag a::before, 
+.modern-article-width .topicstop a::before,
+.section-news .views-field-field-art-cat .topicstop a::before,
+#breadcrumbs a::before {
+	content:"#";
+	color:#999;
+}
+
+.morebtn {
+    border-bottom: 0;
+    background: #fff;
+    border: 1px solid #ef7521;
+    color: #ef7521;
+	font-weight:700;	
+	font-family:Roboto, san-serif;
+	font-weight:500;
+}
+.morebtn {color: #ef7521 !important;}
+.homepage .morebtn {
+	float: none;
+    display: block;
+    border: 0;
+    color: #000 !important;
+    font-size: 16px;
+    text-align: center;
+    background: #fcfcfc;
+    margin: 20px 0;
+}
+
+.homepage .view-id-blogs h3 {
+	font-size: 13px !important; font-weight: normal;display:inline-block;margin:10px 0 8px 0;
+}
+.homepage .view-id-blogs h3 a{
+	color:#999 !important;
+}
+.homepage .view-id-blogs .views-field-body {
+	margin-bottom:6px;
+}
+
+.homepage .view-id-quicktakes h3 a{font-weight:500;}
+
+.node-type-article .field-name-field-article-smarttitle, .modern-article-width .pane-node-field-article-smarttitle h1, .modern-article-width .recent-articles-below-story h2, .modern-article-width .quicktakes-below-story h2, .modern-article-width .recent-blogs-below-story h2, .modern-article-width .pane-node-title h1, .modern-article-width .pane-node-field-bio h2, .modern-article-width .pane-apachesolr-search h2, .modern-article-width.advice-landing .panels-flexible-column-inside-first .pane-title, .modern-article-width.advice-landing .panels-flexible-column-20-main-inside .section-title, .modern-article-width.advice-landing .panels-flexible-region-78-left-inside .section-title, .modern-article-width.advice-landing .pane-node-title.article-views-field-title.calendar, .modern-article-width.advice-landing .article-views-field-title, .modern-article-width.advice-landing .pane-cartoons .pane-title a, .modern-article-width.advice-landing #conditionally-accepted-left-column .pane-title, .modern-article-width.advice-landing.node-type-audio .pane-node-title, .pane-news-section.subsection h2.pane-title {
+	font-size: 38px !important;
+    line-height: 46px !important;
+    margin-bottom: 12px;
+}
+
+.modern-article-width.advice-landing .homepage h2.pane-title {	
+	background:#fff;
+    border-bottom:1px solid #000;		
+	margin-bottom:15px;
+}
+.modern-article-width.advice-landing .homepage h2.pane-title a {
+	color:#000;	
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 32px;    
+}
+.modern-article-width.advice-landing .homepage .pane-blogs h2.pane-title {	
+	margin-bottom:5px;
+}
+.modern-article-width.advice-landing .homepage .pane-mostpopular h2.pane-title,
+.modern-article-width.advice-landing .pane-mostpopular h2.pane-title {
+	background: #333;
+}
+
+.modern-article-width.advice-landing .pane-people {
+    margin: 20px auto;
+}
+
+.views-field-disqus-comment-count a{
+    background: url(/sites/all/themes/ihecustom/images/comment-bubbles.png) top right no-repeat;
+    padding-right: 24px;
+}
+
+.nav-control-panel li.login-panel {
+	padding: 0;   
+	height:auto;
+}
+
+.nav-control-panel li.login-panel div {
+	padding: 6px 15px 2px 10px;
+	border: 1px solid #ddd;
+    border-top: 0;
+    background: #fff;
+    background: -webkit-linear-gradient(#fff, #eee);
+    background: -o-linear-gradient(#fff, #eee);
+    background: -moz-linear-gradient(#fff, #eee);
+    background: linear-gradient(#fff, #eee);
+	display:block;
+}
+
+.nav-control-panel li.login-panel div a {
+	font-family: Roboto;
+    font-size: 13px;
+    color: #333;	
+	position: relative;
+    top: -6px;
+    left: 3px;	
+}
+
+.nav-control-panel li.login-panel div a:first-of-type {
+	
+}
+
+.nav-control-panel li.login-panel div:hover {
+	box-shadow:0 2px 3px #ddd !important;
+	border: 1px solid #aaa;
+    border-top: 0;
+	
+}
+
+.nav-control-panel li.login-panel div a span:hover {
+	text-decoration:underline;
+}
+
+.nav-control-panel li.login-panel img {
+	margin-right:6px;
+	position:relative;
+	top:5px;
+}
+
+
+/* ############# PELCRO STYLING ############# */
+
+#pelcro-app html, #pelcro-app body, #pelcro-app div, #pelcro-app span, #pelcro-app applet, #pelcro-app object, #pelcro-app iframe, #pelcro-app h1, #pelcro-app h2, #pelcro-app h3, #pelcro-app h4, #pelcro-app h5, #pelcro-app h6, #pelcro-app p, #pelcro-app blockquote, #pelcro-app pre, #pelcro-app a, #pelcro-app abbr, #pelcro-app acronym, #pelcro-app address, #pelcro-app big, #pelcro-app cite, #pelcro-app code, #pelcro-app del, #pelcro-app dfn, #pelcro-app em, #pelcro-app img, #pelcro-app ins, #pelcro-app kbd, #pelcro-app q, #pelcro-app s, #pelcro-app samp, #pelcro-app small, #pelcro-app strike, #pelcro-app strong, #pelcro-app sub, #pelcro-app sup, #pelcro-app tt, #pelcro-app var, #pelcro-app b, #pelcro-app u, #pelcro-app i, #pelcro-app center, #pelcro-app dl, #pelcro-app dt, #pelcro-app dd, #pelcro-app ol, #pelcro-app ul, #pelcro-app li, #pelcro-app fieldset, #pelcro-app form, #pelcro-app label, #pelcro-app legend, #pelcro-app table, #pelcro-app caption, #pelcro-app tbody, #pelcro-app tfoot, #pelcro-app thead, #pelcro-app tr, #pelcro-app th, #pelcro-app td, #pelcro-app article, #pelcro-app aside, #pelcro-app canvas, #pelcro-app details, #pelcro-app embed, #pelcro-app figure, #pelcro-app figcaption, #pelcro-app footer, #pelcro-app header, #pelcro-app hgroup, #pelcro-app main, #pelcro-app menu, #pelcro-app nav, #pelcro-app output, #pelcro-app ruby, #pelcro-app section, #pelcro-app summary, #pelcro-app time, #pelcro-app mark, #pelcro-app audio, #pelcro-app video {
+	font-family:"Roboto",Arial,san-serif;
+}
+
+#pelcro-app #pelcro-view-manage-subscriptions .row>div:nth-of-type(2):not(.col-auto) {
+	width:98%;
+}
+
+#pelcro-app .pelcro-prefix-form .pelcro-prefix-btn {
+	background:#ef7521;
+	border-radius:0;
+}
+
+.nav-control-panel li.logjoin {
+	line-height: 13px;
+    color: #ef7521;
+    height: auto;
+}
+
+.nav-control-panel li.logjoin button {
+	font-family: Roboto, Arial, sans-serif;
+    font-size: 13px;
+	background:0;
+	box-shadow:none;
+	border:0;
+	text-transform: capitalize;
+    padding: 0;
+}
+
+.nav-control-panel li.logjoin button:hover {
+	cursor:pointer;
+	color:#ef7521;
+}
+
+.modern-article-width.section-insider-member-dashboard #block-system-main .content,
+.modern-article-width.section-insider-dashboard #block-system-main .content {padding:0;}
+
+.modern-article-width.section-insider-member-dashboard #block-system-main  .content .content, 
+.modern-article-width.section-insider-dashboard #block-system-main  .content .content {
+	border-top: 0;
+	padding-top:10px;
+}
+
+.nav-control-panel li.logjoin {display:none;}
+
+.nav-control-panel li.logjoin.inlineblock {display:inline-block !important;}
+
+.nav-control-panel li.logjoin .insidershow {display:none;}
+
+#pelcro-app .container {
+	padding:0;
+}
+
+#pelcro-app #pelcro-view-page, #pelcro-app #pelcro-view-settings, #pelcro-app #pelcro-view-manage-subscriptions {
+	background:#fff;
+}
+
+#pelcro-app #pelcro-view-page .pelcro-prefix-curated-link .pelcro-prefix-title,
+#pelcro-app #pelcro-view-page .pelcro-prefix-event .pelcro-prefix-title,
+#pelcro-app #pelcro-view-page .pelcro-prefix-saved-link a {
+	font-size:18px;
+	line-height:22px;
+}
+
+#pelcro-app #pelcro-view-page .pelcro-prefix-curated-link .pelcro-prefix-btn,
+#pelcro-app #pelcro-view-page .pelcro-prefix-title.row .col-3 .pelcro-prefix-btn {
+	height:15px;
+	color:#ef7521 !important;
+	background:0;
+	box-shadow:none;
+	border:0;
+	padding:3px 20px;
+	font-size:11px;
+	color: #315ea1 !important;
+    padding: 3px 0;
+	max-width:unset !important;
+	width:auto;
+}
+
+#pelcro-app #pelcro-view-page .pelcro-prefix-btn,
+#pelcro-app #pelcro-view-settings .pelcro-prefix-btn,
+#pelcro-app #pelcro-view-manage-subscriptions .pelcro-prefix-btn{
+	background:#ef7521;
+	border-radius:0;
+	color:#fff !important;
+}
+
+#pelcro-app #pelcro-view-manage-subscriptions .submit{
+	margin-top:35px;
+}
+
+#pelcro-app #pelcro-view-settings .pelcro-prefix-settings-button {
+	padding: 3px 30px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #999;
+    border-bottom: #aaa;
+    border: none;
+    margin-bottom: 48px;
+	box-shadow:none;
+}
+
+#pelcro-app .pelcro-prefix-inside-higher-ed-container .col-12:first-of-type {
+	border-right:1px solid #ddd;
+}
+
+#pelcro-app #pelcro-view-manage-subscriptions .pelcro-prefix-inside-higher-ed-container .col-12:first-of-type {
+	border:0;
+}
+
+#pelcro-app span.pelcro-prefix-link {
+	font-weight:bold;
+	color:#000;
+	margin:0 10px;
+}
+
+
+#pelcro-app .row {
+	max-width:98%;
+}
+
+.pelcro-prefix-new-report-item {
+	font-size: 17px;
+    font-weight: normal;
+    font-family: "Roboto", arial, sans-serif;
+}
+
+#pelcro-app #pelcro-view-page .pelcro-prefix-type {
+	font-size:14px;
+}
+
+#pelcro-app #pelcro-view-page .pelcro-prefix-events-section .row .pelcro-prefix-btn {
+	padding: 5px 10px;
+    height: 27px;
+	margin-top:8px;
+}
+
+#pelcro-app .pelcro-prefix-main-title {
+	padding: 10px;
+    background: #f1f1f1;
+    margin: 0 auto 30px auto;
+}
+
+#pelcro-app .pelcro-prefix-column-title span.pelcro-prefix-link {
+	color:#ef7521;
+}
+
+#pelcro-app .pelcro-prefix-column-title {
+	margin-bottom:30px;
+}
+
+#pelcro-app .pelcro-prefix-main-title .pelcro-prefix-column-title {
+	margin-bottom:0;
+}
+
+#pelcro-app #list .pelcro-prefix-product-container .pelcro-prefix-product-button,
+#pelcro-app #pelcro-view-dashboard .pelcro-prefix-logout-btn,
+#pelcro-app .pelcro-prefix-modal-body .pelcro-prefix-btn {
+	background: #ef7521;
+    border-radius: 0;
+}
+
+#pelcro-app .pelcro-prefix-inside-higher-ed-container .col-12:first-of-type.pelcro-prefix-newsletter-item,
+#pelcro-app .pelcro-prefix-inside-higher-ed-container .col-12:first-of-type.pelcro-prefix-archive-title {
+	border:0;
+}
+
+#pelcro-app #pelcro-view-settings .pelcro-prefix-form-group label[for="pelcro-select-education-level"],
+#pelcro-app #pelcro-view-settings .pelcro-prefix-form-group #pelcro-select-education-level,
+#pelcro-app #pelcro-view-settings .pelcro-prefix-form-group label[for="pelcro-select-institution-size"],
+#pelcro-app #pelcro-view-settings .pelcro-prefix-form-group #pelcro-select-institution-size {
+	display:none;
+}
+
+#pelcro-app #pelcro-view-manage-subscriptions .pelcro-prefix-newsletter-content {
+	font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+#pelcro-app #pelcro-view-manage-subscriptions .col-1 {
+	flex: unset;
+    max-width: unset;
+    width: 50px;
+    padding-right: 0;
+}
+
+#pelcro-app #pelcro-view-manage-subscriptions .col-md-11 {
+	flex: unset;
+    max-width: 86%;
+	float:left;
+	width:auto;
+}
+
+.modern-article-width #block-system-main .content .content {border:0;}
+#main-wrapper .field-name-body li {list-style-position:outside;margin-left:20px;}
+.delay {display:none;}
+#pelcro-app .pelcro-prefix-main-title .pelcro-prefix-column-title .pelcro-prefix-link {
+	font-family:"Roboto Slab", Georgia, serif;
+}
+#pelcro-app #pelcro-view-page .pelcro-prefix-title {
+	font-weight:normal;
+}
+
+#pelcro-app #pelcro-view-page .pelcro-prefix-title:after,
+#pelcro-app #pelcro-view-page .pelcro-prefix-title.row a:after { 
+	content: '\00BB';
+	padding-left:5px;
+}
+
+#pelcro-app #pelcro-view-page .pelcro-prefix-event .pelcro-prefix-title:after,
+#pelcro-app #pelcro-view-page .pelcro-prefix-title.row:after  {
+	content:'';
+	padding:none;
+}
+
+#pelcro-app #pelcro-view-page .pelcro-prefix-curated-link .pelcro-prefix-btn {
+	color: #315ea1 !important;
+	padding: 3px 0;
+}
+
+#pelcro-app #pelcro-view-page .pelcro-prefix-curated-link .pelcro-prefix-btn:before,
+#pelcro-app #pelcro-view-page .pelcro-prefix-title.row .col-3 .pelcro-prefix-btn:before {
+	content: '\204E';
+    padding-right: 5px;
+    position: relative;
+    top: -2px;
+}
+#pelcro-app #pelcro-view-page .pelcro-prefix-type {
+	color: #ef7521;
+	font-weight:normal;
+}
+
+#pelcro-app #pelcro-view-page .pelcro-prefix-btn {
+    box-shadow: 0 1px 3px #999;
+	background: #f1f1f1;    
+    color: #333 !important;
+}
+
+#pelcro-app #pelcro-view-page .pelcro-prefix-advertising-block {
+	background-color: #fff;
+    border: 1px solid #ef7521;
+}
+
+#pelcro-app span.pelcro-prefix-link {
+	font-weight:500;
+}
+
+#pelcro-app .pelcro-prefix-title.row {
+        width:98%;
+}
+
+#pelcro-app .pelcro-prefix-title.row .col-9 {
+        width:100%;
+        max-width:unset;
+        flex:unset;
+        display:block; 
+	}
+
+
+
+@media all and (max-width: 979px) {		
+	.nav-control-panel noscript {display:none;}
+	#header {
+		background:#fff !important;
+		box-shadow:1px 1px 10px #111;
+	}
+	#new-nav-logo {
+		display:block;
+		position:absolute;
+		left: 5px;
+		top: -8px;
+		height:45px;
+		width:auto;
+	}
+	.left-container, .right-container {
+		display:none;
+	}
+	#block-search-form {
+		display:block;
+    }
+	.nav-control-panel {
+		right:5px;
+		top:-1px;
+	}
+	.nav-control-panel ul li{
+		
+	}
+	.nav-control-panel ul li:first-of-type{
+		display:initial;
+		padding-top:4px;
+	}
+	.nav-control-panel .login-panel div {
+		border:0 !important;
+		background:none !important;
+		padding-right:5px !important;
+	}
+	.nav-control-panel li.login-panel div a {
+		left:0;
+		color:#fff;
+	}
+	.nav-control-panel li.login-panel div:hover {
+		box-shadow:none !important;
+		border:0 !important;
+	}
+	.nav-control-panel li.login-panel div a span{
+		display:none;
+	}
+	.new-nav-search {
+		width:260px;
+	}
+	.new-nav-search form {
+		margin-left:5px;
+	}
+	.new-nav-search input,
+	.new-nav-search select{
+		width:220px;
+	}
+	.new-nav-search input[type="submit"] {
+		margin-left:0;
+	}		
+	
+	
+}
+
+@media all and (max-width: 480px) {	
+ 
+	.node-type-article .field-name-field-article-smarttitle, .modern-article-width .pane-node-field-article-smarttitle h1, .modern-article-width .recent-articles-below-story h2, .modern-article-width .quicktakes-below-story h2, .modern-article-width .recent-blogs-below-story h2, .modern-article-width .pane-node-title h1, .modern-article-width .pane-node-field-bio h2, .modern-article-width .pane-apachesolr-search h2, .modern-article-width.advice-landing .panels-flexible-column-inside-first .pane-title, .modern-article-width.advice-landing .panels-flexible-column-20-main-inside .section-title, .modern-article-width.advice-landing .panels-flexible-region-78-left-inside .section-title, .modern-article-width.advice-landing .pane-node-title.article-views-field-title.calendar, .modern-article-width.advice-landing .article-views-field-title, .modern-article-width.advice-landing .pane-cartoons .pane-title a, .modern-article-width.advice-landing #conditionally-accepted-left-column .pane-title, .modern-article-width.advice-landing.node-type-audio .pane-node-title, .pane-news-section.subsection h2.pane-title {
+		font-size: 28px !important;
+		line-height: 36px !important;
+		margin-bottom: 0;
+	}
+	
+}	
+
+</style>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('.toggle-nav, .nav-list-close').click(function(e) {
+        jQuery(this).toggleClass('show-nav');
+        jQuery('.nav-list-links').toggleClass('show-nav');
+        e.preventDefault();
+    });
+
+	
+	jQuery('.toggle-search, .search-close').click(function(e) {
+        jQuery(this).toggleClass('show-search');
+        jQuery('.new-nav-search').toggleClass('show-search');
+ 
+        e.preventDefault();
+    });		
+	
+	
+	jQuery(document).click(function(event) {
+    if ((jQuery(event.target).closest(".show-search").attr("class") != "show-search") &&
+        jQuery('.new-nav-search').hasClass('show-search') && jQuery(event.target).closest(".menu-seventeen").attr("class") != "menu-seventeen"){
+			jQuery('.new-nav-search').toggleClass('show-search');
+    }
+	if ((jQuery(event.target).closest(".show-nav").attr("class") != "show-nav") &&
+        jQuery('.nav-list-links').hasClass('show-nav') && jQuery(event.target).closest(".menu-seventeen").attr("class") != "menu-seventeen") {
+			jQuery('.nav-list-links').toggleClass('show-nav');
+    }
+	});
+	
+	
+	jQuery('#new-search-submit').click(function(e) {
+		var dropsearch;
+		var careersurl;
+		var newsurl;
+		var campaigntracker;
+		if (jQuery('#search-option').val() > 1) {   
+			e.preventDefault();
+			campaigntracker = "&utm_source=ihe&utm_medium=editorial-site&utm_content=header-link&utm_campaign=jobs";
+			dropsearch = jQuery('#search-term').val();
+			careersurl = 'https://careers.insidehighered.com/searchjobs/?Keywords=' + dropsearch + campaigntracker; 
+			window.location.href = careersurl;        
+		} else {
+			e.preventDefault();			
+			dropsearch = jQuery('#search-term').val();
+			newsurl = 'https://www.insidehighered.com/search/results/' + dropsearch; 			
+			window.location.href = newsurl; 
+		}
+	});
+	jQuery("#search-term").focus( function() {
+        if ( jQuery(this).val()=="keyword") {
+            jQuery(this).val('');
+        } 
+    });
+    jQuery("#search-term").blur( function() {
+        if ( jQuery(this).val()=="") {
+            jQuery(this).val('keyword');
+        } 
+    });		
+	
+	jQuery('#morejump').click(function(e) { 		
+        jQuery('.nav-list-links').toggleClass('show-nav');
+	});
+	
+	jQuery('.trending-item a').click(function(){
+        label = jQuery(this).attr('href');
+        ga('send', 'event', 'Trending Navigation', 'Click', label);
+     });
+	
+	
+});
+</script>
+<div class="menu-seventeen">
+<div style="position:relative;">
+<div class="nav-list-links">
+<div class="nav-list-close"><a href="#"><strong>X</strong></a></div>
+<ul>
+<li>
+<a id="captureEmailNewsLetterEnrollemntLink" href="/content/sign-inside-higher-eds-newsletters"><strong>Free Newsletters</strong></a> </li>
+</ul>
+<ul>
+<noscript><li style="font-size:11px;">Enable Javascript to log in</li></noscript>
+<li><a href="/"><strong>News &amp; Views</strong></a></li>
+<li><a href="/admissions-insider">Admissions</a></li>
+<li><a href="/digital-learning">Digital Learning</a></li>
+<li><a href="/news/focus/diversity">Diversity</a></li>
+<li><a href="/capital_campaigns">Fund-Raising</a></li>
+</ul>
+<ul>
+<li><a href="https://careers.insidehighered.com"><strong>Careers</strong></a></li>
+<li><a href="https://careers.insidehighered.com/searchjobs/">Find A Job</a></li>
+<li><a href="/advice">Career Advice</a></li>
+<li><a href="https://shopcareers.insidehighered.com/">Hire Faculty &amp; Staff</a></li>
+</ul>
+<ul>
+<li><a href="/Events"><strong>Events</strong></a></li>
+</ul>
+<ul>
+<li><a href="/special-reports"><strong>Reports &amp; Data</strong></a></li>
+</ul>
+<ul>
+<li><a href="#backtotop" id="morejump"><strong>More</strong></a></li>
+</ul>
+</div>
+<div class="new-nav-search">
+<form>
+<input type="text" value="keyword" name="search-term" id="search-term">
+<select name="search-option" id="search-option">
+<option value="1">News &amp; Opinion</option>
+<option value="2">Jobs</option>
+</select>
+<input type="submit" name="submit" value="search" id="new-search-submit">
+</form>
+</div>
+<div class="nav-control-panel">
+<ul>
+<noscript><strong style="font-size:11px;font-family:Roboto,Arial;">Enable Javascript to log in &nbsp;</strong></noscript>
+<li><a href="#" class="toggle-nav"><img src="/sites/all/themes/ihecustom/nav/menu-lines.png" /></a></li>
+<li><a href="#" class="toggle-search"><img src="/sites/all/themes/ihecustom/nav/menu-glass.png" /></a></li>
+
+</ul>
+</div>
+<div class="left-container">
+<ul class="left-main">
+<li><a href="/">News &amp; Views</a></li>
+<li><a href="https://careers.insidehighered.com">Careers</a></li>
+<li><a href="/events">Events</a></li>
+<li><a href="/special-reports">Reports &amp; Data</a></li>
+</ul>
+<div class="view view-trending view-id-trending view-display-id-trending_nav view-dom-id-7ec5c609ce6d7f9631ba0b700e672753">
+<div class="view-content">
+<ul class="left-sub"> <li class="trending-item">
+<a href="/news/2020/05/15/colleges-seek-protection-lawsuits-if-they-reopen">Fear of Getting Sued</a> </li>
+<li class="trending-item">
+<a href="/news/2020/05/15/wells-college-exemplifies-which-institutions-stand-lose-most-pandemic">College Struggles to Stay Alive</a> </li>
+</ul> </div>
+</div> 
+</div>
+<a href="/"><img id="new-nav-logo" src="/sites/all/themes/ihecustom/nav/ihe-logo-2018.png" /></a>
+<div class="right-container">
+<ul class="right-main">
+<li><a href="/admissions-insider">Admissions</a></li>
+<li><a href="/transforming-teaching-learning">Teaching &amp; Learning</a></li>
+<li><a href="/news/focus/diversity">Diversity</a></li>
+</ul>
+<ul class="right-sub">
+<li>
+<a id="captureEmailNewsLetterEnrollemntLink" href="/content/sign-inside-higher-eds-newsletters">Free Newsletters</a> </li>
+<li><a href="/membership">Membership</a></li>
+<li><a href="https://about.insidehighered.com/marketing-solutions">Advertise</a></li>
+<li><a href="https://shopcareers.insidehighered.com">Hire Faculty &amp; Staff</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="region region-header">
+<div id="block-block-35" class="block block-block first last odd">
+<div class="content">
+<script type="text/javascript">
+var addthis_share = { url_transforms : { shorten: { twitter: 'bitly' } }, shorteners : { bitly : {}  } };
+var addthis_config = { ui_open_windows: true, data_ga_property: "UA-2139597-1", data_ga_social : true };
+</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=insidehighered" async="async"></script>
+<style>#main .section {background:none;}</style>
+</div>
+</div> 
+</div> 
+</div></div>
+<div id="navigation"><div class="section clearfix">
+<ul class="nice-menu nice-menu-down nice-menu-main-menu" id="nice-menu-0"><li class="menu-198 menu-path-front first odd "><a href="/" title="">News</a></li>
+<li class="menu-23836 menu-path-admissions-insider  even "><a href="/admissions-insider" title="">Admissions Insider</a></li>
+<li class="menu-22636 menu-path-news-focus-diversity  odd "><a href="/news/focus/diversity?utm_source=ihe&amp;utm_medium=editorial-site&amp;utm_content=header-link" title="">Diversity Matters</a></li>
+<li class="menu-468 menu-path-views  even "><a href="/views">Views</a></li>
+<li class="menu-474 menu-path-advice  odd "><a href="/advice">Career Advice</a></li>
+<li class="menu-471 menu-path-blogs  even "><a href="/blogs" title="">Blog U</a></li>
+<li class="menu-2301 menu-path-news-survey  odd "><a href="/surveys" title="">Surveys</a></li>
+<li class="menu-7641 menu-path-taxonomy-term-833  even "><a href="/events" title="">Webinars</a></li>
+<li class="menu-7640 menu-path-events-people  odd "><a href="/events_people" title="">Events &amp; People</a></li>
+<li class="menu-466 menu-path-careersinsidehigheredcom-  even "><a href="http://careers.insidehighered.com/" title="">Jobs</a></li>
+<li class="menu-26766 menu-path-search-colleges  odd "><a href="/search/colleges">Audio</a></li>
+<li class="menu-25636 menu-path-capital-campaigns  even "><a href="/capital_campaigns">Capital Campaigns</a></li>
+<li class="menu-35181 menu-path-aaup-faculty-statistical-data  odd last"><a href="/aaup-faculty-statistical-data">Capital Campaigns</a></li>
+</ul>
+</div></div>
+<div id="secondmenu">
+<ul class="links"><li class="menu-7621 first"><a href="/news/focus/admissions" title="">Admissions</a></li>
+<li class="menu-7622"><a href="/books" title="">Books</a></li>
+<li class="menu-7623"><a href="/news/focus/technology" title="">Technology</a></li>
+<li class="menu-7624"><a href="/news/focus/community_colleges" title="">Community Colleges</a></li>
+<li class="menu-7625"><a href="/news/focus/diversity" title="">Diversity</a></li>
+<li class="menu-7626"><a href="/news/focus/teaching-and-learning" title="">Teaching &amp; Learning</a></li>
+<li class="menu-7627"><a href="/news/focus/global" title="">Global</a></li>
+<li class="menu-7628"><a href="/audio" title="">Audio</a></li>
+<li class="menu-8724"><a href="/booklets">Booklets</a></li>
+<li class="menu-7629 last"><a href="http://www.insidehighered.com/content/news-sections" title="">More</a></li>
+</ul> <script type="text/javascript">
+					menuelement = document.getElementsByClassName("menu-7629");
+					box = document.getElementById("topics");
+					if (document.all) {
+					     menuelement[0].onclick = function () { document.getElementById('topics').style.display='block';return false; };
+					} else {
+					    menuelement[0].setAttribute("onclick","document.getElementById('topics').style.display='block'; document.getElementById('topics').style.borderTop='5px solid #EF7521'; document.getElementById('topics').style.margin='0 0 20px 0'; document.getElementById('topics').style.height= '230px';return false;"); }
+				</script>
+</div>
+<div style="height: 1px; display: block; clear: both"></div>
+<div id="main-wrapper">
+<div id="main" class="clearfix with-navigation">
+<div id="content" class="column"><div class="section">
+<div class="region region-highlight">
+<div id="block-dfp-article_superleaderboard" class="block block-dfp object-center marginbottom10 first odd">
+<div class="content">
+<div id="dfp-ad-article_superleaderboard-wrapper" class="dfp-tag-wrapper">
+<div id="dfp-ad-article_superleaderboard" class="dfp-tag-wrapper">
+<script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-article_superleaderboard");
+    });
+  </script>
+</div>
+</div> </div>
+</div> 
+<div id="block-views-44689a951d91bc11c6295b9cb2462836" class="block block-views object-center last even">
+<div class="content">
+<div class="view view-news-features-by-editorial-tag view-id-news_features_by_editorial_tag view-display-id-block_5 new-feature-banner view-dom-id-5ff7db6c47decb90d164e8aa9bce54d7">
+<div class="view-content">
+<div>
+<h4 class="field-content live-updates"><a href="/news/2020/05/15/live-updates-latest-news-coronavirus-and-higher-education">Live Updates: Latest News on Coronavirus and Higher Education - May 15, 2020</a></h4> </div>
+</div>
+</div> 
+</div>
+</div> 
+</div> 
+<a id="main-content"></a>
+<div class="tabs"></div>
+<div class="region region-content">
+<div id="block-system-main" class="block block-system first last odd">
+<div class="content">
+<div class="panel-display panel-2col-bricks clearfix">
+<div class="panel-panel panel-col-top">
+<div class="inside"><div class="panel-pane pane-custom pane-11">
+<div class="pane-content">
+<style type="text/css">.delay {display:none;}
+.pelcro-save-article-button{
+    background: #3e67a7 url(https://www.insidehighered.com/sites/default/server_files/media/whitebmark.png) no-repeat 50% top;
+    padding: 3px;
+    height: 32px;
+    line-height: 29px;
+    color: #fff;
+    font-size: 12px;
+    width: 32px;
+    font-weight: bold;
+    border-radius: 12%;
+    margin: 0 2px 5px 2px;
+    padding: 0;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-size: contain;
+    border-top: 8px solid #3e67a7;
+    border-bottom: 8px solid #3e67a7;
+    box-sizing: border-box;
+    border-left:0;
+    border-right:0;
+}
+.pelcro-save-article-button:hover{
+    transform: translateY(-4px);
+    outline-offset: -1px;
+    color: #fff;
+}
+</style>
+<button title="Save to dashboard" class="delay insidershow pelcro-save-article-button" data-article-path="https://www.insidehighered.com/views/2020/05/14/inclusive-teaching-needed-help-combat-xenophobia-racism-and-discrimination-brought" data-article-tags="Racial groups" data-article-title="Inclusive teaching is needed to help combat the xenophobia, racism and discrimination brought on by COVID-19"></button>
+<script>
+(function ($) {
+    $(document).ready(function(){
+jQuery('.pelcro-save-article-button').prependTo('.top-social');
+});
+})(jQuery);
+</script> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-12">
+<div class="pane-content">
+<div id="breadcrumbs"><a href="/views" class="breadcrumb-link">Views</a></div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-13">
+<div class="pane-content">
+<div class="new-print-this"><a title="Print" href="/print/views/2020/05/14/inclusive-teaching-needed-help-combat-xenophobia-racism-and-discrimination-brought"><span>Print</span><img src="https://www.insidehighered.com/sites/default/server_files/static/images/shareprints.jpg" border="0" height="10px"></a></div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-14 opinion-tag">
+<div class="pane-content">
+<a href="/views">opinion</a>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-article-smarttitle">
+<div class="pane-content">
+<div class="field field-name-field-article-smarttitle field-type-text field-label-hidden"><div class="field-items"><div class="field-item even" property="schema:title"><h1 style='border-bottom-width:0; color:#444444; font-size:22px; font-weight:bold; line-height:25px; text-transform: none; padding-bottom: 0px;'>Fighting the Shadow Pandemic</h1></div></div></div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-15">
+<div class="pane-content">
+<style>
+.modern-article-width .field-name-body img,
+.modern-article-width .field-name-field-image-art2 img {max-width:100%;height:auto !important;} 
+.sub-title-desc{margin:0 0 20px 10px;}
+.view-display-id-recent_featured .item-list ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.view-display-id-recent_featured .item-list ul li:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.view-display-id-recent_featured .item-list ul li img {border:0;}
+.modern-article-width .pane-node-author.read-more-by {display:block;}
+</style> </div>
+</div>
+</div>
+</div>
+<div class="center-wrapper">
+<div class="panel-panel panel-col-first">
+<div class="inside"><div class="panel-pane pane-token pane-node-summary sub-title-desc">
+<div class="pane-content">
+<p>The worldwide spread of COVID-19 has caused mass xenophobia, racism and discrimination, writes B. Venkat Mani, making the need for inclusive teaching all the more urgent.</p>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-author">
+<h2 class="pane-title">
+By </h2>
+<div class="pane-content">
+<a href="/users/b-venkat-mani" title="View user profile." class="username">B. Venkat Mani</a> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-created views-field views-field-created">
+<div class="pane-content">
+May 14, 2020 </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-views jump-to-comments">
+<div class="pane-content">
+<div class="view view-views view-id-views view-display-id-block_10 news-archive view-dom-id-362f54af52be93da8b80039a114980c9">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+<div class="views-field views-field-disqus-comment-count"> <span class="field-content"><a href="/views/2020/05/14/inclusive-teaching-needed-help-combat-xenophobia-racism-and-discrimination-brought#disqus_thread" data-disqus-identifier="node/331546">Comments</a></span> </div> </div>
+</div>
+</div> 
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-1 top-social">
+<div class="pane-content">
+<style>
+.top-social {clear: both;
+    width: 56px !important;
+    background: #fafafa;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px 5px 5px 10px !important;
+    left: -70px;
+    top: 60px;
+    border-radius: 10px 0 0 10px;
+    border-right: 4px solid #f1f1f1 !important;}
+
+@media only screen and (max-width: 979px) {
+.top-social{    clear: both;
+    width: 100% !important;
+    background: #fafafa;
+    position: relative;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    border-bottom: 4px solid #f1f1f1 !important;
+    border-right: 0 !important;
+    display: block;
+    margin: 0;
+    margin-top: 0;
+    text-align: center;
+    padding: 5px 0 0 0 !important;
+	float:none !important;
+}
+
+body.node-type-special-reports .top-social {
+	display:none;
+}
+
+}
+
+</style>
+<div class="addthis_custom_sharing"></div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-2 smallpic-spacer">
+<div class="pane-content">
+<div class="smallpic-spacer"> </div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-3 blog-spacer">
+<div class="pane-content">
+<style>
+.blog-spacer {
+    display: none;    
+  }
+@media (max-width: 420px) {
+  .blog-spacer {
+    display: block;
+    height:1px;
+    clear:both;
+  }
+}
+</style>
+<div>&nbsp;</div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-image-views smallpic">
+<div class="pane-content">
+<div class="field field-name-field-image-views field-type-image field-label-hidden"><div class="field-items"><div class="field-item even" rel="schema:image" resource="https://www.insidehighered.com/sites/default/server_files/media/vector-of-a-sign-with-virus-crossed-out-on-it-vector-id1224019252.jpg"><a href="https://www.insidehighered.com/sites/default/server_files/styles/large/public/media/vector-of-a-sign-with-virus-crossed-out-on-it-vector-id1224019252.jpg?itok=gCPudkNm" title="Inclusive teaching is needed to help combat the xenophobia, racism and discrimination brought on by COVID-19" class="colorbox" data-colorbox-gallery="gallery-node-331546-OFcPARnTx3w" data-cbox-img-attrs="{&quot;title&quot;: &quot;&quot;, &quot;alt&quot;: &quot;&quot;}"><img typeof="foaf:Image" src="https://www.insidehighered.com/sites/default/server_files/styles/medium/public/media/vector-of-a-sign-with-virus-crossed-out-on-it-vector-id1224019252.jpg?itok=pnFAobpm" width="165" height="220" alt="" title="" /></a></div></div></div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-image-source width165">
+<div class="pane-content">
+<div class="field field-name-field-image-source field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Istockphoto.com/Joanna skoczen</div></div></div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-body">
+<div class="pane-content">
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>The United States of America, the richest nation with arguably the strongest army in the world, stands helpless today in front of a virus invisible to the naked eye. The nation leads the world today&nbsp;in the number of confirmed cases infected with the COVID-19 virus.</p>
+<p>In addition, the inequalities&nbsp;existing in the United States through the segregation of neighborhoods and school districts along racial and class-based lines have been rendered visible through the massive deadly impact of the novel coronavirus on the African American and Latinx populations of cities like <a href="https://www.nytimes.com/2020/04/08/nyregion/coronavirus-race-deaths.html">New York</a>, <a href="https://www.chicagotribune.com/coronavirus/ct-coronavirus-chicago-coronavirus-deaths-demographics-lightfoot-20200406-77nlylhiavgjzb2wa4ckivh7mu-story.html">Chicago</a> and <a href="https://newsone.com/3918016/coronavirus-killing-black-people-milwaukee/">Milwaukee</a>. A <a href="https://fortune.com/2020/03/17/coronavirus-ventilator-shortage/">shortage of hospital beds and ventilators</a> and <a href="https://www.theguardian.com/commentisfree/2020/feb/28/coronavirus-millions-of-americans-uninsured">lack of health insurance for the socioeconomically underprivileged</a> has underlined how poorly prepared the nation was in pandemic management.</p>
+<p>Meanwhile, away from the nationwide uncertainty and the disturbing peace and quiet of the streets and workplaces, for the past two months a noisy pandemic of racism has been unfolding. While racism in the United States has long been with us, what is especially cruel about it now is that it is unfolding in a moment of extreme suffering, when the virus itself is not making any distinctions between race, ethnicity, gender or nationality. When the entire humanity, and millions of Americans -- regardless of their physical or financial differences -- are worried about their health, their futures, their financial security, the hatred of anything different and foreign is reaching its peak.</p>
+<p>Indeed, there is ample evidence that the worldwide spread of COVID-19 has caused <a href="https://www.theatlantic.com/international/archive/2020/03/coronavirus-covid19-xenophobia-racism/607816/">mass xenophobia, racism and discrimination</a>. As populist manipulation of publics continues around the world, mostly to hide the lack of preparation of governments in fighting the spread of the virus, human beings who are deemed outsiders have become scapegoats again. Given the initial spread of the virus in Wuhan, China, there has been a resurgence of militant, racist Orientalism. Asians have been the direct targets of racist and xenophobic abuse in numerous countries, including in the United States, <a href="https://www.npr.org/2020/03/02/811363404/when-xenophobia-spreads-like-a-virus">members of the East Asian community</a>; in the United Kingdom, <a href="https://www.theguardian.com/world/2020/mar/24/coronavirus-us-asian-americans-racism">British Asians and Asian migrants</a>; in India, <a href="https://timesofindia.indiatimes.com/city/delhi/students-from-northeast-complain-of-racism-at-kmc/articleshow/74071475.cms">students from northeastern states</a> enrolled at colleges in Delhi and other big cities. Such incidents have also occurred in <a href="https://www.nzz.ch/panorama/coronavirus-rassismus-gegen-asiaten-nzz-ld.1543322">Switzerland</a>, <a href="https://www.zeit.de/kultur/2020-02/coronavirus-rassismus-chinesen-anfeindungen-aengste-diskriminierung">Germany</a> and many other nations.</p>
+<p>As just one local example, not long ago, someone wrote <a href="https://www.facebook.com/uwasianam/posts/2978906008829845">racist messages</a> directed against our Asian students on a sidewalk of the University of Wisconsin at Madison, when I teach literature. This incident of chalking was just one of the manifestations of the growing racial bias and hate speech against Asian and Asian American students, which the campus newspaper <em>Badger Herald </em><a href="https://badgerherald.com/opinion/2020/02/11/as-the-coronavirus-spreads-to-madison-so-does-discrimination-against-asian-americans/">reported</a> well before COVID-19 took over the entire nation. In response to the chalking, the university leadership released a statement on &ldquo;<a href="https://covid19.wisc.edu/statement-on-community-respect-and-support/">Community Respect and Support</a>,&rdquo; which acknowledged an uptick in racism against students of East Asian and South Asian heritages. The dean of students organized a virtual town hall on Zoom. Yet an event that was supposed to be a step toward healing ended up hurting people more. As the <a href="https://badgerherald.com/news/2020/03/26/dean-of-students-hosts-virtual-town-hall-in-response-to-increase-in-racist-incidents-on-campus/" target="_blank">student newspaper reported</a>, &quot;One student appeared on camera with their pants pulled down, singing an obscene song, while another student interrupted the panelists and spoke obscenities for several moments before officials shut down their microphone.&quot;</p>
+<p>In the words of the medical anthropologist <a href="http://www.centerforhealthsecurity.org/our-people/schoch-spana/">Monica Schoch-Spana</a>, who studied the fissures and fault lines of race and class in the segregated city of Baltimore during the Spanish Flu pandemic of 1918: &ldquo;<a href="https://www.washingtonpost.com/health/2020/03/19/coronavirus-projections-us/">[Pandemics] bring with them an almost shadow pandemic of psychological and societal injuries as well</a>.&rdquo; Unlike the 1918 flu, however, the shadow pandemic today is not restricted to physical spaces. In fact, it has been proliferating by the second in the virtual space: on Facebook&nbsp;and through Zoom, WhatsApp and Twitter. President Trump&rsquo;s&nbsp;declaration on Twitter of the <a href="https://www.nytimes.com/2020/04/21/us/politics/coronavirus-trump-immigration-ban.html">ending of immigration</a> is just one&nbsp;example of state-endorsed&nbsp;legitimization of the shadow pandemic of racism and xenophobia.</p>
+<p><strong>Slowing the Spread</strong></p>
+<p>How can we slow down and eventually stop this shadow pandemic? As the spread of the coronavirus has shown, hiding truths and facts and pretending that a dangerous disease-causing virus does not exist or is manageable simply does not work. Similarly, owning up to the continued existence of racism and xenophobia on American campuses, and their manifestation in mild and severe forms -- from everyday microaggressions to what universities term &ldquo;isolated incidents&rdquo; of direct verbal assaults on human dignity -- will be the first step to acknowledge and address the disparities in our postsecondary education that lead to discrimination. One cannot solve a problem if one pretends that it does not exist.</p>
+<p>Racism and xenophobia, in fact, cost a lot of institutional time and money and place severe emotional stress on all those who are impacted, leading to a decline in productivity. The cycle of incident, statement of regret and warning, and incident can be broken. Instead of waiting for yet another racist or xenophobic incident to occur, universities should put effective measures in place that send a strong message of zero tolerance for racism and xenophobia in all spaces, including classrooms, dorms and administrative offices.</p>
+<p>That is why now would be the worst time to cut the budgets of the university&rsquo;s equity, diversity and inclusion offices, centers of excellence for the marginalized and minoritized students,&nbsp;disability resource centers, and &nbsp;programs in international studies. It would be delusional for universities to think that issues that their underrepresented minorities face -- racism, xenophobia, misogyny, homophobia, ableism -- are just problems of these minoritized communities with no relation or impact whatsoever on others. Discriminatory behavior impacts everyone. Disinvesting in diversity now would mean disinvesting in the university&rsquo;s own future, depriving its majority students a chance to enhance their learning experience by interacting and bonding with fellow human beings from backgrounds other than their own.</p>
+<p>But none of this work can be left solely to leadership or the offices of equity, diversity and inclusion on our campuses. As we know from scientists and experts tracing the virus, irresponsible behavior in one section of the city, neighborhood or community assures the spread of the pandemic everywhere. If the strong measures and messaging will help with prevention, emphasis will have to be placed to develop a campuswide culture of resistance of discriminatory practices. Everyone will have to be together, physically or in the virtual space, to resist and fight the shadow pandemic.</p>
+<p>In addition, without erasing differences of class, gender, religion, nationality or ability, we need to obliterate the compartmentalization of racism, xenophobia and other forms of discrimination and see them as a network of behavioral practices that have no place in an institution of higher education. Thinking of separate solutions for racism against Asian Americans, Latinx students, African Americans or international students and faculty will be hardly productive. Adding new courses to educate students in Asian American or Asian cultures or throwing in more ethnic studies requirements will not lead to finding a sustainable solution to this problem. What institutions can certainly do is reemphasize the significance of programs in international studies and&nbsp;feature courses offered by scholars in migration, race and ethnicity, and globalization and cultural studies.</p>
+<p>As a professor, I cannot overemphasize the urgency for inclusive teaching, no matter what you teach. That would require an awareness of differences among our students and thinking of their needs, especially of those who come from socioeconomically underprivileged backgrounds. Colleges and universities across America provide excellent resources for <a href="https://teaching.cornell.edu/teaching-resources/building-inclusive-classrooms/inclusive-teaching-strategies">inclusive teaching strategies</a> or make <a href="https://diversity.wisc.edu/faculty-and-staff-diversity-inclusion-resources/#programs">professional development opportunities</a> available to enhance faculty and staff&rsquo;s commitment to building a better campus climate. These resources are often mostly used by those who come from minoritized communities; many professors from majority backgrounds dismiss the need for working on diversity. These resources should be considered not as an ancillary to but at the very core of a university&rsquo;s teaching, learning and research mission. Diversity statements, which now proliferate on institutional and even departmental websites, should be considered the beginning and not the end of our commitment to diversity.</p>
+<p>For me, inclusive teaching requires being aware of the demographics of the students you teach in tandem with&nbsp;the course material and using that awareness to underline equity and diversity as beneficial to everyone, not just our minoritized students. Inclusive teaching requires a constant unlearning of your own privileges as a professor in order to accommodate understanding of and compassion for students who might be less privileged, no matter what their visible differences might tell us. In teaching courses on literature, migration and refugee studies, my inclusive teaching focuses on encouraging students to think through what I call &ldquo;modes of connecting with the otherness of the other&rdquo; through the syllabus and discussions, as we remain aware of the intersectionality of our identities.</p>
+<p>The great online transition in spring 2020 has reinforced the fact that college itself was never an equalizer. Higher education did&nbsp;pave&nbsp;the way for many to continue their lifelong struggles for upward financial and social mobility. Now that such mobility or a better future looks bleak for all, colleges and universities should place the highest priority on equitable, inclusive and diverse learning experience.</p>
+<p>Thinking of university education in post-COVID times, the question that is being discussed is how we are going to teach: in person or online. But the bigger questions will be what we are teaching, to whom and for which larger public good? The disappearance of students from campuses has not made the imposed and constructed social divisions disappear. As we sit in the safety of our shelters in place, we need to think of what happens when we come out of quarantine, self-imposed or otherwise.</p>
+<p>In these troubled times, as the deepest fissures of our societies become visible along with tragic news of the deadly spread of the virus, we as teaching professionals bear a special responsibility to fight and resist racism and xenophobia. Our health-care professionals are doing their parts in hospitals. We can do ours in our classrooms by fighting exclusion and xenophobia through inclusive teaching. By staying cognizant of the needs of those who are less privileged, by assisting those who might need extra support and caring to assure their professional and personal success, we will actually contribute collectively to prevent the blockage of an entire pipeline of young scholars who might be thinking of dropping out in these stressed times.</p>
+<p>This is the time when the entire humanity is in crisis. Shutting national borders for health reasons should not encourage shutting down the borders of our humanitarian concern for each other. For professors, this means that precisely in the time of a major crisis, those who have been minoritized and marginalized are not edited out of our thoughts and deeds. Now, more than ever, is the time for inclusive teaching, consideration of diversity and respect for difference. 2020 has been a hard year so far.&nbsp;We cannot afford to go back to the shadow pandemic of 1918.</p>
+</div></div></div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-bio">
+<h2 class="pane-title">
+Bio </h2>
+<div class="pane-content">
+<div class="field field-name-field-bio field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p><em><a href="https://gns.wisc.edu/person/b-venkat-mani/">B. Venkat Mani</a> </em><em>is professor of German and world literature, director of the Center for South Asia, and a diversity liaison fellow of the Office of the Deputy Vice Chancellor for Diversity and Inclusion at the University of Wisconsin at Madison. </em></p>
+</div></div></div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-author read-more-by">
+<h2 class="pane-title">
+Read more by </h2>
+<div class="pane-content">
+<a href="/users/b-venkat-mani" title="View user profile." class="username">B. Venkat Mani</a> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-4 jump-to-comments-lower">
+<div class="pane-content">
+<p><a href="#comment-target">jump to comments</a></p>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-5 article-foot-share-etc clear">
+<div class="pane-content">
+<div class="article-foot-printshare" style="margin:15px auto 20px auto;width:225px;display:block;float:none;">
+<a href="/print/views/2020/05/14/inclusive-teaching-needed-help-combat-xenophobia-racism-and-discrimination-brought" style="display: block; padding:0 3px 0 0;margin: 0; float: left;" title="Print">
+<img border="0" height="32px" src="/sites/default/server_files/static/images/shareprintl.jpg" /></a>
+<div class="addthis_custom_sharing"></div>
+</div>
+<p style="padding: 15px 10px 0 10px;
+    text-align: center;
+    background: #f1f1f1;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size:14px;"><strong style="font-size:16px;"><a href="https://www.insidehighered.com/content/sign-inside-higher-eds-newsletters">Be the first to know.</a></strong><br /><a href="https://www.insidehighered.com/content/sign-inside-higher-eds-newsletters">Get our <strong>free</strong> daily newsletter.</a></p>
+<div style="background:#f1f1f1;padding:10px;max-width:500px;margin:0 auto;">
+<span data-sumome-listbuilder-embed-id="c374b9b38765c2755a1976ae71a0a74b82bcd32351c2987b2ceb60b60763689e"></span>
+</div>
+<p style="clear: both; height: 5px;">&nbsp;</p>
+<style>
+.sumome-popup-embed-overlay{z-index:-999 !important;}
+.listbuilder-popup label { font-size: 8px !important;}
+</style> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-dfp-story-leaderboard-2 pane-dfp object-center marginbottom20">
+<div class="pane-content">
+<div id="dfp-ad-story_leaderboard_2-wrapper" class="dfp-tag-wrapper">
+<div id="dfp-ad-story_leaderboard_2" class="dfp-tag-wrapper">
+<script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-story_leaderboard_2");
+    });
+  </script>
+</div>
+</div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-6">
+<div class="pane-content">
+<style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+.section-news .pane-custom h2.brick__header{border:0 !important;}
+.browse-tabbed__content.cf {padding-bottom:0;}
+.new-related-jobs {padding-bottom:0;}
+
+/*--><!]]>*/
+</style><div class="contextual-links-region panel-pane pane-block pane-madgex-custom-tables-madgex-job pane-madgex-custom-tables">
+<div class="pane-content">
+<div class="grid-item two-thirds lap-one-whole palm-one-whole new-related-jobs">
+<h3 style="border-bottom:0;margin-bottom:0;width:auto;float:left;"><em>Inside Higher Ed Careers</em></h3>
+<a href="https://shopcareers.insidehighered.com?utm_medium=editorial-site&amp;utm_source=ihe&amp;utm_campaign=edtocareers&amp;utm_content=article-end" style="&#10;    padding: 5px 8px;&#10;    background: #8ea93e;&#10;    margin: -3px 0 9px 0;&#10;    float: right;&#10;    color: #fff;&#10;">Hiring? Post A Job Today!</a>
+<section class="browse brick browse-tabbed" style="clear:both;"><div class="brick__inner cf">
+<ul class="tabs cf"><li class="tabs__tab tabs__tab--active"><a class="js-browse-tabbed-trigger" href="#tab-facultyjobs">Faculty Jobs</a></li>
+<li class="tabs__tab"><a class="js-browse-tabbed-trigger" href="#tab-administrativejobs">Administrative Jobs</a></li>
+<li class="tabs__tab"><a class="js-browse-tabbed-trigger" href="#tab-executiveadministrationjobs">Executive Administration Jobs</a></li>
+<li class="tabs__tab"><a class="js-browse-tabbed-trigger" href="#tab-jobsoutsidehighereducation">Jobs Outside Higher Education</a></li>
+</ul><p> </p>
+<div class="browse-tabbed__category browse-tabbed__category--facultyjobs browse-tabbed__category--active cf" id="tab-facultyjobs" style="display: block;">
+<h2 class="brick__header"><span>Browse Faculty Jobs</span></h2>
+<div class="browse-tabbed__content cf">
+<ul class="facet-links lap-larger column column-two   palm-column-two js-palm-hide js-tinynav l_tinynav1" data-tinynav-header="Choose a Faculty Jobs"><li class="facet-links__link facet-links__link--arts-and-humanities lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/arts-and-humanities/">Arts &amp; Humanities</a></li>
+<li class="facet-links__link facet-links__link--education lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/education/">Education</a></li>
+<li class="facet-links__link facet-links__link--engineering-and-mathematics lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/engineering-and-mathematics/">Engineering &amp; Mathematics</a></li>
+<li class="facet-links__link facet-links__link--health-and-medical lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/health-and-medical/">Health &amp; Medical</a></li>
+<li class="facet-links__link facet-links__link--professional-fields lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/professional-fields/">Professional Fields</a></li>
+<li class="facet-links__link facet-links__link--science-and-technology lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/science-and-technology/">Science &amp; Technology</a></li>
+<li class="facet-links__link facet-links__link--social-sciences lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/social-sciences/">Social Sciences</a></li>
+<li class="facet-links__link facet-links__link--technical-and-vocational-fields lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/technical-and-vocational-fields/">Technical &amp; Vocational Fields</a></li>
+</ul><select class="tinynav tinynav1 hide" id="tinynav1"><option>Choose a Faculty Jobs</option><option value="https://careers.insidehighered.com/jobs/arts-and-humanities/">Arts &amp; Humanities</option><option value="https://careers.insidehighered.com/jobs/education/">Education</option><option value="https://careers.insidehighered.com/jobs/engineering-and-mathematics/">Engineering &amp; Mathematics</option><option value="https://careers.insidehighered.com/jobs/health-and-medical/">Health &amp; Medical</option><option value="https://careers.insidehighered.com/jobs/professional-fields/">Professional Fields</option><option value="https://careers.insidehighered.com/jobs/science-and-technology/">Science &amp; Technology</option><option value="https://careers.insidehighered.com/jobs/social-sciences/">Social Sciences</option><option value="https://careers.insidehighered.com/jobs/technical-and-vocational-fields/">Technical &amp; Vocational Fields</option></select></div>
+</div>
+<div class="browse-tabbed__category browse-tabbed__category--administrativejobs cf" id="tab-administrativejobs" style="display: none;">
+<h2 class="brick__header"><span>Browse Administrative Jobs</span></h2>
+<div class="browse-tabbed__content cf">
+<ul class="facet-links lap-larger column column-two   palm-column-two js-palm-hide js-tinynav l_tinynav2" data-tinynav-header="Choose a Administrative Jobs"><li class="facet-links__link facet-links__link--academic-affairs lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/academic-affairs/">Academic Affairs</a></li>
+<li class="facet-links__link facet-links__link--institutional-and-business-affairs lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/institutional-and-business-affairs/">Institutional &amp; Business Affairs</a></li>
+<li class="facet-links__link facet-links__link--technology lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/technology/">Technology</a></li>
+<li class="facet-links__link facet-links__link--student-affairs lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/student-affairs/">Student Affairs</a></li>
+</ul><select class="tinynav tinynav2 hide" id="tinynav2"><option>Choose a Administrative Jobs</option><option value="https://careers.insidehighered.com/jobs/academic-affairs/">Academic Affairs</option><option value="https://careers.insidehighered.com/jobs/institutional-and-business-affairs/">Institutional &amp; Business Affairs</option><option value="https://careers.insidehighered.com/jobs/technology/">Technology</option><option value="https://careers.insidehighered.com/jobs/student-affairs/">Student Affairs</option></select></div>
+</div>
+<div class="browse-tabbed__category browse-tabbed__category--executiveadministrationjobs cf" id="tab-executiveadministrationjobs" style="display: none;">
+<h2 class="brick__header"><span>Browse Executive Administration Jobs</span></h2>
+<div class="browse-tabbed__content cf">
+<ul class="facet-links lap-larger column column-two   palm-column-two js-palm-hide js-tinynav l_tinynav3" data-tinynav-header="Choose a Executive Administration Jobs"><li class="facet-links__link facet-links__link--c-level-and-executive-directors lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/c-level-and-executive-directors/">C-Level &amp; Executive Directors</a></li>
+<li class="facet-links__link facet-links__link--deans lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/deans/">Deans</a></li>
+<li class="facet-links__link facet-links__link--other-executive-administration lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/other-executive-administration/">Other Executive Administration</a></li>
+<li class="facet-links__link facet-links__link--presidents-and-chancellors lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/presidents-and-chancellors/">Presidents &amp; Chancellors</a></li>
+<li class="facet-links__link facet-links__link--provosts lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/provosts/">Provosts</a></li>
+<li class="facet-links__link facet-links__link--vice-presidents lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/vice-presidents/">Vice Presidents</a></li>
+</ul><select class="tinynav tinynav3 hide" id="tinynav3"><option>Choose a Executive Administration Jobs</option><option value="https://careers.insidehighered.com/jobs/c-level-and-executive-directors/">C-Level &amp; Executive Directors</option><option value="https://careers.insidehighered.com/jobs/deans/">Deans</option><option value="https://careers.insidehighered.com/jobs/other-executive-administration/">Other Executive Administration</option><option value="https://careers.insidehighered.com/jobs/presidents-and-chancellors/">Presidents &amp; Chancellors</option><option value="https://careers.insidehighered.com/jobs/provosts/">Provosts</option><option value="https://careers.insidehighered.com/jobs/vice-presidents/">Vice Presidents</option></select></div>
+</div>
+<div class="browse-tabbed__category browse-tabbed__category--jobsoutsidehighereducation cf" id="tab-jobsoutsidehighereducation" style="display: none;">
+<h2 class="brick__header"><span>Browse Jobs Outside Higher Education</span></h2>
+<div class="browse-tabbed__content cf">
+<ul class="facet-links lap-larger column column-two   palm-column-two js-palm-hide js-tinynav l_tinynav4" data-tinynav-header="Choose a Jobs Outside Higher Education"><li class="facet-links__link facet-links__link--businesses-and-consultants lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/businesses-and-consultants/">Businesses &amp; Consultants</a></li>
+<li class="facet-links__link facet-links__link--government-agencies lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/government-agencies/">Government Agencies</a></li>
+<li class="facet-links__link facet-links__link--museums-and-cultural-organizations lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/museums-and-cultural-organizations/">Museums &amp; Cultural Organizations</a></li>
+<li class="facet-links__link facet-links__link--non-profit-organizations-and-associations lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/non-profit-organizations-and-associations/">Non-Profit Organizations &amp; Associations</a></li>
+<li class="facet-links__link facet-links__link--public-policy lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/public-policy/">Public Policy</a></li>
+<li class="facet-links__link facet-links__link--publishers-and-presses lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/publishers-and-presses/">Publishers &amp; Presses</a></li>
+<li class="facet-links__link facet-links__link--other-jobs-outside-higher-education lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/other-jobs-outside-higher-education/">Other Jobs Outside Higher Education</a></li>
+<li class="facet-links__link facet-links__link--research-and-development lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/research-and-development/">Research &amp; Development</a></li>
+<li class="facet-links__link facet-links__link--software-and-technology lap-larger__item column__item"><a href="https://careers.insidehighered.com/jobs/software-and-technology/">Software &amp; Technology</a></li>
+</ul><select class="tinynav tinynav4 hide" id="tinynav4"><option>Choose a Jobs Outside Higher Education</option><option value="https://careers.insidehighered.com/jobs/businesses-and-consultants/">Businesses &amp; Consultants</option><option value="https://careers.insidehighered.com/jobs/government-agencies/">Government Agencies</option><option value="https://careers.insidehighered.com/jobs/museums-and-cultural-organizations/">Museums &amp; Cultural Organizations</option><option value="https://careers.insidehighered.com/jobs/non-profit-organizations-and-associations/">Non-Profit Organizations &amp; Associations</option><option value="https://careers.insidehighered.com/jobs/public-policy/">Public Policy</option><option value="https://careers.insidehighered.com/jobs/publishers-and-presses/">Publishers &amp; Presses</option><option value="https://careers.insidehighered.com/jobs/other-jobs-outside-higher-education/">Other Jobs Outside Higher Education</option><option value="https://careers.insidehighered.com/jobs/research-and-development/">Research &amp; Development</option><option value="https://careers.insidehighered.com/jobs/software-and-technology/">Software &amp; Technology</option></select></div>
+</div>
+</div>
+</section></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-panel panel-col-last">
+<div class="inside"><div class="panel-pane pane-views pane-news-section" id="topics">
+<h2 class="pane-title">
+Topics </h2>
+<div class="pane-content">
+<div class="view view-news-section view-id-news_section view-display-id-default view-dom-id-3e32e516d4d53effe583c9ea1cfd8adb">
+<div class="view-content">
+<div class="item-list"> <ul> <li class="views-row views-row-1 views-row-odd views-row-first infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/adjuncts">Adjuncts</a></span> </h4></li>
+<li class="views-row views-row-2 views-row-even infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/admissions">Admissions</a></span> </h4></li>
+<li class="views-row views-row-3 views-row-odd infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/assessment_and_accountability">Assessment and Accountability</a></span> </h4></li>
+<li class="views-row views-row-4 views-row-even infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/books">Books and Publishing</a></span> </h4></li>
+<li class="views-row views-row-5 views-row-odd infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/community_colleges">Community Colleges</a></span> </h4></li>
+<li class="views-row views-row-6 views-row-even infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/diversity">Diversity</a></span> </h4></li>
+<li class="views-row views-row-7 views-row-odd infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/profit-higher-ed">For-Profit Higher Ed</a></span> </h4></li>
+<li class="views-row views-row-8 views-row-even infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/global">Global</a></span> </h4></li>
+<li class="views-row views-row-9 views-row-odd infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/health-professions">Health Professions</a></span> </h4></li>
+<li class="views-row views-row-10 views-row-even infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/news-sections/religious-colleges">Religious Colleges</a></span> </h4></li>
+<li class="views-row views-row-11 views-row-odd infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/retirement-issues">Retirement Issues</a></span> </h4></li>
+<li class="views-row views-row-12 views-row-even infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/student-aid-and-loans">Student Aid and Loans</a></span> </h4></li>
+<li class="views-row views-row-13 views-row-odd infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/students-and-violence">Students and Violence</a></span> </h4></li>
+<li class="views-row views-row-14 views-row-even infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/teaching-and-learning">Teaching and Learning</a></span> </h4></li>
+<li class="views-row views-row-15 views-row-odd views-row-last infocus-news">
+<h4 class="views-field views-field-name"> <span class="field-content"><a href="/news/focus/technology">Technology</a></span> </h4></li>
+</ul></div> </div>
+<div class="view-footer">
+<center><a id="moreblogs" href="#" onclick="document.getElementById('topics').style.height= '0px'; setTimeout(function(){document.getElementById('topics').style.display='none'}, 2000); return false;" title="Close">
+<img src="/sites/all/themes/ihecustom/images/up-arrow.png" border="0" style="padding-top:4px" /></a></center> </div>
+</div> 
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-dfp-clone-of-story-level-pages pane-dfp maringtop10">
+<div class="pane-content">
+<div id="dfp-ad-clone_of_story_level_pages-wrapper" class="dfp-tag-wrapper">
+<div id="dfp-ad-clone_of_story_level_pages" class="dfp-tag-wrapper">
+<script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-clone_of_story_level_pages");
+    });
+  </script>
+</div>
+</div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-9">
+<div class="pane-content">
+<div style="text-align: center;width: 100%; padding-bottom: 25px;"><a href="https://www.insidehighered.com/advertise" style="color:#999999; font-size:9px; text-decoration:none; text-transform: uppercase;" target="_blank">Want to advertise? Click here</a></div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-madgex-custom-tables-school-links pane-madgex-custom-tables maringtop10">
+<h2 class="pane-title">
+College Pages </h2>
+<div class="pane-content">
+<div class="view view-schools view-id-schools view-display-id-page_5 search view-dom-id-2962c2721a16120115731f09d008fcdd">
+<div class="view-filters">
+<form action="/college-search" method="get" id="views-exposed-form-schools-page-5" accept-charset="UTF-8"><div><div class="views-exposed-form">
+<div class="views-exposed-widgets clearfix">
+<div id="edit-title-wrapper" class="views-exposed-widget views-widget-filter-title">
+<div class="views-widget">
+<div class="form-item form-type-textfield form-item-title">
+<input type="text" id="edit-title" name="title" value="" size="30" maxlength="128" class="form-text" />
+</div>
+</div>
+</div>
+<div class="views-exposed-widget views-submit-button">
+<input type="submit" id="edit-submit-schools" name="" value="SEARCH" class="form-submit" /> </div>
+</div>
+</div>
+</div></form> </div>
+</div> 
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-block-81 pane-block">
+<div class="pane-content">
+<div id="sidebar-subscribe-apps" style="display:none;margin-top:16px;"><a href="/newsletter/signup" style="&#10;    text-align: center;&#10;    padding-top: 10px;&#10;    background: url(https://www.insidehighered.com/sites/default/server_files/media/envelope.png) #ef7521 no-repeat 8px 7px;&#10;    background-size: 40px 26px;&#10;    font-family: 'Ubuntu','Open Sans',Arial,Sans-serif;&#10;    color: #fff;&#10;    font-size: 19px;&#10;    text-indent: 8px;&#10;    cursor: pointer;&#10;    border: 0;&#10;    box-sizing: border-box;&#10;    height: 40px;&#10;    display: block;&#10;    border-bottom: 2px solid #a75217;&#10;    margin:0 auto 16px auto;&#10;    ">Subscribe for free today</a></div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-schools featured-logo clear">
+<h2 class="pane-title">
+Featured college pages </h2>
+<div class="pane-content">
+<div class="view view-schools view-id-schools view-display-id-recent_featured featured-stripe view-dom-id-a8df1890a584cc63f5f29efa633d68f0">
+<div class="view-content">
+<div class="item-list"> <ul> <li class="">
+<div class="views-field views-field-field-logo-url"> <div class="field-content maringtop10"></div> </div></li>
+<li class="">
+<div class="views-field views-field-field-logo-url"> <div class="field-content maringtop10"><a href="/college/southern-nazarene-university"><img typeof="foaf:Image" src="https://www.insidehighered.com/sites/default/server_files/styles/medium-copy/public/media/snu1899logo.png?itok=KLmPtS4H" width="140" height="93" /></a></div> </div></li>
+<li class="">
+<div class="views-field views-field-field-logo-url"> <div class="field-content maringtop10"><a href="/college/northern-wyoming-community-college-district"><img typeof="foaf:Image" src="https://www.insidehighered.com/sites/default/server_files/styles/medium-copy/public/media/Northery%20Wyoming%20CC%20District.png?itok=DFo3Obyt" width="140" height="34" /></a></div> </div></li>
+</ul></div> </div>
+</div> 
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-10 clear maringtop10">
+<div class="pane-content">
+<script>
+jQuery(document).ready(function() {
+
+var whichsubmit;
+
+jQuery('.popular-link').click(function(){
+	whichsubmit = jQuery(this).attr("href");
+	ga('send', 'event', 'Chartbeat Popular Right Now Click', 'Click', whichsubmit);
+});
+
+
+});
+</script>
+<style>
+.popular-title {
+    padding: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ef7521;
+    color: #000;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 18px; 
+    margin-top:14px;}
+   
+.popular-item {
+    font-size:16px;
+    line-height:20px;
+    padding:0 !important;
+    margin-bottom:12px;
+    font-weight:500;
+}
+.popular-item:hover{background:#eee;}
+
+@media all and (max-width: 480px) {	
+    .popular-title{
+      margin-top: 14px;
+      padding-top: 20px;
+      border-top: 1px dotted #ccc; }
+}
+
+</style>
+<h4 class="popular-title">Popular Right Now</h4>
+<p class="popular-item"><a class="popular-link" href="http://www.insidehighered.com/news/2020/05/15/colleges-seek-protection-lawsuits-if-they-reopen">Colleges seek protection from lawsuits if they reopen</a></p><p class="popular-item"><a class="popular-link" href="http://www.insidehighered.com/news/2020/05/15/live-updates-latest-news-coronavirus-and-higher-education">Live Updates: Latest News on Coronavirus and Higher Education</a></p><p class="popular-item"><a class="popular-link" href="http://www.insidehighered.com/news/2020/05/14/missouri-western-cuts-quarter-faculty-along-programs-history-and-more">Missouri Western cuts quarter of faculty along with programs in history and more</a></p><p class="popular-item"><a class="popular-link" href="http://www.insidehighered.com/news/2020/05/14/how-campuses-might-make-best-undesirable-virtual-fall">How campuses might make the best of an undesirable virtual fall</a></p><p class="popular-item"><a class="popular-link" href="http://www.insidehighered.com/news/2020/05/15/size-state-budget-cuts-becomes-clearer">Size of state budget cuts becomes clearer</a></p><p class="popular-item"><a class="popular-link" href="http://www.insidehighered.com/digital-learning/article/2020/03/25/how-shift-remote-learning-might-affect-students-instructors-and">How the shift to remote learning might affect students, instructors and colleges</a></p><p class="popular-item"><a class="popular-link" href="http://www.insidehighered.com/digital-learning/article/2020/05/13/one-option-delivering-instruction-if-campuses-open-fall-hyflex">One option for delivering instruction if campuses open this fall: HyFlex</a></p><p class="popular-item"><a class="popular-link" href="http://www.insidehighered.com/digital-learning/blogs/learning-innovation/15-fall-scenarios">15 Fall Scenarios</a></p><p class="popular-item"><a class="popular-link" href="http://www.insidehighered.com/digital-learning/article/2020/03/18/most-teaching-going-remote-will-help-or-hurt-online-learning">Most teaching is going remote. Will that help or hurt online learning?</a></p> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-panel panel-col-middle">
+<div class="inside"></div>
+</div>
+<div class="center-wrapper">
+<div class="panel-panel panel-col-first">
+<div class="inside"><div class="panel-pane pane-custom pane-7" id="comments-here">
+<div class="pane-content">
+<a name="comment-target" style="position:relative;display:block;height:1px;width:1px;top:-40px;" id="comment-target"> </a>
+<div class="comment-expander"><a class="comment-plus">+</a> <a class="comment-minus">-</a>
+<p><a class="show-the-comments">Expand </a><a class="show-the-comments">comments</a><a class="hide-the-comments">Hide</a><a class="hide-the-comments"> comments</a>  <span class="join-conversation">—   Join the conversation!</span></p>
+</div>
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-disqus-disqus-comments pane-disqus">
+<div class="pane-content">
+<div id="disqus_thread"><noscript><p><a href="http://insidehighered.disqus.com/?url=https%3A%2F%2Fwww.insidehighered.com%2Fviews%2F2020%2F05%2F14%2Finclusive-teaching-needed-help-combat-xenophobia-racism-and-discrimination-brought">View the discussion thread.</a></p></noscript></div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-8 mobile-ad-test-topright">
+<div class="pane-content">
+<div class="mobile-ad-holder"></div> </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-views recent-articles-below-story">
+<h2 class="pane-title">
+Opinions on Inside Higher Ed </h2>
+<div class="pane-content">
+<div class="view view-views view-id-views view-display-id-recent_views_below_comments news-archive view-dom-id-ac3de77fb7e1afd4316451cd487db428">
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first">
+<div class="views-field views-field-field-image-views Thumbnail"> <div class="field-content"><div class="[field_image_size]"><a href="/views/2020/05/15/clery-act-does-little-improve-campus-safety-even-during-pandemic-opinion"><img typeof="foaf:Image" src="https://www.insidehighered.com/sites/default/server_files/styles/secondary_column/public/media/umbrella-protecting-merchants-immune-novel-coronavirus-pneumonia-vector-id1214228179.jpg?itok=_1p7pEf0" width="290" height="290" /></a> </div></div> </div>
+<div class="views-field views-field-field-article-smarttitle"> <div class="field-content"><a href="/views/2020/05/15/clery-act-does-little-improve-campus-safety-even-during-pandemic-opinion">It’s Time to Reform the Clery Act</a></div> </div> </div>
+<div class="views-row views-row-2 views-row-even">
+<div class="views-field views-field-field-image-views Thumbnail"> <div class="field-content"><div class="[field_image_size]"><a href="/views/2020/05/15/review-kevin-peter-hand-alien-oceans-search-life-depths-space"><img typeof="foaf:Image" src="https://www.insidehighered.com/sites/default/server_files/styles/secondary_column/public/media/9780691179513.jpg?itok=ouHXmb-h" width="290" height="441" /></a> </div></div> </div>
+<div class="views-field views-field-field-article-smarttitle"> <div class="field-content"><a href="/views/2020/05/15/review-kevin-peter-hand-alien-oceans-search-life-depths-space">The Oceans of Outer Space</a></div> </div> </div>
+<div class="views-row views-row-3 views-row-odd views-row-last">
+<div class="views-field views-field-field-image-views Thumbnail"> <div class="field-content"><div class="[field_image_size]"><a href="/views/2020/05/14/five-ways-college-educators-can-have-more-effective-conversations-about-race"><img typeof="foaf:Image" src="https://www.insidehighered.com/sites/default/server_files/styles/secondary_column/public/media/stop-racism-sign-and-text-on-chinese-flag-background-3d-illustration-picture-id1215364550.jpg?itok=1gcl4224" width="290" height="290" /></a> </div></div> </div>
+<div class="views-field views-field-field-article-smarttitle"> <div class="field-content"><a href="/views/2020/05/14/five-ways-college-educators-can-have-more-effective-conversations-about-race">Pushing Back Against Racism and Xenophobia <br>on Campuses</a></div> </div> </div>
+</div>
+</div> 
+</div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-blogs recent-blogs-below-story">
+<h2 class="pane-title">
+Inside Higher Ed&rsquo;s Blog U </h2>
+<div class="pane-content">
+<div class="view view-blogs view-id-blogs view-display-id-recent_blogs_below_comments view-dom-id-0532bb335e0a0cc17e512c422028ae62">
+<div class="view-content">
+<div class="views-limit-grouping-group">
+<div class="views-row views-row-odd views-limit-grouping">
+<div class="blog-name"> <div><a href="/blogs/confessions-community-college-dean" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Confessions of a Community College Dean</a></div> </div>
+<div class="blog-entry-title"> <span><a href="/blogs/confessions-community-college-dean/friday-fragments-181">Friday Fragments</a></span> </div> </div>
+<div class="views-row views-row-odd views-limit-grouping">
+<div class="blog-name"> <div><a href="/blogs/just-visiting" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Just Visiting</a></div> </div>
+<div class="blog-entry-title"> <span><a href="/blogs/just-visiting/what-happened-university-everywhere">What Happened to the University of Everywhere?</a></span> </div> </div>
+<div class="views-row views-row-odd views-limit-grouping">
+<div class="blog-name"> <div><a href="/blogs/higher-ed-gamma" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Higher Ed Gamma</a></div> </div>
+<div class="blog-entry-title"> <span><a href="/blogs/higher-ed-gamma/what-lies-ahead-0">What Lies Ahead</a></span> </div> </div>
+<div class="views-row views-row-odd views-limit-grouping">
+<div class="blog-name"> <div><a href="/blogs/confessions-community-college-dean" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Confessions of a Community College Dean</a></div> </div>
+<div class="blog-entry-title"> <span><a href="/blogs/confessions-community-college-dean/sanding-down-spikes">Sanding Down the Spikes</a></span> </div> </div>
+</div>
+</div>
+</div> 
+</div>
+</div>
+</div>
+</div>
+<div class="panel-panel panel-col-last">
+<div class="inside"></div>
+</div>
+</div>
+<div class="panel-panel panel-col-bottom">
+<div class="inside"></div>
+</div>
+</div>
+</div>
+</div> 
+</div> 
+</div></div>
+</div>
+</div>
+</div></div>
+<div style="height: 15px; display: block; clear: both"></div>
+<div id="backtotop">
+<a class="backtotopbtn" href="#" rel='nofollow'>Back to Top</a>
+</div>
+<style>
+#backtotop{
+    margin-bottom: -17px;
+	width: 998px;
+}
+
+#footer-deep {
+	width:100%;
+	background:#333;	
+	clear:both;
+	border-bottom:2px solid #ef7521;
+}
+
+#foot-container {
+	width:1120px;
+	margin:0 auto;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
+.foot-column-one ul li a, .foot-column-two ul li a,
+.foot-column-one ul li h2, .foot-column-two ul li h2,
+.footer-link-string li a,
+.address, .address a,
+#foot-search {
+	color:#fff;
+	font-family:"Roboto", Arial, san-serif;
+}
+
+.foot-column-one ul li a,
+.foot-column-two ul li a,
+.footer-link-string ul li a {
+	font-weight:300;
+}
+
+.foot-column-one ul li h2, .foot-column-two ul li h2,
+.foot-column-one ul li h2 a, .foot-column-two ul li h2 a {
+	margin-bottom:0;
+	font-family:"Roboto Slab", Georgia, serif;	
+	font-weight:500;
+}
+
+.foot-column-one, .foot-column-two {
+	display:inline-block;	
+	float:left;
+	margin-bottom:30px;
+}
+
+.foot-column-one ul, .foot-column-two ul {
+	display:inline-block;	
+	float:left;
+	list-style:none;
+	margin-right:80px;
+	width:215px;
+}
+
+.foot-column-two ul:last-of-type {
+	margin-right:0;
+}
+
+.foot-column-one ul li, .foot-column-two ul li {
+	padding-bottom:12px;
+}
+
+.foot-column-one ul li:first-of-type,
+.foot-column-two ul li:first-of-type {
+	border-bottom:2px solid #ef7521;
+	margin-bottom:18px;
+}
+
+#foot-search {
+	clear:both;	
+	margin:0 0 30px 0;
+	padding:30px;
+	background:#555;
+	text-align:center;
+	width:100%;
+	box-sizing:border-box;
+}
+
+#foot-search input, #foot-search select {
+	height:40px;
+	border:0;
+	text-indent:10px;	
+	border-radius:0;
+	margin-right:10px;
+	font-family:"Roboto", Arial, san-serif;
+	font-size:16px;
+	width:30%;
+}
+
+#foot-search select { 
+	width:15%;
+}
+
+#foot-search input[type=submit] {
+	text-indent:0;
+	background:#ef7521;
+	border-bottom:2px solid #a75217;
+	color:#fff;
+	cursor:pointer;
+}
+
+.footer-link-string {	
+	clear:both;
+	list-style:none;
+	display:block;
+	text-align:center;
+	margin-bottom:30px;
+}
+
+.footer-link-string li {
+	display:inline-block;
+	font-size:14px;
+	padding-left:12px;
+	border-left:1px solid #555;
+	padding-right:6px;
+}
+
+.footer-link-string li:first-of-type { border:0; padding-left:0; }
+.footer-link-string li:first-of-type { padding-right:0;}
+
+.address {
+	font-size:14px;
+	text-align:center;
+	margin-bottom:30px;
+	font-weight:100;
+	line-height:26px;
+}
+
+.address span {display:inline-block;}
+
+#site-social-footer {
+	text-align:center;
+	border-bottom:10px;
+}
+
+@media (max-width: 979px) { 
+
+	#backtotop {		
+		width: 100%;;
+	}
+
+	#foot-container {
+		width:100%;
+	}
+
+	.foot-column-one, .foot-column-two {
+		float:none;
+		display:block;
+		margin:0 auto 30px auto;
+		width:600px;
+	}
+
+	.foot-column-two {
+		clear:left;
+	}
+
+	.foot-column-one:after,
+	.foot-column-two:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	#foot-search input, #foot-search select {
+		display: block;
+		margin: 8px auto;
+		width: 300px !important;
+	}
+
+
+
+}
+
+@media (max-width: 650px) { 
+	.foot-column-one, .foot-column-two {width:300px;}
+}
+
+</style>
+<script>
+
+jQuery(document).ready(function() {
+    
+	jQuery('#foot-submit').click(function(e) {
+		var footsearch;
+		var footcareersurl;
+		var footnewsurl;
+		var footcampaigntracker;
+		if (jQuery('#foot-option').val() > 1) {   
+			e.preventDefault();
+			footcampaigntracker = "&utm_source=ihe&utm_medium=editorial-site&utm_content=header-link&utm_campaign=jobs";
+			footsearch = jQuery('#foot-term').val();
+			footcareersurl = 'https://careers.insidehighered.com/searchjobs/?Keywords=' + footsearch + footcampaigntracker; 
+			window.location.href = footcareersurl;        
+		} else {
+			e.preventDefault();			
+			dropsearch = jQuery('#foot-term').val();
+			newsurl = 'https://www.insidehighered.com/search/results/' + dropsearch; 			
+			window.location.href = newsurl; 
+		}
+	});
+	jQuery("#foot-term").focus( function() {
+        if ( jQuery(this).val()=="keyword") {
+            jQuery(this).val('');
+        } 
+    });
+    jQuery("#foot-term").blur( function() {
+        if ( jQuery(this).val()=="") {
+            jQuery(this).val('keyword');
+        } 
+    });		
+	
+	
+});
+
+</script>
+<footer id="footer-deep">
+<div id="foot-container">
+<div class="foot-column-one">
+<ul>
+<li><h2><a href="/">News &amp Views</a></h2></li>
+<li><a href="/admissions-insider">Admissions</a></li>
+<li><a href="/transforming-teaching-learning">Teaching &amp; Learning</a></li>
+<li><a href="/capital_campaigns">Fund-Raising</a></li>
+<li><a href="/news/focus/diversity">Diversity</a></li>
+<li><a href="/podcasts/the-key">The Key Podcast</a></li>
+</ul>
+<ul>
+<li><h2><a href="https://careers.insidehighered.com">Careers</a></h2></li>
+<li><a href="https://careers.insidehighered.com/">Find a Job</a></li>
+<li><a href="/search/colleges">College Pages</a></li>
+<li><a href="/advice">Career Advice</a></li>
+<li><a href="https://careers.insidehighered.com/newalert/">Job Alerts</a></li>
+</ul>
+</div>
+<div class="foot-column-two">
+<ul>
+<li><h2><a href="/events">Events</a></h2></li>
+<li><a href="/events">In-Person Events</a></li>
+<li><a href="/events#editorial_webcasts">Editorial Webcasts</a></li>
+<li><a href="/events#advertiser_webcasts">Vendor Webcasts</a></li>
+</ul>
+<ul>
+<li><h2><a href="/special-reports">Reports &amp; Data</a></h2></li>
+<li><a href="/special-reports">Special Reports</a></li>
+<li><a href="/special-reports#surveys_data">Surveys</a></li>
+<li><a href="/special-reports#booklets">Booklets</a></li>
+<li><a href="/aaup-compensation-survey">AAUP Compensation Data</a></li>
+</ul>
+</div>
+<ul class="footer-link-string">
+<li><a href="/quick-takes">Quick Takes</a></li>
+<li><a href="/views">Views</a></li>
+<li><a href="/blogs">Blog U</a></li>
+<li><a href="/audio">Audio</a></li>
+<li><a href="/content/news-topics">Topics</a></li>
+<li><a href="/events_people">Events &amp; People</a></li>
+<li><a href="/sponsored">Sponsored Content</a></li>
+</ul>
+<form id="foot-search">
+<input type="text" value="keyword" name="foot-term" id="foot-term">
+<select name="foot-option" id="foot-option">
+<option value="1">News &amp; Opinion</option>
+<option value="2">Jobs</option>
+</select>
+<input type="submit" name="submit" value="search" id="foot-submit">
+</form>
+<ul class="footer-link-string">
+<li>
+<a id="captureEmailNewsLetterEnrollemntLink" href="/content/sign-inside-higher-eds-newsletters">Free Newsletters</a> </li>
+<li><a href="/content/contact-us">Contact Us</a></li>
+<li><a href="/content/about-us">About Us</a></li>
+<li><a href="https://recruiters.insidehighered.com">Hire Faculty &amp; Staff</a></li>
+<li><a href="https://about.insidehighered.com/marketing-solutions">Advertise</a></li>
+<li><a href="/content/work-us">Work For Us</a></li>
+<li><a href="/content/testimonials">Testimonials</a></li>
+<li><a href="/content/rights-and-permissions">Rights and Permissions</a></li>
+<li><a href="/content/privacy">Privacy</a></li>
+<li><a href="/content/add-inside-higher-ed-content-your-site">Share our content</a></li>
+</ul>
+<div class="address">
+<span>Copyright &copy; 2020</span>&nbsp; &bull; &nbsp;<span><a href="https://goo.gl/maps/d9sSjngMKK22" target="_blank">Inside Higher Ed</span>&nbsp; &bull; &nbsp;<span>1150 Connecticut Avenue NW Suite 400</span>&nbsp; &bull; &nbsp;<span>Washington, DC 20036</a></span>&nbsp; &bull; &nbsp;<span>Ph: 1-202-659-9208</span>&nbsp; &bull; &nbsp;<span>Fax: 1-202-659-9381</span><span style="display:block;clear:both;"><a href="/content/privacy#right-to-information" style="font-size:10px;font-style:italic;">Do Not Sell My Personal Information</a></span>
+</div>
+<div id="site-social-footer">
+<a href="https://www.facebook.com/InsideHigherEdDC/" target="_blank" rel="nofollow">
+<img src="/sites/all/themes/ihecustom/images/socialicons/facebook_grey.png" title="Facebook" width="28" height="28">
+</a>
+<a href="http://twitter.com/insidehighered" target="_blank" rel="nofollow">
+<img src="/sites/all/themes/ihecustom/images/socialicons/twitter_grey.png" style="padding-left: 3px;" title="Twitter" width="28" height="28">
+</a>
+<a href="https://www.linkedin.com/company/inside-higher-ed" target="_blank" rel="nofollow">
+<img src="/sites/all/themes/ihecustom/images/socialicons/linkedin_grey.png" style="padding-left: 3px;" title="LinkedIn" width="28" height="28">
+</a>
+</div>
+</div>
+</footer>
+<script>
+jQuery(document).ready(function($) {
+  $('.backtotopbtn').click(function(e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  });  
+});
+</script>
+<div class="region region-bottom">
+<div id="block-block-121" class="block block-block first odd">
+<div class="content">
+<style>
+.new-feature-banner h4.live-updates a {
+    color: #EE4444;
+}
+.homepage-breaking-news h2 {
+	clear:both !important;
+	width:100%;
+	display:none;
+	line-height:initial;
+	min-height:auto;
+	padding:5px;
+}
+
+.homepage-breaking-news .content {
+	display:block;
+	width:100%;
+}
+
+.homepage-breaking-news .views-row-1 h2 {	
+	display:block;
+}
+
+.homepage-breaking-news .view-content>div {
+	
+}
+
+.homepage-breaking-news .content a {
+	margin:6px 0 6px 6px;
+}
+
+@media (max-width: 979px) {
+	#block-system-main .homepage-breaking-news a {
+	display:block;
+	clear:both;
+	padding:2px;
+
+	}
+
+}
+</style> </div>
+</div> 
+<div id="block-block-131" class="block block-block even">
+<div class="content">
+<script>
+(function ($) {
+$(document).ready(function() {
+
+jQuery('.left-main a, .right-container a').click(function(){
+        label = jQuery(this).text();
+        ga('send', 'event', 'header nav click', 'Click', label);
+     });
+
+jQuery('.login-panel span').click(function(){
+        label = jQuery(this).text();
+        ga('send', 'event', 'login panel click', 'Click', label);
+     });
+
+});
+})(jQuery);
+</script> </div>
+</div> 
+<div id="block-block-136" class="block block-block last odd">
+<div class="content">
+<script>  
+  
+  (function ($) {
+  $(window).on('load', function() {  
+    var islogged = Pelcro.user.isAuthenticated();
+    var logbutts = '<li class="logjoin"><button class="joinbutt hideforinsiders">Become an Insider</button> <span class="hideforinsiders">/</span> <button class="login-button hideforinsiders">Login</button><button class="insidershow dashboardbutt">My Dashboard</button></li>';
+		jQuery(logbutts).insertBefore(".nav-control-panel ul li:first");
+        //var usersubs = !!(Pelcro.user.read().subscriptions ? Pelcro.user.read().subscriptions.length : false);
+//var usersubs = !!(Pelcro.user.read().subscriptions ? Pelcro.user.read().subscriptions.length : false);
+
+   //if (islogged == false) { alert('falso');} else {alert('logged bro');}    
+   if (islogged == false) { 
+        //if not logged in
+        $('.insidershow').remove();
+        $('.logjoin, .delay').fadeIn();
+     	$('.logjoin').addClass('inlineblock');
+     	$('.joinbutt').click(function() {
+          window.location = '/membership';
+        }); 
+        $('.buy-digital.insidershow , .buy-print.insidershow').click(function() {
+          event.preventDefault();
+          window.location = '/membership';
+        });      
+     	$('.insidershow').remove();
+     	//alert('not logged in');
+      } else {
+          
+		setTimeout(function(){  
+          var usersubs = !!(Pelcro.user.read().subscriptions ? Pelcro.user.read().subscriptions.length : false);
+           if (usersubs === false) { 
+             //logged in without paying
+           $('.dashboardbutt').removeClass('insidershow');
+           $('.insidershow , .lognosub').remove();
+           $('.logjoin .hideforinsiders').remove();
+            $('.logjoin, .delay').fadeIn();
+            $('.logjoin').addClass('inlineblock');
+            $('.joinbutt').click(function() {
+              window.location = '/membership';
+            });             
+           $('.buy-digital.insidershow , .buy-print.insidershow').click(function() {
+              event.preventDefault();
+              window.location = '/membership';
+            });      
+            $('.insidershow , .lognosub').remove();
+           	$('.dashboardbutt').click(function() {
+          		window.location = '/insider-dashboard';
+        	});      
+             
+             //alert('no subs');
+         } else {
+         	//logged in and paying
+        $('.hideforinsiders').remove();
+        $('.buy-digital.insidershow , .buy-print.insidershow , .logjoin , .logjoin .insidershow, .delay').fadeIn();
+        $('.logjoin').addClass('inlineblock');
+        
+        $('.dashboardbutt').click(function() {
+          window.location = '/insider-dashboard';
+        });              
+        $('.hideforinsiders').remove();
+        $('.pelcro-prefix-events-section .pelcro-prefix-btn-view').html('View More Upcoming Events');
+        	$('.pelcro-prefix-link').click(function() {
+          	  $('.pelcro-prefix-events-section .pelcro-prefix-btn-view').html('View More Upcoming Events');
+        	}); 
+         $(".pelcro-prefix-type").html(function() { return $(this).html().replace("In-Person", "Online"); });
+           //alert('logged in and paid subscriber');
+         }
+          }, 500);
+      }
+                                         
+  });
+  })(jQuery);
+
+</script>
+<style>
+.nav-control-panel li.logjoin {
+position: relative;
+    top: -5px;
+}
+.nav-control-panel li.logjoin .joinbutt {
+    background: #ef7521;
+    color: #fff;
+    padding: 3px 6px;
+    box-shadow: 0 1px 3px #999;
+}
+.nav-control-panel li.logjoin .joinbutt:hover {
+    color:#fff;
+}
+.nav-control-panel li.logjoin .login-button {
+    background: #f1f1f1;
+    color: #333;
+    padding: 3px 6px;
+    box-shadow: 0 1px 3px #999;
+}
+.nav-control-panel li.logjoin span {display:none;}
+</style> </div>
+</div> 
+</div> 
+<div class="region region-page-bottom">
+</div> 
+<script type="text/javascript">
+  var _sf_async_config={};
+  _sf_async_config.uid = 24021;
+  _sf_async_config.domain = "www.insidehighered.com";
+  _sf_async_config.useCanonical = true;
+  (function(){
+    function loadChartbeat() {
+      window._sf_endpt=(new Date()).getTime();
+      var e = document.createElement("script");
+      e.setAttribute("language", "javascript");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute('src', (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") + "js/chartbeat.js");
+      document.body.appendChild(e);
+    }
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != "function") ?
+       loadChartbeat : function() { try { oldonload(); } catch (e) { loadChartbeat(); throw e} loadChartbeat(); };
+
+  })();
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d618589be4","applicationID":"537611697","transactionName":"NVBWY0FQDUdXWkFcWgwadVRHWAxaGUlUUlA9WFVZUlYGRmlXWlFQPUNdUkRuE1VRXA==","queueTime":0,"applicationTime":828,"atts":"GRdVFQlKHkk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

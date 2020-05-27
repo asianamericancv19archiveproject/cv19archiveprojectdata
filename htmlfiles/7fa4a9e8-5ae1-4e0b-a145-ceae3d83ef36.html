@@ -1,0 +1,988 @@
+
+
+
+
+
+<!doctype html>
+<html lang="en"><head>
+	<meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"4e2e5ec189",applicationID:"13429426"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+    <title>Asian Americans bear brunt of blame for COVID-19 | News | DanvilleSanRamon.com |</title>
+
+	<!-- START NewsBeat.com tracking code -- added 8/2/11 -- also in the footer -->
+<script type='text/javascript'>var _sf_startpt=(new Date()).getTime()</script>
+<!-- END NewsBeat.com tracking code -->
+    <meta name="description" content="As some people blame the rise of coronavirus on China, where it originated, the FBI has warned about a possible rise in hate crimes against Asians in the United States. Businesses owned by Asian Americans are being vandalized.">
+        <meta name="author" content="Bay City News Service">
+    <meta property="fb:app_id" content="617912501565820" />
+<meta property="og:title" content="Asian Americans bear brunt of blame for COVID-19" />
+<meta property="og:description" content="As some people blame the rise of coronavirus on China, where it originated, the FBI has warned about a possible rise in hate crimes against Asians in the United States. Businesses owned by Asian Americans are being vandalized." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://danvillesanramon.com/news/2020/05/24/asian-americans-bear-brunt-of-blame-for-covid-19"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@DanvilleSanRamo" />
+<meta name="twitter:title" content="Asian Americans bear brunt of blame for COVID-19" />
+<meta name="twitter:description" content="As some people blame the rise of coronavirus on China, where it originated, the FBI has warned about a possible rise in hate crimes against Asians in the United States. Businesses owned by Asian Americans are being vandalized." />
+<meta property="og:image" content="https://danvillesanramon.com/art/local_news_icon.jpg" />
+<meta name="twitter:image" content="https://danvillesanramon.com/art/local_news_icon.jpg"/>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link media="screen" rel="stylesheet" href="//www.embarcaderopublishing.com/colorbox/colorbox.css?v=8" />
+<script type="text/javascript" src="//www.embarcaderopublishing.com/colorbox/jquery.colorbox.js"></script>
+<script type="text/javascript" src="//www.embarcaderopublishing.com/class/ajax.js?v=8"></script>
+<script type="text/javascript" src="//www.embarcaderopublishing.com/js/hide_slide.js?v=8"></script>
+<script type="text/javascript" src="//www.embarcaderopublishing.com/js/cookie.js?v=8"></script>
+	<script type="text/javascript" src="//www.embarcaderopublishing.com/js/login_scripts.js?v=8"></script>	
+	
+<script type="application/javascript">
+	function retry(isDone, next) {
+		var current_trial = 0, max_retry = 50, interval = 10, is_timeout = false;
+		var id = window.setInterval(
+			function() {
+				if (isDone()) {
+					window.clearInterval(id);
+					next(is_timeout);
+				}
+				if (current_trial++ > max_retry) {
+					window.clearInterval(id);
+					is_timeout = true;
+					next(is_timeout);
+				}
+			},
+			10
+		);
+	}
+
+	function isIE10OrLater(user_agent) {
+		var ua = user_agent.toLowerCase();
+		if (ua.indexOf('msie') === 0 && ua.indexOf('trident') === 0) {
+			return false;
+		}
+		var match = /(?:msie|rv:|Edge)[\s|\/]?([\d\.]+)/.exec(ua); // detect Project Spartan too
+		if (match && parseInt(match[1], 10) >= 10) {
+			return true;
+		}
+		return false;
+	}
+
+	function detectPrivateMode(callback) {
+		var is_private;
+
+		if (window.webkitRequestFileSystem) {
+			window.webkitRequestFileSystem(
+				window.TEMPORARY, 1,
+				function() {
+					is_private = false;
+				},
+				function(e) {
+					console.log(e);
+					is_private = true;
+				}
+			);
+		} else if (window.indexedDB && /Firefox/.test(window.navigator.userAgent)) {
+			var db;
+			try {
+				db = window.indexedDB.open('test');
+			} catch(e) {
+				is_private = true;
+			}
+
+			if (typeof is_private === 'undefined') {
+				retry(
+					function isDone() {
+						return db.readyState === 'done' ? true : false;
+					},
+					function next(is_timeout) {
+						if (!is_timeout) {
+							is_private = db.result ? false : true;
+						}
+					}
+				);
+			}
+		} else if (isIE10OrLater(window.navigator.userAgent)) {
+			is_private = false;
+			try {
+				if (!window.indexedDB) {
+					is_private = true;
+				}                 
+			} catch (e) {
+				is_private = true;
+			}
+		} else if (window.localStorage && /Safari/.test(window.navigator.userAgent)) {
+			try {
+				window.localStorage.setItem('test', 1);
+			} catch(e) {
+				is_private = true;
+			}
+
+			if (typeof is_private === 'undefined') {
+				is_private = false;
+				window.localStorage.removeItem('test');
+			}
+		}
+
+		retry(
+			function isDone() {
+				return typeof is_private !== 'undefined' ? true : false;
+			},
+			function next(is_timeout) {
+				callback(is_private);
+			}
+		);
+	}
+</script>
+
+
+
+<!-- Google Analytics Code START 05.27.2016 -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-440011-6']);
+
+  // set custom variables
+  
+  _gaq.push(['_trackPageview']);
+_gaq.push(['_setCustomVar',
+								      2,             // This custom var is set to slot #1.  Required parameter.
+								      'User Type',   // The name of the custom variable.  Required parameter.
+								      'Visitor',      // Sets the value of "User Type" to "Subscriber", "User" or "Visitor" depending on status.  Required parameter.
+								       1             // Sets the scope to session-level.  Optional parameter.
+								   ]);
+						_gaq.push(['_setCustomVar',
+								      3,             // This custom var is set to slot #1.  Required parameter.
+								      'Unlocked',   // The name of the custom variable.  Required parameter.
+								      'Viewed',      // Sets the value of "Unlocked" to "Viewed" or "Blocked" depending on status.  Required parameter.
+								       1             // Sets the scope to session-level.  Optional parameter.
+								   ]);
+						_gaq.push(['_setCustomVar',
+								      4,             // This custom var is set to slot #1.  Required parameter.
+								      'Meter Count',   // The name of the custom variable.  Required parameter.
+								      '1',      // Sets the value of "Unlocked" to "Viewed", "Blocked" or depending on status.  Required parameter.
+								       1             // Sets the scope to session-level.  Optional parameter.
+								   ]);
+  (function() {
+    detectPrivateMode(
+        function(is_private) {
+            typeof is_private === 'undefined' ? 
+								_gaq.push(['_setCustomVar',
+					  5,             // This custom var is set to slot #5.  Required parameter.
+					  'hiding',   // The name of the custom variable.  Required parameter.
+					  'unknown',      // Sets the value of Required parameter.
+					   1             // Sets the scope to session-level.  Optional parameter.
+				   ])
+			 : is_private ? 
+				_gaq.push(['_setCustomVar',
+					  5,             // This custom var is set to slot #5.  Required parameter.
+					  'hiding',   // The name of the custom variable.  Required parameter.
+					  'private',      // Sets the value of Required parameter.
+					   1             // Sets the scope to session-level.  Optional parameter.
+				   ])
+			 : 
+				_gaq.push(['_setCustomVar',
+					  5,             // This custom var is set to slot #5.  Required parameter.
+					  'hiding',   // The name of the custom variable.  Required parameter.
+					  'not private',      // Sets the value of Required parameter.
+					   1             // Sets the scope to session-level.  Optional parameter.
+				   ])
+		}
+    );
+  })();
+	
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    //ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+
+//Evil Robot Detection -- Added by FAB 6/6/2012
+// http://stkywll.com/2012/04/27/annoying-robots-a-solution-for-google-analytics/
+
+	var category = 'trafficQuality';
+	var dimension = 'botDetection';
+	var human_events = ['onkeydown','onmousemove'];
+
+	if ( navigator.appName == 'Microsoft Internet Explorer' && !document.referrer) {
+		for(var i = 0; i < human_events.length; i++){
+			document.attachEvent(human_events[i], ourEventPushOnce);
+		}
+	}else{
+		_gaq.push( [ '_trackEvent', category, dimension, 'botExcluded', 1, true ] );
+	}
+
+	function ourEventPushOnce(ev) {
+
+		_gaq.push( [ '_trackEvent', category, dimension, 'on' + ev.type, 1, true ] );
+
+		for(var i = 0; i < human_events.length; i++){
+			document.detachEvent(human_events[i], ourEventPushOnce);
+		}
+
+	} // end ourEventPushOnce()
+
+	//End Evil Robot Detection
+
+</script>
+<!-- Google Analytics Code END -->
+
+
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1381337412046565');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1381337412046565&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->	<script type="text/javascript">
+	var email = document.cookie;
+    if (sessionStorage.getItem("c_messaging") == null || email.includes("embarcaderopublishing.com"))
+	{
+		//skip after setting a value
+		sessionStorage.setItem('c_messaging', 'y');
+        //alert("Hello! I am just starting!!");
+	}
+	else if (sessionStorage.getItem("c_messaging") == 'x' || email.includes("embarcaderopublishing.com"))
+	{
+		//skip
+        //alert("Hello! I am an X box!!");
+    }
+	else
+    {
+		sessionStorage.setItem('c_messaging', 'x');
+		setTimeout(c_messaging,20000);
+		
+		function c_messaging()
+		{
+			$.colorbox(
+			{
+				close:"X",
+				opacity:0.3,
+				overlayClose:false,
+				href:"/user/subscribe/c_messaging.pop.php"
+			});
+		}
+	}
+	</script>
+	    
+    <!-- Start GPT Async Tag -->
+                    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+                    <script>
+                        var gptadslots = [];
+                        var googletag = googletag || {
+                            cmd: []
+                        };
+                    </script>
+                    <script>
+
+                      googletag.cmd.push(function() {
+                      
+                      
+                        var mappingsizes = googletag.sizeMapping().
+                        addSize([992, 0], [[970, 250], [1, 1]]).
+                        addSize([768, 0], [[728, 90], [1, 1]]).
+                        addSize([320, 0], [[320, 50], [320, 100], [320, 150]]).
+                        addSize([0, 0], [[320, 50], [1, 1]]).
+
+                        build();
+
+
+                        //Adslot declaration
+                      
+                        googletag.defineSlot('/1006587/danville_news_responsive_1', [[320, 50], [728, 90], [970, 250]], 'div-gpt-ad-danville_news_responsive_1').defineSizeMapping(mappingsizes).addService(googletag.pubads()); 
+                        googletag.defineSlot('/1006587/danville_news_responsive_2', [[320, 50], [728, 90], [970, 250]], 'div-gpt-ad-danville_news_responsive_2').defineSizeMapping(mappingsizes).addService(googletag.pubads()); 
+                        
+                        googletag.defineSlot('/1006587/danville_news_story_300x250_1', [300, 250], 'div-gpt-ad-danville_news_story_300x250_1').addService(googletag.pubads());
+                        googletag.defineSlot('/1006587/danville_news_story_300x250_2', [300, 250], 'div-gpt-ad-danville_news_story_300x250_2').addService(googletag.pubads());
+                        googletag.defineSlot('/1006587/danville_news_story_300x250_3', [300, 250], 'div-gpt-ad-danville_news_story_300x250_3').addService(googletag.pubads());
+                        googletag.defineSlot('/1006587/danville_news_story_300x250_4', [300, 250], 'div-gpt-ad-danville_news_story_300x250_4').addService(googletag.pubads());
+
+                        
+                        googletag.pubads().enableSingleRequest();
+                        googletag.pubads().collapseEmptyDivs();
+                        googletag.enableServices();
+                      });
+                    </script>
+                <!-- End GPT Async Tag -->
+    
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	<!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/twitter_bootstrap/4.3.1/css/bootstrap.min.css">
+	
+	<script type="text/javascript" src="//www.embarcaderopublishing.com/js/jquery.js"></script>	
+	
+    <link rel="stylesheet" type="text/css" href="//www.embarcaderopublishing.com/css/styles_responsive.css?v=8" />
+
+    <link media="screen" rel="stylesheet" href="//www.embarcaderopublishing.com/colorbox/colorbox.css?v=8" />
+    <script type="text/javascript" src="//www.embarcaderopublishing.com/colorbox/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="//www.embarcaderopublishing.com/js/login_scripts.js?v=8"></script>
+
+    <script src="https://kit.fontawesome.com/20c4b40556.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<header> 
+
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-light fixed-top">
+			<a class="navbar-brand" href="/"><img src="/art/top_logo.png"></a>
+			<!-- navbarCollapse toggle -->
+			<button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			   <span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div align="right";>
+                        <span class="display-desktop">
+                <a href="javascript:em_login_link()" class="btn btn-success btn-sm">
+                    Login
+                </a>
+            </span>
+            <span class="display-mobile">
+                <a href="javascript:em_login_link()"><i class="fas fa-sign-in-alt fa-lg"></i></a>
+            </span>
+               
+    
+                        &nbsp; 
+                <a href="/user/subscribe/" class="btn btn-info btn-sm btn-join">
+                    Join
+                </a>
+                			</div>
+
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+
+                					<li class="nav-item active">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="/news/">Top Stories</a>
+							<a class="dropdown-item" href="/news/recent_headlines.php">Recent News</a>
+							<a class="dropdown-item" href="/news/section/editorials/">Editorials</a>
+							<a class="dropdown-item" href="/obituaries/">Obituaries</a>
+							<a class="dropdown-item" href="/calmatters/">State News from CALmatters</a>
+							<a class="dropdown-item" href="/print/special/">Special Publications</a>
+							<a class="dropdown-item" href="/print/">Danville Weekly archives Of</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/square/">Town Square</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blogs</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="/blogs/">Meet our Bloggers</a>
+							<a class="dropdown-item" href="/blogs/recent/">Most Recent Posts</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							A&amp;E
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="/arts/">Features and Reviews</a>
+							<a class="dropdown-item" href="/calendar/">Calendar</a>
+							<a class="dropdown-item" href="/movies/">Movies</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/real_estate/">Real Estate</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Join
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="/user/subscribe/">Become a Subscribing Member</a>
+							<a class="dropdown-item" href="/express/">Express Newsletters</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Contact
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="/about/contact/">Contact Info</a>
+							<a class="dropdown-item" href="/about/contact/mailto.php?e=editor&s=newstip">Submit News Tip/Photo</a>
+							<a class="dropdown-item" href="https://portal.cityspark.com/EventEntry/EventEntry/DanvilleSanRamon/" target="_blank">Submit Calendar Item</a>
+                            <a class="dropdown-item" href="/mediakit/">Advertising</a>
+                            <a class="dropdown-item" href="/mediakit/">Place a Legal Ad</a>
+                            <a class="dropdown-item" href="/about/contact/">Contact Info</a>
+                            <a class="dropdown-item" href="/promotions/">Promotions & Contests</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/user/register/" target="_blank">Register</a>
+					</li>
+                					<li class="nav-item">
+						<a class="nav-link" href="javascript:em_login_link()">Login</a>
+					</li>
+                   
+
+
+                    
+                </ul>
+			</div>
+		</nav>
+
+		
+	</header>
+
+	<div class="mt60"></div>
+    
+    
+
+<!-- do the different types of headines -->
+
+	
+<!-- Begin page content -->
+<div class="outline-me ad-break-top d-print-none" id="ad-block-00">
+            <div id="div-gpt-ad-danville_news_responsive_1">
+                <script>
+                googletag.cmd.push(function() {
+                    googletag.display("div-gpt-ad-danville_news_responsive_1");
+                });
+                </script>
+            </div>
+        </div>
+<div class="container d-print-none">
+    <div class="row h-100">
+        <div class="col-md-8 offset-md-2 outline-me content-block" id="block-01">
+            <div class="text-block">
+                <p class="section">News</p>
+
+                                <h1>Asian Americans bear brunt of blame for COVID-19</h1>
+                <h2>'Racism can be traumatic,' says Danville psychologist </h2>
+
+                <div class="share-tools">
+                    <div class="addthis_inline_share_toolbox"></div>
+                </div>
+
+                                <p class="dateline">Uploaded: Sun, May 24, 2020, 3:26 pm<br>
+                
+                                    Time to read: about 4 minutes
+                                    </p>
+            </div>
+        </div>
+        <div class="col-md-2 outline-me">
+                    </div>
+    </div>
+</div>
+    
+        
+	<div class="container d-print-none">
+        <div class="row h-100">
+            <div class="col-md-8 offset-md-2 outline-me content-block" id="block-01">
+                <div class="text-block">
+                        <p>Lifelong San Francisco resident Sandy Fong-Navalta was on Muni recently, heading home from work when she witnessed a white male yell at an elderly Asian man for being a "rude, f***ing ignorant Chinaman."</p>
+                                <p>The Asian man had put his hand up when someone got too close to him on the bus. "You're the reason coronavirus came to America!" the white male continued in response to the elderly man's gesture.</p>
+                                <p>Fong-Navalta, whose sister-in-law is Race and Coronavirus co-founder Pati Navalta, said she has witnessed or felt tension in San Francisco quite a bit since the first reports of coronavirus -- a homeless man recently told her she was "spreading the corona" -- and that it has come "to the point where I'm almost desensitized to it."</p>
+                                <p>As some people blame the rise of coronavirus on China, where it originated, the FBI has warned about a possible rise in hate crimes against Asians in the United States. Businesses owned by Asian Americans are being vandalized.</p>
+                                <p>Some Asian Americans are literally arming themselves in case they are physically assaulted, like an Asian family that was stabbed at a Sam's Club in Texas in March, reportedly because of coronavirus. And advocacy groups, policymakers and others are having to dole out advice on how to deal with it all.</p>
+                                                    
+                </div>
+            </div>
+
+                        <div class="col-md-2 outline-me my-auto side-block d-print-none" id="side-block-01">
+            <p class="side-block-headline">What's local journalism worth to you?</p>
+            <p class="side-block-text">Support DanvilleSanRamon.com for as little as $5/month.</p>
+            <a href="/user/subscribe/?utm_source=internal&utm_medium=story_page&utm_campaign=join" class="btn btn-info btn-sm btn-block">Learn more</a>
+                        </div>                        </div>
+    </div>
+    
+	<div class="outline-me ad-break d-print-none" id="ad-block-01">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 offset-md-2 ad-content" id="block-03">
+								<div class="row">
+									<div class="col-lg-6 ad-break-first-medium-rectangle">
+                                        <div id="div-gpt-ad-danville_news_story_300x250_1">
+                                            <script>
+                                            googletag.cmd.push(function() {
+                                                googletag.display("div-gpt-ad-danville_news_story_300x250_1");
+                                            });
+                                            </script>
+                                        </div>
+                                    </div>
+									<div class="col-lg-6">
+                                        <div id="div-gpt-ad-danville_news_story_300x250_2">
+                                            <script>
+                                            googletag.cmd.push(function() {
+                                                googletag.display("div-gpt-ad-danville_news_story_300x250_2");
+                                            });
+                                            </script>
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+    	<div class="container d-print-none">
+        <div class="row h-100">
+            <div class="col-md-8 offset-md-2 outline-me content-block" id="block-02">
+                <div class="text-block">
+                        <p>Also in San Francisco in early March, Yuanyuan Zhu was on her way to the gym when a white male in his 40s who "looked like a regular person" spat on her after he shouted "F*** China." He also yelled at a passing bus to "run 'them' over."</p>
+                                <p>She told her story on social media and to the New York Times, but she recently told it again to journalists who tuned in for a recent online press conference held by Chinese for Affirmative Action, Asian Pacific Policy and Planning Council and San Francisco State University's Asian American Studies Department, which have teamed up on Stop AAPI Hate, a website where people can submit anti-Asian incidents.</p>
+                                <p>In the four weeks since the site was created, it had collected nearly 1,500 reports - and by Tuesday, that number was up to 1,716, according to Chinese for Affirmative Action SF spokesman Eugene Lau.</p>
+                                <p>"I was panicked," Zhu said. "I just walked faster and into my gym." She said it was "hard to imagine that this would happen in the Bay Area," which is known for its diversity, and that it's important to speak up and collect data about what's happening.</p>
+                                <p>Russell Jeung, head of Asian American Studies at SFSU, said the density of San Francisco, its residents' reliance on public transit, and large Asian population are probably why 41.8% of the reported incidents happened in the city. New York City was second, with 16.7% of the reported incidents.</p>
+                                                    
+                </div>
+            </div>
+
+                        <div class="col-md-2 outline-me my-auto side-block d-print-none" id="side-block-02">
+            <p class="side-block-headline">Stay informed</p>
+            <p class="side-block-text">Get daily headlines sent straight to your inbox.</p>
+            <a href="/express/?utm_source=internal&utm_medium=story_page&utm_campaign=express" class="btn btn-info btn-sm btn-block">Sign up</a>
+                        </div>                        </div>
+    </div>
+    
+	<div class="outline-me ad-break d-print-none" id="ad-block-02">
+            <div id="div-gpt-ad-danville_news_responsive_2">
+                <script>
+                googletag.cmd.push(function() {
+                    googletag.display("div-gpt-ad-danville_news_responsive_2");
+                });
+                </script>
+            </div>
+        </div>	
+    	<div class="container d-print-none">
+        <div class="row h-100">
+            <div class="col-md-8 offset-md-2 outline-me content-block" id="block-03">
+                <div class="text-block">
+                        <p>"When coronavirus hit, I knew Asians would be targeted," Jeung told Race and Coronavirus. The incident reports are coming from different ethnic groups because many Asians are mistaken for Chinese.</p>
+                                <p>The professor blamed politicians for "riling up their base" and trying to avoid responsibility for "not doing enough" in response to the novel coronavirus. "Their political rhetoric opens up hate."</p>
+                                <p>He also pointed to the long history of anti-Asian racism in this country. Chinese miners were driven from their homes and even killed during the 1880s. Jeung said the Chinese Exclusion Act of 1882, which banned Chinese laborers from entering the United States, has "eerie parallels" to U.S. sentiment today.</p>
+                                <p>"Back then there was a recession and whites were losing their jobs," he said. "Now we're (headed toward) a depression and whites are losing their jobs."</p>
+                                <p>A fairly recent parallel is the backlash against Muslims after the September 2001 terrorist attacks, Jeung said, adding that then and now, America was and is said to be at war.</p>
+                                                    
+                </div>
+            </div>
+
+        <div class="col-md-2 outline-me my-auto side-block side-block-mobile-full d-print-none" id="side-block-03">
+    <div class="d-none d-md-block">
+        <p class="side-block-headline">Most Viewed Stories</p>
+        			 <p class="side-block-text side-block-hanging-indent">&#9632; <a href="/news/2020/05/24/person-dies-in-crash-on-i-680-in-san-ramon">Person dies in crash on I-680 in San Ramon</a></p>
+						 <p class="side-block-text side-block-hanging-indent">&#9632; <a href="/news/2020/05/25/details-emerge-about-fatal-crash-on-freeway-in-san-ramon">Details emerge about fatal crash on freeway in San Ramon</a></p>
+						 <p class="side-block-text side-block-hanging-indent">&#9632; <a href="/news/2020/05/25/srvusd-board-to-consider-raises-for-executive-cabinet-management">SRVUSD board to consider raises for executive cabinet, management</a></p>
+						 <p class="side-block-text side-block-hanging-indent">&#9632; <a href="/news/2020/05/25/governor-announces-statewide-covid-19-contact-tracing-campaign">Governor announces statewide COVID-19 contact tracing campaign</a></p>
+						 <p class="side-block-text side-block-hanging-indent">&#9632; <a href="/news/2020/05/25/commission-to-review-plans-for-new-danville-town-hall">Commission to review plans for new Danville Town Hall</a></p>
+			        
+    </div>
+    <div class="d-sm-block d-md-none">
+        <p class="side-block-headline">Most Viewed Stories</p>
+        <div class="row">
+                        <div class="col-6">
+                 <p class="side-block-text side-block-hanging-indent">&#9632; <a href="/news/2020/05/24/person-dies-in-crash-on-i-680-in-san-ramon">Person dies in crash on I-680 in San Ramon</a></p>
+            </div>
+                            <div class="col-6">
+                 <p class="side-block-text side-block-hanging-indent">&#9632; <a href="/news/2020/05/25/details-emerge-about-fatal-crash-on-freeway-in-san-ramon">Details emerge about fatal crash on freeway in San Ramon</a></p>
+            </div>
+                        
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+    
+	<div class="outline-me ad-break d-print-none" id="ad-block-04">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2" id="block-04">
+                        <div class="row">
+                            <div class="col-lg-6 ad-break-first-medium-rectangle">
+                                <div id="div-gpt-ad-danville_news_story_300x250_3">
+                                    <script>
+                                    googletag.cmd.push(function() {
+                                        googletag.display("div-gpt-ad-danville_news_story_300x250_3");
+                                    });
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div id="div-gpt-ad-danville_news_story_300x250_4">
+                                    <script>
+                                    googletag.cmd.push(function() {
+                                        googletag.display("div-gpt-ad-danville_news_story_300x250_4");
+                                    });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>	
+    	<div class="container d-print-none">
+        <div class="row h-100">
+            <div class="col-md-8 offset-md-2 outline-me content-block" id="block-04">
+                <div class="text-block">
+                        <p>"The difference is President (George W.) Bush said we shouldn't tolerate racism against Muslims," he said. "President (Donald) Trump insists on calling it the Chinese virus ... with social media and memes, it really shapes people's subconscious."</p>
+                                <p>In a podcast interview with Race and Coronavirus, California Assemblymember Phil Ting (D-San Francisco) responded to whether he had been personally affected by anti-Asian backlash since the beginning of this crisis. He said that he had, but could not go into detail.</p>
+                                <p>"This virus has really given people a license to hate," he said. Ting represents the 19th district, which includes parts of San Francisco and San Mateo counties.</p>
+                                <p>Ting applauded the creation of the Stop AAPI Hate website, citing the importance of collecting data for policymaking. However, he cautioned that reported numbers may not reflect the true number of incidents. "There are probably ... more people who decided not to step forward or haven't even heard about this website."</p>
+                                <p>Cynthia Choi, co-director of Chinese for Affirmative Action, said as much during the press conference: "Consider this an undercount. Lots of incidents are unreported."</p>
+                                <p>How can Asian Americans deal with the verbal harassment, shunning, being discriminated against at their workplaces and in other businesses, and even physical assaults?</p>
+                                <p>The groups that held the press conference underscored the importance of reporting and tracking the incidents as a way to inform authorities and officials who can enact policies and enforcement to combat the hate.</p>
+                                <p>"Racism can be traumatic," said Alicia del Prado, a psychologist from Danville who said she has seen patients who have been affected by anti-Asian sentiment.</p>
+                                <p>She said she tries to help her clients "feel supported and understood so they do not internalize the negative messages and do not go to self-blame, self-hatred, paralyzing fear, or other negative outcomes."</p>
+                                <p>Jeung takes some comfort in history: "Asian Americans have always resisted, so that gives me strength. The Japanese won redress and reparations (for their internment during World War II). America can apologize for its actions." He hopes that people use lessons from the past to politically mobilize, and is encouraged by the fact that there are more Asian American leaders in power these days.</p>
+                                <p>Ting mentioned that "we have the largest Asian American caucus in California state history."</p>
+                                <p>He said the Asian American caucus has stood against hatred in all forms and have the support of other caucuses on this issue. "If you ever think that representation doesn't matter, it absolutely does matter."</p>
+                                <p><span style="font-style:italic;">Editor's note: Story by Levi Sumagaysay of Race and Coronavirus, courtesy of Bay City News Service. Race and Coronavirus is a <a href="https://raceandcoronavirus.substack.com/p/anti-asian-sentiment-plus-the-importance">newsletter and podcast</a> dedicated to covering issues related to the intersection of race and the global pandemic.</span></p>
+                                                    
+                </div>
+            </div>
+
+                        <div class="col-md-2 outline-me my-auto side-block d-print-none" id="side-block-04">
+                <p class="side-block-headline">Craving a new voice in Peninsula dining?</p>
+                <p class="side-block-text">Sign up for the Peninsula Foodist newsletter.</p>
+                <a href="/express/foodist/?utm_source=internal&utm_medium=story_page&utm_campaign=foodist" class="btn btn-info btn-sm btn-block btn-custom">Sign up now</a>
+                            </div>                        </div>
+    </div>
+    
+		
+    
+
+        <div class="container">
+		<div class="row h-100">
+			<div class="col-md-8 offset-md-2 outline-me content-block" id="block-tag">
+				<div class="text-block">
+                    
+                                            <p class="tag">&mdash; Bay City News Service</p>
+                        				</div>
+			</div>
+			
+			<div class="col-md-2 outline-me my-auto side-block" id="side-block-tag">
+			</div>
+		</div>
+	</div>
+    
+            <div class="container d-print-none">
+            <div class="row h-100">
+                <div class="col-md-8 offset-md-2 outline-me content-block" id="block-tag">
+                    <div class="text-block">
+
+                        <p class="tag">
+                        Follow DanvilleSanRamon.com on Twitter <a href="//twitter.com/DanvilleSanRamo" target="_blank" title="Twitter">@DanvilleSanRamo</a> and <a href="//facebook.com/danvillesanramon" target="_blank" title="Facebook">Facebook</a> for breaking news, local events, photos, videos and more.
+
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 outline-me my-auto side-block" id="side-block-tag">
+                </div>
+            </div>
+        </div>
+        
+    
+        <div class="container d-none d-print-block">
+        <meta itemprop="pageType" content="article">
+        <h1 itemprop="headline">Asian Americans bear brunt of blame for COVID-19</h1>
+        <h2>'Racism can be traumatic,' says Danville psychologist </h2>
+                <meta itemprop="datePublished" content="2020-05-24T15:26:00-07:00">
+        <p class="dateline">Uploaded: Sun, May 24, 2020, 3:26 pm<br>
+                <meta itemprop="thumbnailUrl" content="https://danvillesanramon.com/art/local_news_icon.jpg">
+        <article itemprop="articleBody"><p>Lifelong San Francisco resident Sandy Fong-Navalta was on Muni recently, heading home from work when she witnessed a white male yell at an elderly Asian man for being a "rude, f***ing ignorant Chinaman."</p><p>The Asian man had put his hand up when someone got too close to him on the bus. "You're the reason coronavirus came to America!" the white male continued in response to the elderly man's gesture.</p><p>Fong-Navalta, whose sister-in-law is Race and Coronavirus co-founder Pati Navalta, said she has witnessed or felt tension in San Francisco quite a bit since the first reports of coronavirus -- a homeless man recently told her she was "spreading the corona" -- and that it has come "to the point where I'm almost desensitized to it."</p><p>As some people blame the rise of coronavirus on China, where it originated, the FBI has warned about a possible rise in hate crimes against Asians in the United States. Businesses owned by Asian Americans are being vandalized.</p><p>Some Asian Americans are literally arming themselves in case they are physically assaulted, like an Asian family that was stabbed at a Sam's Club in Texas in March, reportedly because of coronavirus. And advocacy groups, policymakers and others are having to dole out advice on how to deal with it all.</p><p>Also in San Francisco in early March, Yuanyuan Zhu was on her way to the gym when a white male in his 40s who "looked like a regular person" spat on her after he shouted "F*** China." He also yelled at a passing bus to "run 'them' over."</p><p>She told her story on social media and to the New York Times, but she recently told it again to journalists who tuned in for a recent online press conference held by Chinese for Affirmative Action, Asian Pacific Policy and Planning Council and San Francisco State University's Asian American Studies Department, which have teamed up on Stop AAPI Hate, a website where people can submit anti-Asian incidents.</p><p>In the four weeks since the site was created, it had collected nearly 1,500 reports - and by Tuesday, that number was up to 1,716, according to Chinese for Affirmative Action SF spokesman Eugene Lau.</p><p>"I was panicked," Zhu said. "I just walked faster and into my gym." She said it was "hard to imagine that this would happen in the Bay Area," which is known for its diversity, and that it's important to speak up and collect data about what's happening.</p><p>Russell Jeung, head of Asian American Studies at SFSU, said the density of San Francisco, its residents' reliance on public transit, and large Asian population are probably why 41.8% of the reported incidents happened in the city. New York City was second, with 16.7% of the reported incidents.</p><p>"When coronavirus hit, I knew Asians would be targeted," Jeung told Race and Coronavirus. The incident reports are coming from different ethnic groups because many Asians are mistaken for Chinese.</p><p>The professor blamed politicians for "riling up their base" and trying to avoid responsibility for "not doing enough" in response to the novel coronavirus. "Their political rhetoric opens up hate."</p><p>He also pointed to the long history of anti-Asian racism in this country. Chinese miners were driven from their homes and even killed during the 1880s. Jeung said the Chinese Exclusion Act of 1882, which banned Chinese laborers from entering the United States, has "eerie parallels" to U.S. sentiment today.</p><p>"Back then there was a recession and whites were losing their jobs," he said. "Now we're (headed toward) a depression and whites are losing their jobs."</p><p>A fairly recent parallel is the backlash against Muslims after the September 2001 terrorist attacks, Jeung said, adding that then and now, America was and is said to be at war.</p><p>"The difference is President (George W.) Bush said we shouldn't tolerate racism against Muslims," he said. "President (Donald) Trump insists on calling it the Chinese virus ... with social media and memes, it really shapes people's subconscious."</p><p>In a podcast interview with Race and Coronavirus, California Assemblymember Phil Ting (D-San Francisco) responded to whether he had been personally affected by anti-Asian backlash since the beginning of this crisis. He said that he had, but could not go into detail.</p><p>"This virus has really given people a license to hate," he said. Ting represents the 19th district, which includes parts of San Francisco and San Mateo counties.</p><p>Ting applauded the creation of the Stop AAPI Hate website, citing the importance of collecting data for policymaking. However, he cautioned that reported numbers may not reflect the true number of incidents. "There are probably ... more people who decided not to step forward or haven't even heard about this website."</p><p>Cynthia Choi, co-director of Chinese for Affirmative Action, said as much during the press conference: "Consider this an undercount. Lots of incidents are unreported."</p><p>How can Asian Americans deal with the verbal harassment, shunning, being discriminated against at their workplaces and in other businesses, and even physical assaults?</p><p>The groups that held the press conference underscored the importance of reporting and tracking the incidents as a way to inform authorities and officials who can enact policies and enforcement to combat the hate.</p><p>"Racism can be traumatic," said Alicia del Prado, a psychologist from Danville who said she has seen patients who have been affected by anti-Asian sentiment.</p><p>She said she tries to help her clients "feel supported and understood so they do not internalize the negative messages and do not go to self-blame, self-hatred, paralyzing fear, or other negative outcomes."</p><p>Jeung takes some comfort in history: "Asian Americans have always resisted, so that gives me strength. The Japanese won redress and reparations (for their internment during World War II). America can apologize for its actions." He hopes that people use lessons from the past to politically mobilize, and is encouraged by the fact that there are more Asian American leaders in power these days.</p><p>Ting mentioned that "we have the largest Asian American caucus in California state history."</p><p>He said the Asian American caucus has stood against hatred in all forms and have the support of other caucuses on this issue. "If you ever think that representation doesn't matter, it absolutely does matter."</p><p><span style="font-style:italic;">Editor's note: Story by Levi Sumagaysay of Race and Coronavirus, courtesy of Bay City News Service. Race and Coronavirus is a <a href="https://raceandcoronavirus.substack.com/p/anti-asian-sentiment-plus-the-importance">newsletter and podcast</a> dedicated to covering issues related to the intersection of race and the global pandemic.</span></p></article>
+                    <meta itemprop="author" content="Bay City News Service">
+            &mdash; Bay City News Service
+                </div>
+
+
+	
+
+
+
+
+
+    	<div class="container d-print-none">
+		<div class="row h-100">
+			<div class="col-md-8 offset-md-2 outline-me comment">
+				<h4>Comments</h4>
+
+                                            <p>There are no comments yet. Please share yours below.</p>
+                        			</div>
+		</div>
+	</div>
+			
+	<div class="container d-print-none">
+		<div class="row h-100">
+			<div class="col-md-8 offset-md-2 outline-me comment">
+                                <div class="comment"></div>
+				<a name="comment_form" id="comment_form"></a>
+
+        
+
+
+        <h4>Post a comment</h4>
+			<p class="small">Posting an item on Town Square is simple and requires no registration. Just complete this form and hit "submit" and your topic will appear online. 
+		Please be respectful and truthful in your postings so Town Square will continue to be a thoughtful gathering place for sharing community information 
+		and opinion. All postings are subject to our <a href="/about/terms_of_use">TERMS OF USE</a>, and may be deleted if deemed inappropriate by our staff.</p>
+		<p class="small">We prefer that you use your real name, but you may use any "member" name you wish.</p>
+			<form class="comment small" method="post" action="/square/process.php" enctype="multipart/form-data">
+        <input type="hidden" name="process" value="5">
+        <input type="hidden" name="topic_id" value="0">
+        <input type="hidden" name="comment_section_id" value="news2view">
+        <input type="hidden" name="main_story_id" value="17522">
+        <input type="hidden" name="blog_id" value="">
+        <input type="hidden" name="refer" value="/news/2020/05/24/asian-americans-bear-brunt-of-blame-for-covid-19#comments">
+        <input type="hidden" name="form_type" value="responsive">
+			
+	<style>
+	.decoy {
+	visibility:hidden;
+	}
+	</style>
+<input type="text" name="is_this_real" class="decoy" value="">
+	<!-- form for posting a comment -->
+        
+            
+        
+        
+        
+        
+        
+					<div class="form-group row">
+						<div class="col-12">
+							<label class="" for="text"> Your Name</label> 
+							<input id="user_name" name="user_name" placeholder="Your name" type="text" class="form-control" value="" required="required">
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-12">
+							<label for="select" class="">Your Community</label> 
+                            <select name="zone_id" class="custom-select" required="required">
+                                                                <option value="">Neighborhoods</option>
+                                                                        <option value="23"> - Alamo</option>
+                                                                        <option value="22"> - Blackhawk</option>
+                                                                        <option value="24"> - Danville</option>
+                                                                        <option value="25"> - Diablo</option>
+                                                                        <option value="26"> - San Ramon</option>
+                                                                        <option value="27"> - Walnut Creek</option>
+                                                                        <option value="">Schools</option>
+                                                                        <option value="5"> - Alamo Elementary School</option>
+                                                                        <option value="15"> - Charlotte Wood Middle School</option>
+                                                                        <option value="20"> - Del Amigo Continuation High School</option>
+                                                                        <option value="14"> - Diablo Vista Middle School</option>
+                                                                        <option value="6"> - Green Valley Elementary School</option>
+                                                                        <option value="7"> - Greenbrook Elementary School</option>
+                                                                        <option value="8"> - John Baldwin Elementary School</option>
+                                                                        <option value="16"> - Los Cerros Middle School</option>
+                                                                        <option value="9"> - Montair Elementary School</option>
+                                                                        <option value="19"> - Monte Vista High School</option>
+                                                                        <option value="10"> - Rancho Romero Elementary School</option>
+                                                                        <option value="18"> - San Ramon Valley High School</option>
+                                                                        <option value="17"> - Stone Valley Middle School</option>
+                                                                        <option value="11"> - Sycamore Valley Elementary School</option>
+                                                                        <option value="12"> - Tassajara Hills Elementary School</option>
+                                                                        <option value="21"> - Venture Independent Study School</option>
+                                                                        <option value="13"> - Vista Grande Elementary School</option>
+                                                                        <option value="">Other</option>
+                                                                        <option value="1"> - another community</option>
+                                                                </select>
+                            <span id="fence_zonesHelpBlock" class="form-text text-muted"></span>
+						</div>
+					</div>
+                    					<div class="form-group row">
+						<div class="col-12">
+							<label for="category_id" class="">Category</label> 
+							<select id="category_id" name="category_id" class="custom-select">
+                                <option value="">Categories</option>
+                                                                    <option value="7">Around Town</option>
+                                                                        <option value="8">Books & Movies</option>
+                                                                        <option value="100">Comments on Stories</option>
+                                                                        <option value="106">Crimes & Incidents</option>
+                                                                        <option value="10">Restaurants</option>
+                                                                        <option value="3">Schools & Kids</option>
+                                                                        <option value="5">Sports</option>
+                                                                        <option value="6">State, National, International</option>
+                                    							</select>
+                            <span id="category_idHelpBlock" class="form-text text-muted">Since this is the first comment on this story a new topic will also be started in Town Square! Please choose a category that best describes this story.</span>
+						</div>
+					</div>
+                        					<div class="form-group row">
+						<div class="col-12">
+							<label for="comment" class="">Comment</label> 
+							<textarea id="comment" name="comment" cols="40" rows="6" class="form-control"></textarea>
+						</div>
+					</div> 
+                    					<div class="form-group row">
+						<div class="col-12">
+							                            <script src='https://www.google.com/recaptcha/api.js'></script><div class="g-recaptcha" data-sitekey="6LedKxcTAAAAAA2XlY2N4R_gVSNauQx50AhB829K"></div>						</div>
+					</div>
+                        					<div class="form-group row">
+						<div class="col-12" align="center">
+							<button name="submit" type="submit" class="btn btn-info" onClick="this.form.submit(); this.disabled=true; this.value='Sending...'; ">Submit</button>
+						</div>
+					</div>
+	</form>
+	            </div>
+			<div class="col-md-2 outline-me">
+							</div>
+		</div>
+	</div>
+        
+
+<style>
+@media only screen and (max-width: 767px) {
+    ._magnetRelConrel_364-3 {
+        display: none;
+    }
+}
+@media only print {
+    ._magnetRelConrel_364-3 {
+        display: none;
+    }
+}
+</style>
+
+<meta itemprop="url" content="https://danvillesanramon.com/news/2020/05/24/asian-americans-bear-brunt-of-blame-for-covid-19">
+<meta itemprop="inLanguage" content="en">
+<meta itemprop="identifier" content="17522">
+<script type="text/javascript">
+    (function() { 
+    var ms = document.createElement('script'); ms.type = 'text/javascript'; ms.async = true; 
+    ms.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//magnetapi.klangoo.com/w/Widgets_364.js'; 
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ms, s);
+    })();
+</script>
+
+
+<div data-widget-id="rel_364-3"></div>
+    
+
+    <footer class="footer small">
+
+        <div class="d-print-none">
+				<div class="container outline-me d-none d-md-block">
+			<div class="row">
+				<div class="col-md-12">
+					<h5>Index</h5>
+				</div>
+				<div class="col-md-3">
+					<p><a href="/">Home</a><br>
+						<a href="/news">News</a><br>
+						<a href="/square">TownSquare</a><br>
+						<a href="/blogs/">Blogs</a><br>
+						<a href="/arts">A&amp;E</a><br>
+						<a href="/real_estate">Home &amp; Real Estate</a><br>
+						<a href="/express">Express</a><br>
+						<a href="/print/special">Special Pubs</a><br>
+						<a href="/obituaries">Obituaries</a></p>
+				</div>
+				<div class="col-md-3">
+					<p><a href="/about/contact/mailto.php?e=editor&s=newstip">Send News Tips</a><br>
+						<a href="/user/subscribe/" target="_blank">Subscribe</a><br>
+						<br>
+						<a href="http://www.PleasantonWeekly.com">Pleasanton Weekly</a></p>
+				</div>
+				<div class="col-md-3">
+					<p><a href="/about">About Us</a><br>
+						<a href="/about/contact">Contact Us</a><br>
+						<a href="https://mailchi.mp/embarcaderomediagroup/advertise" target="_blank">Advertising Info</a><br>
+												<a href="/about/terms_of_use">Terms of Use</a><br>
+						<a href="/about/privacy_policy">Privacy Policy</a></p>
+				</div>
+				<div class="col-md-3">
+					<p>&copy; 2020 <a href="/">DanvilleSanRamon.com</a><br>
+						All rights reserved.<br>
+						&nbsp;<br>
+						<a href="http://www.EmbarcaderoMediaGroup.com" target="_blank">Embarcadero Media</a><br>
+						&nbsp;<br>
+						<a href="/press_releases/" target="_blank">PR MediaRelease</a><br>
+						<a href="/emdesign/" target="_blank">Sponsored content</a><br>
+						<a href="/user/go_mobile.php">Mobile site</a></p>
+				</div>
+			</div>
+		</div>
+		</div>
+        
+		<div class="container outline-me d-sm-block d-md-none d-print-block" style="padding-bottom: 60px;">
+			<p>&copy; 2020 <a href="/">DanvilleSanRamon.com</a>. All rights reserved.<br>
+		</div>
+				
+	</footer>
+	
+	<script src="/twitter_bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-7apeS9pNVYMQo"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-7apeS9pNVYMQo.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+
+        <!-- START ChartBeat.com tracking code -- added 8/2/11, updated 11/30/15 -->
+    <!-- NOTE: There is also code in the header -->
+    <script type='text/javascript'>
+        var _sf_async_config = _sf_async_config || {};
+        /** CONFIGURATION START **/
+        _sf_async_config.uid = 26708;
+                _sf_async_config.domain = 'danvillesanramon.com';
+        _sf_async_config.sections = 'News';  // This changes based on section
+        _sf_async_config.authors = 'Bay City News Service';    // This changes based on author
+        _cbq = window._cbq = (window._cbq || []); // added this line and next to show user type (http://support.chartbeat.com/docs/#usertype)
+        _cbq.push(['_acct', 'anon']);
+        /** CONFIGURATION END **/
+         (function () {
+              function loadChartbeat() {
+                   window._sf_endpt = (new Date()).getTime();
+                   var e = document.createElement('script');
+                   e.setAttribute('language', 'javascript');
+                   e.setAttribute('type', 'text/javascript');
+                   e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+                   document.body.appendChild(e);
+              }
+              loadChartbeat();
+         })();
+    </script>
+    <!-- END ChartBeat.com tracking code -->
+    
+	
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-598898374a736221"></script>
+
+	
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4e2e5ec189","applicationID":"13429426","transactionName":"b1RQMUNVDUoDWhVeW1YeZxdYGw1cFUpOXlpcVEpLQVwT","queueTime":0,"applicationTime":56,"atts":"QxNTRwtPHkQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
+

@@ -1,0 +1,3073 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+	<head>
+		<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"fa09265af4",applicationID:"460234015"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta itemprop="acquia_lift:content_title" content="Seattle artist fights anti-Asian racism in the Chinatown-International District" />
+<meta itemprop="acquia_lift:content_type" content="article" />
+<meta itemprop="acquia_lift:page_type" content="node page" />
+<meta itemprop="acquia_lift:context_language" content="en" />
+<meta itemprop="acquia_lift:content_section" content="" />
+<meta itemprop="acquia_lift:content_keywords" content="" />
+<meta itemprop="acquia_lift:post_id" content="67491" />
+<meta itemprop="acquia_lift:content_uuid" content="72ec588f-c8e3-4a6b-8af5-1d1e84a9f91a" />
+<meta itemprop="acquia_lift:published_date" content="1589371140" />
+<meta itemprop="acquia_lift:persona" content="" />
+<meta itemprop="acquia_lift:engagement_score" content="1" />
+<meta itemprop="acquia_lift:account_id" content="KCTS" />
+<meta itemprop="acquia_lift:site_id" content="www_crosscut_com" />
+<meta itemprop="acquia_lift:contentOrigin" content="41af9ada-7b14-41bb-5e67-ed8da83c16b9" />
+<meta itemprop="acquia_lift:liftAssetsURL" content="https://builder.lift.acquia.com" />
+<meta itemprop="acquia_lift:liftDecisionAPIURL" content="https://us-east-1-decisionapi.lift.acquia.com" />
+<meta itemprop="acquia_lift:authEndpoint" content="https://us-east-1-oauth2.lift.acquia.com/authorize" />
+<meta itemprop="acquia_lift:bootstrapMode" content="auto" />
+<meta itemprop="acquia_lift:contentReplacementMode" content="trusted" />
+<script src="https://builder.lift.acquia.com/lift.js" async></script>
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://crosscut.com/2020/05/seattle-artist-fights-anti-asian-racism-chinatown-international-district" />
+<meta name="twitter:title" content="Seattle artist fights anti-Asian racism in the Chinatown-International District" />
+<meta name="twitter:site" content="@crosscut" />
+<meta name="twitter:description" content="As the pandemic emboldens bigotry, Monyee Chau tells her neighborhood: “We will survive this too.”" />
+<meta property="og:title" content="Seattle artist fights anti-Asian racism in the Chinatown-International District" />
+<link rel="image_src" href="https://crosscut.com/sites/default/files/images/articles/200508_de_monyee_chau_hero_teaser.jpg.jpg" />
+<meta property="og:description" content="As the pandemic emboldens bigotry, Monyee Chau tells her neighborhood: “We will survive this too.”" />
+<meta name="twitter:image:alt" content="Person in orange shirt next to a yellow poster stating:“Chinatown, Filipinotown, Japantown, Little Saigon were all built on resilience. We will survive this, too.”" />
+<meta name="twitter:image" content="https://crosscut.com/sites/default/files/images/articles/200508_de_monyee_chau_hero_teaser.jpg.jpg" />
+<meta property="og:image" content="https://crosscut.com/sites/default/files/images/articles/200508_de_monyee_chau_hero_teaser.jpg.jpg" />
+<meta property="og:image:url" content="https://crosscut.com/sites/default/files/images/articles/200508_de_monyee_chau_hero_teaser.jpg.jpg" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "name": "Seattle artist fights anti-Asian racism in the Chinatown-International District",
+    "headline": "Seattle artist fights anti-Asian racism in the Chinatown-International District",
+    "description": "As the pandemic emboldens bigotry, Monyee Chau tells her neighborhood: “We will survive this too.”",
+    "image": {
+        "@type": "ImageObject",
+        "representativeOfPage": "True",
+        "url": "https://crosscut.com/sites/default/files/images/articles/200508_de_monyee_chau_hero_teaser.jpg.jpg"
+    },
+    "datePublished": "2020-05-13T11:59:00Z",
+    "dateModified": "2020-05-13T09:16:38-0700",
+    "author": {
+        "@type": "Person",
+        "@id": "Margo Vansynghel",
+        "name": "Margo Vansynghel"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "@id": "https://crosscut.com/",
+        "name": "Crosscut",
+        "url": "https://crosscut.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://crosscut.com/themes/crosscut/logo_crosscut_2019.png",
+            "width": "300",
+            "height": "51"
+        }
+    },
+    "thumbnailUrl": "https://crosscut.com/sites/default/files/styles/thumbnail/public/images/articles/200508_de_monyee_chau_hero_teaser.jpg.jpg?itok=PUY9hGNz",
+    "url": "https://crosscut.com/2020/05/seattle-artist-fights-anti-asian-racism-chinatown-international-district",
+    "mainEntityOfPage": "https://crosscut.com/2020/05/seattle-artist-fights-anti-asian-racism-chinatown-international-district",
+    "creator": {
+        "@type": "Person",
+        "@id": "Margo Vansynghel",
+        "name": "Margo Vansynghel"
+    },
+    "keywords": [
+        "Arts",
+        "Coronavirus",
+        "Features",
+        "Food",
+        "Gentrification",
+        "Immigration",
+        "Race"
+    ],
+    "articleSection": "Culture"
+}</script>
+<meta name="parsely-post-id" content="67491" />
+<link rel="shortcut icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://crosscut.com/2020/05/seattle-artist-fights-anti-asian-racism-chinatown-international-district" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?qacfc6" defer></script>
+
+		<title>Seattle artist fights anti-Asian racism in the Chinatown-International District | Crosscut</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/themes/custom/crosscut/favicon/apple-touch-icon.png?v=A07XApmMAk">
+    <link rel="icon" type="image/png" sizes="32x32" href="/themes/custom/crosscut/favicon/favicon-32x32.png?v=A07XApmMAk">
+    <link rel="icon" type="image/png" sizes="16x16" href="/themes/custom/crosscut/favicon/favicon-16x16.png?v=A07XApmMAk">
+    <link rel="manifest" href="/themes/custom/crosscut/favicon/site.webmanifest?v=A07XApmMAk">
+    <link rel="mask-icon" href="/themes/custom/crosscut/favicon/safari-pinned-tab.svg?v=A07XApmMAk" color="#172c3b">
+    <link rel="shortcut icon" href="/themes/custom/crosscut/favicon/favicon.ico?v=A07XApmMAk">
+    <meta name="msapplication-TileColor" content="#172c3b">
+    <meta name="msapplication-config" content="/themes/custom/crosscut/favicon/browserconfig.xml?v=A07XApmMAk">
+    <meta name="theme-color" content="#172c3b">
+
+        <!--
+    /**
+     * @license
+     * MyFonts Webfont Build ID 3698457, 2019-01-15T16:06:07-0500
+     *
+     * The fonts listed in this notice are subject to the End User License
+     * Agreement(s) entered into by the website owner. All other parties are
+     * explicitly restricted from using the Licensed Webfonts(s).
+     *
+     * You may obtain a valid license at the URLs below.
+     *
+     * Webfont: ProximaNova-BoldIt by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/bold-it/
+     *
+     * Webfont: ProximaNova-Bold by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/bold/
+     *
+     * Webfont: ProximaNova-Regular by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+     *
+     * Webfont: ProximaNova-RegularIt by Mark Simonson
+     * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular-it/
+     *
+     *
+     * License: https://www.myfonts.com/viewlicense?type=web&buildid=3698457
+     * Licensed pageviews: 1,000,000
+     * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+     *
+     * © 2019 MyFonts Inc
+    */
+    -->
+
+		<link rel="stylesheet" media="all" href="/sites/default/files/css/css_rp-hIcRZwxfeZYECwYJ5zfM-t2Dt1rFHqM5eRtqRoWo.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_9Dx5aJKFm4gd1fknB6wyNI8YXuHPxJQ3P1W3FkB9TRE.css" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Roboto+Slab:400,700|Roboto:400,400i,700&amp;display=swap" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_CiGrMbQ9ZrIfBXLdYdyKTATMJB5BjX050jZBNy4etbI.css" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_D7udY8uaKa8jr7c29pEsvrNizxeunBUtDEvpSgIFZ8w.css" />
+
+		
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/sites/default/files/js/js_QHqjxhGPGgZFwOfW92tmrVpssmC1sbO0zDG4TgLmaEI.js"></script>
+<script src="//securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+        <script>
+      window.googletag = window.googletag || {cmd: []};
+    </script>
+	</head>
+	<body class="no-sidebar path-node __20-05-seattle-artist-fights-anti-asian-racism-chinatown-international-district page-node-type-article page-node-67491">
+		<a id="page-top" href="#main-content" class="visually-hidden focusable">
+			Skip to main content
+		</a>
+		<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NL5QH48" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+  
+<div class="layout-container">
+  
+  <div class="pagetop">
+          <div id="block-quantcasttrackingpixel" class="block-quantcasttrackingpixel block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+  <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+<!--/*--><![CDATA[/* ><!--*/
+.block-quantcasttrackingpixel p{
+    margin:0px;
+    }
+  
+/*--><!]]]]><![CDATA[>*/
+
+/*--><!]]>*/
+</style><script>
+<!--//--><![CDATA[// ><!--
+
+<!--//--><![CDATA[// ><!--
+
+    var ezt = ezt ||[];
+    (function(){
+      var elem = document.createElement('script');
+      elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://pixel") + ".quantserve.com/aquant.js?a=p-a2EEpzn47yTDS";
+      elem.async = true;
+      elem.type = "text/javascript";
+      var scpt = document.getElementsByTagName('script')[0];
+      scpt.parentNode.insertBefore(elem,scpt);
+    }());
+    ezt.push({qacct: 'p-a2EEpzn47yTDS',
+              orderid: '',
+              revenue: ''
+             });
+  
+//--><!]]]]><![CDATA[>
+
+//--><!]]>
+</script><noscript>
+
+
+
+        <div class="media-wrapper media-wrapper--blazy">            <div style="padding-bottom: 100%;" data-ratio="100" class="media media--blazy media--loading media--ratio media--ratio--fluid media--image">
+      
+      
+      
+      <img alt="Quantcast" border="0" height="1" style="display: none;" width="1" class="media__image media__element b-lazy" loading="lazy" data-src="https://pixel.quantserve.com/pixel/p-a2EEpzn47yTDS.gif?labels=_fp.event.Default" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 1 1'%2F%3E" /></div>
+      </div>  
+  
+  
+
+
+</noscript>
+
+<!-- Facebook Pixel Code -->
+<script>
+<!--//--><![CDATA[// ><!--
+
+<!--//--><![CDATA[// ><!--
+
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '123516855160140'); 
+fbq('track', 'PageView');
+
+//--><!]]]]><![CDATA[>
+
+//--><!]]>
+</script><noscript>
+
+
+
+
+        <div class="media-wrapper media-wrapper--blazy">            <div style="padding-bottom: 100%;" data-ratio="100" class="media media--blazy media--loading media--ratio media--ratio--fluid media--image">
+      
+      
+      
+      <img height="1" width="1" class="media__image media__element b-lazy" loading="lazy" data-src="https://www.facebook.com/tr?id=123516855160140&amp;ev=PageView&#10;&amp;noscript=1" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 1 1'%2F%3E" alt="" /></div>
+      </div>  
+  
+  
+
+
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+</div>
+      
+			
+			
+		</div>
+	</div>
+</div>
+
+      </div>
+
+
+  <header class="header clearfix" role="banner">
+            <div class="header-content container">
+        <div class="row">
+            <div id="block-crosscut-branding" class="block-crosscut-branding">
+	
+							<div class="site-name">
+				<div class="logo">
+					<a href="/" title="Crosscut" rel="home" class="site-logo">
+						<img class="" src="/themes/custom/crosscut/logo_crosscut_2019.png" alt="Home" />
+					</a>
+				</div>
+				<a href="/" title="Home" rel="home" class="visually-hidden" aria-hidden="true">Crosscut</a>
+			</div>
+				
+</div>
+<div id="block-megamainmenu" class="block-megamainmenu block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+              <ul id="mega-main-menu" class="mega-main-menu hidden-xs hidden-sm d-none d-lg-block" >
+              <li class="mega-link-item link-link-politics">
+                                <div class="visible-xs visible-sm mobile-item-wrapper d-lg-none">
+                <a href="/politics" data-drupal-link-system-path="taxonomy/term/1">Politics</a>
+              </div>
+              <div class="hidden-xs hidden-sm d-none d-lg-block">
+                <div class="mega-toggle" id="mega-toggle-link-politics" data-toggle="collapse" data-target="#mega-drop-link-politics" aria-expanded="false" aria-controls="#mega-drop-link-politics">
+                  Politics
+                </div>
+              </div>
+                          <div id="mega-drop-link-politics" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-link-politics">
+          <div class="collapse-pad-wrap">
+            
+<div class="row">
+  <div class="col-lg-7 colossal-menu__top-story">
+    
+  <div class="field field--name-field-top-story field--type-viewsreference field--label-above">
+    <div class="field--label"><span>Top Story</span></div>
+              <div class="field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-9235d1d673b95250346fb4bb4e946ed49a9043a2d59f6a0fd5e4e57d58809aad">
+  
+  
+  
+
+  
+  
+  
+
+    
+                          
+  <div class="views-row debug-entity-theme-node debug-entity-bundle-article debug-entity-view-mode-menu-teaser">
+    
+    
+<article role="article">
+  <div class="row">
+    <div class="col-md-5">
+      <a href="/2020/04/poll-most-wa-voters-wary-reopening-economy-too-soon" title="Poll: Most WA voters wary of reopening economy too soon" target="_self">
+        
+            <div class="field field--name-field-teaser-image field--type-image field--label-hidden field--item">  <img src="/sites/default/files/styles/three_two_450x300/public/images/articles/200419_m3_olympia_protest_covid_99_0.jpg?h=a1e1a043&amp;itok=Z8aNHQ9b" width="450" height="300" alt="protestors in Olympia" />
+
+
+</div>
+      
+      </a>
+    </div> 
+    <div class="col-md-7">
+      
+        <h2>
+          <a href="/2020/04/poll-most-wa-voters-wary-reopening-economy-too-soon" title="Poll: Most WA voters wary of reopening economy too soon" target="_self" rel="bookmark"><span>Poll: Most WA voters wary of reopening economy too soon</span>
+</a>
+        </h2>
+      
+      <div class="byline">
+        <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/donna-gordon-blankinship" hreflang="en">Donna Gordon Blankinship</a></li>
+          </ul>
+   </span>
+        <span class="separator-slant"> / </span>
+        <span class="published-date">April 24, 2020</span>
+      </div>
+      
+    </div>
+  </div>
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+          </div>
+
+    <div class="colossal-menu--links">
+      
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/politics">All Politics</a>
+    </div>
+  
+      
+    </div>
+  </div>
+  <div class="col-lg-5 colossal-menu__latest">
+    
+  <div class="field field--name-field-latest field--type-viewsreference field--label-above">
+    <div class="field--label"><span>Latest</span></div>
+              <div class="field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-2a6e13e4e4f31bdc6732ceddbb0f1e180fd3251741c88c68696d0f033362f02c">
+  
+  
+  
+
+  
+  
+  
+
+    
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/04/seattle-rekindles-business-tax-debate-grim-new-economy" hreflang="en">Seattle rekindles business tax debate in a grim new economy</a>
+</span></div>
+  </div>
+  
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/04/washingtons-successful-vote-mail-system-wasnt-built-overnight" hreflang="en">Washington’s successful vote-by-mail system wasn’t built overnight</a>
+</span></div>
+  </div>
+  
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/03/after-brief-coronavirus-closure-seattle-immigration-court-reopens-backlash" hreflang="en">After brief coronavirus closure, Seattle immigration court reopens to backlash</a>
+</span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+          </div>
+
+  </div>
+</div>
+
+
+                      </div>
+        </div>
+
+      </li>
+          <li class="mega-link-item link-link-culture">
+                                <div class="visible-xs visible-sm mobile-item-wrapper d-lg-none">
+                <a href="/culture" data-drupal-link-system-path="taxonomy/term/3">Culture</a>
+              </div>
+              <div class="hidden-xs hidden-sm d-none d-lg-block">
+                <div class="mega-toggle" id="mega-toggle-link-culture" data-toggle="collapse" data-target="#mega-drop-link-culture" aria-expanded="false" aria-controls="#mega-drop-link-culture">
+                  Culture
+                </div>
+              </div>
+                          <div id="mega-drop-link-culture" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-link-culture">
+          <div class="collapse-pad-wrap">
+            
+<div class="row">
+  <div class="col-lg-7 colossal-menu__top-story">
+    
+  <div class="field field--name-field-top-story field--type-viewsreference field--label-above">
+    <div class="field--label"><span>Top Story</span></div>
+              <div class="field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-40d87e66c3c88ac35dd9c1a7679a490944dc62112f9cef8b271f31b9c36cfdbd">
+  
+  
+  
+
+  
+  
+  
+
+    
+                          
+  <div class="views-row debug-entity-theme-node debug-entity-bundle-article debug-entity-view-mode-menu-teaser">
+    
+    
+<article role="article">
+  <div class="row">
+    <div class="col-md-5">
+      <a href="/2020/05/editors-notebook-how-make-your-own-film-festival-home" title="Editor’s Notebook: How to make your own film festival — at home" target="_self">
+        
+            <div class="field field--name-field-teaser-image field--type-image field--label-hidden field--item">  <img src="/sites/default/files/styles/three_two_450x300/public/images/articles/rebarclosed.jpeg?h=c282529e&amp;itok=K_4lrPuZ" width="450" height="300" alt="outside of the Rebar nightclub" />
+
+
+</div>
+      
+      </a>
+    </div> 
+    <div class="col-md-7">
+      
+        <h2>
+          <a href="/2020/05/editors-notebook-how-make-your-own-film-festival-home" title="Editor’s Notebook: How to make your own film festival — at home" target="_self" rel="bookmark"><span>Editor’s Notebook: How to make your own film festival — at home</span>
+</a>
+        </h2>
+      
+      <div class="byline">
+        <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/brangien-davis" hreflang="und">Brangien Davis</a></li>
+          </ul>
+   </span>
+        <span class="separator-slant"> / </span>
+        <span class="published-date">May 14, 2020</span>
+      </div>
+      
+    </div>
+  </div>
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+          </div>
+
+    <div class="colossal-menu--links">
+      
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/culture">All Culture</a>
+    </div>
+  
+      
+    </div>
+  </div>
+  <div class="col-lg-5 colossal-menu__latest">
+    
+  <div class="field field--name-field-latest field--type-viewsreference field--label-above">
+    <div class="field--label"><span>Latest</span></div>
+              <div class="field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-543ed94555fc908cacd2538303623fb0e3cd300c961d56e8abb810513b1e833d">
+  
+  
+  
+
+  
+  
+  
+
+    
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/05/seattle-artist-fights-anti-asian-racism-chinatown-international-district" hreflang="en">Seattle artist fights anti-Asian racism in the Chinatown-International District</a>
+</span></div>
+  </div>
+  
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/05/seattle-worlds-fair-meets-salish-geek-new-virtual-art-show" hreflang="en">Seattle World’s Fair meets ‘Salish geek’ in new (virtual) art show</a>
+</span></div>
+  </div>
+  
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/05/mossbacks-northwest-black-pioneer-who-launched-puget-sound-settlement" hreflang="en">Mossback’s Northwest: The Black pioneer who launched the Puget Sound settlement</a>
+</span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+          </div>
+
+  </div>
+</div>
+
+
+                      </div>
+        </div>
+
+      </li>
+          <li class="mega-link-item link-link-equity">
+                                <div class="visible-xs visible-sm mobile-item-wrapper d-lg-none">
+                <a href="/equity" data-drupal-link-system-path="taxonomy/term/5">Equity</a>
+              </div>
+              <div class="hidden-xs hidden-sm d-none d-lg-block">
+                <div class="mega-toggle" id="mega-toggle-link-equity" data-toggle="collapse" data-target="#mega-drop-link-equity" aria-expanded="false" aria-controls="#mega-drop-link-equity">
+                  Equity
+                </div>
+              </div>
+                          <div id="mega-drop-link-equity" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-link-equity">
+          <div class="collapse-pad-wrap">
+            
+<div class="row">
+  <div class="col-lg-7 colossal-menu__top-story">
+    
+  <div class="field field--name-field-top-story field--type-viewsreference field--label-above">
+    <div class="field--label"><span>Top Story</span></div>
+              <div class="field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-35c9bc25655cb7e3f3e68307c65e8f6f1ed1719a3c912ecea039ef916372f826">
+  
+  
+  
+
+  
+  
+  
+
+    
+                          
+  <div class="views-row debug-entity-theme-node debug-entity-bundle-article debug-entity-view-mode-menu-teaser">
+    
+    
+<article role="article">
+  <div class="row">
+    <div class="col-md-5">
+      <a href="/2020/05/language-gaps-make-it-doubly-hard-businesses-seeking-aid" title="Language gaps make it doubly hard for businesses seeking aid" target="_self">
+        
+            <div class="field field--name-field-teaser-image field--type-image field--label-hidden field--item">  <img src="/sites/default/files/styles/three_two_450x300/public/images/articles/esl_bussiness_covid_hero_01.jpg?h=56d0ca2e&amp;itok=xwuaodka" width="450" height="300" alt="Shoppers at Stella&#039;s Deli wait at the counter" />
+
+
+</div>
+      
+      </a>
+    </div> 
+    <div class="col-md-7">
+      
+        <h2>
+          <a href="/2020/05/language-gaps-make-it-doubly-hard-businesses-seeking-aid" title="Language gaps make it doubly hard for businesses seeking aid" target="_self" rel="bookmark"><span>Language gaps make it doubly hard for businesses seeking aid</span>
+</a>
+        </h2>
+      
+      <div class="byline">
+        <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/manola-secaira" hreflang="en">Manola Secaira</a></li>
+          </ul>
+   </span>
+        <span class="separator-slant"> / </span>
+        <span class="published-date">May 14, 2020</span>
+      </div>
+      
+    </div>
+  </div>
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+          </div>
+
+    <div class="colossal-menu--links">
+      
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/equity">All Equity</a>
+    </div>
+  
+      
+    </div>
+  </div>
+  <div class="col-lg-5 colossal-menu__latest">
+    
+  <div class="field field--name-field-latest field--type-viewsreference field--label-above">
+    <div class="field--label"><span>Latest</span></div>
+              <div class="field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-6dc64956760e8488114c58a11728cfc4859ee36dc466436dc9d84a7fed6ee1dc">
+  
+  
+  
+
+  
+  
+  
+
+    
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/05/why-covid-19-hitting-washington-latinos-especially-hard" hreflang="en">Why COVID-19 is hitting Washington Latinos especially hard</a>
+</span></div>
+  </div>
+  
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/04/alone-ice-detention-teens-fear-arrival-covid-19" hreflang="en">Alone in ICE detention, teens fear arrival of COVID-19</a>
+</span></div>
+  </div>
+  
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/04/washington-farmers-markets-are-reopening-wont-look-same" hreflang="en">Washington farmers markets are reopening, but won&#039;t look the same</a>
+</span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+          </div>
+
+  </div>
+</div>
+
+
+                      </div>
+        </div>
+
+      </li>
+          <li class="mega-link-item link-link-environment">
+                                <div class="visible-xs visible-sm mobile-item-wrapper d-lg-none">
+                <a href="/environment" data-drupal-link-system-path="taxonomy/term/7">Environment</a>
+              </div>
+              <div class="hidden-xs hidden-sm d-none d-lg-block">
+                <div class="mega-toggle" id="mega-toggle-link-environment" data-toggle="collapse" data-target="#mega-drop-link-environment" aria-expanded="false" aria-controls="#mega-drop-link-environment">
+                  Environment
+                </div>
+              </div>
+                          <div id="mega-drop-link-environment" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-link-environment">
+          <div class="collapse-pad-wrap">
+            
+<div class="row">
+  <div class="col-lg-7 colossal-menu__top-story">
+    
+  <div class="field field--name-field-top-story field--type-viewsreference field--label-above">
+    <div class="field--label"><span>Top Story</span></div>
+              <div class="field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-d0766a65a4ba762db81185948d725e51845af6ba2ebb1b47038713a77d63b3cb">
+  
+  
+  
+
+  
+  
+  
+
+    
+                          
+  <div class="views-row debug-entity-theme-node debug-entity-bundle-article debug-entity-view-mode-menu-teaser">
+    
+    
+<article role="article">
+  <div class="row">
+    <div class="col-md-5">
+      <a href="/2020/05/apocalypse-now-what-i-need-surgery-am-i-doomed" title="Apocalypse: Now What? I need surgery. Am I doomed?" target="_self">
+        
+            <div class="field field--name-field-teaser-image field--type-image field--label-hidden field--item">  <img src="/sites/default/files/styles/three_two_450x300/public/images/articles/200513_corvid_now_what_hero_0.jpeg?h=56d0ca2e&amp;itok=8LzXv_jz" width="450" height="300" alt="hospital exam room" />
+
+
+</div>
+      
+      </a>
+    </div> 
+    <div class="col-md-7">
+      
+        <h2>
+          <a href="/2020/05/apocalypse-now-what-i-need-surgery-am-i-doomed" title="Apocalypse: Now What? I need surgery. Am I doomed?" target="_self" rel="bookmark"><span>Apocalypse: Now What? I need surgery. Am I doomed?</span>
+</a>
+        </h2>
+      
+      <div class="byline">
+        <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/ted-alvarez" hreflang="und">Ted Alvarez</a></li>
+          </ul>
+   </span>
+        <span class="separator-slant"> / </span>
+        <span class="published-date">May 14, 2020</span>
+      </div>
+      
+    </div>
+  </div>
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+          </div>
+
+    <div class="colossal-menu--links">
+      
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/environment">All Environment</a>
+    </div>
+  
+      
+    </div>
+  </div>
+  <div class="col-lg-5 colossal-menu__latest">
+    
+  <div class="field field--name-field-latest field--type-viewsreference field--label-above">
+    <div class="field--label"><span>Latest</span></div>
+              <div class="field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-11604bf3cd11497c2bd169b94c4947dad07295506034c47dc13a237af305c3a0">
+  
+  
+  
+
+  
+  
+  
+
+    
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/05/when-chehalis-floods-again-who-pays-price" hreflang="en">When the Chehalis floods again, who pays the price?</a>
+</span></div>
+  </div>
+  
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/05/seattles-vanishing-piers-leave-vibrant-fishing-community-reeling" hreflang="en">Seattle’s vanishing piers leave a vibrant fishing community reeling</a>
+</span></div>
+  </div>
+  
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/05/wooden-high-rises-dont-guarantee-reduced-emissions" hreflang="en">Wooden high-rises don’t guarantee reduced emissions</a>
+</span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+          </div>
+
+  </div>
+</div>
+
+
+                      </div>
+        </div>
+
+      </li>
+          <li class="mega-link-item link-link-opinion">
+                                <div class="visible-xs visible-sm mobile-item-wrapper d-lg-none">
+                <a href="/opinion" data-drupal-link-system-path="taxonomy/term/9">Opinion</a>
+              </div>
+              <div class="hidden-xs hidden-sm d-none d-lg-block">
+                <div class="mega-toggle" id="mega-toggle-link-opinion" data-toggle="collapse" data-target="#mega-drop-link-opinion" aria-expanded="false" aria-controls="#mega-drop-link-opinion">
+                  Opinion
+                </div>
+              </div>
+                          <div id="mega-drop-link-opinion" class="mega-dropdown collapse multi-collapse" aria-labelledby="mega-toggle-link-opinion">
+          <div class="collapse-pad-wrap">
+            
+<div class="row">
+  <div class="col-lg-7 colossal-menu__top-story">
+    
+  <div class="field field--name-field-top-story field--type-viewsreference field--label-above">
+    <div class="field--label"><span>Top Story</span></div>
+              <div class="field--item">
+  <div class="views-element-container form-group"><div class="view-name-main-menu-top-story js-view-dom-id-348afbe6abe89e3506cd71b36b366f927f38494dd08a949b9a0bab20b1378905">
+  
+  
+  
+
+  
+  
+  
+
+    
+                          
+  <div class="views-row debug-entity-theme-node debug-entity-bundle-article debug-entity-view-mode-menu-teaser">
+    
+    
+<article role="article">
+  <div class="row">
+    <div class="col-md-5">
+      <a href="/2020/05/gofundwho-more-equitable-ways-crowdfund-crisis" title="GoFundWho? More equitable ways to crowdfund in a crisis" target="_self">
+        
+            <div class="field field--name-field-teaser-image field--type-image field--label-hidden field--item">  <img src="/sites/default/files/styles/three_two_450x300/public/images/articles/suffering_sse_v1_workingresize.jpg?h=2d0958c8&amp;itok=srvvaTKJ" width="450" height="300" alt="" />
+
+
+</div>
+      
+      </a>
+    </div> 
+    <div class="col-md-7">
+      
+        <h2>
+          <a href="/2020/05/gofundwho-more-equitable-ways-crowdfund-crisis" title="GoFundWho? More equitable ways to crowdfund in a crisis" target="_self" rel="bookmark"><span>GoFundWho? More equitable ways to crowdfund in a crisis</span>
+</a>
+        </h2>
+      
+      <div class="byline">
+        <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/marcus-harrison-green" hreflang="und">Marcus Harrison Green</a></li>
+          </ul>
+   </span>
+        <span class="separator-slant"> / </span>
+        <span class="published-date">May 15, 2020</span>
+      </div>
+      
+    </div>
+  </div>
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+          </div>
+
+    <div class="colossal-menu--links">
+      
+      <div class="field field--name-field-category-link field--type-link field--label-hidden field--item">
+      <a class="btn btn-primary" href="/opinion">All Opinion</a>
+    </div>
+  
+      
+      <div class="field field--name-field-related-links field--type-link field--label-hidden field--items">
+              <div class="field--item"><a href="/what-are-opinion-pieces">What are opinion pieces?</a></div>
+              <div class="field--item"><a href="/about/submitting-commentary-to-crosscut">How to submit</a></div>
+          </div>
+  
+    </div>
+  </div>
+  <div class="col-lg-5 colossal-menu__latest">
+    
+  <div class="field field--name-field-latest field--type-viewsreference field--label-above">
+    <div class="field--label"><span>Latest</span></div>
+              <div class="field--item">
+  <div class="views-element-container form-group"><div class="field--name-field-latest view-name-main-menu-latest js-view-dom-id-05bcfeb3b492dd474d278793c4ae0ca1bcb43c068d235623eaa16bd5bc99f431">
+  
+  
+  
+
+  
+  
+  
+
+    
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/05/two-explosions-changed-washington-and-world" hreflang="en">Two explosions that changed Washington — and the world</a>
+</span></div>
+  </div>
+  
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/05/seattles-coming-recession-explained" hreflang="en">Seattle&#039;s coming recession, explained</a>
+</span></div>
+  </div>
+  
+        
+  <div class="views-row">
+    <div class="views-field views-field-nothing views-field-title"><span class="field-content">  <a href="/2020/05/why-seattle-needs-government-funded-news-outlet" hreflang="en">Why Seattle needs a government-funded news outlet</a>
+</span></div>
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+</div>
+          </div>
+
+  </div>
+</div>
+
+
+                      </div>
+        </div>
+
+      </li>
+        </ul>
+  
+
+
+			
+			
+		</div>
+	</div>
+</div>
+
+<nav role="navigation" class="visually-hidden" aria-hidden="false">
+  
+						<ul>
+
+		
+											<li class="parent-menu-0 https:crosscut.comnewsletters">
+				<a href="https://crosscut.com/newsletters" class="btn btn-secondary" title="Subscribe">Subscribe</a>
+							</li>
+											<li class="parent-menu-0 https:www.pledgecart.orgpledgeCart3?campaign=062989EF-9767-44BA-926A-BD370AA4F132&amp;amp%3Bsource=TV1AM-W1606--009#home">
+				<a href="https://www.pledgecart.org/pledgeCart3/?campaign=062989EF-9767-44BA-926A-BD370AA4F132&amp;amp%3Bsource=TV1AM-W1606--009#/home" class="btn btn-primary" target="_blank" title="Donate">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 feature">
+				<a href="/feature" class="strong clearfix" target="_self" title="Features">Features</a>
+							</li>
+											<li class="parent-menu-0 northwest-wonders">
+				<a href="/northwest-wonders" class="strong clearfix" target="_self" data-drupal-link-system-path="node/65461">Northwest Wonders</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" class="strong" target="_self" title="Video" data-drupal-link-system-path="taxonomy/term/89">Multimedia</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 support-crosscut">
+				<a href="/support-crosscut" data-drupal-link-system-path="node/37">Support</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 advertising">
+				<a href="/advertising" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+</nav>
+
+<nav role="navigation"
+     aria-labelledby="block-secondarynav-menu" id="block-secondarynav" class="block-secondarynav collapse">
+            
+  <h2 class="visually-hidden" id="block-secondarynav-menu">Secondary Nav</h2>
+        <div id="mobile-wrap" class="d-lg-none secondary-nav-mobile block-secondarynav__inner">
+      <div class="secondary-nav-mobile__container">
+        <div class="secondary-nav-mobile__row secondary-nav-mobile__row--first">
+          <div class="secondary-nav-mobile__col">
+            <ul class="buttons"></ul>
+          </div>
+        </div>
+        <div class="secondary-nav-mobile__row secondary-nav-mobile__row--second">
+          <div class="secondary-nav-mobile__col col-auto">
+            <ul class="social"></ul>
+          </div>
+          <div class="secondary-nav-mobile__col col-auto">
+            <ul class="account-mgmnt"></ul>
+          </div>
+        </div>
+        <div class="secondary-nav-mobile__row secondary-nav-mobile__row--third">
+          <div class="secondary-nav-mobile__col col-6">
+            <div class="secondary-nav-mobile__primary-menu">
+              
+              <ul class="menu clearfix">
+        
+            	            <li class="parent-menu-0 link-number-1 menu-item">
+                          <a href="/politics" data-drupal-link-system-path="taxonomy/term/1">Politics</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-2 menu-item">
+                          <a href="/culture" data-drupal-link-system-path="taxonomy/term/3">Culture</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-3 menu-item">
+                          <a href="/equity" data-drupal-link-system-path="taxonomy/term/5">Equity</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-4 menu-item">
+                          <a href="/environment" data-drupal-link-system-path="taxonomy/term/7">Environment</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-5 menu-item">
+                          <a href="/opinion" data-drupal-link-system-path="taxonomy/term/9">Opinion</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-6 menu-item">
+                          <a href="/search" data-drupal-link-system-path="search">Search</a>
+              </li>
+    
+
+        	    
+  
+
+
+            </div>
+          </div>
+          <div class="secondary-nav-mobile__col col-6">
+            <div class="secondary-nav-mobile__secondary-menu">
+              
+						<ul>
+
+		
+											<li class="parent-menu-0 https:crosscut.comnewsletters">
+				<a href="https://crosscut.com/newsletters" class="btn btn-secondary" title="Subscribe">Subscribe</a>
+							</li>
+											<li class="parent-menu-0 https:www.pledgecart.orgpledgeCart3?campaign=062989EF-9767-44BA-926A-BD370AA4F132&amp;amp%3Bsource=TV1AM-W1606--009#home">
+				<a href="https://www.pledgecart.org/pledgeCart3/?campaign=062989EF-9767-44BA-926A-BD370AA4F132&amp;amp%3Bsource=TV1AM-W1606--009#/home" class="btn btn-primary" target="_blank" title="Donate">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 feature">
+				<a href="/feature" class="strong clearfix" target="_self" title="Features">Features</a>
+							</li>
+											<li class="parent-menu-0 northwest-wonders">
+				<a href="/northwest-wonders" class="strong clearfix" target="_self" data-drupal-link-system-path="node/65461">Northwest Wonders</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" class="strong" target="_self" title="Video" data-drupal-link-system-path="taxonomy/term/89">Multimedia</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 support-crosscut">
+				<a href="/support-crosscut" data-drupal-link-system-path="node/37">Support</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 advertising">
+				<a href="/advertising" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="desktop-wrap" class="d-none d-lg-block secondary-nav-desktop block-secondarynav__inner">
+      <div class="secondary-nav-desktop__container container">
+        
+						<ul>
+
+		
+											<li class="parent-menu-0 https:crosscut.comnewsletters">
+				<a href="https://crosscut.com/newsletters" class="btn btn-secondary" title="Subscribe">Subscribe</a>
+							</li>
+											<li class="parent-menu-0 https:www.pledgecart.orgpledgeCart3?campaign=062989EF-9767-44BA-926A-BD370AA4F132&amp;amp%3Bsource=TV1AM-W1606--009#home">
+				<a href="https://www.pledgecart.org/pledgeCart3/?campaign=062989EF-9767-44BA-926A-BD370AA4F132&amp;amp%3Bsource=TV1AM-W1606--009#/home" class="btn btn-primary" target="_blank" title="Donate">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 feature">
+				<a href="/feature" class="strong clearfix" target="_self" title="Features">Features</a>
+							</li>
+											<li class="parent-menu-0 northwest-wonders">
+				<a href="/northwest-wonders" class="strong clearfix" target="_self" data-drupal-link-system-path="node/65461">Northwest Wonders</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" class="strong" target="_self" title="Video" data-drupal-link-system-path="taxonomy/term/89">Multimedia</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 support-crosscut">
+				<a href="/support-crosscut" data-drupal-link-system-path="node/37">Support</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 advertising">
+				<a href="/advertising" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+      </div>
+    </div>
+    
+</nav>
+<div id="block-donate-button" class="block-donate-button block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div><a class="btn btn-primary" href="https://www.pledgecart.org/pledgeCart3/?campaign=062989EF-9767-44BA-926A-BD370AA4F132&amp;source=TV1AM-W1606--009#/home" target="_blank" title="Donate">Donate</a></div>
+</div>
+      
+			
+			
+		</div>
+	</div>
+</div>
+<div class="views-exposed-form block-acquia-search-form-header block block-header-search container collapse" data-drupal-selector="views-exposed-form-acquia-search-page" id="block-acquia-search-form-header">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							<form action="/search" method="get" id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
+  <div class="form-group js-form-item form-item js-form-type-textfield form-item-search js-form-item-search">
+      <label for="edit-search">Search</label>
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+
+  <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper"><input data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+
+
+</form>
+
+			
+			
+		</div>
+	</div>
+</div>
+
+
+      <a href="/search" class="visually-hidden" title="Search" aria-hidden="false">Search</a>
+			<div class="search-toggle collapsed" data-toggle="collapse" data-target="#block-acquia-search-form-header" title="Search">
+                    <span class="ico-white ico-mglass"></span>
+                </div>
+      <a href="#" class="secondary-menu-toggle collapsed visually-hidden" data-toggle="collapse" data-target="#block-secondarynav" title="Search" aria-hidden="false">Quick Menu</a>
+            <div class="secondary-menu-toggle collapsed" data-toggle="collapse" data-target="#block-secondarynav">
+                <div class="menu-toggle-ellipsis">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+  </header>
+
+  
+  
+
+  
+
+  
+
+  <main class="main main-node-type-article" role="main">
+    <a id="main-content" tabindex="-1"></a>    
+          
+  <div class="pre-content">
+          <div class="container">
+        <div class="row">
+          <div id="block-donate-banner" class="block-donate-banner block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div><a class="btn btn-primary" href="https://www.pledgecart.org/pledgeCart3/?campaign=062989EF-9767-44BA-926A-BD370AA4F132&amp;source=TV1AM-W1606--009#/home" target="_blank" title="Donate">Donate</a></div>
+</div>
+      
+			
+			
+		</div>
+	</div>
+</div>
+
+        </div>
+      </div>
+      </div>
+
+    
+          
+  <div class="highlighted">
+          <div class="container">
+        <div class="row">
+          <div data-drupal-messages-fallback class="hidden"></div>
+
+        </div>
+      </div>
+      </div>
+
+    
+        
+    
+    <div class="layout-content-container ">
+
+      
+              <div class="">
+
+          
+          <div class="layout-content">
+            
+  <div class="content">
+          <div id="block-crosscut-content" class="block-crosscut-content block">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+
+
+  
+
+
+<article role="article" class="printable">
+  
+    
+  <div class="article-hero">
+    <div class="layout-basic-main">
+      <div class="container default-hero">
+
+                  
+
+
+
+<div class="social-share__outer">
+    <div  class="social-share__wrapper">
+    <h5>Share</h5>
+    <div class="social-share">
+      <div class="social-share__list">
+        <ul>
+          <li class="ico">
+            <a class="ico ico-facebook clearfix fb-share" href="#"
+               onclick="event.preventDefault();" target="_blank"
+               title="facebook.com/crosscut">Facebook</a>
+          </li>
+          <li class="ico">
+            <a class="ico ico-twitter twitter-share" href="#"
+               onclick="event.preventDefault();" target="_blank"
+               title="twitter.com/crosscut">Twitter</a>
+          </li>
+          <li class="ico">
+            <a class="ico ico-email email-share" href="#"
+               title="e-mail">Email</a>
+          </li>
+          <li class="ico">
+            <a class="ico ico-print print-share"
+               href="javascript: window.print();" title="print">Print
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      
+    </div>
+  </div>
+  </div>
+        
+        
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+        <h1><span>Seattle artist fights anti-Asian racism in the Chinatown-International District</span>
+</h1>
+        
+            <div class="field field--name-field-subtitle field--type-text-long field--label-hidden field--item"><p>As the pandemic emboldens bigotry, Monyee Chau tells her neighborhood: ‘We will survive this, too.’</p></div>
+      
+        <div class="byline">
+                      <span
+                class="authored-by clone-outlet">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/margo-vansynghel" hreflang="en">Margo Vansynghel</a></li>
+          </ul>
+   </span>
+            <span class="separator-slant"> / </span>
+                    <span class="published-date">May 13, 2020</span>
+          
+          
+          
+                      <br/>
+            <span
+                class="authored-by clone-outlet">
+      <div class="field field--name-field-contributors field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">
+  </div>
+          </div>
+  </span>
+          
+        </div>
+
+                  
+            <div data-blazy="" class="blazy blazy--field blazy--field-hero-image blazy--field-hero-image--default field field--name-field-hero-image field--type-image field--label-hidden field--item">
+
+
+
+                    <div class="media media--bundle--article media--blazy media--loading media--responsive media--image">
+      
+      
+      
+        <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="/sites/default/files/styles/max_992x992/public/images/articles/200508_de_monyee_chau_hero_teaser.jpg_0.jpg?itok=VmbJixie" srcset="" sizes="(min-width: 1030px) 960px, 88vw" data-srcset="/sites/default/files/styles/max_325x325/public/images/articles/200508_de_monyee_chau_hero_teaser.jpg_0.jpg?itok=DegUY7Eh 325w, /sites/default/files/styles/large/public/images/articles/200508_de_monyee_chau_hero_teaser.jpg_0.jpg?itok=49gdDAtH 480w, /sites/default/files/styles/max_650x650/public/images/articles/200508_de_monyee_chau_hero_teaser.jpg_0.jpg?itok=0iMQaYCz 650w, /sites/default/files/styles/max_992x992/public/images/articles/200508_de_monyee_chau_hero_teaser.jpg_0.jpg?itok=VmbJixie 992w" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 992 661&#039;%2F%3E" alt="Person in orange shirt next to a yellow poster stating:“Chinatown, Filipinotown, Japantown, Little Saigon were all built on resilience. We will survive this, too.” " />
+
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+          
+            <div class="field field--name-field-hero-image-caption field--type-text-long field--label-hidden field--item"><p>After stickers from a white nationalist group were posted around Seattle’s Chinatown-International District, local multimedia artist Monyee Chau responded by creating "resiliency posters" and placing them around her neighborhood. (Dorothy Edwards/Crosscut)</p></div>
+      
+              </div>
+
+          </div>
+  </div>
+  <div class="article-intro">
+    <div class="container">
+      
+            <div class="field field--name-field-introduction field--type-text-long field--label-hidden field--item"><p>She was just a toddler at the time, but Monyee Chau vividly remembers sitting on the counter of Chau’s Family Seafood Restaurant at the corner of Jackson Street and Fourth Avenue in Seattle’s Chinatown-International District. She recalls neighborhood characters popping in and out, the sound of people speaking Cantonese. Her memories arrive in clear snippets: “Big fish tanks with crazy fish and really interesting seafood,” Chau remembers. In the back, a huge table to hold big family meals. “My grandpa in the little window where he [took] the orders.”</p></div>
+      
+    </div>
+  </div>
+  <div class="article-content">
+    
+
+
+<div  class="field field--name-field-article-sections field--type-entity-reference-revisions field--label-hidden container">
+  <div class="row">
+    <div class="col-auto col-md-7 col-xl-auto">
+      <section  class="node__content-section node__content-section--main two-col-content-section two-col-content-section--main">
+                                      <div class="field--item">
+            
+  <div class="paragraph--contained paragraph paragraph--type--text-area paragraph--view-mode--default">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>The restaurant would forever tether Chau, now 24 and a local multimedia artist, to the neighborhood, to the Chinese seafood specialties featured in her artwork, and to the people who have made the Chinatown-International District what it is today.</p>
+
+<p>But after coronavirus-related closures and <a href="https://crosscut.com/2020/03/coronavirus-fears-pacific-nw-lead-rise-anti-asian-racism">a surge in anti-Asian racism</a> sent the neighborhood reeling, the idyllic images of Chau’s youth seemed from a faraway past. And then Chau noticed the hateful stickers.</p>
+
+<p>In mid-April, a Chinatown-International District restaurant owner witnessed a group of men with dark sunglasses and face coverings plastering stickers with slogans like “America First” and “Better dead than red” in the neighborhood. The Seattle Police Department’s Bias Crimes Unit is <a href="https://spdblotter.seattle.gov/2020/04/14/bias-crimes-unit-investigating-after-white-nationalist-stickers-left-on-chinatown-international-district-businesses/">investigating</a>.</p>
+
+<p>“It goes back to the same rhetoric that white folks have used about China and communism and the ‘Chinese virus,’” Chau says, “stigmatizing all of us again.”</p>
+
+<hr /><p><strong><em>Read more on how damaging stereotypes about Asian communities <a href="https://crosscut.com/2020/03/coronavirus-fears-pacific-nw-lead-rise-anti-asian-racism">have resurfaced amid the pandemic</a>. </em></strong></p>
+
+<hr /><p>Below the slogans, the stickers bore a link to the website for Patriot Front, a<a href="https://www.splcenter.org/fighting-hate/extremist-files/group/patriot-front?fbclid=IwAR1VzZyugDQx1AvMiw5orlhp3UqEn6O7pnSv63PQTi2Y0bMrrJNK1sIoPtY"> white nationalist hate group</a>, according to the Southern Poverty Law Center.</p>
+
+<p>“It made me feel super unsafe,” Chau says. “White supremacists could be literally your neighbor.”</p>
+
+<p>For a while, it was all Chau could think about. She felt deflated and scared and became “really, really worried for a lot of the elders out here.” But then, she says, a sense of responsibility (followed by creativity) kicked in. Inspired by Chinese protective charms, Chau designed a poster with a message for her neighbors in fiery red letters: “Chinatown, Filipinotown, Japantown, Little Saigon were all built on resilience. We will survive this, too.”</p></div>
+      
+      </div>
+
+          </div>
+                                      <div class="field--item">
+            
+<div class="paragraph paragraph--type--full-width-image paragraph--view-mode--default paragraph__top-margin">
+  <div class="full-width-image">
+    
+            <div data-blazy="" data-colorbox-gallery class="blazy blazy--colorbox blazy--field blazy--field-full-width-image blazy--field-full-width-image--default field field--name-field-full-width-image field--type-image field--label-hidden field--item">
+
+
+
+                      <a href="https://crosscut.com/sites/default/files/styles/max_1600x1600/public/images/200508_de_monyee_chau_in_text_002.jpg.jpg?itok=dWh3MKQX" class="blazy__colorbox litebox" data-colorbox-trigger data-media="{&quot;bundle&quot;:&quot;full_width_image&quot;,&quot;type&quot;:&quot;image&quot;,&quot;width&quot;:&quot;1200&quot;,&quot;height&quot;:&quot;800&quot;,&quot;rel&quot;:&quot;blazy-paragraph-full-width-image-full-width-image-default-colorbox-blazy-colorbox&quot;}">      <div class="media media--bundle--full-width-image media--blazy media--loading media--switch media--switch--colorbox media--responsive media--image">
+      
+      
+      
+        <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="/sites/default/files/styles/max_2000x2000/public/images/200508_de_monyee_chau_in_text_002.jpg.jpg?itok=BlfWJYkz" srcset="" sizes="100vw" data-srcset="/sites/default/files/styles/large/public/images/200508_de_monyee_chau_in_text_002.jpg.jpg?itok=iwLC57pd 480w, /sites/default/files/styles/max_768x768/public/images/200508_de_monyee_chau_in_text_002.jpg.jpg?itok=W_kybruz 768w, /sites/default/files/styles/max_2000x2000/public/images/200508_de_monyee_chau_in_text_002.jpg.jpg?itok=BlfWJYkz 1200w" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 1200 800&#039;%2F%3E" alt="Yellow poster with red text stating:“Chinatown, Filipinotown, Japantown, Little Saigon were all built on resilience. We will survive this, too.” " />
+
+
+      
+                  
+      
+
+            
+      <span class="media__icon media__icon--litebox"></span>
+    </div>
+  </a>
+
+                          <div class="litebox-caption visually-hidden"><p>“Resiliency Posters” by Monyee Chau in Seattle's Chinatown-International District on May 8. (Dorothy Edwards/Crosscut)</p></div>
+        
+            
+  
+  
+
+
+</div>
+      
+    
+            <div class="field field--name-field-full field--type-text-long field--label-hidden field--item"><p>“Resiliency Posters” by Monyee Chau in Seattle's Chinatown-International District on May 8. (Dorothy Edwards/Crosscut)</p></div>
+      
+  </div>
+  
+</div>
+
+          </div>
+                                      <div class="field--item">
+            
+  <div class="paragraph--contained paragraph paragraph--type--text-area paragraph--view-mode--default">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>“I wanted to counteract these stickers that were so misinformed, so xenophobic,” Chau says, “[and] share that our community has been built on love and on growth and healing.”</p>
+
+<p>Thanks to Chau — and volunteers armed with buckets of wheat paste and staple guns — hundreds of “Resiliency Posters” have <a href="https://asamnews.com/2020/04/28/seattle-artist-fights-coronavirus-covid19-racism-xenophobia-with-posters-art-encouraging-resiliency/?fbclid=IwAR0i94DLC-SD_z-e5hAsP7dxiN7dKSYI8gjCHwH_5l221QuMEIwJixZQM3w">appeared all over the neighborhood</a>. The image has traveled the country digitally. Dozens of people have downloaded a PDF version of the poster from Chau’s website, in some cases to be printed and put up in other Chinatowns across the U.S.</p></div>
+      
+      </div>
+
+          </div>
+                                      <div class="field--item">
+            
+  <div class="paragraph--contained paragraph paragraph--type--text-area paragraph--view-mode--default">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>While the recent appearance of racist propaganda in her neighborhood inspired her poster project, Chau’s mission to honor the history and vibrancy of Chinatowns is a longer-term project.<strong> </strong></p>
+
+<hr /><p><strong><em>See the intersection of traditional Salish art and the Seattle World’s Fair in a new show that <a href="https://crosscut.com/2020/05/seattle-worlds-fair-meets-salish-geek-new-virtual-art-show">imagines ‘A Better Tomorrow’ for us all</a>.</em></strong></p>
+
+<hr /><p>Her recent work includes a brief history of Chinatowns in America (“and the racism that built them”), which she styled as a bright pink takeout menu. “We have over 50 locations in America” the flyer proclaims. “Open: 7 days a week, 365 days a year, even on Christmas and Thanksgiving.”</p>
+
+<p>When she posted a photo of the piece on Twitter in early May, it went viral, with more than 18,000 likes and thousands of retweets. Teachers messaged her to ask if they could use it to talk to their students about the history of Chinatowns. Chau says many people don’t know the neighborhoods arose in the 1800s as the only place Chinese immigrants were able to find housing, community and relative safety from attacks and discrimination in the U.S. (She hopes to visit them all someday as part of an art project.)</p></div>
+      
+      </div>
+
+          </div>
+                                      <div class="field--item">
+            
+<div class="paragraph paragraph--type--full-width-image paragraph--view-mode--default paragraph__top-margin">
+  <div class="full-width-image">
+    
+            <div data-blazy="" data-colorbox-gallery class="blazy blazy--colorbox blazy--field blazy--field-full-width-image blazy--field-full-width-image--default field field--name-field-full-width-image field--type-image field--label-hidden field--item">
+
+
+
+                      <a href="https://crosscut.com/sites/default/files/styles/max_1600x1600/public/images/200508_monyee_chau_06.jpg?itok=bygDqZ99" class="blazy__colorbox litebox" data-colorbox-trigger data-media="{&quot;bundle&quot;:&quot;full_width_image&quot;,&quot;type&quot;:&quot;image&quot;,&quot;width&quot;:1600,&quot;height&quot;:1200,&quot;rel&quot;:&quot;blazy-paragraph-full-width-image-full-width-image-default-colorbox-blazy-colorbox&quot;}">      <div class="media media--bundle--full-width-image media--blazy media--loading media--switch media--switch--colorbox media--responsive media--image">
+      
+      
+      
+        <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="/sites/default/files/styles/max_2000x2000/public/images/200508_monyee_chau_06.jpg?itok=AB46ZzMS" srcset="" sizes="100vw" data-srcset="/sites/default/files/styles/large/public/images/200508_monyee_chau_06.jpg?itok=vXGfZs04 480w, /sites/default/files/styles/max_768x768/public/images/200508_monyee_chau_06.jpg?itok=fCObTcsM 768w, /sites/default/files/styles/max_1200x1200/public/images/200508_monyee_chau_06.jpg?itok=SFBdfLfd 1200w, /sites/default/files/styles/max_1600x1600/public/images/200508_monyee_chau_06.jpg?itok=bygDqZ99 1600w, /sites/default/files/styles/max_2000x2000/public/images/200508_monyee_chau_06.jpg?itok=AB46ZzMS 2000w" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 2000 1500&#039;%2F%3E" alt="" />
+
+
+      
+                  
+      
+
+            
+      <span class="media__icon media__icon--litebox"></span>
+    </div>
+  </a>
+
+                          <div class="litebox-caption visually-hidden"><p>Recently, Monyee Chau's brief history of Chinatowns in America, styled as a bright pink take-out menu, went viral on Twitter. “We have over 50 locations in America,” the flyer proclaims. (Monyee Chau)</p></div>
+        
+            
+  
+  
+
+
+</div>
+      
+    
+            <div class="field field--name-field-full field--type-text-long field--label-hidden field--item"><p>Recently, Monyee Chau's brief history of Chinatowns in America, styled as a bright pink take-out menu, went viral on Twitter. “We have over 50 locations in America,” the flyer proclaims. (Monyee Chau)</p></div>
+      
+  </div>
+  
+</div>
+
+          </div>
+                                      <div class="field--item">
+            
+  <div class="paragraph--contained paragraph paragraph--type--text-area paragraph--view-mode--default">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>“[Chinatown] allowed immigrants to have a place to survive and thrive,” Chau says. “I want to preserve their history. I want to protect them.”</p>
+
+<p>Seattle’s Chinatown-International District isn’t just a memory or concept she wants to protect for others. It’s where her own grandparents made a home and built several businesses after immigrating to the U.S. from Hong Kong in the late 1970s. It’s where she lives, eats, makes art and finds community. </p>
+
+<p>Today, much of Chau’s visual artwork pays homage to her ancestors' food and traditions. On her arm, a shrimp tattoo forever memorializes having grown up, as she puts it, a “restaurant baby.” Right below, the cleaver knife her grandfather cooked with gets an honorary spot, as well as the chicken feet her grandmother “could put away faster than anyone.” Plus, that one phrase of love, “你食咗飯未?,” she heard over and over: “Have you eaten yet?”</p>
+
+<p>In her 2017 installation “A Day's Work of Labor and Love: Xiaolong bao,” which she created at Pilchuck Glass School, trios of ethereal sculpted glass dumplings sit in bamboo steamers like fragile puffs of clouds. The work, Chau says, is a tribute to her <em>ama</em> (grandmother) and cooking as a labor of love and form of communication in families of color.</p>
+
+<p>In Chau's two-dimensional work, Chinese iconography often makes an appearance. Her vitreographs and posters burst with pops of red, and in a zine shown at Bellevue Arts Museum last year, she tells stories of the Chinese zodiac.</p></div>
+      
+      </div>
+
+          </div>
+                                      <div class="field--item">
+            
+<div class="paragraph paragraph--type--full-width-image paragraph--view-mode--default paragraph__top-margin">
+  <div class="full-width-image">
+    
+            <div data-blazy="" data-colorbox-gallery class="blazy blazy--colorbox blazy--field blazy--field-full-width-image blazy--field-full-width-image--default field field--name-field-full-width-image field--type-image field--label-hidden field--item">
+
+
+
+                      <a href="https://crosscut.com/sites/default/files/styles/max_1600x1600/public/images/200508_monyee_chau_03_1.jpg?itok=RKKR5XcI" class="blazy__colorbox litebox" data-colorbox-trigger data-media="{&quot;bundle&quot;:&quot;full_width_image&quot;,&quot;type&quot;:&quot;image&quot;,&quot;width&quot;:1600,&quot;height&quot;:1066,&quot;rel&quot;:&quot;blazy-paragraph-full-width-image-full-width-image-default-colorbox-blazy-colorbox&quot;}">      <div class="media media--bundle--full-width-image media--blazy media--loading media--switch media--switch--colorbox media--responsive media--image">
+      
+      
+      
+        <img class="media__image media__element b-lazy b-responsive" loading="lazy" data-src="/sites/default/files/styles/max_2000x2000/public/images/200508_monyee_chau_03_1.jpg?itok=Ilpgc_HR" srcset="" sizes="100vw" data-srcset="/sites/default/files/styles/large/public/images/200508_monyee_chau_03_1.jpg?itok=HI8ojZA4 480w, /sites/default/files/styles/max_768x768/public/images/200508_monyee_chau_03_1.jpg?itok=GYofcZWH 768w, /sites/default/files/styles/max_1200x1200/public/images/200508_monyee_chau_03_1.jpg?itok=frZioEs5 1200w, /sites/default/files/styles/max_1600x1600/public/images/200508_monyee_chau_03_1.jpg?itok=RKKR5XcI 1600w, /sites/default/files/styles/max_2000x2000/public/images/200508_monyee_chau_03_1.jpg?itok=Ilpgc_HR 2000w" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 2000 1333&#039;%2F%3E" alt="Dumplings made from glass sitting in a bamboo steamer" />
+
+
+      
+                  
+      
+
+            
+      <span class="media__icon media__icon--litebox"></span>
+    </div>
+  </a>
+
+                          <div class="litebox-caption visually-hidden"><p>Chau's 2017 installation “A Day's Work of Labor and Love: Xiaolong bao,” is a tribute to her ama (grandmother) and cooking as a labor of love and form of communication in families of color. (Monyee Chau)</p></div>
+        
+            
+  
+  
+
+
+</div>
+      
+    
+            <div class="field field--name-field-full field--type-text-long field--label-hidden field--item"><p>Chau's 2017 installation “A Day's Work of Labor and Love: Xiaolong bao,” is a tribute to her ama (grandmother) and cooking as a labor of love and form of communication in families of color. (Monyee Chau)</p></div>
+      
+  </div>
+  
+</div>
+
+          </div>
+                                      <div class="field--item">
+            
+  <div class="paragraph--contained paragraph paragraph--type--text-area paragraph--view-mode--default">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>This emphasis on her heritage in her work is something Chau’s younger self would have never imagined. She spent most of her youth “ashamed” of her cultural background, she says. In her first years of studying visual art at the Cornish College of the Arts, Chau steered mostly clear of Chinese iconography, or her family’s stories.</p>
+
+<p>Until one day, taking the Metro bus to school, a cluster of sterile, fluorescent lights on a new Bartell drugstore on Jackson Street caught her eye. “I was like: ‘Where … am I? I have no idea.’ And then I realized it was the land that my family's restaurant was on.”</p>
+
+<p>She cried, though it was only later she really understood why: “That restaurant kept me grounded in my heritage and I didn't recognize that until it was gone. Growing up in that restaurant was very conflicting for me, but it really tied me to this neighborhood,” she says.</p>
+
+<p>Since then, she’s been on an artistic mission to acknowledge and appreciate the labor of the immigrants who built the Chinatown-International District, she says. A quest to “protect this neighborhood and give back to it what it has given me.”</p>
+
+<p>With reports of hate crimes and hate speech against <a href="http://www.asianpacificpolicyandplanningcouncil.org/wp-content/uploads/Press_Release_4_23_20.pdf">Asian Americans increasing</a> amid the COVID-19 pandemic, Chau’s work has found another layer of resonance.</p>
+
+<p>In a new online artwork, “<a href="https://mailchi.mp/wingluke/resilience-campaign-eblast-372519?e=%255BUNIQID%255D">A Comic on Resilience</a>,” Chau channels her feelings about the neighborhood’s current uncertainty. One coral pink panel features a sketch of her grandfather. On the wall behind him, the family logo of a carp. Next to him, yellow font, which reads: “The underlying racism of coronavirus has brought back old ideologies of yellow peril, which in turn threatens the lives and businesses that make Seattle's International District so special.”</p></div>
+      
+      </div>
+
+          </div>
+                                      <div class="field--item">
+            
+  <div class="paragraph--contained paragraph paragraph--type--article-gallery paragraph--view-mode--default">
+          
+      <div class="field field--name-field-gallery-image-caption field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">
+
+  <div class="paragraph--contained paragraph paragraph--type--gallery paragraph--view-mode--default">
+          
+            <div data-blazy="" data-colorbox-gallery class="blazy blazy--colorbox blazy--field blazy--field-gallery-image blazy--field-gallery-image--default field field--name-field-gallery-image field--type-image field--label-hidden field--item">
+
+
+
+                      <a href="https://crosscut.com/sites/default/files/styles/max_1600x1600/public/images/article/gallery/200508_monyee_chau_10.jpg?itok=kMBi2_Ja" class="blazy__colorbox litebox" data-colorbox-trigger data-media="{&quot;bundle&quot;:&quot;gallery&quot;,&quot;type&quot;:&quot;image&quot;,&quot;width&quot;:1600,&quot;height&quot;:1280,&quot;rel&quot;:&quot;blazy-paragraph-gallery-gallery-image-default-colorbox-blazy-colorbox&quot;}">      <div class="media media--bundle--gallery media--blazy media--loading media--switch media--switch--colorbox media--image">
+      
+      
+      
+      <img alt="Pink sketch of arch with text reading: &quot;Sometimes when things get rough, I try to remember what this neighborhood + community has experienced before.&quot;" class="media__image media__element b-lazy" loading="lazy" data-src="/sites/default/files/styles/max_1300x1300/public/images/article/gallery/200508_monyee_chau_10.jpg?itok=uAet2GqC" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 1300 1040&#039;%2F%3E" width="1300" height="1040" />
+
+      
+                  
+      
+
+            
+      <span class="media__icon media__icon--litebox"></span>
+    </div>
+  </a>
+
+                          <div class="litebox-caption visually-hidden"><p>In a new online artwork, “A Comic on Resilience,” Chau depicts the neighborhood’s current uncertainty. (Monyee Chau)</p></div>
+        
+            
+  
+  
+
+
+</div>
+      
+            <div class="field field--name-field-gallery-caption field--type-text-long field--label-hidden field--item"><p>In a new online artwork, “A Comic on Resilience,” Chau depicts the neighborhood’s current uncertainty. (Monyee Chau)</p></div>
+      
+      </div>
+</div>
+              <div class="field--item">
+
+  <div class="paragraph--contained paragraph paragraph--type--gallery paragraph--view-mode--default">
+          
+            <div data-blazy="" data-colorbox-gallery class="blazy blazy--colorbox blazy--field blazy--field-gallery-image blazy--field-gallery-image--default field field--name-field-gallery-image field--type-image field--label-hidden field--item">
+
+
+
+                      <a href="https://crosscut.com/sites/default/files/styles/max_1600x1600/public/images/article/gallery/200508_monyee_chau_09.jpg?itok=f_gAECDv" class="blazy__colorbox litebox" data-colorbox-trigger data-media="{&quot;bundle&quot;:&quot;gallery&quot;,&quot;type&quot;:&quot;image&quot;,&quot;width&quot;:1600,&quot;height&quot;:1280,&quot;rel&quot;:&quot;blazy-paragraph-gallery-gallery-image-default-colorbox-blazy-colorbox&quot;}">      <div class="media media--bundle--gallery media--blazy media--loading media--switch media--switch--colorbox media--image">
+      
+      
+      
+      <img alt="Pink sketch of diner booth with text: The city started to implement plans to contain the virus, but the streets of the neighborhood have been quiet much before the virus reached the United States. " class="media__image media__element b-lazy" loading="lazy" data-src="/sites/default/files/styles/max_1300x1300/public/images/article/gallery/200508_monyee_chau_09.jpg?itok=Hr_clGdx" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 1300 1040&#039;%2F%3E" width="1300" height="1040" />
+
+      
+                  
+      
+
+            
+      <span class="media__icon media__icon--litebox"></span>
+    </div>
+  </a>
+
+                          <div class="litebox-caption visually-hidden"><p>In a new online artwork, “A Comic on Resilience,” Chau depicts the neighborhood’s current uncertainty. (Monyee Chau)</p></div>
+        
+            
+  
+  
+
+
+</div>
+      
+            <div class="field field--name-field-gallery-caption field--type-text-long field--label-hidden field--item"><p>In a new online artwork, “A Comic on Resilience,” Chau depicts the neighborhood’s current uncertainty. (Monyee Chau)</p></div>
+      
+      </div>
+</div>
+              <div class="field--item">
+
+  <div class="paragraph--contained paragraph paragraph--type--gallery paragraph--view-mode--default">
+          
+            <div data-blazy="" data-colorbox-gallery class="blazy blazy--colorbox blazy--field blazy--field-gallery-image blazy--field-gallery-image--default field field--name-field-gallery-image field--type-image field--label-hidden field--item">
+
+
+
+                      <a href="https://crosscut.com/sites/default/files/styles/max_1600x1600/public/images/article/gallery/200508_monyee_chau_08.jpg?itok=n9thNRqv" class="blazy__colorbox litebox" data-colorbox-trigger data-media="{&quot;bundle&quot;:&quot;gallery&quot;,&quot;type&quot;:&quot;image&quot;,&quot;width&quot;:1600,&quot;height&quot;:1280,&quot;rel&quot;:&quot;blazy-paragraph-gallery-gallery-image-default-colorbox-blazy-colorbox&quot;}">      <div class="media media--bundle--gallery media--blazy media--loading media--switch media--switch--colorbox media--image">
+      
+      
+      
+      <img alt="Yellow text on pink backdrop: I worry for the sake of this neighborhood, especially because it&#039;s in a vulnerable place due to gentrification... Will we be able to bounce back from this?" class="media__image media__element b-lazy" loading="lazy" data-src="/sites/default/files/styles/max_1300x1300/public/images/article/gallery/200508_monyee_chau_08.jpg?itok=zTXxPu3U" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 1300 1040&#039;%2F%3E" width="1300" height="1040" />
+
+      
+                  
+      
+
+            
+      <span class="media__icon media__icon--litebox"></span>
+    </div>
+  </a>
+
+                          <div class="litebox-caption visually-hidden"><p>In a new online artwork, “A Comic on Resilience,” Chau depicts the neighborhood’s current uncertainty. (Monyee Chau)</p></div>
+        
+            
+  
+  
+
+
+</div>
+      
+            <div class="field field--name-field-gallery-caption field--type-text-long field--label-hidden field--item"><p>In a new online artwork, “A Comic on Resilience,” Chau depicts the neighborhood’s current uncertainty. (Monyee Chau)</p></div>
+      
+      </div>
+</div>
+              <div class="field--item">
+
+  <div class="paragraph--contained paragraph paragraph--type--gallery paragraph--view-mode--default">
+          
+            <div data-blazy="" data-colorbox-gallery class="blazy blazy--colorbox blazy--field blazy--field-gallery-image blazy--field-gallery-image--default field field--name-field-gallery-image field--type-image field--label-hidden field--item">
+
+
+
+                      <a href="https://crosscut.com/sites/default/files/styles/max_1600x1600/public/images/article/gallery/200508_monyee_chau_07.jpg?itok=rzatZw5c" class="blazy__colorbox litebox" data-colorbox-trigger data-media="{&quot;bundle&quot;:&quot;gallery&quot;,&quot;type&quot;:&quot;image&quot;,&quot;width&quot;:1600,&quot;height&quot;:1280,&quot;rel&quot;:&quot;blazy-paragraph-gallery-gallery-image-default-colorbox-blazy-colorbox&quot;}">      <div class="media media--bundle--gallery media--blazy media--loading media--switch media--switch--colorbox media--image">
+      
+      
+      
+      <img alt="Image of Chinese dragon and text: But I remember the resiliency that lives within the streets and the people here. My community keeps me strong, and so does the legacy and stories of all those who came before us. I know we&#039;re going to be okay. " class="media__image media__element b-lazy" loading="lazy" data-src="/sites/default/files/styles/max_1300x1300/public/images/article/gallery/200508_monyee_chau_07.jpg?itok=3svxzPXx" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 1300 1040&#039;%2F%3E" width="1300" height="1040" />
+
+      
+                  
+      
+
+            
+      <span class="media__icon media__icon--litebox"></span>
+    </div>
+  </a>
+
+                          <div class="litebox-caption visually-hidden"><p>In a new online artwork, “A Comic on Resilience,” Chau depicts the neighborhood’s current uncertainty. (Monyee Chau)</p></div>
+        
+            
+  
+  
+
+
+</div>
+      
+            <div class="field field--name-field-gallery-caption field--type-text-long field--label-hidden field--item"><p>In a new online artwork, “A Comic on Resilience,” Chau depicts the neighborhood’s current uncertainty. (Monyee Chau)</p></div>
+      
+      </div>
+</div>
+          </div>
+  
+      </div>
+
+          </div>
+                                      <div class="field--item">
+            
+  <div class="paragraph--contained paragraph paragraph--type--text-area paragraph--view-mode--default">
+          
+            <div class="field field--name-field-text-area field--type-text-long field--label-hidden field--item"><p>“I worry for the sake of this neighborhood, especially because it's in a vulnerable place due to gentrification,” continues Chau’s comic, which she made for a Wing Luke Museum fundraiser (moved online because of the stay-at-home order). “Will we be able to bounce back from this?”</p>
+
+<p>Chau sees some glimmers of hope: families and friends having dinner together over Zoom; the sprouting of a Facebook group called “<a href="https://www.facebook.com/groups/209513293443640/">Support the ID — Community United</a>” to support the mom and pop shops in the neighborhood; total strangers letting her know they’ve donated hundreds of printed posters to her project.</p>
+
+<p>For now, Chau plans to keep plastering the poster all over the neighborhood and sharing it with people across the country. With the help of local community groups, she’s working on a sticker version. And as new white nationalist stickers show up in the neighborhood (and they already have, she says), Chau will add “resiliency stickers” as a counter initiative — right on top of the other stickers.</p>
+
+<p>With every new poster, and every new sticker, Chau wants to give the neighborhood another reminder of solidarity and strength. As she writes in the last panel of her comic: “I remember the resiliency that lives within the streets and the people here. My community keeps me strong, and so does the legacy and stories of all those who came before us. I know we're going to be okay.”</p></div>
+      
+      </div>
+
+          </div>
+                                      <div class="field--item">
+            
+<div class="paragraph paragraph--type--system-block-reference paragraph--view-mode--default paragraph--contained">
+  
+            <div class="field field--name-field-system-block-reference field--type-entity-reference field--label-hidden field--item">
+  
+<div id="block-quick-subscribe-arts" class="block-quick-subscribe-arts block block-quick-subscribe block-quick-subscribe--default">
+  <div class="block-outer">
+    <div class="block-inner">
+      
+      
+              
+
+<div  class="ces-quick-subscribe-block--inline ces-quick-subscribe-block">
+      <div class="quick-subscribe-block-prefix">
+      <div class="quick-subscribe-prefix-text">
+<h3>Get the latest in local arts and culture</h3>
+
+<p>This weekly newsletter brings arts news and cultural events straight to your inbox&nbsp;</p>
+</div>
+
+    </div>
+  
+  <div class="quick-subscribe-block-form">
+    <form class="crosscut-email-subscribe-quick-subscribe-form form-inline" data-drupal-selector="crosscut-email-subscribe-quick-subscribe-form-2" action="/2020/05/seattle-artist-fights-anti-asian-racism-chinatown-international-district" method="post" id="crosscut-email-subscribe-quick-subscribe-form--2" accept-charset="UTF-8">
+  
+  <div id="crosscut-email-subscribe-quick-subscribe-form" data-drupal-selector="edit-container" class="form-group js-form-wrapper form-wrapper"><div class="form-group js-form-item form-item js-form-type-email form-item-email-address js-form-item-email-address form-no-label">
+      <label for="edit-email-address" class="visually-hidden js-form-required form-required">Email address</label>
+        <input placeholder="Enter your email address" data-drupal-selector="edit-email-address" type="email" id="edit-email-address" name="email_address" value="" size="60" maxlength="254" class="form-email required" required="required" aria-required="true" />
+
+        </div>
+
+  <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper"><input class="btn btn-secondary button button--secondary js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Subscribe" />
+</div>
+
+</div>
+
+<input autocomplete="off" data-drupal-selector="form-pih1k6yvffligoufwam6dsz85azvtn0-39rn0adkbz8" type="hidden" name="form_build_id" value="form-pih1K6yVffliGoUfwAm6DsZ85aZvTn0_39rn0ADkbZ8" />
+<input data-drupal-selector="edit-crosscut-email-subscribe-quick-subscribe-form" type="hidden" name="form_id" value="crosscut_email_subscribe_quick_subscribe_form" />
+
+  <div class="url-textfield form-group js-form-wrapper form-wrapper" style="display: none !important;"><div class="form-group js-form-item form-item js-form-type-textfield form-item-url js-form-item-url">
+      <label for="edit-url">Leave this field blank</label>
+        <input autocomplete="off" data-drupal-selector="edit-url" type="text" id="edit-url" name="url" value="" size="20" maxlength="128" class="form-text" />
+
+        </div>
+</div>
+
+
+</form>
+<div class="ces-quick-subscribe-terms">By subscribing, you agree to receive occasional membership emails from Crosscut/Cascade Public Media.</div>
+  </div>
+
+  </div>
+
+      
+      
+    </div>
+  </div>
+</div>
+</div>
+      
+</div>
+
+          </div>
+                                      <div class="field--item sidebar-enabled">
+            <div class="secondary-content__wrapper">
+  <div class="paragraph paragraph--type--related-content paragraph--view-mode--default secondary-content">
+    <div class="cc-mark cc-mark--large">
+      <div class="cc-mark__inner"></div>
+    </div>
+    <span class="content-continues-text">Article continues below</span>
+    <div class="secondary-content__inner col-12">
+      <div class="secondary-content__header">
+        <h2 class="field--name-field-section-header">Related Stories</h2>
+      </div>
+              
+      <div class="field field--name-field-related-content field--type-entity-reference field--label-hidden field--items">
+              <div class="field--item">
+
+    
+<article role="article" class="nat node-article-teaser-related-content">
+
+  <div class="row">
+    <div class="col-12">
+      <div class="img-icon-wrap">
+        <a href="/2020/03/coronavirus-fears-pacific-nw-lead-rise-anti-asian-racism" title="Coronavirus fears in Pacific NW lead to rise in anti-Asian racism" target="_self">
+          
+            <div data-blazy="" class="blazy blazy--field blazy--field-teaser-image field field--name-field-teaser-image field--type-image field--label-hidden field--item">
+
+
+
+                    <div class="media media--bundle--article media--blazy media--loading media--image">
+      
+      
+      
+      <img alt="A woman in a mask walks by Uwajimaya" class="media__image media__element b-lazy" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/031020_m3_coronavirus_discrimination_04.jpg?h=10d202d3&amp;itok=7R5DnZcB" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 450 300&#039;%2F%3E" width="450" height="300" />
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+                  </a>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="teaser-text-wrap">
+          
+          
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/equity" hreflang="en">Equity</a></div>
+      
+          <h3>
+            <a href="/2020/03/coronavirus-fears-pacific-nw-lead-rise-anti-asian-racism" title="Coronavirus fears in Pacific NW lead to rise in anti-Asian racism" target="_self"><span>Coronavirus fears in Pacific NW lead to rise in anti-Asian racism</span>
+</a>
+          </h3>
+          
+
+          <div class="d-none d-md-block">
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>Asian Americans in Seattle and elsewhere say they are increasingly being harassed and blamed for the COVID-19 outbreak.</p></div>
+      </div>
+
+          <div class="byline">
+              <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/lilly-fowler" hreflang="und">Lilly Fowler</a></li>
+          </ul>
+   </span>
+              <span class="separator-slant"> / </span>
+              <span class="month-day-date">March 11</span>
+                        </div>
+
+          
+        </div>
+    </div>
+  </div>
+
+</article>
+</div>
+              <div class="field--item">
+
+    
+<article role="article" class="nat node-article-teaser-related-content">
+
+  <div class="row">
+    <div class="col-12">
+      <div class="img-icon-wrap">
+        <a href="/2020/04/seattle-comics-artist-illustrating-our-pandemic-essential" title="For a Seattle comics artist, illustrating our pandemic is essential" target="_self">
+          
+            <div data-blazy="" class="blazy blazy--field blazy--field-teaser-image field field--name-field-teaser-image field--type-image field--label-hidden field--item">
+
+
+
+                    <div class="media media--bundle--article media--blazy media--loading media--image">
+      
+      
+      
+      <img alt="two comics with faces" class="media__image media__element b-lazy" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/200423_comic_artist_teaser.jpg?h=56d0ca2e&amp;itok=eIPDtoh0" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 450 300&#039;%2F%3E" width="450" height="300" />
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+                  </a>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="teaser-text-wrap">
+          
+          
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+          <h3>
+            <a href="/2020/04/seattle-comics-artist-illustrating-our-pandemic-essential" title="For a Seattle comics artist, illustrating our pandemic is essential" target="_self"><span>For a Seattle comics artist, illustrating our pandemic is essential</span>
+</a>
+          </h3>
+          
+
+          <div class="d-none d-md-block">
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>Julia Wald chronicles the everyday upheaval of COVID-19 in stark black and white.</p></div>
+      </div>
+
+          <div class="byline">
+              <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/brangien-davis" hreflang="und">Brangien Davis</a></li>
+          </ul>
+   </span>
+              <span class="separator-slant"> / </span>
+              <span class="month-day-date">April 28</span>
+                        </div>
+
+          
+        </div>
+    </div>
+  </div>
+
+</article>
+</div>
+              <div class="field--item">
+
+    
+<article role="article" class="nat node-article-teaser-related-content">
+
+  <div class="row">
+    <div class="col-12">
+      <div class="img-icon-wrap">
+        <a href="/2020/04/editors-notebook-seattle-artists-promise-we-will-not-desert-you" title="Editor’s Notebook: Seattle artists promise ‘We will not desert you’" target="_self">
+          
+            <div data-blazy="" class="blazy blazy--field blazy--field-teaser-image field field--name-field-teaser-image field--type-image field--label-hidden field--item">
+
+
+
+                    <div class="media media--bundle--article media--blazy media--loading media--image">
+      
+      
+      
+      <img alt="Mural by Electric Coffin picturing a mylar balloon reading &quot;We Will Survive&quot;" class="media__image media__element b-lazy" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/eleccoffinwewillsurvive.jpg?h=41f55a5b&amp;itok=LJvtZMR-" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 450 300&#039;%2F%3E" width="450" height="300" />
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+                  </a>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="teaser-text-wrap">
+          
+          
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+          <h3>
+            <a href="/2020/04/editors-notebook-seattle-artists-promise-we-will-not-desert-you" title="Editor’s Notebook: Seattle artists promise ‘We will not desert you’" target="_self"><span>Editor’s Notebook: Seattle artists promise ‘We will not desert you’</span>
+</a>
+          </h3>
+          
+
+          <div class="d-none d-md-block">
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>In the face of coronavirus chaos, creatives take on the work of lifting spirits.</p></div>
+      </div>
+
+          <div class="byline">
+              <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/brangien-davis" hreflang="und">Brangien Davis</a></li>
+          </ul>
+   </span>
+              <span class="separator-slant"> / </span>
+              <span class="month-day-date">April 16</span>
+                        </div>
+
+          
+        </div>
+    </div>
+  </div>
+
+</article>
+</div>
+          </div>
+  
+          </div>
+  </div>
+</div>
+          </div>
+              </section>
+    </div>
+    <div class="col-auto col-md-5 col-xl-auto">
+      <aside  class="node__content-section node__content-section--sidebar two-col-content-section two-col-content-section--sidebar">
+                                                                                                                                                                                                                                                                                                                                                            <div class="field--item sidebar-enabled">
+              <div class="secondary-content__wrapper">
+  <div class="paragraph paragraph--type--related-content paragraph--view-mode--default secondary-content">
+    <div class="cc-mark cc-mark--large">
+      <div class="cc-mark__inner"></div>
+    </div>
+    <span class="content-continues-text">Article continues below</span>
+    <div class="secondary-content__inner col-12">
+      <div class="secondary-content__header">
+        <h2 class="field--name-field-section-header">Related Stories</h2>
+      </div>
+              
+      <div class="field field--name-field-related-content field--type-entity-reference field--label-hidden field--items">
+              <div class="field--item">
+
+    
+<article role="article" class="nat node-article-teaser-related-content">
+
+  <div class="row">
+    <div class="col-12">
+      <div class="img-icon-wrap">
+        <a href="/2020/03/coronavirus-fears-pacific-nw-lead-rise-anti-asian-racism" title="Coronavirus fears in Pacific NW lead to rise in anti-Asian racism" target="_self">
+          
+            <div data-blazy="" class="blazy blazy--field blazy--field-teaser-image field field--name-field-teaser-image field--type-image field--label-hidden field--item">
+
+
+
+                    <div class="media media--bundle--article media--blazy media--loading media--image">
+      
+      
+      
+      <img alt="A woman in a mask walks by Uwajimaya" class="media__image media__element b-lazy" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/031020_m3_coronavirus_discrimination_04.jpg?h=10d202d3&amp;itok=7R5DnZcB" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 450 300&#039;%2F%3E" width="450" height="300" />
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+                  </a>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="teaser-text-wrap">
+          
+          
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/equity" hreflang="en">Equity</a></div>
+      
+          <h3>
+            <a href="/2020/03/coronavirus-fears-pacific-nw-lead-rise-anti-asian-racism" title="Coronavirus fears in Pacific NW lead to rise in anti-Asian racism" target="_self"><span>Coronavirus fears in Pacific NW lead to rise in anti-Asian racism</span>
+</a>
+          </h3>
+          
+
+          <div class="d-none d-md-block">
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>Asian Americans in Seattle and elsewhere say they are increasingly being harassed and blamed for the COVID-19 outbreak.</p></div>
+      </div>
+
+          <div class="byline">
+              <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/lilly-fowler" hreflang="und">Lilly Fowler</a></li>
+          </ul>
+   </span>
+              <span class="separator-slant"> / </span>
+              <span class="month-day-date">March 11</span>
+                        </div>
+
+          
+        </div>
+    </div>
+  </div>
+
+</article>
+</div>
+              <div class="field--item">
+
+    
+<article role="article" class="nat node-article-teaser-related-content">
+
+  <div class="row">
+    <div class="col-12">
+      <div class="img-icon-wrap">
+        <a href="/2020/04/seattle-comics-artist-illustrating-our-pandemic-essential" title="For a Seattle comics artist, illustrating our pandemic is essential" target="_self">
+          
+            <div data-blazy="" class="blazy blazy--field blazy--field-teaser-image field field--name-field-teaser-image field--type-image field--label-hidden field--item">
+
+
+
+                    <div class="media media--bundle--article media--blazy media--loading media--image">
+      
+      
+      
+      <img alt="two comics with faces" class="media__image media__element b-lazy" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/200423_comic_artist_teaser.jpg?h=56d0ca2e&amp;itok=eIPDtoh0" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 450 300&#039;%2F%3E" width="450" height="300" />
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+                  </a>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="teaser-text-wrap">
+          
+          
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+          <h3>
+            <a href="/2020/04/seattle-comics-artist-illustrating-our-pandemic-essential" title="For a Seattle comics artist, illustrating our pandemic is essential" target="_self"><span>For a Seattle comics artist, illustrating our pandemic is essential</span>
+</a>
+          </h3>
+          
+
+          <div class="d-none d-md-block">
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>Julia Wald chronicles the everyday upheaval of COVID-19 in stark black and white.</p></div>
+      </div>
+
+          <div class="byline">
+              <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/brangien-davis" hreflang="und">Brangien Davis</a></li>
+          </ul>
+   </span>
+              <span class="separator-slant"> / </span>
+              <span class="month-day-date">April 28</span>
+                        </div>
+
+          
+        </div>
+    </div>
+  </div>
+
+</article>
+</div>
+              <div class="field--item">
+
+    
+<article role="article" class="nat node-article-teaser-related-content">
+
+  <div class="row">
+    <div class="col-12">
+      <div class="img-icon-wrap">
+        <a href="/2020/04/editors-notebook-seattle-artists-promise-we-will-not-desert-you" title="Editor’s Notebook: Seattle artists promise ‘We will not desert you’" target="_self">
+          
+            <div data-blazy="" class="blazy blazy--field blazy--field-teaser-image field field--name-field-teaser-image field--type-image field--label-hidden field--item">
+
+
+
+                    <div class="media media--bundle--article media--blazy media--loading media--image">
+      
+      
+      
+      <img alt="Mural by Electric Coffin picturing a mylar balloon reading &quot;We Will Survive&quot;" class="media__image media__element b-lazy" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/eleccoffinwewillsurvive.jpg?h=41f55a5b&amp;itok=LJvtZMR-" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 450 300&#039;%2F%3E" width="450" height="300" />
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+                  </a>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="teaser-text-wrap">
+          
+          
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+          <h3>
+            <a href="/2020/04/editors-notebook-seattle-artists-promise-we-will-not-desert-you" title="Editor’s Notebook: Seattle artists promise ‘We will not desert you’" target="_self"><span>Editor’s Notebook: Seattle artists promise ‘We will not desert you’</span>
+</a>
+          </h3>
+          
+
+          <div class="d-none d-md-block">
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>In the face of coronavirus chaos, creatives take on the work of lifting spirits.</p></div>
+      </div>
+
+          <div class="byline">
+              <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/brangien-davis" hreflang="und">Brangien Davis</a></li>
+          </ul>
+   </span>
+              <span class="separator-slant"> / </span>
+              <span class="month-day-date">April 16</span>
+                        </div>
+
+          
+        </div>
+    </div>
+  </div>
+
+</article>
+</div>
+          </div>
+  
+          </div>
+  </div>
+</div>
+            </div>
+                  
+                
+  <div class="views-element-container form-group"><div class="view-name-related-articles js-view-dom-id-a224cf5abb05777aa57c6cb6cc95e63057f5726c50d39af845661ca973584fbb">
+  
+  
+  
+
+  
+  
+  
+
+  
+<div class="secondary-content__wrapper">
+  <div class="secondary-content">
+    <div class="cc-mark cc-mark--large">
+      <div class="cc-mark__inner"></div>
+    </div>
+    <div class="secondary-content__inner col-12">
+      <div class="secondary-content__header">
+        <h2 class="field--name-field-section-header">Recent</h2>
+      </div>
+
+              
+                                                                                      
+        <div class="views-row debug-entity-theme-node debug-entity-bundle-article debug-entity-view-mode-teaser-no-image">
+          
+    
+<article role="article" class="nat node-article-teaser-no-image">
+
+  <div class="row-x">
+      <div class="teaser-text-wrap">
+        
+
+        
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/news" hreflang="en">News</a></div>
+      
+
+        <h2>
+          <a href="/2020/04/coronavirus-disrupts-child-custody-plans-wa-parents" title="Coronavirus disrupts child custody plans for WA parents" target="_self"><span>Coronavirus disrupts child custody plans for WA parents</span>
+</a>
+        </h2>
+        
+
+        
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>Family courts are closed except for emergencies, leaving many scrambling to improvise new parenting arrangements.</p></div>
+      
+
+        <div class="byline">
+          <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/emily-mccarty" hreflang="en">Emily McCarty</a></li>
+          </ul>
+  </span>
+          <span class="separator-slant"> / </span>
+          <span class="month-day-year-date">April 21, 2020</span>
+                  </div>
+        
+      </div>
+
+</article>
+
+        </div>
+              
+                                                                                      
+        <div class="views-row debug-entity-theme-node debug-entity-bundle-article debug-entity-view-mode-teaser-no-image">
+          
+    
+<article role="article" class="nat node-article-teaser-no-image">
+
+  <div class="row-x">
+      <div class="teaser-text-wrap">
+        
+
+        
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/environment" hreflang="en">Environment</a></div>
+      
+
+        <h2>
+          <a href="/2020/04/apocalypse-now-what-license-drive" title="Apocalypse: Now What? License to drive" target="_self"><span>Apocalypse: Now What? License to drive</span>
+</a>
+        </h2>
+        
+
+        
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>Readers ask: When and where is it OK to get behind the wheel during a pandemic? We explore the gray area.</p></div>
+      
+
+        <div class="byline">
+          <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/ted-alvarez" hreflang="und">Ted Alvarez</a></li>
+          </ul>
+  </span>
+          <span class="separator-slant"> / </span>
+          <span class="month-day-year-date">April 23, 2020</span>
+                  </div>
+        
+      </div>
+
+</article>
+
+        </div>
+              
+                                                                                      
+        <div class="views-row debug-entity-theme-node debug-entity-bundle-article debug-entity-view-mode-teaser-no-image">
+          
+    
+<article role="article" class="nat node-article-teaser-no-image">
+
+  <div class="row-x">
+      <div class="teaser-text-wrap">
+        
+
+        
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/culture" hreflang="en">Culture</a></div>
+      
+
+        <h2>
+          <a href="/2020/05/editors-notebook-how-make-your-own-film-festival-home" title="Editor’s Notebook: How to make your own film festival — at home" target="_self"><span>Editor’s Notebook: How to make your own film festival — at home</span>
+</a>
+        </h2>
+        
+
+        
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>Events are on hold, but culture isn’t canceled.</p></div>
+      
+
+        <div class="byline">
+          <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/brangien-davis" hreflang="und">Brangien Davis</a></li>
+          </ul>
+  </span>
+          <span class="separator-slant"> / </span>
+          <span class="month-day-year-date">May 14, 2020</span>
+                  </div>
+        
+      </div>
+
+</article>
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+
+      </aside>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="article-footer">
+    
+<div class="field_tags container">
+
+    
+  <h5>Topics:</h5>
+    <ul class="list-unstyled inline category-list">
+              <li><a href="/arts" hreflang="en">Arts</a><span class="comma">,</span></li>
+              <li><a href="/coronavirus" hreflang="en">Coronavirus</a><span class="comma">,</span></li>
+              <li><a href="/features" hreflang="en">Features</a><span class="comma">,</span></li>
+              <li><a href="/food" hreflang="en">Food</a><span class="comma">,</span></li>
+              <li><a href="/gentrification" hreflang="en">Gentrification</a><span class="comma">,</span></li>
+              <li><a href="/immigration" hreflang="en">Immigration</a><span class="comma">,</span></li>
+              <li><a href="/race" hreflang="en">Race</a></li>
+          </ul>
+</div>
+
+
+          <div class="container d-xl-none">
+        
+
+
+
+  <div  class="social-share__wrapper social-share__wrapper--bottom">
+    <h5>Share</h5>
+    <div class="social-share">
+      <div class="social-share__list">
+        <ul>
+          <li class="ico">
+            <a class="ico ico-facebook clearfix fb-share" href="#"
+               onclick="event.preventDefault();" target="_blank"
+               title="facebook.com/crosscut">Facebook</a>
+          </li>
+          <li class="ico">
+            <a class="ico ico-twitter twitter-share" href="#"
+               onclick="event.preventDefault();" target="_blank"
+               title="twitter.com/crosscut">Twitter</a>
+          </li>
+          <li class="ico">
+            <a class="ico ico-email email-share" href="#"
+               title="e-mail">Email</a>
+          </li>
+          <li class="ico">
+            <a class="ico ico-print print-share"
+               href="javascript: window.print();" title="print">Print
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      
+    </div>
+  </div>
+        </div>
+    
+  </div>
+</article>
+
+			
+			
+		</div>
+	</div>
+</div>
+<div id="block-article-contributors" class="block-article-contributors block container">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+							<h2 class="block-title">About the Authors &amp; Contributors</h2>
+			
+							
+     
+
+<article role="article" class="node-staff-teaser clearfix">
+  <div class="row-x">
+    <div class="author-pic">
+      
+            <div data-blazy="" class="blazy blazy--field blazy--field-staff-photo field field--name-field-staff-photo field--type-image field--label-hidden field--item">
+
+
+
+                    <div class="media media--bundle--staff media--blazy media--loading media--image">
+      
+      
+      
+      <img alt="" class="media__image media__element b-lazy" loading="lazy" data-src="/sites/default/files/styles/square_large/public/2019-12/mcknight_headshots2019_0199.jpg?h=8a7fc05e&amp;itok=uGWZa0gW" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 620 620&#039;%2F%3E" width="620" height="620" />
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+    </div>
+    <div class="author-details">
+      <h3>
+        <span class="author-name-link">
+          <a href="/author/margo-vansynghel"
+             title="Margo Vansynghel"
+             rel="bookmark"><span>Margo Vansynghel</span>
+</a>
+        </span>
+      </h3>
+      
+            <div class="field field--name-field-teaser-bio field--type-text-long field--label-hidden field--item"><p>Margo Vansynghel is a reporter at Crosscut focused on arts and culture. Find her on Twitter <a href="https://twitter.com/Margo_vs">@Margo_vs</a> or email at <a href="mailto:Margo.Vansynghel@crosscut.com">Margo.Vansynghel@crosscut.com</a>.</p></div>
+      
+      <div class="social-wrap">
+                  <a href="mailto:margo.vansynghel@crosscut.com" title="margo.vansynghel@crosscut.com"><i class="fa fa-envelope fa-2x"></i></a>
+                          <a href="https://twitter.com/Margo_vs" title="@Margo_vs"><i class="fa fa-twitter fa-2x"></i></a>
+                      </div>
+
+    </div>
+  </div>
+</article>
+
+			
+			
+		</div>
+	</div>
+</div>
+<div class="views-element-container block-views-block-up-next-block-1 block container paragraph" id="block-views-block-up-next-block-1">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+  <div class="form-group"><div class="view-name-up-next js-view-dom-id-1ae034375fc0eba5d5b1680f7f7f4ece18f9e619b5f0cde596ff88e600d88aed">
+  
+  
+  
+
+  
+  
+  
+
+    
+                          
+  <div class="views-row debug-entity-theme-node debug-entity-bundle-article debug-entity-view-mode-homepage-latest">
+    
+    
+<article role="article" class="node-article-homepage-latest">
+
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="img-icon-wrap">
+        <a href="/2020/05/judge-demands-wa-psychiatric-hospital-reopen-despite-covid-19" title="Judge demands WA psychiatric hospital reopen despite COVID-19" target="_self">
+          
+            <div data-blazy="" class="blazy blazy--field blazy--field-teaser-image field field--name-field-teaser-image field--type-image field--label-hidden field--item">
+
+
+
+                    <div class="media media--bundle--article media--blazy media--loading media--image">
+      
+      
+      
+      <img alt="Outside of Western State Hospital" class="media__image media__element b-lazy" loading="lazy" data-src="/sites/default/files/styles/three_two_450x300/public/images/articles/200506_m3_western_state_hospital_01_0.jpg?h=10d202d3&amp;itok=kwTyb569" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039; viewBox%3D&#039;0 0 450 300&#039;%2F%3E" width="450" height="300" />
+
+      
+                  
+      
+
+            
+      
+    </div>
+        
+  
+  
+
+
+</div>
+      
+                  </a>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="teaser-text-wrap">
+        
+        <h2 class="up-next-heading-link">
+          <a href="/2020/05/judge-demands-wa-psychiatric-hospital-reopen-despite-covid-19" title="Judge demands WA psychiatric hospital reopen despite COVID-19" target="_self">
+            Up next
+          </a>
+        </h2>
+        
+            <div class="field field--name-field-category field--type-entity-reference field--label-hidden field--item"><a href="/news" hreflang="en">News</a></div>
+      
+        <h2>
+          <a href="/2020/05/judge-demands-wa-psychiatric-hospital-reopen-despite-covid-19" title="Judge demands WA psychiatric hospital reopen despite COVID-19" target="_self">
+            <span>Judge demands WA psychiatric hospital reopen despite COVID-19</span>
+
+          </a>
+        </h2>
+        
+
+        
+            <div class="field field--name-field-article-teaser field--type-text-long field--label-hidden field--item"><p>Western State Hospital has mostly stopped accepting jail transfers, leaving inmates with mental illness in limbo.</p></div>
+      
+
+        <div class="byline">
+          <span class="authored-by">by 
+      <ul class="field_author list-unstyled inline">
+              <li><a href="/author/david-kroman" hreflang="und">David Kroman</a></li>
+          </ul>
+   </span>
+          <span class="separator-slant"> / </span>
+          <span class="month-day-date">May 12</span>
+          <span class="month-day-year-date">May 12, 2020</span>
+                  </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+
+  </div>
+
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+
+			
+			
+		</div>
+	</div>
+</div>
+
+      </div>
+
+          </div>
+
+          
+        </div>
+          </div>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__content container">
+      <div class="row">
+        <div class="col-12 col-md-7">
+          
+<div class="region--footer">
+  <div class="footer__branding">
+    <a href="/" title="Crosscut" rel="home"
+       class="site-logo">
+      <img width="300" height="60"
+          src="/themes/custom/crosscut/assets/images/logos/crosscut_logo_footer.png"
+          alt="Crosscut, a service of Cascade Public Media"/>
+    </a>
+    <ul>
+      <li><a class="ico ico-facebook clearfix"
+             href="https://www.facebook.com/crosscut" target="_blank"
+             title="facebook.com/crosscut">Facebook</a></li>
+      <li><a class="ico ico-twitter" href="https://twitter.com/crosscut"
+             target="_blank" title="twitter.com/crosscut">Twitter</a></li>
+      <li><a class="ico ico-instagram"
+             href="https://www.instagram.com/crosscut/" target="_blank"
+             title="instagram.com/crosscut">Instagram</a></li>
+      <li><a class="ico ico-rss"
+             href="/articles.xml" target="_blank"
+             title="RSS">RSS</a></li>
+    </ul>
+  </div>
+
+  
+
+<div id="block-quick-subscribe-footer" class="block-quick-subscribe-footer block block-quick-subscribe">
+  <div class="block-outer">
+    <div class="block-inner">
+      
+      
+              
+
+<div  class="ces-quick-subscribe-block--inline ces-quick-subscribe-block">
+      <div class="quick-subscribe-block-prefix">
+      <h5>Sign up for the Crosscut Weekly newsletter</h5>
+
+    </div>
+  
+  <div class="quick-subscribe-block-form">
+    <form class="crosscut-email-subscribe-quick-subscribe-form form-inline" data-drupal-selector="crosscut-email-subscribe-quick-subscribe-form-2" action="/2020/05/seattle-artist-fights-anti-asian-racism-chinatown-international-district" method="post" id="crosscut-email-subscribe-quick-subscribe-form--2" accept-charset="UTF-8">
+  
+  <div id="crosscut-email-subscribe-quick-subscribe-form" data-drupal-selector="edit-container" class="form-group js-form-wrapper form-wrapper"><div class="form-group js-form-item form-item js-form-type-email form-item-email-address js-form-item-email-address form-no-label">
+      <label for="edit-email-address" class="visually-hidden js-form-required form-required">Email address</label>
+        <input placeholder="Enter your email address" data-drupal-selector="edit-email-address" type="email" id="edit-email-address" name="email_address" value="" size="60" maxlength="254" class="form-email required" required="required" aria-required="true" />
+
+        </div>
+
+  <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper"><input class="btn btn-secondary button button--secondary js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Subscribe" />
+</div>
+
+</div>
+
+<input autocomplete="off" data-drupal-selector="form-7oen79-lcxyivanqksvrdaigy-29ekvx5q2syqp6q1q" type="hidden" name="form_build_id" value="form-7OeN79_lCXyivAnqKsVRDAIgy_29EkVx5Q2Syqp6q1Q" />
+<input data-drupal-selector="edit-crosscut-email-subscribe-quick-subscribe-form" type="hidden" name="form_id" value="crosscut_email_subscribe_quick_subscribe_form" />
+
+  <div class="url-textfield form-group js-form-wrapper form-wrapper" style="display: none !important;"><div class="form-group js-form-item form-item js-form-type-textfield form-item-url js-form-item-url">
+      <label for="edit-url">Leave this field blank</label>
+        <input autocomplete="off" data-drupal-selector="edit-url" type="text" id="edit-url" name="url" value="" size="20" maxlength="128" class="form-text" />
+
+        </div>
+</div>
+
+
+</form>
+<div class="ces-quick-subscribe-terms">By subscribing, you agree to receive occasional membership emails from Crosscut/Cascade Public Media.</div>
+  </div>
+
+  </div>
+
+      
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+        </div>
+        <div class="col-12 col-md-5">
+          
+  <div class="footer-menu row">
+          <div id="block-footer-menu-main" class="block-footer-menu-main block col-6">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+              <ul class="menu clearfix">
+        
+            	            <li class="parent-menu-0 link-number-1 menu-item">
+                          <a href="/politics" data-drupal-link-system-path="taxonomy/term/1">Politics</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-2 menu-item">
+                          <a href="/culture" data-drupal-link-system-path="taxonomy/term/3">Culture</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-3 menu-item">
+                          <a href="/equity" data-drupal-link-system-path="taxonomy/term/5">Equity</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-4 menu-item">
+                          <a href="/environment" data-drupal-link-system-path="taxonomy/term/7">Environment</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-5 menu-item">
+                          <a href="/opinion" data-drupal-link-system-path="taxonomy/term/9">Opinion</a>
+              </li>
+        	            <li class="parent-menu-0 link-number-6 menu-item">
+                          <a href="/search" data-drupal-link-system-path="search">Search</a>
+              </li>
+    
+
+        	    
+  
+
+
+			
+			
+		</div>
+	</div>
+</div>
+<div id="block-footer-menu-secondary" class="block-footer-menu-secondary block col-6">
+	<div class="block-outer">
+		<div class="block-inner">
+			
+			
+							
+						<ul>
+
+		
+											<li class="parent-menu-0 https:crosscut.comnewsletters">
+				<a href="https://crosscut.com/newsletters" class="btn btn-secondary" title="Subscribe">Subscribe</a>
+							</li>
+											<li class="parent-menu-0 https:www.pledgecart.orgpledgeCart3?campaign=062989EF-9767-44BA-926A-BD370AA4F132&amp;amp%3Bsource=TV1AM-W1606--009#home">
+				<a href="https://www.pledgecart.org/pledgeCart3/?campaign=062989EF-9767-44BA-926A-BD370AA4F132&amp;amp%3Bsource=TV1AM-W1606--009#/home" class="btn btn-primary" target="_blank" title="Donate">Donate</a>
+							</li>
+											<li class="parent-menu-0 http:www.facebook.comcrosscut">
+				<a href="http://www.facebook.com/crosscut" class="ico ico-facebook clearfix" target="_blank" title="facebook.com/crosscut">Facebook</a>
+							</li>
+											<li class="parent-menu-0 http:twitter.comcrosscut">
+				<a href="http://twitter.com/crosscut" class="ico ico-twitter" target="_blank" title="twitter.com/crosscut">Twitter</a>
+							</li>
+											<li class="parent-menu-0 https:www.instagram.comcrosscut">
+				<a href="https://www.instagram.com/crosscut/" class="ico ico-instagram" target="_blank" title="instagram.com/crosscut">Instagram</a>
+							</li>
+											<li class="parent-menu-0 focus">
+				<a href="/focus" class="strong clearfix" target="_self" data-drupal-link-system-path="node/62876">Focus</a>
+							</li>
+											<li class="parent-menu-0 feature">
+				<a href="/feature" class="strong clearfix" target="_self" title="Features">Features</a>
+							</li>
+											<li class="parent-menu-0 northwest-wonders">
+				<a href="/northwest-wonders" class="strong clearfix" target="_self" data-drupal-link-system-path="node/65461">Northwest Wonders</a>
+							</li>
+											<li class="parent-menu-0 video">
+				<a href="/video" class="strong" target="_self" title="Video" data-drupal-link-system-path="taxonomy/term/89">Multimedia</a>
+							</li>
+											<li class="parent-menu-0 podcasts">
+				<a href="/podcasts" class="strong hr" title="Crosscut Podcasts" data-drupal-link-system-path="node/61306">Podcasts</a>
+							</li>
+											<li class="parent-menu-0 events">
+				<a href="/events" data-drupal-link-system-path="node/40117">Events</a>
+							</li>
+											<li class="parent-menu-0 about">
+				<a href="/about" data-drupal-link-system-path="node/51857">About</a>
+							</li>
+											<li class="parent-menu-0 careers">
+				<a href="/careers">Careers</a>
+							</li>
+											<li class="parent-menu-0 support-crosscut">
+				<a href="/support-crosscut" data-drupal-link-system-path="node/37">Support</a>
+							</li>
+											<li class="parent-menu-0 newsletters">
+				<a href="/newsletters" data-drupal-link-system-path="node/55236">Newsletters</a>
+							</li>
+											<li class="parent-menu-0 advertising">
+				<a href="/advertising" data-drupal-link-system-path="node/35">Advertising</a>
+							</li>
+											<li class="parent-menu-0 contact-us">
+				<a href="/contact-us" data-drupal-link-system-path="node/33">Contact</a>
+							</li>
+		
+		</ul>
+	
+
+
+			
+			
+		</div>
+	</div>
+</div>
+
+      </div>
+
+        </div>
+        <div class="footer__copyright">
+          <p>
+            &copy;2020 Cascade Public Media. All Rights Reserved.<br/>
+            <a href="https://cascadepublicmedia.org/terms-use" target="_blank">Terms of Use</a> and <a
+                href="https://cascadepublicmedia.org/privacy-policy" target="_blank">Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+
+</div>
+<div class="canvas-bkgd"></div>
+
+  </div>
+
+		
+		<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/67491","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"blazy\/colorbox,blazy\/filter,blazy\/lightbox,colorbox\/init,colorbox_inline\/colorbox_inline,core\/drupal.form,core\/html5shiv,core\/picturefill,crosscut\/components.social-share,crosscut\/external-links,crosscut\/gallery,crosscut\/global-css,crosscut\/global-js-footer,crosscut\/global-js-header,crosscut_schema\/tag,paragraphs\/drupal.paragraphs.unpublished,system\/base,views\/views.module","theme":"crosscut","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/search":true},"colorbox":{"transition":"elastic","speed":350,"opacity":0.84999999999999998,"slideshow":true,"slideshowAuto":false,"slideshowSpeed":2500,"slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":true,"returnFocus":true,"maxWidth":"98%","maxHeight":"98%","initialWidth":"300","initialHeight":"250","fixed":true,"scrolling":true,"mobiledetect":false,"mobiledevicewidth":"480px"},"blazy":{"loadInvisible":true,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25,"container":""},"blazyIo":{"enabled":false,"disconnect":false,"rootMargin":"0px","threshold":[0]},"crosscut_schema":{"tag":{"site_id":"crosscut.com"}},"crosscut":{"node":{"id":"67491","revision_id":"278726","bundle":"article"},"ad_targeting":{"category":"Culture","topic":["Arts","Coronavirus","Features","Food","Gentrification","Immigration","Race"]}},"user":{"uid":0,"permissionsHash":"cb528775d0d4ba6f8cf217f01ca0d95cc8e2567779141958cd588215c35a5294"}}</script>
+<script src="/sites/default/files/js/js_L20uCpQGAo-6CkapZGHfDNDi9fdufjqhUljFlAFLHTQ.js"></script>
+<script src="//platform.twitter.com.widgets.js"></script>
+<script src="/sites/default/files/js/js_0C1a9KCFeltrJ31ww6YAlnE87FaxnnjXPEQzycTP6lE.js"></script>
+
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fa09265af4","applicationID":"460234015","transactionName":"ZVEEbBRVWBFWW0ZQWFwbJ1sSXVkMGHxATEdTWDpZE0BZEVZOV2ZRXUYLZCBbRA9reUdNWEFVEF0gW0QPdU1bVVNXRksGFFFYBlJKYlVWUVEOVwpQUxBxV0BUdlFAD1cI","queueTime":0,"applicationTime":745,"atts":"SRYHGlxPSx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
