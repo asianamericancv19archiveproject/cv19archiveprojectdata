@@ -1,5 +1,5 @@
 # The Asian American CV19 Archive Project: GitHub Data Repository
-The github repository for www.asianamericancv19archiveproject.org is divided into the following folders:
+The github repository for the Asian American archive project (http://aacv19projectv2.azurewebsites.net/) is divided into the following folders:
 
 <ul>
   <li><b>datafiles</b>: This directory contains the main index JSON file of all content data that is currently being archived.</li>  
