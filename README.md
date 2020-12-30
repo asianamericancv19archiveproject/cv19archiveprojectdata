@@ -1,4 +1,7 @@
 # The Asian American CV19 Archive Project: GitHub Data Repository
+
+Note that the archive is no longer being updated with new data and is provided as is for research and historical purposes. It is the hope that this project in some small way can spur other community projects to share their data.
+
 The github repository for the Asian American archive project (http://aacv19projectv2.azurewebsites.net/) is divided into the following folders:
 
 <ul>
